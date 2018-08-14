@@ -1,3 +1,10 @@
+# Pelican files
+attila/
+bin/
+include/
+lib64
+output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
