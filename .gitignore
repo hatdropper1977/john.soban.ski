@@ -5,6 +5,9 @@ include/
 lib64
 output/
 
+# License for Shutterstock does not include templates
+content/images/elenabsl_shutterstock.jpg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
