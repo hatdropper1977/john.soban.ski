@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-SITENAME = 'John Sobanski - Cloud Architect'
+SITENAME = 'John Sobanski'
 SITEURL = 'https://john.soban.ski'
 #SITEURL = 'http://52.54.218.55:8000'
 HEADER_COVER = 'images/elenabsl_shutterstock.jpg'
