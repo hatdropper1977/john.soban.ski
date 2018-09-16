@@ -1,6 +1,6 @@
 Title: Applying a Reduced Coulomb Energy (RCE) Neural Network Classifier to the Bupa Liver Disorders Data Set
 Date: 2018-08-27 10:26
-Author: John Sobanski
+Author: john-sobanski
 Category: Data Science
 Tags: Octave, RCE, Neural Networks, Machine Learning, Data Science
 Slug: reduced_coulomb_energy_neural_network_bupa

@@ -14,7 +14,7 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 25
 
 CATEGORY_URL = 'category/{slug}'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'

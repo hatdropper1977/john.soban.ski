@@ -73,7 +73,7 @@ $ sudo apt-get -y install openjdk-8-jre
 
 #### Centos
 ```bash
-$ sudo yum -y install sudo yum -y install java-1.8.0-openjdk
+$ sudo yum -y install java-1.8.0-openjdk
 ```
 
 Run the following command to see if you OS points to Java 8, if not select it from the list.  Either way, copy the path to the binary, so you can update **JAVA_HOME** in the next step.
