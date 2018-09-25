@@ -38,7 +38,7 @@ Copy and paste the following JavaScript Object Notation (JSON) text into the "Cr
 ```JSON
 {
     "Version": "2012-10-17",
-    "Statement": [fusion_builder_container hundred_percent="yes" overflow="visible"][fusion_builder_row][fusion_builder_column type="1_1" background_position="left top" background_color="" border_size="" border_color="" border_style="solid" spacing="yes" background_image="" background_repeat="no-repeat" padding="" margin_top="0px" margin_bottom="0px" class="" id="" animation_type="" animation_speed="0.3" animation_direction="left" hide_on_mobile="no" center_content="no" min_height="none"][
+    "Statement": [
         {
             "Effect": "Allow",
             "Action": [
@@ -202,7 +202,7 @@ if __name__ == "__main__":
     print resp.read()
 ```
 
-> **__HOT TIP__**: Snapshot names must be lowercase in the url. You can use ***/18jun16/\_restore*** but not ***/18JUN16/restore*** 
+> **__HOT TIP__**: Snapshot names must be lowercase in the url. You can use ***/18jun16/\_restore*** but not ***/18JUN16/\_restore*** 
 
 Run the script to take a snapshot:
 
