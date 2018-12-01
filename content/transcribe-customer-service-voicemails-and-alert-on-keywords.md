@@ -189,6 +189,12 @@ resp = client.make_request(method='GET', headers={'Content-Type': 'application/j
 
 for hit in json.loads(resp.read())['hits']['hits']:
     print 'Start time: {}\nMessage: {}\n'.format(hit['_source']['startTime'],hit['_source']['text'])
+    DOC_ID = hit['_id']
+
+WARN_SENT_JSON = { "doc" : { "Warning_Sent" : True } }
+UPDATE_PATH = '/{}/_doc/{}/_update'.format(ELASTIC_INDEX_NAME,DOC_ID)
+
+update_resp = client.make_request(method='POST', headers={'Content-Type': 'application/json'}, path=UPDATE_PATH, data=json.dumps(WARN_SENT_JSON))
 ```
 
 The query includes the following line, which reads as 'Only return documents where we did **not** yet send a warning.'  This ensures we will not get spammed with repeated warnings.
@@ -396,7 +402,12 @@ resp = client.make_request(method='GET', headers={'Content-Type': 'application/j
 for hit in json.loads(resp.read())['hits']['hits']:
     START_TIME = '{}'.format(hit['_source']['startTime'])
     TEXT_MSG = '{}'.format(hit['_source']['text'])
+    DOC_ID = hit['_id']
 
+WARN_SENT_JSON = { "doc" : { "Warning_Sent" : True } }
+UPDATE_PATH = '/{}/_doc/{}/_update'.format(ELASTIC_INDEX_NAME,DOC_ID)
+
+update_resp = client.make_request(method='POST', headers={'Content-Type': 'application/json'}, path=UPDATE_PATH, data=json.dumps(WARN_SENT_JSON))
 
 AWS_REGION = "us-east-1"
 SUBJECT = "A Hit"
