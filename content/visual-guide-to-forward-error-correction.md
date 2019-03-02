@@ -65,8 +65,6 @@ A systematic linear block code generator matrix has the form **G = [ P | Ik ]**.
 In this blog post we discused noisy channels, coding gain, hamming distance and block codes.  Next month we will deep dive into Convolutional codes.
 
 If you enjoyed this blog post, you may be interested my discussion of a [Discrete Event Simulation (DES) for Adaptive Forward Error Correction (AFEC)]({filename}/afec-ka-band-discrete-event-simulation.md).
-
-[LTE]({filename}/connect_aws_lambda_to_elasticsearch.md)
  
 #Bibliography
 
