@@ -1,6 +1,6 @@
 Title: A Visual Guide To Forward Error Correction Part Two  - Convolutional Codes
 Date: 2019-02-28 10:26
-Author: John Sobanski
+Author: john-sobanski
 Category: IEEE
 Tags: FEC
 Slug: visual-guide-to-forward-error-correction-part-two
@@ -15,11 +15,11 @@ Convolutional codes produce **n** code bits in response to the **k** input bits 
 
 ![Convolutional Code Encoding Device]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/02_Convolutional_Code_Encoding_Device.png)
 
-The constraint length is **3**, with **n=2** output bits.  Squares **d1**, **d2** and **d3** represent the flip-flops that can be in either state **0** or **1**.  They are connected to modulo two adders to represent the generator polynomial.  An external clock produces a signal every **t0** seconds (assume **t0 = 1**), causing the contents of the flip-flops to move to the right (i.e. a shift register).  The **modulo 2** operations produce the output bits **s1** and **s2** ([Lint](#Lint) 181).
+The constraint length is **3**, with **n=2** output bits.  Squares **d1**, **d2** and **d3** represent the flip-flops that can be in either state **0** or **1**.  They are connected to modulo two adders to represent the generator polynomial.  An external clock produces a signal every **t<sub>0</sub>** seconds (assume **t<sub>0</sub> = 1**), causing the contents of the flip-flops to move to the right (i.e. a shift register).  The **modulo 2** operations produce the output bits **s1** and **s2** ([Lint](#Lint) 181).
 
-Mathematically, if we describe the input stream **i0**, **i1**, **i2**, **…**  as a power series **I0(x) : = i0 + ix1 + i2x2 + …** with coefficients in **2** dimensional space, describe the outputs at **s1** and **s2** as **T0(x)** and **T1(x)** and synchronize the external clock so the first input corresponds to the first output then, for the polynomials **1 + x2** and **1 + x + x2** we get **T0(x) = (1 + x2)I0(x)** and **T1(x) = (1 + x + x2)I0(x)**.  
+Mathematically, if we describe the input stream **i<sub>0</sub>**, **i<sub>1</sub>**, **i<sub>2</sub>**, **…**  as a power series **I<sub>0</sub>(x) : = i<sub>0</sub> + i<sub>1</sub>x + i<sub>2</sub>x<sup>2</sup> + …** with coefficients in **2** dimensional space, describe the outputs at **s1** and **s2** as **T<sub>0</sub>(x)** and **T<sub>1</sub>(x)** and synchronize the external clock so the first input corresponds to the first output then, for the polynomials **1 + x<sup>2</sup>** and **1 + x + x<sup>2</sup>** we get **T<sub>0</sub>(x) = (1 + x<sup>2</sup>)I<sub>0</sub>(x)** and **T<sub>1</sub>(x) = (1 + x + x<sup>2</sup>)I<sub>0</sub>(x)**.  
 
-We interlace the outputs as **T(x) = T0(x2) + xT1(x2)**.  For example, if we had an output stream **11 01 11 00 00 …**, **G(x) := 1 + x + x3 + x4 + x5 = (1 + (x2)2) + x(1 + (x2) + (x2)2)**.  Defining **I(x) := I0(x2) T(x) = G(x)I(x)**.  We refer to the polynomial **G(x)** as the generator polynomial of this code ([Lint](#Lint) 184).
+We interlace the outputs as **T(x) = T<sub>0</sub>(x<sup>2</sup>) + xT<sub>1</sub>(x<sup>2</sup>)**.  For example, if we had an output stream **11 01 11 00 00 …**, **G(x) := 1 + x + x<sup>3</sup> + x<sup>4</sup> + x<sup>5</sup> = (1 + (x<sup>2</sup>)<sup>2</sup>) + x(1 + (x<sup>2</sup>) + (x<sup>2</sup>)<sup>2</sup>)**.  Defining **I(x) := I<sub>0</sub>(x<sup>2</sup>) T(x) = G(x)I(x)**.  We refer to the polynomial **G(x)** as the generator polynomial of this code ([Lint](#Lint) 184).
    
 [Lint](#Lint) prefaces the previous diagram with “every introduction to convolutional coding seems to use the same example.  Adding one more instance to the list might strengthen the belief of some students that no other example exists, but nevertheless we shall use this canonical example (182).”  Most of my sources included this diagram, and the state diagram that follows, yet despite its ubiquity I did not find a clear explanation as to how the latter followed the former.  For that reason, I decided to look at the problem until I could describe it to a layperson.  The state diagram is actually quite simple.
 
