@@ -15,7 +15,7 @@ As an alternative to FastAI (and any roll-your-own vision service, for that matt
 
 AutoML Vision simplifies labeling and then automates training, optimization and serving of the model.
 
-GCP provides a **no code** method to create, deploy and  serve AI Vision modles at scale!
+GCP provides a **no code** method to create, deploy and  serve AI Vision models at scale!
 
 In this HOWTO we will accomplish the following:
 
@@ -52,7 +52,7 @@ gs://mods-rockers/rockers/00000099.jpg,rockers
 
 >IMPORTANT:  Ensure that you use a regional bucket in us-central1, location type: Region and required storage class: Standard.
 
-If you do not use the proper bucket configuration, you will recieve the following error when you attempt to import your dataset.
+If you do not use the proper bucket configuration, you will receive the following error when you attempt to import your dataset.
 
 ![Import Fail]({filename}/images/Gcp_Automl_Vision/00_Import_Fail_Wrong_Region.png)
 
@@ -205,7 +205,7 @@ Export the name of your Google Cloud Storage (GCS) bucket.
 ~/course-v3/nbs/dl1/data/brighton_seafront$ export BUCKET_NAME=mods-rockers
 ```
 
-Brigton seafront contains two sub-directories, **mods** and **rockers.**
+Brighton seafront contains two sub-directories, **mods** and **rockers.**
 
 Create a spreadsheet that appends the URI for the image, followed by the label.
 
@@ -269,7 +269,7 @@ After the import completes, you will see your labeled images.
 
 ![Successful_Import]({filename}/images/Gcp_Automl_Vision/09_Successful_Import.png)
 
-A breif perusal of the images shows that some pictures (highlighted in red) include incorrect labels.
+A brief perusal of the images shows that some pictures (highlighted in red) include incorrect labels.
 
 ![Bad_Labels]({filename}/images/Gcp_Automl_Vision/10_Bad_Labels.png)
 
@@ -282,7 +282,7 @@ Select **Start Training**
 
 The training will use 16 GPU hours.
 
-Since GCP farms the training out in parellel, the 16 GPU hours take less than an hour.
+Since GCP farms the training out in parallel, the 16 GPU hours take less than an hour.
 
 #Evaluate your Model
 After the training completes, click **Evaluate**.
@@ -297,7 +297,7 @@ This points to a labeling problem.
 
 ![Bad_Labels_Cause_Errors]({filename}/images/Gcp_Automl_Vision/13_Bad_Labels_Cause_Errors.png)
 
->NOTE: Upon second glance, the picture on the right depicts Teddy Boys.  Should I label Teddy Boys Mods, Rockers or delete the picture?  Answer in the comments below!
+> NOTE: Upon second glance, the picture on the right depicts Teddy Boys.  Should I label Teddy Boys Mods, Rockers or delete the picture?  Answer in the comments below!
 
 #Fix Labels
 Click **images** and change the labels of the troublesome images (or just delete them if you're lazy right now).
@@ -336,7 +336,7 @@ The model reports, with 93% certainty that I fall under the **Mod** classificati
 
 ![Serve_Sobanski]({filename}/images/Gcp_Automl_Vision/19_Serve_Sobanski.png)
 
-My paisly shirt and Italian sunglasses give credence to this, although I do have a **Rocker** hair cut (styled with [Royal Crown](https://en.wikipedia.org/wiki/Pomade), no less).
+My paisley shirt and Italian sunglasses give credence to this, although I do have a **Rocker** hair cut (styled with [Royal Crown](https://en.wikipedia.org/wiki/Pomade), no less).
 
 #Conclusion
 GCP provides an AutoML vision service that automates the manual FastAI tasks of training, optimizing and serving a Vision model.
