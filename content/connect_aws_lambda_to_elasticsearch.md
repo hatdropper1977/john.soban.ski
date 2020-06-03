@@ -2,7 +2,7 @@ Title: Connect AWS Lambda to Elasticsearch
 Date: 2017-04-29 01:56
 Author: john-sobanski
 Category: HOWTO
-Tags: AWS, Chalice, Elasticsearch, HOWTO, IAM, Python
+Tags: AWS, Chalice, Elasticsearch, HOWTO, IAM, Lambda, Python
 Slug: connect_aws_lambda_to_elasticsearch
 Status: published
 

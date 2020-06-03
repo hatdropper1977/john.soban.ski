@@ -2,7 +2,7 @@ Title: Deploy an Advanced Elasticsearch Proxy with Lambda
 Date: 2018-02-12 21:56
 Author: john-sobanski
 Category: HOWTO
-Tags: AWS, Chalice, Elasticsearch, HOWTO, IAM, Python
+Tags: AWS, Chalice, Elasticsearch, HOWTO, IAM, Lambda, Python
 Slug: deploy_an_advanced_elasticsearch_proxy_with_lambda
 Status: published
 

@@ -2,7 +2,7 @@ Title: The World's Cheapest (And Easiest) Web Database App deployment
 Date: 2019-05-31 23:26
 Author: john-sobanski
 Category: HOWTO
-Tags:  AWS, Zappa, HOWTO, IAM, Python, S3
+Tags:  AWS, Zappa, HOWTO, IAM, Lambda, Python, S3
 Slug: an-inexpensive-web-database-app-via-s3-part-two
 Status: published
 
