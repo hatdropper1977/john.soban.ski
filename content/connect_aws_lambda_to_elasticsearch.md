@@ -277,4 +277,4 @@ Congratulations!  Your Lambda function can hit your [Elasticsearch]({tag}elasti
 
 I encourage you to proceed to the second [HOWTO]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md) of this series, which demonstrates how to use this approach to [recieve, validate and persist Elasticsearch documents to the document store]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md).
 
-In addition, you may want to learn how to [backup the AWS provided Elasticsearch service to S3]({filename}/part-6-backup-aws-provided-elasticsearch-to-amazon-simple-storage-service.md) or add ***@Timestamp*** to your [Python Elasticsearch DSL Model](add-timestamp-to-your-python-elasticsearch-dsl-model.md).
+In addition, you may want to learn how to [backup the AWS provided Elasticsearch service to S3]({filename}/part-6-backup-aws-provided-elasticsearch-to-amazon-simple-storage-service.md) or add ***@Timestamp*** to your [Python Elasticsearch DSL Model]({filename}/add-timestamp-to-your-python-elasticsearch-dsl-model.md).
