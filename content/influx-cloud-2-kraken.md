@@ -2,7 +2,7 @@ Title: Deploy a Personal Kraken Exchange Terminal to InfluxDB Cloud 2.0
 Date: 2019-06-30 10:26
 Author: john-sobanski
 Category: Coins
-Tags:  Coins, HOWTO, InfluxDB
+Tags:  Coins, HOWTO, InfluxDB, Time Series
 Slug: influx-cloud-2-kraken
 Status: published
 

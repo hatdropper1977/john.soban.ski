@@ -2,7 +2,7 @@ Title: Refactor InfluxDB 1.X Python Scripts to InfluxDB 2.0
 Date: 2019-08-31 10:31
 Author: john-sobanski
 Category: HOWTO
-Tags:  HOWTO, InfluxDB
+Tags:  HOWTO, InfluxDB, Time Series
 Slug: refactor-python-to-influx-2
 Status: published
 

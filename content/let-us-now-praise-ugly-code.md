@@ -12,14 +12,22 @@ Coming from an [Octave](https://www.gnu.org/software/octave/)/[MATLAB](http://ww
 
 I have a project that keeps track of comic books, their publishers, their prices and their customers. The model stores data in excel and to make things readable, I use a columnar store. In this way, I can quickly add new entries to the table by adding columns.  Each column has an arbitrary number of rows. I know this might not be the best way to store data, but bear with me here. This blog looks at the processing of that data, not the storing of the data. Besides, in the real world, you sometimes have no choice but to start with ugly data.
 
-### **The Ugly Way...**
-
+### The Ugly Way...
 Let us proceed. First, take a look at Titles:
 
 ```R
-> Titles.orig <- data.frame(DC=c('Batman','Superman','Captain_Marvel',''),
-                          Image=c('Youngblood','Spawn','',''),
-                          Marvel=c('Spiderman','Iron_Man','Cable','Doctor_Strange'),
+> Titles.orig <- data.frame(DC=c('Batman',
+                                 'Superman',
+                                 'Captain_Marvel',
+                                 ''),
+                          Image=c('Youngblood',
+                                  'Spawn',
+                                  '',
+                                  ''),
+                          Marvel=c('Spiderman',
+                                   'Iron_Man',
+                                   'Cable',
+                                   'Doctor_Strange'),
                           stringsAsFactors = FALSE)
 
 > Titles.orig
@@ -41,7 +49,7 @@ Image  "Youngblood" "Spawn"    ""               ""
 Marvel "Spiderman"  "Iron_Man" "Cable"          "Doctor_Strange"
 ```
 
-When I process *Titles.orig* in R, I first transform it to a key-value store. My approach relies on data frame index logic (commands inside the [] brackets).
+When I process ***Titles.orig*** R, I first transform it to a key-value store. My approach relies on data frame index logic (commands inside the [] brackets).
 
 In my original approach, I create two vectors, one that repeats the column several times, and another that un-packs (unlists) the data. When I put them together, I get key-value pairs (with some empties).
 
@@ -59,7 +67,7 @@ This attempt fails. I want it in the form: 'DC, DC, DC, DC, Image, Image etc.'
 
 After a few Google searches, I find that ***matrix()***allows us to stack rows, so I stuff the repeat statement into ***matrix()***:
 
-``` {style="margin: 0; line-height: 125%;"}
+```R
 > matrix(rep(names(Titles),nrow(Titles)),nrow=nrow(Titles))
 
      [,1]     [,2]     [,3]    
@@ -149,7 +157,7 @@ And then remove the empty rows. A lot of my early code follows this convention. 
 12    Marvel Doctor_Strange
 ```
 
-### **The Pretty Way...**
+### The Pretty Way...
 
 Let's recap. We had nested hell to transform the columnar table to a key-value table, and then we needed two more commands to name the data frame columns and remove the empties.
 
@@ -160,7 +168,9 @@ With pipes (***dplyr*** and ***magrittr***) and ***tidyr***, we can produce the 
 > library("magrittr")
 > library("tidyr")
 > Titles <- Titles.orig
-> Titles %>% gather(publisher,title) %>% filter(nzchar(title))
+> Titles %>% 
+    gather(publisher,title) %>% 
+    filter(nzchar(title))
 
   publisher          title
 1        DC         Batman
@@ -174,20 +184,30 @@ With pipes (***dplyr*** and ***magrittr***) and ***tidyr***, we can produce the 
 9    Marvel Doctor_Strange
 ```
 
-To dump and then set the variable, we use the ***%\<\>%*** pipe.
+To dump and then set the variable, we use the ***%<\>%*** pipe.
 
 ```R
-> Titles %<>% gather(publisher,title) %>% filter(nzchar(title))
+> Titles %<>% 
+    gather(publisher,title) %>% 
+    filter(nzchar(title))
 ```
 
-### **More Pretty Code**
+### More Pretty Code
 
 Now we have a separate table of customers. This is a more traditional table, and we can arbitrarily add columns and rows as we see fit.
 
 ```R
-> Customers <- data.frame(title = c('Batman','Superman','Captain_Marvel',
-                                  'Youngblood','Spawn','Spiderman','Iron_Man','Cable','Doctor_Strange'),
-                        Micky = c(2,0,0,0,0,0,2,0,1),Mike = c(5,1,1,1,1,1,1,1,1),
+> Customers <- data.frame(title = c('Batman',
+                                    'Superman',
+                                    'Captain_Marvel',
+                                    'Youngblood',
+                                    'Spawn',
+                                    'Spiderman',
+                                    'Iron_Man',
+                                    'Cable',
+                                    'Doctor_Strange'),
+                        Micky = c(2,0,0,0,0,0,2,0,1),
+                        Mike = c(5,1,1,1,1,1,1,1,1),
                         Peter = c(1,1,0,0,0,1,1,2,0),
                         Davy = c(2,7,1,5,1,2,0,0,1),
                         stringsAsFactors=FALSE)
@@ -208,7 +228,10 @@ Now we have a separate table of customers. This is a more traditional table, and
 Let's try the gather function on this table to see what we get. We want each row to contain the comic title, the customer name, and the quantity they want to purchase.
 
 ```R
-> Customers %>% gather(customer,qty) %>% suppressWarnings %>% head(12)
+> Customers %>% 
+    gather(customer,qty) %>% 
+    suppressWarnings %>% 
+    head(12)
 
    customer            qty
 1     title         Batman
@@ -228,7 +251,9 @@ Let's try the gather function on this table to see what we get. We want each row
 As you can see, this is not what we want. For correct syntax, we need to specify a start and end column.
 
 ```R
-> Customers %>% gather(customer,qty,Micky:Davy) %>% head(12)
+> Customers %>% 
+    gather(customer,qty,Micky:Davy) %>% 
+    head(12)
 
             title customer qty
 1          Batman    Micky   2
@@ -250,15 +275,32 @@ I have an issue with this code in that I need to refactor it each time I add a n
 To future proof, we modify the code as follows:
 
 ```R
-> Customers %>% gather(customer,qty,2:ncol(Customers)) %>% head(12)
+> Customers %>% 
+    gather(customer,qty,2:ncol(Customers)) %>% 
+    head(12)
 ```
 
 In a separate table I have prices for each title.
 
 ```R
-> Price <- data.frame(title = c('Batman','Superman','Captain_Marvel','Youngblood',
-                              'Spawn','Spiderman','Iron_Man','Cable','Doctor_Strange'), 
-                    price = c(1.95,1.95,2.95,2.95,1.75,1.75,3.95,3.95,1.95), 
+> Price <- data.frame(title = c('Batman',
+                                'Superman',
+                                'Captain_Marvel',
+                                'Youngblood',
+                                'Spawn',
+                                'Spiderman',
+                                'Iron_Man',
+                                'Cable',
+                                'Doctor_Strange'), 
+                    price = c(1.95,
+                              1.95,
+                              2.95,
+                              2.95,
+                              1.75,
+                              1.75,
+                              3.95,
+                              3.95,
+                              1.95), 
                     stringsAsFactors = FALSE )
 > Price
 
@@ -277,7 +319,8 @@ In a separate table I have prices for each title.
 We can easily add a price column to Customers with the ***merge()*** function:
 
 ```R
-> Customers %>% merge(Price)
+> Customers %>% 
+    merge(Price)
 
            title Micky Mike Peter Davy price
 1         Batman     2    5     1    2  1.95
@@ -298,8 +341,10 @@ How do we find per customer totals? I'll show a hard way and an easy way. Let's 
 First, we narrow the table and merge with price:
 
 ```R
-> Customers %>% gather(customer,qty,2:ncol(Customers)) %>% 
-  merge(Price) %>% head(12)
+> Customers %>% 
+    gather(customer,qty,2:ncol(Customers)) %>%
+    merge(Price) %>% 
+    head(12)
 
             title customer qty price
 1          Batman    Micky   2  1.95
@@ -319,9 +364,11 @@ First, we narrow the table and merge with price:
 Then, we add a fifth column that calculates the subtotal:
 
 ```R
-> Customers %>% gather(customer,qty,2:ncol(Customers)) %>% 
-  merge(Price) %>% mutate(subtotal= qty * price) %>% 
-  head(12)
+> Customers %>% 
+    gather(customer,qty,2:ncol(Customers)) %>% 
+    merge(Price) %>% 
+    mutate(subtotal= qty * price) %>% 
+    head(12)
 
             title customer qty price subtotal
 1          Batman    Micky   2  1.95     3.90
@@ -341,9 +388,12 @@ Then, we add a fifth column that calculates the subtotal:
 Then, we sum the subtotal for each customer. We can achieve this with ease using the ***group\_by()*** and ***summarize()*** functions:
 
 ```R
-> Customers %>% gather(customer,qty,2:ncol(Customers)) %>% 
-  merge(Price) %>% mutate(subtotal= qty * price) %>% 
-  group_by(customer) %>% summarize(sum(subtotal))
+> Customers %>% 
+    gather(customer,qty,2:ncol(Customers)) %>% 
+    merge(Price) %>% 
+    mutate(subtotal= qty * price) %>% 
+    group_by(customer) %>% 
+    summarize(sum(subtotal))
 
 # A tibble: 4 x 2
   customer sum(subtotal)
@@ -365,7 +415,9 @@ We first create our vector
 Then our matrix
 
 ```R
-> A <- Customers %>% select(Micky:Davy) %>% as.matrix()
+> A <- Customers %>% 
+         select(Micky:Davy) %>% 
+         as.matrix()
 ```
 
 We do a simple dot product and we're done:
@@ -380,10 +432,13 @@ We do a simple dot product and we're done:
 We could also do it in one line:
 
 ```R
-> Price$price %*% (Customers %>% select(Micky:Davy) %>% as.matrix())
+> Price$price %*% 
+    (Customers %>% 
+       select(Micky:Davy) %>% 
+    as.matrix())
 
      Micky  Mike Peter  Davy
 [1,] 13.75 30.95  17.5 42.45
 ```
 
-My Octave/ MATLAB experience led me to use linear algebra right out of the gate. Sometimes, even in the face of fancy new functions, it turns out I produce beautiful code on the first try.
+My Octave/ MATLAB experience led me to use linear algebra right out of the gate. Sometimes, even in the face of fancy new functions, it turns out I produce beautiful code on the first try.

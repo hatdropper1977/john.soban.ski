@@ -1,7 +1,7 @@
 Title: A Visual Guide To Forward Error Correction Part Two  - Convolutional Codes
 Date: 2019-02-28 10:26
 Author: john-sobanski
-Category: IEEE
+Category: IETF
 Tags: FEC
 Slug: visual-guide-to-forward-error-correction-part-two
 Status: published
