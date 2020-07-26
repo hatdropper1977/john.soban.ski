@@ -26,10 +26,11 @@ AUTHORS_BIO = {
   "john-sobanski": {
     "name": "John Sobanski",
     "cover": "https://john.soban.ski/images/bsod_cropped.jpg",
-    "image": "https://john.soban.ski/images/sobanski.jpg",
+    "image": "https://john.soban.ski/images/sobanski-2.jpg",
+    #"image": "http://52.54.218.55:8000/images/sobanski-2.jpg",
     "website": "https://github.com/hatdropper1977/john.soban.ski",
     "location": "Washington, DC",
-    "bio": "Electrical Engineer turned Cloud Architect.<p><img src=\'https://john.soban.ski/images/AWS_Badge.png\' alt=\'Cert\'></p><p>License <a href=\'https://aw.certmetrics.com/amazon/public/verification.aspx\'>R25L4B4K1FF1Q9WP</a> (July 1st 2016, Re-certified June 29th 2018)",
+    "bio": "Professional Degree (Engr.) and Masters of Science in Electrical Engineering from GWU.<p><img src=\'https://john.soban.ski/images/four_badges.png\' alt=\'Cert\'></p><p>AWS License <a href=\'https://www.youracclaim.com/badges/42379ff7-2298-48a0-ba32-c30198985295\'>R25L4B4K1FF1Q9WP</a> (July 1st 2016, Re-certified June 29th 2018 expires June 29th, 2021)</p><p>Google Cloud Certified Professional Data Engineer License <a href=\'https://www.credential.net/4951d2ef-2828-4f00-876c-5c2cc9ae1ab0\'>ctUxjj</a> (February 26th 2020 - 2022)</p><p>Elasticsearch Certified Engineer license <a href=\'https://certified.elastic.co/81ae38bb-4a1a-42e5-9b34-7e90cd0c9617#gs.8l8jf7\'>19690771</a> (June 22nd 2020 - 2022)</p><p>Scrum Master Certified <a href=\'http://bcert.me/spffgetkt\'>1238209</a> (June 25th 2020 - 2022)</p>",
     "linkedin": "johnsobanski/",
     "github": "hatdropper1977",
   }
