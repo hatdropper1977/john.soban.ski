@@ -6,7 +6,7 @@ Tags: AWS, Elasticsearch, HOWTO, IAM, Python
 Slug: part-1-connect-ec2-to-the-amazon-elasticsearch-service
 Status: published
 
-> NOTE:  If you are interested, find an update of this blog post [here]({filename}/boto3-ec2-to-amazon-elasticsearch.md)
+> NOTE:  Click here to find an update to this blog post which uses [Boto3 and Elasticsearch 7.X]({filename}/boto3-ec2-to-amazon-elasticsearch.md)
 
 Step one of our journey connects [EC2](https://aws.amazon.com/ec2/) to ES using the Amazon [boto](https://aws.amazon.com/sdk-for-python/) Python library. I spent more than a few hours pouring through the AWS help docs and pounding at my keyboard on my instances to figure out the easiest and most direct method to accomplish this. As of writing this blog, I found no decent HOWTO online on how to connect EC2 to the [AWS provided ES](https://aws.amazon.com/elasticsearch-service/) so I put my chin up and started swinging. If you find that this article helps you to quickly get your job done, then please write a comment below (Even if it's just "thanks dude!") .
 

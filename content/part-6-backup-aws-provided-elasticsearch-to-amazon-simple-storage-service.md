@@ -17,6 +17,9 @@ All production databases require backups.  The AWS Elasticsearch [documentation
 
 After this text, the Amazon documentation provides detailed descriptions of the ingredients necessary to create a snapshot, but not a simple to follow recipe.  In this HOWTO I present a clear, easy to follow, step-by-step guide.
 
+> NOTE:  Click here to find an update to this blog post which uses [Boto3 and Elasticsearch 7.X]({filename}/snapshot-aws-es-to-s3.md)
+
+
 **Step 1. Create a bucket:**
 
 In order to backup to a bucket, you need to create a bucket.  From the Amazon console, click S3 --\> Create Bucket and then enter a bucket name.  I named mine ***s3-flask-es***.  Pick a Region if you care and then click "create."

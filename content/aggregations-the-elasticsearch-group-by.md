@@ -3,7 +3,7 @@ Date: 2020-06-27 02:48
 Author: john-sobanski
 Category: HOWTO
 Tags: AWS, Elasticsearch, HOWTO, Python
-Slug: aggregations-the-elasticsearch-group-by.md
+Slug: aggregations-the-elasticsearch-group-by
 Status: published
 
 Elastic Architects designed the distributed Elasticsearch platform to follow NoSql principles.  In the traditional Relational Database Management System (RDBMS) world, SQL databases use [GROUP BY](https://www.w3schools.com/sql/sql_groupby.asp) syntax to group rows with similar values into summary rows. The query, "find the number of web page hits per country," for example, represents a typical **GROUP BY** operations.
