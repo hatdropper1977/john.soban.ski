@@ -89,7 +89,11 @@ You can download a complete (all features) release of OpenDaylight using the fol
 
 Release | Version | Year | Month
 ----------|--------|-----|------
-[Flourine](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.1/karaf-0.9.1.zip) | 0.9.1 | 2018 | Nov
+[Aluminum](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.13.1/karaf-0.13.1.zip) | 0.13.1 | 2020 | Nov
+[Magnesium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.12.2/karaf-0.12.2.zip) | 0.12.2 | 2020 | Jul
+[Sodium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.11.4/karaf-0.11.4.zip) | 0.11.4 | 2020 | Aug
+[Neon](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.10.3/karaf-0.10.3.zip) | 0.10.3 | 2019 | Dec
+[Flourine](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.3/karaf-0.9.3.zip)| 0.9.3 | 2019 | Jun
 [Oxygen](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.4/karaf-0.8.4.zip) | 0.8.4 | 2018 | Dec
 [Nitrogen](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.7.3/karaf-0.7.3.zip) | 0.7.3 | 2018 | May
 [Carbon](https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.6.4-Carbon/distribution-karaf-0.6.4-Carbon.zip) | 0.6.4 | 2018 | Apr
@@ -341,4 +345,4 @@ Now that you installed OpenDaylight as a service on Ubuntu LTS 18.04, head over 
 
 You may be interested in the demo I gave at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia back in 2015.  Find the slides [here](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) or watch the video [here](https://www.youtube.com/watch?v=PGl43xJQQ0g).
 
-If you get stuck, you might find my answers on the OpenDaylight ask [forums](https://ask.opendaylight.org/users/420/runamuck/) useful.
+UPDATE:  Click here on instructions on [how to install OpenDaylight on Ubuntu LTS 20.04]({filename}/install-opendaylight-ubuntu-lts-fast.md).

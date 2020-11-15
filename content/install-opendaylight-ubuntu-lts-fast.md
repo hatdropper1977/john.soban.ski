@@ -120,7 +120,7 @@ OpenDaylight does not make it obvious how to download pre-compiled binaries of t
 
 Release | Version | Year | Month
 ----------|--------|-----|------
-[Aluminum](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.13.0/karaf-0.13.0.zip) | 0.13.0 | 2020 | Sep
+[Aluminum](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.13.1/karaf-0.13.1.zip) | 0.13.1 | 2020 | Nov
 [Magnesium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.12.2/karaf-0.12.2.zip) | 0.12.2 | 2020 | Jul
 [Sodium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.11.4/karaf-0.11.4.zip) | 0.11.4 | 2020 | Aug
 [Neon](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.10.3/karaf-0.10.3.zip) | 0.10.3 | 2019 | Dec

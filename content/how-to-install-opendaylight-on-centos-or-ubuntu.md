@@ -61,6 +61,8 @@ $ sudo yum -y install unzip vim wget
 ```
 
 ## Install packages for zip approach
+> UPDATE:  Click here if you would like to [install OpenDaylight on Ubuntu LTS 20.04]({filename}/install-opendaylight-ubuntu-lts-fast.md).
+
 ### Install JAVA 8
 This section walks you through installing packages that you need to run the binary from the release zip.  If you would like to build OpenDaylight, skip ahead to [Install packages for build](#packbuild)
 
