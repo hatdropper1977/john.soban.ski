@@ -2,7 +2,7 @@ Title: Fast and Easy ML Optimization with GCP AutoML Tables (Beta)
 Date: 2020-12-26 04:19
 Author: john-sobanski
 Category: Data Science
-Tags: Neural Networks, Machine Learning, Data Science, GCP
+Tags: GCP, Neural Networks, Machine Learning, Data Science
 Slug: fast-and-easy-automl-optimize
 Status: published
 

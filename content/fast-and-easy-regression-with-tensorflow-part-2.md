@@ -315,7 +315,7 @@ Linear Model | 5 | 3.22
 DNN | 5 | 3.30
 DNN |  2 | 3.17
 
-In future blog posts we will investigate ways to tune the model, from a construction and hyper-parameter tuning standpoint.
+In [the next blog post]({filename}/fast-and-easy-automl-optimize.md) we will investigate ways to tune the model, from a construction and hyper-parameter tuning standpoint.
 
 If you enjoyed this blog post, please check out these related blog posts:
 
@@ -325,3 +325,4 @@ If you enjoyed this blog post, please check out these related blog posts:
 - [Probabalistic Parzen Neural Networks (PNN) with cartoons]({filename}/graphical_intro_to_probabilistic_neural_networks.md)
 - [Vision model w/ FAST AI]({filename}/fastai-flask.md)
 - [Vision model w/ Google AutoML]({filename}/gcp-automl-vision.md)
+- [Google AutoML Tables Beta]({filename}/fast-and-easy-automl-optimize.md)

@@ -2,7 +2,7 @@ Title:  Google AutoML Vision - Mods vs. Rockers Revisited!
 Date: 2020-04-25 12:12
 Author: john-sobanski
 Category: Data Science
-Tags:  Data Science
+Tags:  GCP, Data Science, Machine Learning
 Slug: gcp-automl-vision
 Status: published
 

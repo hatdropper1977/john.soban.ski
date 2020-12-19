@@ -261,3 +261,12 @@ I leave you with convenient bullet points summarizing the work we accomplished t
   -  RCE can ID ambiguous regions
      -  ID regions of useful training patterns
      -  Does not classify as a known class, in the case that there may be unknown classes
+
+If you enjoyed this blog post, please check out these related blog posts:
+
+- [Exploratory Factor Analysis (EFA) Workflow and Interpretation]({filename}/big-data-idol-how-i-crunched-the-numbers.md)
+- [EFA - The Math and Algorithms]({filename}/big-data-idol-the-math.md)
+- [Reduced Columb Energy (RCE) - An alternative to KNN]({filename}/reduced_coulomb_energy_neural_network_bupa.md)
+- [Vision model w/ FAST AI]({filename}/fastai-flask.md)
+- [Vision model w/ Google AutoML]({filename}/gcp-automl-vision.md)
+- [Google AutoML Tables Beta]({filename}/fast-and-easy-automl-optimize.md)

@@ -134,6 +134,15 @@ Lippmann and Hudak criticize RCE nets.  Lippmann writes, RCE nets “may require
 I experience a “computational cost” during management of the RCE net training.  Iterating through 20 candidate values of **&#951;**, and then iterating 200 learning steps for each takes tens of minutes.  Once I identify the proper weight tuning for the data, however, classification occurs in real time.  RCE does have benefits, due to the ambiguity.  Even Hudak writes, “hyper-spherical classifiers can recognize patterns from an unknown class as not belonging to any class known to the classifier. If true, this would be an advantage over the nearest-neighbor classifier [[Hudak](#Hudak) 853].”  
 
 In conclusion, binary coding does not help reduce error/ ambiguity.  Reducing the feature set on the un-coded data reduces error/ ambiguity.  My feedback-tuning algorithm, while computationally expensive, reduces error/ ambiguity in all cases.  The feedback-tuning algorithm yields the greatest gain on the poorer-performing coded data set.  The best case scenario shows reducing the un-coded feature vector to half its dimension using the features “alkaline phosphotase, “gamma-glutamyl transpeptidase”  and “number of half-pint equivalents of alcoholic beverages drunk per day” and feedback tuning using a learning rate of **&#951;**=.25.  This yields an error of 20%, and an ambiguity of 31%.
+
+If you enjoyed this blog post, please check out these related blog posts:
+
+- [Exploratory Factor Analysis (EFA) Workflow and Interpretation]({filename}/big-data-idol-how-i-crunched-the-numbers.md)
+- [EFA - The Math and Algorithms]({filename}/big-data-idol-the-math.md)
+- [Probabalistic Parzen Neural Networks (PNN) with cartoons]({filename}/graphical_intro_to_probabilistic_neural_networks.md)
+- [Vision model w/ FAST AI]({filename}/fastai-flask.md)
+- [Vision model w/ Google AutoML]({filename}/gcp-automl-vision.md)
+- [Google AutoML Tables Beta]({filename}/fast-and-easy-automl-optimize.md)
  
 ## Bibliography
 <a name="Bagirov"></a>Bagirov, A.M., Ugon, J. “Supervised Data Classification via Max-min Separability.”  Mathematical Modeling of Bio-systems Springer Berlin Heidelberg, 2008: 1-23
