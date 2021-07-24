@@ -120,12 +120,12 @@ Rank | Platform | Approach | Dims | RMSE
 1 | GCP | AutoML Tables | 11 | 0.598
 2 | TensorFlow | Linear Model | 7 | 0.633
 3 | BigQuery   | AutoML | 11 | 0.639
-3 | TensorFlow | DNN | 7 | 0.645
-4 | TensorFlow | DNN | 11 | 0.648
-5 | BigQuery | Linear | 11 | 0.661
-6 | TensorFlow | Linear Model | 11 | 0.706
-7 | TensorFlow | Linear Model | 2 | 0.735
-8 |Pandas | Guess Mean | N/A | 0.801
+4 | TensorFlow | DNN | 7 | 0.645
+5 | TensorFlow | DNN | 11 | 0.648
+6 | BigQuery | Linear | 11 | 0.661
+7 | TensorFlow | Linear Model | 11 | 0.706
+8 | TensorFlow | Linear Model | 2 | 0.735
+9 |Pandas | Guess Mean | N/A | 0.801
 
 BigQuery AutoML under-performs compared to [GCP AutoML Tables]({filename}/fast-and-easy-automl-optimize.md) and a [dimensionality reduced TensorFlow model]({filename}/fast-and-easy-regression-with-tensorflow-part-2.md).
 
