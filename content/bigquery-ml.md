@@ -145,7 +145,7 @@ R squared | 0.3039
 
 The MSE maps to a Root Mean Square Error (RMSE) of about **0.6614**.
 
-Last month, [we tackled the Wine Quality Dataset with a variety of models]({filename}/(fast-and-easy-automl-optimize.md) and compared the results.
+Last month, [we tackled the Wine Quality Dataset with a variety of models]({filename}/fast-and-easy-automl-optimize.md) and compared the results.
 
 I capture the results table below:
 

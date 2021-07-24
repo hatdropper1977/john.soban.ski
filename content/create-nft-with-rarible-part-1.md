@@ -2,7 +2,7 @@ Title: Create Your First Non Fungible Token (NFT) with Rarible (Part 1)
 Date: 2021-02-28 10:26
 Author: john-sobanski
 Category: Coins
-Tags: Coins
+Tags: Coins, NFT, Rarible
 Slug: create-nft-with-rarible-part-1
 Status: published
 
@@ -161,7 +161,7 @@ You now have an account on Rarible with a username and Avatar picture.
 # Conclusion
 NFTs provide an exciting and fun investment vehicle.  With Rarible you can buy and manage digital creations.  At this point you can buy NFTs, which you will own in perpetuity.
 
-Since you have an account on Rarible and some Ethereum in your wallet, you may want to purchase some of my digital artwork.  I created [isometric pixel art of the Eames Lounge Chair and Ottoman](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537:0x011ffdd17a0232b017d51d9d7d29a936c36f0dfa) in MS paint.
+Since you have an account on Rarible and some Ethereum in your wallet, you may want to purchase some of my digital artwork.  Click this link to [buy my isometric pixel art on Rarible](https://rarible.com/sobanski?tab=created).
 
 ![For Sale]({filename}/images/Create_Nft_With_Rarible_Part_1/30_For_Sale.png)
 
