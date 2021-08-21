@@ -1,4 +1,4 @@
-Title: A Hand Crafted Exemplar Machine Learning Algorithm (Part 1 - Development)
+Title: A Handcrafted Exemplar Machine Learning Algorithm (Part 1 - Development)
 Date: 2021-08-21 02:34
 Author: john-sobanski
 Category: Data Science
