@@ -220,9 +220,9 @@ The normalized training set yields the following results:
 
 Approach | Dims | RMSE
 -|-|-
-DNN | 11 | 0.6483683
-Linear Model | 11 | 0.7061977
-Guess Mean | N/A | 0.8012159
+DNN | 11 | 0.648
+Linear Model | 11 | 0.706
+Guess Mean | N/A | 0.801
 
 The DNN blows the other two approaches out of the water.  
 
@@ -230,10 +230,10 @@ In the spirit of the prior blog post, we reduce the eleven features to two, via 
 
 Approach | Dims | RMSE
 -|-|-
-DNN | 11 | 0.6483683
-Linear Model | 11 | 0.7061977
-Linear Model | 2 | 0.7350416
-Guess Mean | N/A | 0.8012159
+DNN | 11 | 0.648
+Linear Model | 11 | 0.706
+Linear Model | 2 | 0.735
+Guess Mean | N/A | 0.801
 
 One principle component (dimension) depicts a poor fit for the regression line.  
 
@@ -263,12 +263,12 @@ When we reduce the dimensionality of the data set to seven, and apply the two al
 
 Approach | Dims | RMSE
 -|-|-
-Linear Model | 7 | 0.6327900
-DNN | 7 | 0.6449177 
-DNN | 11 | 0.6483683
-Linear Model | 11 | 0.7061977
-Linear Model | 2 | 0.7350416
-Guess Mean | N/A | 0.8012159
+Linear Model | 7 | 0.633
+DNN | 7 | 0.645
+DNN | 11 | 0.648
+Linear Model | 11 | 0.706
+Linear Model | 2 | 0.735
+Guess Mean | N/A | 0.801
 
 The dimensionality reduced Linear Model wins.
 
@@ -352,12 +352,12 @@ In summary, the **Google AutoML Tables Beta** service yields the best results:
 Approach | Dims | RMSE
 -|-|-
 AutoML Tables | 11 | 0.598
-Linear Model | 7 | 0.6327900
-DNN | 7 | 0.6449177 
-DNN | 11 | 0.6483683
-Linear Model | 11 | 0.7061977
-Linear Model | 2 | 0.7350416
-Guess Mean | N/A | 0.8012159
+Linear Model | 7 | 0.633
+DNN | 7 | 0.645
+DNN | 11 | 0.648
+Linear Model | 11 | 0.706
+Linear Model | 2 | 0.735
+Guess Mean | N/A | 0.801
 
 > NOTE: We achieved the best results with the least amount of work: Upload a CSV and click train!  
 
