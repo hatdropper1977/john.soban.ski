@@ -631,4 +631,4 @@ calc_success(test_df)
 ```
 
 # Conclusion
-In this blog post we developed an exemplar RCE neural net classifier from scratch.  Our initial attempt yielded a model with an F1 Score of **0.42** and ambiguity of **26.6%**.  Next month, we will tune hyperparameters in order to improve model success and reduce ambiguity.  We will investigate the number of principal components and tune **r**.  **r** indicates the maximum value for **Lambda** and puts an upper limit on the maximum size of each circle that represents a given **hit footprint**.
+In this blog post we developed an exemplar RCE neural net classifier from scratch.  Our initial attempt yielded a model with an F1 Score of **0.42** and ambiguity of **26.6%**.  [Next month]({filename}/rce-python-part-2.md), we will tune hyperparameters in order to improve model success and reduce ambiguity.  We will investigate the number of principal components and tune **r**.  **r** indicates the maximum value for **Lambda** and puts an upper limit on the maximum size of each circle that represents a given **hit footprint**.
