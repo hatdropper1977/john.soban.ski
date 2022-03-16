@@ -1,5 +1,5 @@
 Title: A Visual Guide To Forward Error Correction Part One: Block Codes
-Date: 2019-01-31 23:26
+Date: 2022-01-29 23:26
 Author: john-sobanski
 Category: IETF
 Tags: AFEC, Satellie Communications 
