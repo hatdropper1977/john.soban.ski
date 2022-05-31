@@ -64,7 +64,7 @@ After you fill out the form, click **Create Item**.
 
 ![Click Create]({filename}/images/Create_Nft_With_Rarible_Part_2/35_Click_Create.png)
 
-Rarible then connects to your Ethereum wallet to confirm your identity and funds.  The Mint process requires Ethernet ***gas***.  Expect to pay around seventy dollars USD ($70) to drive the minting.  You can try at different times of day to find a lower price.  The market drives the price.  Pay the gas and click **Confirm**.
+Rarible then connects to your Ethereum wallet to confirm your identity and funds.  The Mint process requires Ethereum ***gas***.  Expect to pay around seventy dollars USD ($70) to drive the minting.  You can try at different times of day to find a lower price.  The market drives the price.  Pay the gas and click **Confirm**.
 
 ![Confirm Fees]({filename}/images/Create_Nft_With_Rarible_Part_2/36_Confirm_Fees.png)
 

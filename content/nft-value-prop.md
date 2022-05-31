@@ -6,7 +6,7 @@ Tags: Coins, NFT, Rarible
 Slug: nft-value-prop
 Status: published
 
-NFTs provide an immutable record of ownership for digital assets, verified by the global Ethernet Blockchain.  The Blockchain tracks ownership of NFTs until the end of human civilization.
+NFTs provide an immutable record of ownership for digital assets, verified by the global Ethereum Blockchain.  The Blockchain tracks ownership of NFTs until the end of human civilization.
 
 2021 ushered in speculative mania in every conceivable investment and collecting category.  Real Estate, Stocks, Precious Metals, Comic Books, Pokemon Cards, Graded Video games and Crypto Currency hit all time highs (ATH), with some hitting a new ATH on a weekly basis.  Investors, bored from government imposed house arrest had more time and money (due to stimulus checks or lack of commuting fees) to gamble in high risk money plays.
 
@@ -122,9 +122,9 @@ Consider this on a smaller scale, where an indie artist gets verified on [Raribl
 She would have to go through the Rarible verification process once more, and alert buyers to the fact that she has two accounts (two signatures), one for pre-hack and one for post hack.  This fact would inject confusion into the collecting process.
 
 ## Downside 2: Gas
-NFTs ride the Ethernet blockchain.
+NFTs ride the Ethereum blockchain.
 
-An Artist must pay a fee to mint, auction or sell their NFT.  A buyer must pay a fee to bid on a piece or buy a piece.  The Ethernet standard calls this fee "gas."
+An Artist must pay a fee to mint, auction or sell their NFT.  A buyer must pay a fee to bid on a piece or buy a piece.  The Ethereum standard calls this fee "gas."
 
 From experience, I have paid $60-$80 to mint an NFT.  I paid $40 to bid on an NFT.  An indie artist may place an NFT for sale for $3, for example, but the buyer will have to pay over ten times that in order to cover gas.
 

@@ -6,7 +6,7 @@ Tags: AWS, Elasticsearch, HOWTO, Python
 Slug: aggregations-the-elasticsearch-group-by
 Status: published
 
-Elastic Architects designed the distributed Elasticsearch platform to follow NoSql principles.  In the traditional Relational Database Management System (RDBMS) world, SQL databases use [GROUP BY](https://www.w3schools.com/sql/sql_groupby.asp) syntax to group rows with similar values into summary rows. The query, "find the number of web page hits per country," for example, represents a typical **GROUP BY** operations.
+Elastic Architects designed the distributed Elasticsearch platform to follow NoSql principles.  In the traditional Relational Database Management System (RDBMS) world, SQL databases use [GROUP BY](https://www.w3schools.com/sql/sql_groupby.asp) syntax to group rows with similar values into summary rows. The query, **"find the number of web page hits per country,"** for example, represents a typical **GROUP BY** operation.
 
 Witness the following table, which records the number of hits to my site [John.Soban.ski](https://john.soban.ski), broken down by time zone.
 
@@ -23,7 +23,7 @@ Witness the following table, which records the number of hits to my site [John.S
 |France|Europe/Paris|3682|
 
 
-We can further summarize the table to record "hits per country" via a **GROUP BY** operation.  This operation collapses the Timezones into their parent countries.
+We can further summarize the table to record **"hits per country"** via a **GROUP BY** operation.  This operation collapses the Timezones into their parent countries.
 
 ```sql
 SELECT COUNTRY, SUM(HITS) FROM timezone_hits GROUP BY COUNTRY;
@@ -124,7 +124,7 @@ I recommend that you learn the **aggs** API.  This allows you to command Elastic
 # Aggs
 
 ## Simple Tables 
-In the upper right corner of Kibana, selct the appropriate time range.
+In the upper right corner of Kibana, select the appropriate time range.
 
 ![Select Time]({filename}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
 

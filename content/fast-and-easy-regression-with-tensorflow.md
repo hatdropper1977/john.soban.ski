@@ -200,7 +200,7 @@ sgot | 24.4 | 10.2
 gammagt | 38.0 | 37.5
 drinks | 3.4 | 3.4
 
-Notice that for **drinks**, our target (label), **25&#956; = &#x3A3; = 3.4**.
+Notice that for **drinks**, our target (label),** &#956; = &#x3C3; = 3.4**.
 
 We already looked at the density plot for **drinks**.  We now plot the **histograms** of the features.
 

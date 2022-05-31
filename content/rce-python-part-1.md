@@ -14,7 +14,7 @@ The **nearest neighbor** classifier represents the most popular and widely used 
 
 In this blog post, I will develop Python code to implement a lesser known **exemplar** classifier, Reduced Columb Energy (RCE).
 
-The RCE algorithm assigns a class to **test** data based on weather or not the data points live inside **hit footprints** of **training** data.
+The RCE algorithm assigns a class to **test** data based on whether or not the data points live inside **hit footprints** of **training** data.
 
 ![2d RCE Map]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
 

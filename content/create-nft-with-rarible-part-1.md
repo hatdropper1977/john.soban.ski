@@ -86,7 +86,7 @@ Select **Directly Deposit Ether** and then click **View Account**.
 
 ![Select Deposit]({filename}/images/Create_Nft_With_Rarible_Part_1/14_Select_Deposit.png)
 
-MetaMask now provides you with your Ethernet wallet address.  Copy this address.  You will send Ethereum to this address.
+MetaMask now provides you with your Ethereum wallet address.  Copy this address.  You will send Ethereum to this address.
 
 ![Copy Address]({filename}/images/Create_Nft_With_Rarible_Part_1/15_Copy_Address.png)
 
@@ -152,7 +152,7 @@ Fill out your profile and Upload a picture.
 
 ![Config Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/28_Config_Profile.png)
 
-Once you click **submit**, MetaMask will prompt you for a **Sign** request.  MetaMask will use your private key to digitally sign the update request and post the change to the Ethernet blockchain.
+Once you click **submit**, MetaMask will prompt you for a **Sign** request.  MetaMask will use your private key to digitally sign the update request and post the change to the Ethereum blockchain.
 
 ![Sign Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/29_Sign_Profile.png)
 
