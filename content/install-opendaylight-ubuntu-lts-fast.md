@@ -21,6 +21,8 @@ Internet Service Providers, Cloud Service Providers, Data Center Engineers and A
      *  Bandwidth costs money and consumers get angry if they can't watch Netflix.  Your cable provider wants to keep you happy so their nerds find ways to use every inch of glass laid across the country (and under the sea).  They move traffic (network packets) around to avoid "traffic jams" and prioritize certain data flows (e.g. 911 calls) so that they can break through all of the cat memes.  OpenDaylight lends a helping hand.
   *  Visibility and Control
      *  Metrics help ISPs and companies make decisions about upgrades.  Find out, for example, if you need to drop half a million on that new refrigerator sized BGP router.  The OpenDaylight dashboards don't lie!
+
+> UPDATE:  Click [here]({filename}/install-opendaylight-ubuntu-lts-22-04.md) to [install OpenDaylight on Ubuntu LTS 22.04]({filename}/install-opendaylight-ubuntu-lts-22-04.md)
   
 I've compiled the following instructions to help Engineers and Software developers get up and running on ODL quickly and efficiently.  This HOWTO collects the quickest method to install OpenDaylight with all features and includes instructions on how to install legacy versions.  
 
@@ -259,3 +261,5 @@ opendaylight-user@root>feature:list
 You now have the knowledge and experience to install any **release** version of OpenDaylight with all the **karaf features**.  If you would like a challenge, you can try some more complicated methods of install, to include [building OpenDaylight from Source]({filename}/how-to-install-opendaylight-on-centos-or-ubuntu.md) or [installing OpenDaylight as a Service]({filename}/how-to-install-opendaylight-as-a-service-on-ubuntu.md).
 
 You might also want to check out the demonstration I gave at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia.  I uploaded the slides to [SlideShare](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) and the Linux Foundation uploaded the video to [YouTube](https://www.youtube.com/watch?v=PGl43xJQQ0g).
+
+> UPDATE:  Click [here]({filename}/install-opendaylight-ubuntu-lts-22-04.md) to [install OpenDaylight on Ubuntu LTS 22.04]({filename}/install-opendaylight-ubuntu-lts-22-04.md)
