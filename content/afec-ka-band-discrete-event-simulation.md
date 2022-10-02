@@ -2,7 +2,7 @@ Title: Discrete Event Simulation (DES) of an Adaptive Forward Error Correction (
 Date: 2021-07-31 01:58 
 Author: john-sobanski
 Category: IETF
-Tags: AFEC, Satellie Communications, DES, Octave
+Tags: AFEC, Satellite Communications, DES, Octave
 Slug: afec-ka-band-discrete-event-simulation
 Status: published
 
