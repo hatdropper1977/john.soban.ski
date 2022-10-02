@@ -6,15 +6,13 @@ Tags: Jasper, Machine Learning
 Slug: jasper-ai
 Status: published
 
-Machine Learning (ML) Engineers at Jasper Artificial Intelligence (AI) trained a Natural Language Processing (NLP) model on 10% of the written content on the Internet to create a service that writes text on command.  A user feeds the model a sentence or two requesting a topic and the service spits out paragraphs.  The end user tunes the service, approving or disapproving each new paragraph and guides the writing through the addition of keywords.
+Machine Learning (ML) Engineers at [Jasper Artificial Intelligence (AI)](https://jasper.ai?fpr=sobanski) trained a Natural Language Processing (NLP) model on 10% of the written content on the Internet to create a service that writes text on command.  A user feeds the model a sentence or two requesting a topic and the service spits out paragraphs.  The end user tunes the service, approving or disapproving each new paragraph and guides the writing through the addition of keywords.
 
-I had [Jasper](https://www.jasper.ai/) write the introduction paragraph to this blog post.  I fed it only the title (above) of this blog post and the service produced three candidate introduction paragraphs.  The **best** one follows:  
+I had [Jasper](https://jasper.ai?fpr=sobanski) write the introduction paragraph to this blog post.  I fed it only the title (above) of this blog post and the service produced three candidate introduction paragraphs.  The **best** one follows:  
 
 > Would you like to have a computer write your blog posts for you? Jasper AI can do that! Just input your topic and Jasper will take care of the writing for you. No more worrying about whether you can write an interesting or engaging post - let Jasper take care of that for you. So why not give it a try? You may be surprised at just how well Jasper can write!
 
-[Jasper](https://www.jasper.ai/) also integrates with the machine learning driven [Surfer AI](https://surferseo.com/) service, which provides guidance to the Jasper user on how to maximize Search Engine performance.  In this blog post, I will demonstrate how to quickly use Jasper and Surfer together to write an effective, [Search Engine Optimized (SEO)](https://en.wikipedia.org/wiki/Search_engine_optimization) blog post.
-
-> NOTE:  I did not receive any compensation from Jasper or Surfer for this blog post
+[Jasper](https://jasper.ai?fpr=sobanski) also integrates with the machine learning driven [Surfer AI](https://surferseo.com/) service, which provides guidance to the [Jasper](https://jasper.ai?fpr=sobanski) user on how to maximize Search Engine performance.  In this blog post, I will demonstrate how to quickly use Jasper and Surfer together to write an effective, [Search Engine Optimized (SEO)](https://en.wikipedia.org/wiki/Search_engine_optimization) blog post.
 
 # Get Started
 Jasper uses a [Software as a Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) approach to get its AI into the hands of end users.  You just need to sign into the WebSite and put in your credit card information.
@@ -48,11 +46,11 @@ I decide to try the cheaper option for my Proof of Concept.
 # Use a Template
 The **starter** plan allows use of the Jasper templates.  
 
-I select the **Blog Post Intro Paragraph** template.  I want Jasper to write a blog post on [Decentralized Finance](https://en.wikipedia.org/wiki/Decentralized_finance), so I feed it the title **Decentralized Finance Drives Freedom**.
+I select the **Blog Post Intro Paragraph** template.  I want [Jasper](https://jasper.ai?fpr=sobanski) to write a blog post on [Decentralized Finance](https://en.wikipedia.org/wiki/Decentralized_finance), so I feed it the title **Decentralized Finance Drives Freedom**.
 
 ![Intro Paragraph]({filename}/images/Jasper_Ai/08_Intro_Paragraph.png)
 
-I click **Generate** and Jasper produces the following text:
+I click **Generate** and [Jasper](https://jasper.ai?fpr=sobanski) produces the following text:
 
 > It's no secret that the world is becoming increasingly digitized. In fact, DeFi may be one of the most important aspects of this digital revolution. DeFi allows for a new level of freedom and autonomy that has never been seen before. With DeFi, users are in control of their own finances, and can transact without the need for permission from centralized authorities. This is a huge step forward in terms of financial freedom and censorship resistance. As DeFi continues to grow in popularity, it will become an increasingly important part of our global economy.
 
@@ -235,8 +233,8 @@ DeFi enables a number of financial transactions, such as lending, borrowing, tra
 In conclusion , DeFi is a financial system that runs on decentralized infrastructure and offers users more freedom and control over their finances. DeFi has the potential to revolutionize the way we interact with money and could eventually replace traditional financial institutions.
 
 # Final Thoughts
-Jasper provides an Artificial Intelligence service that produces contents for massive search engine algorithms.  With Jasper, you have a robot writing for robots.
+[Jasper](https://jasper.ai?fpr=sobanski) provides an Artificial Intelligence service that produces contents for massive search engine algorithms.  With Jasper, you have a robot writing for robots.
 
 While (at present time) I do not recommend Jasper for polished technical content nor scientific papers writing I do recommend it to anyone who works in an industry that needs traffic.  The Jasper + Surfer combination produces easy to read blog posts in a casual voice with minimal effort and minimal time.
 
-For fun, I may start an ancillary hobby blog on a Pop Culture topic, and then jot down titles and bullet points on that topic and then feed those notes into Jasper to get an insta-website.
+For fun, I may start an ancillary hobby blog on a Pop Culture topic, and then jot down titles and bullet points on that topic and then feed those notes into [Jasper](https://jasper.ai?fpr=sobanski) to get an insta-website.
