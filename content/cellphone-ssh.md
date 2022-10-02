@@ -14,7 +14,7 @@ This month I demonstrate how to configure both an Amazon Web Services (AWS) Elas
 
 ## Launch a Server and Retrieve a Key 
 Your SSH client requires the appropriate [Privacy Enhanced Mail (PEM)](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) key associated with your server.  If you do not have a PEM key, I will quickly explain how to retrieve one upon server launch.  
-u
+
 I recommend you follow these steps on the cellphone that you wish to use for SSH communications.
 
 First, sign into the AWS console at [aws.amazon.com](https://aws.amazon.com).  You can either enter the email address of your root account (not recommended), or enter your account alias.
