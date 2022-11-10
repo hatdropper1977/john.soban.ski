@@ -29,6 +29,8 @@ The following outline records the steps necessary to install OpenDaylight on Ubu
   5.  Create a ***systemd*** service configuration file
   6.  Install and enable the ***systemd*** OpenDaylight service
 
+[![Jasper AI Robot]({filename}/images/jasper.png)](https://www.jasper.ai/free-trial?fpr=sobanski)
+
 ## Prepare operating system
 Run an ***apt-get*** update to ensure that your server receives all of the most recent security and application packages.
 
