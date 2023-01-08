@@ -28,7 +28,7 @@ The city depresses Hopkins. He writes to Bridges:
 > The state of the country [England] is indeed sad, I might say it is heartbreaking, for I am a very great patriot. Lamentable as the condition of Ireland is, there is hope of things mending, but the Transvaal is an unrelieved disgrace. And people do not seem to mind (Bridges 131)
 
 ## Elusive Muse
-But Hopkins faces more than just literal death caused by the city. Hopkins' City also leads to creative death. Hopkins finds that his “muse eludes [him] in urban physical surroundings” (Thesing 386). Martin reiterates verbatim at two points of his biography that Hopkins feels “dried out by cities, spiritually and poetically” (325 & 335). Hopkins subscribes to the tenet that “urban work and poetic creation seem to be antagonistic or at best mutually exclusive” (Thesing 388). He feels that the “horrible place,” the city, exists to “stifle” creative endeavors (Bridges 126).
+But Hopkins faces more than just literal death in the city. Hopkins' city also leads to creative death. Hopkins finds that his “muse eludes [him] in urban physical surroundings” (Thesing 386). Martin reiterates verbatim at two points of his biography that Hopkins feels “dried out by cities, spiritually and poetically” (325 & 335). Hopkins discovers that “urban work and poetic creation seem to be antagonistic or at best mutually exclusive” (Thesing 388). The “horrible place,” the city, exists to “stifle” creative endeavors (Bridges 126).
 
 ![Victorian Dublin]({filename}/images/Gerard_Manley_Hopkins_1/04_Victorian_Dublin.png)
 
@@ -51,9 +51,9 @@ St. Beuno’s surrounds Hopkins with more nature than any locale and thus fills 
 
 The nature around him provides a great muse and drives him to write “approximately one third of all his mature poetry” (Martin 261). This period of his life marks copious poems that celebrate the wonders of Nature. For example, in “Spring,” he writes “Nothing is so beautiful as Spring / When weed, in wheels, shoot long and lovely and lush; / Thrush’s eggs look little low heavens...” (1-3).
 
-Notice how Hopkins compares “eggs” to “heavens” (3). On the surface, eggs look like clouds, or “low heavens” (3). But Hopkins’ choice of the word **heaven** over a secular synonym implies a patent connection between God and Nature. Hopkins, during this period of his life, feels a connection between God and nature. During this time of his career that Hopkins embraces the connection between God and Nature without question. He sees no need for burdening skepticism or deconstruction.
+Notice how Hopkins compares “eggs” to “heavens” (3). On the surface, eggs look like clouds, or “low heavens” (3). But Hopkins’ choice of the word **heaven** over a secular synonym implies a patent connection between God and Nature. Hopkins, during this period of his life, feels a connection between God and nature. Hopkins embraces the connection between God and Nature without question. He sees no need for burdening skepticism or deconstruction.
 
-Martin writes, “almost more than at any other time in his career, [Hopkins] seems totally at home with the connection of God and nature, content to accept and praise it without, as Keats almost said, any ***irritable reaching after fact and reason*** To put it in Hopkins’ own terms, he never seems to have been so happily engulfed in unquestioning faith” (262: Italics Mine). Hopkins equates God and Nature in “God’s Grandeur,” when he writes “the world is charged with the grandeur of God” (1) and says that “nature is never spent” because “the Holy Ghost over the bent / World broods with warm breast and with ah! bright wings” (13-14). Since Hopkins believes in a connection between Nature and God during this period in his life, an attack against nature presents obvious, grander implications.
+Martin writes, “almost more than at any other time in his career, [Hopkins] seems totally at home with the connection of God and nature, content to accept and praise it without, as Keats almost said, any ***irritable reaching after fact and reason***. To put it in Hopkins’ own terms, he never seems to have been so happily engulfed in unquestioning faith” (262: Italics Mine). Hopkins equates God and Nature in “God’s Grandeur,” when he writes “the world is charged with the grandeur of God” (1) and says that “nature is never spent” because “the Holy Ghost over the bent / World broods with warm breast and with ah! bright wings” (13-14). Since Hopkins believes in a connection between Nature and God during this period in his life, an attack against nature presents obvious, grander implications.
 
 Over time, the relationship between nature and the divine evolves and becomes more complex for Hopkins. Instead of seeing a “one-to-one” mapping between Nature and God, he sees in Nature a functionary analogous to rosary beads or holy water. Hopkins sees in Nature a divine element that can atone for Humankind’s sins. He sees Nature “[wipe] out in daily reassertion of the sanctity of the external [natural] world” Humankind's “worst ravages, moral and physical” (Martin 303). 
 
@@ -64,13 +64,13 @@ The city reduces Mankind in Hopkins’ estimation on multiple levels. To Hopkins
 
 ![City Vice]({filename}/images/Gerard_Manley_Hopkins_1/08_City_Vice.png)
 
-Hopkins sees how cities reduce humankind on spiritual, intellectual, and physical planes. These illustrations lead Hopkins to lose his hope for humankind.
+Hopkins sees the city degrade men on spiritual, intellectual, and physical planes. These observations lead Hopkins to lose his hope for humankind.
 
 Spiritually speaking, the city breeds human degeneracy and filth. Its suffocating machinations destroy the would-be pious, allowing the immoral weeds of humanity to flourish. Hopkins’ city experiences include a string of exposures to the most base products of the modem city. These patterns of depravity sap both his faith in humanity and desire to live. He writes:
 
 > My Liverpool and Glasgow experience laid upon my mind a conviction, a truly crushing conviction, of the misery of town life to the poor and more than to the poor, of the misery of the poor in general, of the ***degradation even of our race, of the hollowness of this century’s civilization***: it made even life a burden to me to have daily thrust upon me the things I saw (Correspondence 97: Italics Mine)
 
-The “things” that Hopkins “sees” constantly in the city include unloved, disheveled children, prostitutes, and an array of public displays of immorality. The proximity of his Oxford residence includes “an oasis in which was to be found ... children begging or selling matches” and “omnipresent tramps and drunks” (Martin 369). 
+The “things” that Hopkins “sees” constantly in the city include unloved, disheveled children, prostitutes, and an array of public displays of immorality. Near his Oxford residence lies “an oasis in which was to be found ... children begging or selling matches” and “omnipresent tramps and drunks” (Martin 369). 
 
 ![Victorian Drunks]({filename}/images/Gerard_Manley_Hopkins_1/09_Victorian_Drunks.png)
 
@@ -94,7 +94,7 @@ Hopkins also witnesses questionable actions taken by “the dominant Catholic mi
 
 Hopkins also witnesses intellectual decline in the city. Hopkins loves learning for its own sake. Unfortunately, when he tries to impart this love for knowledge to his Dublin students, he learns that the “facts that they could repeat in examinations” interest them more than “the play of the intellect”  (Martin 375). The city, or more accurately a product of the city, “the small rising Irish middle class,” holds a “utilitarian attitude to education... as a passport to careers and respectability.” This attitude kills the desire for a liberal education amongst Hopkins’ students. Daly writes “intellectual curiosity in the classics was the preserve of [but] a few” (102). Martin writes “luminous idealism ...had long since evaporated” in the classroom, with “Irish politics now seem[ing] more important than Greek philosophy or even Christian theology” (375).
 
-Hopkins’ students see no utility in his classical subjects and feel “no compulsion to listen to him,” instead “talk(ing), laugh[ing] and creat[ing] a constant disturbance” (Martin 376). The students have so little respect for Hopkins and his intellectual endeavors that they actually drag him “around the table by his heels to demonstrate Hector’s fate at Troy” (377). 
+Hopkins’ students see no utility in his classical subjects and feel “no compulsion to listen to him,” instead “talk[ing], laugh[ing] and creat[ing] a constant disturbance” (Martin 376). The students have so little respect for Hopkins and his intellectual endeavors that they actually drag him “around the table by his heels to demonstrate Hector’s fate at Troy” (377). 
 
 ![Students_Tackle]({filename}/images/Gerard_Manley_Hopkins_1/11_Students_Tackle.png)
 
@@ -107,6 +107,8 @@ The city also produces a physical decline in the modem man, which angers Hopkins
 Bristow states that Hopkins “adores the male body,” thereby explaining Hopkins’ indignation at its reduction (695). He also says how Hopkins equates something of the divine in a muscular body, stressing how Hopkins has “concern with the spiritually enhanced muscularity of the laborer” (695).
 
 Modem man’s failure to live up to his potential physically, spiritually, and intellectually reduces his worth in Hopkins’ eyes. A letter to Robert Bridges, recounting his feelings during a parade of horses in Liverpool illustrates his disgust towards modem man. Hopkins writes, “while admir[ing] the handsome horses I remark for the thousandth time with sorrow and loathing the base and bespotted figures of the Liverpool crowd... as I look about them it fills me with shame and wretchedness” (Bridges 127-8).   An often-quoted letter to bridges best illustrates Hopkins' view of modern man. He writes “the drunkards go on drinking, the filthy, as the scriptures say, filthy still; human nature is so inveterate. Would that I had seen the last of it" (Bridges 126).
+
+[Click Here for Part Two]({filename}/gerard-manley-hopkins-2.md)
 
 # Works Cited:
 -  Abrams, M.H [ed.]. *The Norton Anthology of English Literature: Volume Two*. 6th ed. New York: W.W. Norton & Company, 1993.

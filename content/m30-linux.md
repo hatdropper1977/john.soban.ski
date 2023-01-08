@@ -127,20 +127,8 @@ The Emulator will then load your 8BitDo M30 Configuration for the Mega Drive.
 
 ![M30 Connected]({filename}/images/M30_Linux/06_M30_Connected.png)
 
-## Batman Forever 
-Acclaim entertainment released the video game **Batman Forever**, based on the hit movie of the same name, in 1995.  Acclaim unleashed the game onto multiple consoles.  The Genesis, SNES, Gameboy, Game Gear and Sega CD each received a version.  
-
-Acclaim used very expensive (at the time) motion capture technology to create photo-realistic sprites.  They overlaid the sprites on the Mortal Kombat engine and plopped the characters into a Metroidvania style open world/ exploratory level design.
-
-Critics (and fans) hate the game, I consider it an underappreciated Gem, if not masterpiece!  I played countless hours of Mortal Kombat back in the 90s and love the idea of (1) Playing Batman and (2) Breaking out of the limited Mortal Kombat levels into a huge world with jumps and platforms.
-
-Batman Forever uses the Sega Genesis six button controller, with Mortal Kombat style high attacks, low attacks and a block button.  Batman Forever also includes a button for the Bat Grapple Gun.
-
-![Batman Forever]({filename}/images/M30_Linux/07_Batman_Forever.png)
-
-When I load Batman Forever, I find that RetroPie defaults to the three button controller.
-
-I found a way to use the six button controller.
+## Quick Menu
+If emulationstation defaults to a three button controller, use the **Quick Menu** to force a six button controller configuration. 
 
 First, press the **Guide Button**, which looks like the checkboard Vans sneakers worn by Jeff Spiccoli.
 
@@ -170,7 +158,26 @@ RetroPie now displays the correct controller.
 
 Press the **G Button** to escape the menu and start your game!
 
+## Batman Forever 
+I recommend **Batman Forever** for the Sega Genesis.  
+
+![Batman Forever]({filename}/images/M30_Linux/07_Batman_Forever.png)
+
+I play my copy in High Definition on my [Analogue SG](https://www.analogue.co/mega-sg).  You can buy a used [Batman Forever cart on ebay](https://www.ebay.com/sch/i.html?_nkw=batman+forever+genesis) (clean link, non-affiliate) for around ten bucks.
+
+![Batman Forever!]({filename}/images/M30_Linux/15_Analogue_Sg.png)
+
+Acclaim entertainment released the video game **Batman Forever**, based on the hit movie of the same name, in 1995.  Acclaim unleashed the game onto multiple consoles.  The Genesis, SNES, Gameboy, Game Gear and Sega CD each received a version.  
+
 ![Batman Forever!]({filename}/images/M30_Linux/14_Batman_Forever.png)
+
+Acclaim used very expensive (at the time) motion capture technology to create photo-realistic sprites.  They overlaid the sprites on the Mortal Kombat engine and plopped the characters into a Metroidvania style open world/ exploratory level design.
+
+![Batman Forever!]({filename}/images/M30_Linux/16_Wata_Batman.png)
+
+Critics (and fans) hate the game, I consider it an underappreciated Gem, if not masterpiece!  I played countless hours of Mortal Kombat back in the 90s and love the idea of (1) Playing Batman and (2) Breaking out of the limited Mortal Kombat levels into a huge world with jumps and platforms.
+
+Batman Forever uses the Sega Genesis six button controller, with Mortal Kombat style high attacks, low attacks and a block button.  Batman Forever also includes a button for the Bat Grapple Gun.
 
 # Conclusion
 RetroPie stands in first place on the leaderboard of emulator platforms.  RetroPie turns Raspberry Pi into a retro game console. RetroPie comes pre-loaded with many popular emulators, and provides a simple interface for gamers to add more. RetroPie developers created a great interface for gamers to navigate and play games with ease. RetroPie provides the option to add custom buttons to the controller for specific functions (e.g. rewind the game, save states).

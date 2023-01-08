@@ -10,6 +10,8 @@ The City fuels Hopkins' sense of failure. The City provokes him to lose faith in
 
 ![The Beast]({filename}/images/Gerard_Manley_Hopkins_2/01_The_Beast.png)
 
+> NOTE: [Click here for part one](gerard-manley-hopkins-1.md) if you missed it last month
+
 # No Worst, There is None
 The poem “No Worst, There is None” expresses Hopkins' pain and depression caused by his and society’s failings. This “Terrible Sonnet” imparts a grim mood and desolate tone:
 
