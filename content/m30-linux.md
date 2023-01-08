@@ -128,7 +128,7 @@ The Emulator will then load your 8BitDo M30 Configuration for the Mega Drive.
 ![M30 Connected]({filename}/images/M30_Linux/06_M30_Connected.png)
 
 ## Quick Menu
-If emulationstation defaults to a three button controller, use the **Quick Menu** to force a six button controller configuration. 
+If RetroPie defaults to a three button controller, use the **Quick Menu** to force a six button controller configuration. 
 
 First, press the **Guide Button**, which looks like the checkboard Vans sneakers worn by Jeff Spiccoli.
 
