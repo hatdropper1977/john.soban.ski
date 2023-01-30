@@ -4,13 +4,15 @@ Author: john-sobanski
 Category: Literature
 Tags: Literature, Hopkins, Jasper
 Slug: gerard-manley-hopkins-3
-Status: draft
+Status: published
 
 Hopkins refers to a “year” of “done darkness.”  1885 marks this year, the year Hopkins wrote “[Carrion Comfort].”  For Hopkins, 1885 includes “encroaching derangement” that consumes him (Harris 12). 
 
 ![No Worst]({filename}/images/Gerard_Manley_Hopkins_3/01_No_Worst.png)
 
 Harris calls Hopkins’ situation “a recurrence of the melancholia” he experiences in 1866 (12). Harris says how Hopkins uses the prose “fits of sadness” which “resemble madness” to refer to “melancholia” (12). The year in which Hopkins “lay wrestling” with God, therefore, marks madness, a madness of depression induced by the City (14).
+
+> [Click Here]({filename}/gerard-manley-hopkins-1.md) to read [Part 1]({filename}/gerard-manley-hopkins-1.md) or [here]({filename}/gerard-manley-hopkins-2.md) to read [Part 2]({filename}/gerard-manley-hopkins-2.md)
 
 # I Wake and Feel the Fell of Dark, Not Day
 Hopkins also deals with City-induced madness and depression in his “I Wake and Feel the Fell of Dark, Not Day.” 
@@ -32,7 +34,7 @@ Lines two and three tease us. The past tense of these two lines insinuates the n
 
 ![The Fear]({filename}/images/Gerard_Manley_Hopkins_3/04_The_Fear.png)
 
-The verb “saw” in line three conveys that, despite the darkness, Hopkins sees the “sights” of night. He sees and registers all of the atrocities of the night that give him pain. As Ellis writes, “darkness does not bring blessed blindness...the heart must instead ‘see’ only too clearly the horrors besetting its dark journeyings [sic]” (283).
+The verb “saw” in line three conveys that, despite the darkness, Hopkins sees the “sights” of night. He sees and registers all of the atrocities of the night that give him pain. Ellis writes, “darkness does not bring blessed blindness...the heart must instead ‘see’ only too clearly the horrors besetting its dark journeyings [sic]” (283).
 
 Hopkins uses “fell” in both the title and the first line of the poem. “Fell” to the common reader elicits notions of felled trees. With this definition, we read that God fells darkness (like a tree), and the weight falls on Hopkins. MacKenzie, however, points out that those classically educated in the manner of Hopkins recognize “fell”  to define a type of “skin or hide (from the Greek word ***pellis***)” (MacKenzie 181). 
 
@@ -66,7 +68,7 @@ In the Sextet, Hopkins analyzes the physicality of his prison, and compares it t
 > 13  The lost are like this, and their scourge to be  
 > 14  As I am mine, their sweating selves; but worse.  
 
-Hopkins tastes his own physicality, he dines on his “flesh” and “blood” and “sour dough” of spirit in a perversion of the Eucharist (Ellis 286). Digestion or rather indigestion produces “Gall” and “Heartburn.” His autocannibalism (flesh-eating) sickens him, which symbolizes an act of sin. “God’s most deep decree” does not contradict the earlier sentiment that God doesn’t sentence Hopkins to a mental prison. Rather, Hopkins says that God decrees him to a predisposition for sin because God creates his “fleshy vessel of sin” in the first place (Ellis 286). Hopkins builds the mental prison to punish his sin. 
+Hopkins tastes his own physicality, he dines on his “flesh” and “blood” and “sour dough” of spirit in a perversion of the Eucharist (Ellis 286). Digestion or rather indigestion produces “Gall” and “Heartburn.” His autocannibalism (flesh-eating) sickens him, which symbolizes an act of sin. Hopkins says that God decrees him to a predisposition for sin because God creates his “fleshy vessel of sin” in the first place (Ellis 286). Hopkins builds the mental prison to punish his sin. 
 
 ![Mental Prison]({filename}/images/Gerard_Manley_Hopkins_3/07_Mental_Prison.png)
 
@@ -152,7 +154,7 @@ Hopkins atones and humbles himself in the presence of God at the end of the sonn
 > 13  Delicious kindness?—He is patient. Patience fills  
 > 14  His crisp combs, and that comes those ways we know.  
 
-Counter to the first Stance, he now “not only asks but in a sense humbly orders God to master his will— ‘Yet the rebellious wills / Of us we do bid God bend to him even so’ —and is willing to undergo the death-to-life that patience seems to involve and demand” (Ellis 293). 
+Counter to the first stanza, he now “not only asks but in a sense humbly orders God to master his will— ‘Yet the rebellious wills / Of us we do bid God bend to him even so’ —and is willing to undergo the death-to-life that patience seems to involve and demand” (Ellis 293). 
 
 The sonnet, however, still ends unresolved. The question Hopkins asks in lines 9-10 “where is he who more and more distills / Delicious kindness?” remains unanswered.
 
