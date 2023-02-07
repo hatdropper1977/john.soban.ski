@@ -146,7 +146,8 @@ Please post in the comments at the end of this blog post (below) if you run into
 
 Release | Version | Year | Month
 ----------|--------|-----|------
-[Sulfur](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.16.1/karaf-0.16.1.zip) | 0.16.1 | 2022 | Jun
+[Chlorine](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.17.2/karaf-0.17.2.zip) | 0.17.2 | 2023 | Jan
+[Sulfur](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.16.3/karaf-0.16.3.zip) | 0.16.3 | 2022 | Dec
 [Phosphorus](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.15.3/karaf-0.15.3.zip) | 0.15.3 | 2022 | May
 [Silicon](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.14.4/karaf-0.14.4.zip) | 0.14.4 | 2022 | Jan
 [Aluminum](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.13.4/karaf-0.13.4.zip) | 0.13.4 | 2021 | Jun
