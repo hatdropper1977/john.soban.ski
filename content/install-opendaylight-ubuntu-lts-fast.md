@@ -41,8 +41,6 @@ I crafted this HOWTO to minimize the time it takes for you to install OpenDaylig
 - [Click here if you would like to build OpenDaylight from Source]({filename}/how-to-install-opendaylight-on-centos-or-ubuntu.md)
 - [Click here to learn how to install OpenDaylight as a Service]({filename}/how-to-install-opendaylight-as-a-service-on-ubuntu.md)
 
-[![Jasper AI Robot]({filename}/images/jasper.png)](https://www.jasper.ai/free-trial?fpr=sobanski)
-
 ## 1. Prepare operating system
 Update your operating system, applications and security tools through the **apt** package manager.
 

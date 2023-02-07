@@ -19,7 +19,7 @@ DEFAULT_LANG = 'en'
 
 DEFAULT_PAGINATION = 25
 
-CATEGORY_URL = 'category/{slug}'
+CATEGORY_URL = 'category/{slug}/index.html'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 
 TAG_SAVE_AS = 'tag/{slug}.html'
@@ -47,8 +47,8 @@ TWITTER_USERNAME = 'SkiSoban'
 
 MENUITEMS = (
              ('Fork me on GitHub!', 'https://github.com/hatdropper1977/john.soban.ski'),
-             ('AWS Architecture', '/category/howto'),
-             ('Coins', '/category/coins'),
-             ('Data Science', '/category/data-science'),
-             ('Protocols', '/category/ietf'),
+             ('AWS Architecture', '/category/howto/index.html'),
+             ('Coins', '/category/coins/index.html'),
+             ('Data Science', '/category/data-science/index.html'),
+             ('Protocols', '/category/ietf/index.html'),
 )

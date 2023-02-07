@@ -42,8 +42,6 @@ Even though Elasticsearch does not use the **row** construct to identify a unit 
 
 The Elasticsearch API provides an expressive REST API to execute **Aggregations**.  Kibana also provides a Graphical User Interface (GUI) to execute **Aggregations**.  We will demonstrate both methods in this blog post.
 
-[![Jasper AI Robot]({filename}/images/jasper.png)](https://www.jasper.ai/free-trial?fpr=sobanski)
-
 # Aside 1: Get Cloudfront logs into Elasticsearch
 I ingested my AWS Cloudfront logs from S3 into Elasticsearch using Logstash.  I first set up an Elasticsearch cluster using the method I recorded in last mont's blog post, which describes [how to use Boto3 to connect an Ubuntu EC2 instance to the Amazon Elasticsearch Service]({filename}/boto3-ec2-to-amazon-elasticsearch.md).
 

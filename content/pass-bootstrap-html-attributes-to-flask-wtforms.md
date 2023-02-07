@@ -18,8 +18,6 @@ In this blog post you will:
   -   Tweak the appearance of the web page using a Flask-WTF macro
   -   Tweak the appearance of the web page using a Flask-Bootstrap method
 
-[![Jasper AI Robot]({filename}/images/jasper.png)](https://www.jasper.ai/free-trial?fpr=sobanski)
-
 # The Baseline App
 The following code shows the baseline Flask application, which uses "quick\_form" to render the form's web page. Keep in mind that this application doesn't do anything, although you can easily extend it to persist data using an [ORM](https://www.sqlalchemy.org/) (for example). I based the web app on the following Architecture:
 
