@@ -8,8 +8,13 @@ SITEURL = 'https://john.soban.ski'
 HEADER_COVER = 'images/elenabsl_shutterstock.jpg'
 COLOR_SCHEME_CSS = 'monokai.css'
 
-GOOGLE_ANALYTICS = 'UA-72207340-3'
+# Old Universal Analytics (UA)
+#GOOGLE_ANALYTICS = 'UA-72207340-3'
 
+# New Google Analytics 4  (GA-4)
+GOOGLE_ANALYTICS ='G-68ZKCSR3PQ'
+
+CATEGORY_FEED_ATOM = None
 
 PATH = 'content'
 
@@ -21,6 +26,7 @@ DEFAULT_PAGINATION = 25
 
 CATEGORY_URL = 'category/{slug}/index.html'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+#CATEGORIES_SAVE_AS = 'categories.html'
 
 TAG_SAVE_AS = 'tag/{slug}.html'
 TAGS_SAVE_AS = 'tags.html'
