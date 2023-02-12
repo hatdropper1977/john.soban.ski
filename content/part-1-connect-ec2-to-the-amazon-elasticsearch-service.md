@@ -10,7 +10,7 @@ Status: published
 
 Step one of our journey connects [EC2](https://aws.amazon.com/ec2/) to ES using the Amazon [boto](https://aws.amazon.com/sdk-for-python/) Python library. I spent more than a few hours pouring through the AWS help docs and pounding at my keyboard on my instances to figure out the easiest and most direct method to accomplish this. As of writing this blog, I found no decent HOWTO online on how to connect EC2 to the [AWS provided ES](https://aws.amazon.com/elasticsearch-service/) so I put my chin up and started swinging. If you find that this article helps you to quickly get your job done, then please write a comment below (Even if it's just "thanks dude!") .
 
-![Howto]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/howot1.png)
+![Howto]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/howot1.png)
 
 One more caveat before we begin. You need to trust me that the [IAM](https://aws.amazon.com/iam/) role approach below will make your life easy. It's a quick, "pull of the bandaid" method that will save you a ton of headaches and troubleshooting. Unfortunately, the IAM role method has two downsides (1) It appears boring and complicated so your mind come up with reasons to skip it in order to [comfort your precious ego](https://en.wikipedia.org/wiki/Defence_mechanisms) (No offense, my mind pulls the same crap and I am not nearly as smart as you) and (2) It uses JSON, which to the uninitiated also appears boring and complicated. All I ask of you is twenty seconds of courage, to read my IAM instructions (which I spent hours simplifying), copy and paste and move on! Your alternatives (1) Copy and Paste your AWS credentials or (2) Use the old "Allow by IP" hack appear to be much simpler, but after the most basic integrations become maddeningly difficult and time wasting, if not impossible.
 
@@ -25,27 +25,27 @@ Note:  This blog post assumes you know how to [SSH into an EC2 instance.](http
 
 Amazon makes Elasticsearch deployment a snap.  Just click the Elasticsearch Service icon on your management screen:
 
-![Console]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/AWS-Management-Console-300x222.png)
+![Console]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/AWS-Management-Console-300x222.png)
 
 Then click "New Domain."
 
-![Console]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Amazon-Elasticsearch-Service-Management-Console-1024x440.png)
+![Console]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Amazon-Elasticsearch-Service-Management-Console-1024x440.png)
 
 Name your domain "test-domain" (Or whatever).
 
-![Service MGMT]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Amazon-Elasticsearch-Service-Management-Console-2-1024x590.png)
+![Service MGMT]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Amazon-Elasticsearch-Service-Management-Console-2-1024x590.png)
 
 Keep the defaults on the next screen "Step 2: Configure Cluster."  Just click "next."   On the next screen, select: "Allow or deny access to one or more AWS accounts or IAM users".  (Resist the temptation to "Allow by IP" ).
 
-![Set up access]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/set_up_access-1024x569.png)
+![Set up access]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/set_up_access-1024x569.png)
 
 Amazon makes security easy as well.  On the next menu they list your ARN.  Just copy and paste it into the text field and hit "next."
 
-![User Access]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/User-Access-1024x623.png)
+![User Access]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/User-Access-1024x623.png)
 
 AWS generates the JSON for your Elasticsearch service:
 
-![ES JSON]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/es_json-1024x374.png)
+![ES JSON]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/es_json-1024x374.png)
 
 Click "Next" and then "confirm and create."
 
@@ -57,19 +57,19 @@ OK, deep breath.  Just follow me and you will confront your IAM fears.
 
 First, select "Identity and Access Management" from the AWS access console.
 
-![IAM Menu]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_menu-300x190.png)
+![IAM Menu]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_menu-300x190.png)
 
 On the Dashboard, click "roles."
 
-![Roles]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/roles-139x300.png)
+![Roles]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/roles-139x300.png)
 
 Next, click "create new role."  I like to name the roles something obvious.  Since we want to grant an EC2 instance (i.e. a Linux server) access to Amazon services, I picked the name "EC2\_Can\_Use\_Services."
 
-![Name the service role]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/name_the_role-1024x314.png)
+![Name the service role]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/name_the_role-1024x314.png)
 
 On the next screen, Amazon asks you to select from popular roles.  Click on the first one "Allow EC2 instances to call AWS services on your behalf."
 
-![Select role type]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_role_type-1024x529.png)
+![Select role type]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_role_type-1024x529.png)
 
 You're almost done!  Just click through the next menu "Attach Policy." 
 
@@ -79,11 +79,11 @@ We will worry about that in the next section.  Just click "Next Step" and then 
 
 Now at the IAM Management dashboard, select "Policies."
 
-![Select Policy]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_policy-116x300.png)
+![Select Policy]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_policy-116x300.png)
 
 Then, select "create policy" and then "create your own policy."
 
-![Create Policy]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_create_policy-1024x596.png)
+![Create Policy]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/select_create_policy-1024x596.png)
 
 Name your policy "Can\_CRUD\_Elasticsearch," add a description and then copy and paste the following JSON into the "Policy Document:"  
 
@@ -108,23 +108,23 @@ Name your policy "Can\_CRUD\_Elasticsearch," add a description and then copy and
 
 If you click "Validate Policy," you will receive a message that it works.  If you see "the policy is valid," click "create policy."
 
-![Validate]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/reveiw_policy-1024x532.png)
+![Validate]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/reveiw_policy-1024x532.png)
 
 **2.3 Attach your Policy**
 
 Go back to the Role you created, "EC2\_Can\_Use\_Services," and click "attach policy."
 
-![Attach]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/attach_policy-1024x552.png)
+![Attach]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/attach_policy-1024x552.png)
 
 Now, in the search bar, type "CRUD" and you will see the Policy you just created, "Can\_CRUD\_Elasticsearch."  Click this policy and then click "Attach Policy."
 
-![Attach]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/attach_policy2-1024x459.png)
+![Attach]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/attach_policy2-1024x459.png)
 
 **2.4 Trust Elasticsearch**
 
 Now it's time for your victory lap! After you click "attach policy," AWS takes you back to the IAM Role dashboard.  From here, click the "Trust Relationship" tab and click "Edit Trust Relationships."
 
-![Edit Trust]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/edit_trust_relationships-1024x460.png)
+![Edit Trust]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/edit_trust_relationships-1024x460.png)
 
 <!-- HTML generated using hilite.me -->Now edit the JSON to reflect the JSON below.  You can copy and paste the JSON into the "Policy Document" field.
 
@@ -146,7 +146,7 @@ Now it's time for your victory lap! After you click "attach policy," AWS takes y
 
 After you click "update trust relationship," your IAM Role Dashboard will read as follows:
 
-![IAM Role Done]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
+![IAM Role Done]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
 
 Congrats!  You made it through the hardest part!!!
 
@@ -155,7 +155,7 @@ Congrats!  You made it through the hardest part!!!
 
 You can only attach an IAM role at instance creation.  So, we will need to launch a brand new EC2 instance (no biggie).  From the AWS Management Console, click EC2 and then "Launch Instance."
 
-![Launch an EC2]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Launch_an_EC2-300x264.png)
+![Launch an EC2]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/Launch_an_EC2-300x264.png)
 
 In "Step 1: Choose an AMI Instance," select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type."
 
@@ -163,7 +163,7 @@ In "Step 2: Choose an Instance Type" select t2.micro.
 
 Now, this part is very important, in Step 3, be sure to pick your IAM role.
 
-![Apply IAM Role]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/apply_IAM_role-1024x569.png)
+![Apply IAM Role]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/apply_IAM_role-1024x569.png)
 
 Now click "Review and Launch" and then launch.  AWS will take a few minutes to launch the instance.
 
@@ -210,7 +210,7 @@ Notice that the shell prompt lists the name of your virtual environment (connect
 
 Go back to the AWS Management console, click the Elasticsearch service and copy the address for your endpoint.
 
-![ES Endpoint]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/es_endpoint-1024x562.png)
+![ES Endpoint]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/es_endpoint-1024x562.png)
 
 Now, edit the following Python script with your Endpoint address for "host."  
 

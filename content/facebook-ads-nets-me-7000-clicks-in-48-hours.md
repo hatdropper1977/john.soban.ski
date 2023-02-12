@@ -6,7 +6,7 @@ Tags: Big Data Personality Test, Data Science
 Slug: facebook-ads-nets-me-7000-clicks-in-48-hours
 Status: published
 
-![Kibana]({filename}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/Visualize-Kibana-4-1024x517.png)
+![Kibana]({static}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/Visualize-Kibana-4-1024x517.png)
 
 For my (post) masters project on machine learning and [big data infrastructure]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md) I thought it would be fun to acquire my own data set.  Last semester I traded available services and architected a scalable (big data) Internet facing survey infrastructure using a combination of [Amazon Web Services](https://aws.amazon.com/) and [Python](https://www.python.org/).  I had my friends send me (sometimes silly) survey questions and put them on my site.  After an initial flury of "friends of friends" taking the survey, my traffic died down to zero.
 
@@ -20,10 +20,10 @@ To summarize the experience, you simply click "Create Ad,"  pick some demograph
 
 A quick note.  Of the 4.75k test takers I had two skeptics that think I'm a front for some political entity or some other nefarious institution.  I assure you that I am putting together this data set for my (post) masters college project.  Also, [as I said before]({filename}/why-a-big-data-personality-test.md) if by some miracle I make any money off this, I will donate it to charity!  For the time being, with the infrastructure and advertising I'm a couple grand in the hole and forsee a couple grand more.  I am paying for this out of my own pocket.  Where do I get the money, you ask?  Easy... by selling my childhood on ebay!
 
-![Selling Childhood Transformers]({filename}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/Screenshot_2016-01-25-15-30-50-640x1024.jpg)
+![Selling Childhood Transformers]({static}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/Screenshot_2016-01-25-15-30-50-640x1024.jpg)
  
 * * * * *
 
 UPDATE:  I posted this blog entry at 2:04 AM yesterday.  Since I posted this blog, the market opened and Facebook stock went up 15.5%.  I take full credit for this jump:
 
-![Stock Bump]({filename}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/fb-1024x956.png)
+![Stock Bump]({static}/images/Facebook_Ads_Nets_Me_7000_Clicks_in_48_Hours/fb-1024x956.png)
