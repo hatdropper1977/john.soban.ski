@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 SITENAME = 'John Sobanski'
 SITEURL = 'https://john.soban.ski'
 #SITEURL = 'http://52.54.218.55:8000'
-HEADER_COVER = 'images/elenabsl_shutterstock.jpg'
+HEADER_COVER = 'images/city5.png'
 COLOR_SCHEME_CSS = 'monokai.css'
 
 # Old Universal Analytics (UA)
