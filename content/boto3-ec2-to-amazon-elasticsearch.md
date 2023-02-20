@@ -226,13 +226,13 @@ Note that you need to install the proper version of the **Elasticsearch** client
 In the case of **7.4** I simply type:
 
 ```bash
-$ pip install 'elasticsearch>=7.0.0,<8.0.0'
+$ pip install 'elasticsearch>=7.0.0,<7.14'
 ```
 
 Install all of the required packages into your virtual environment:
 
 ```bash
-(connect_to_es) ubuntu@ip-172-31-52-51:~/connect_to_es$ pip install boto3 requests requests-aws4auth 'elasticsearch>=7.0.0,<8.0.0'
+(connect_to_es) ubuntu@ip-172-31-52-51:~/connect_to_es$ pip install boto3 requests requests-aws4auth 'elasticsearch>=7.0.0,<7.14'
 ```
 
 A **pip freeze** writes the installed packages to the screen:
