@@ -74,7 +74,7 @@ In the past, we would [install a Java Runtime Environment (JRE)]({filename}/inst
 
 The Java foundation switched gears with Java 11, however, and no longer provides a JRE.  They encourage developers to create their own **JRE** based on need.
 
-Oracle owns the Java foundation and [writes](https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html):
+Oracle owns the Java foundation and [writes](https://www.oracle.com/java/technologies/javase/11-relnote-issues.html):
 
 > In this release, the JRE or Server JRE is no longer offered. Only the JDK is offered. Users can use **jlink** to create smaller custom runtimes.
 

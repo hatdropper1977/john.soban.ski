@@ -6,7 +6,7 @@ Tags: Coins, ENS, IPFS, NFT, Rarible, Darkblock
 Slug: crypto-website
 Status: published
 
-The free and open [Ethereum](https://ethereum.org) platform delivers the following benefits to developers and end-users:
+The free and open [Ethereum](https://ethereum.org/en/) platform delivers the following benefits to developers and end-users:
 
 -  Impervious to censorship
 -  Native payment system
