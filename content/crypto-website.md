@@ -14,7 +14,7 @@ The free and open [Ethereum](https://ethereum.org) platform delivers the followi
 -  Global, anonymous login
 -  100% Uptime
 
-This blog post demonstrates how to use [InterPlanetary File System (IPFS)](https://ipfs.io) with [Ethereum Name Service (ENS)](https://ens.domains) to host a static website on the Ethereum platform.
+This blog post demonstrates how to use [InterPlanetary File System (IPFS)](https://ipfs.tech) with [Ethereum Name Service (ENS)](https://ens.domains) to host a static website on the Ethereum platform.
 
 In this demo we will:
 
@@ -77,9 +77,9 @@ OpenSea pulls your account info directly from the blockchain.  Right now we do n
 After we get some digital assets in our new wallet, however, we will look at several dApps to demonstrate the global nature of the Ethereum blockchain.  Also, later in this post, we will change the string of hex (**0x84916411a80C9C60AD3433A26aEe49805239Bd04**) that records our Ethereum wallet's address to a human-readable name via the [Ethereum Name Service](https://ens.domains).
 
 # Publish to InterPlanetary File System (IPFS)
-The [InterPlanetary File System (IPFS)](https://ipfs.io) provides a massive, decentralized, distributed file system.  Think of an [Amazon Web Service (AWS) Simple Storage Service (S3)](https://aws.amazon.com/s3/) owned and maintained by the public, vs. a trillion dollar company. (To my stickler nerd friends - the IPFS protocol acts closer in spirt to AWS [CloudFront](https://aws.amazon.com/cloudfront) vs. AWS S3).
+The [InterPlanetary File System (IPFS)](https://ipfs.tech) provides a massive, decentralized, distributed file system.  Think of an [Amazon Web Service (AWS) Simple Storage Service (S3)](https://aws.amazon.com/s3/) owned and maintained by the public, vs. a trillion dollar company. (To my stickler nerd friends - the IPFS protocol acts closer in spirt to AWS [CloudFront](https://aws.amazon.com/cloudfront/) vs. AWS S3).
 
-Each IPFS user hosts and receives data, following a protocol similar to [Napster](https://us.napster.com) back in the day.  To use IPFS, you must first download and install the IPFS client.  The [IPFS website](https://ipfs.io/#install) provides a desktop client for Windows, Linux and Mac.
+Each IPFS user hosts and receives data, following a protocol similar to [Napster](https://en.wikipedia.org/wiki/Napster) back in the day.  To use IPFS, you must first download and install the IPFS client.  The [IPFS website](https://ipfs.tech/#install) provides a desktop client for Windows, Linux and Mac.
 
 ![Install Ipfs]({filename}/images/Crypto_Website/10_Install_Ipfs.png)
 
@@ -126,8 +126,6 @@ To see the website, click the ellipses next to your uploaded web folder and then
 
 ![Share Link]({filename}/images/Crypto_Website/15_Share_Link.png)
 
-[https://ipfs.io/ipfs/QmQG4Pwkuwz3JV1b5ocrD3ZzXkVM2iuZqWxPvmHPZwR2j5](https://ipfs.io/ipfs/QmQG4Pwkuwz3JV1b5ocrD3ZzXkVM2iuZqWxPvmHPZwR2j5)
-
 Paste this link into any browser to see your website.  Keep in mind that IPFS takes dozens of minutes to catch up.
 
 # Create an NFT
@@ -135,7 +133,7 @@ The Ethereum blockchain records both our Ethereum account's actions and our Ethe
 
 Let's create and sell an NFT to add some interesting history to our account.
 
-[OpenSea](https://opensea.io) and [Rarible]({filename}/create-nft-with-rarible-part-1.md) both provide a dApp to create [NFT's]({tag}nft). In OpenSea, for example, click [Create Item](https://opensea.io/asset/create).
+[OpenSea](https://opensea.io) and [Rarible]({filename}/create-nft-with-rarible-part-1.md) both provide a dApp to create [NFT's]({tag}nft). In OpenSea, for example, click **Create Item**.
 
 ![Create Item]({filename}/images/Crypto_Website/17_Create_Item.png)
 
@@ -191,7 +189,7 @@ OpenSea used the Ethereum blockchain to mint, manage and sell my NFT.  Other dAp
 In a Web 2.0 Architecture, OpenSea, Rarible and Darkblock would each have their own database to track NFT creation, logistics and permissions.  In the Web 3.0 (how long will that name stick?) construct, all three dApps use the same **database** for their back-ends... the Ethereum Blockchain.
 
 # Ethereum Name Service (ENS)
-The Internet Domain Name Service (DNS) maps human-readable names to Internet Protocol Addresses.  [John.Soban.Ski](https://john.soban.ski), for example, points to the IP address [65.9.83.48](https://nslookup.io/dns-records/john.soban.ski).
+The Internet Domain Name Service (DNS) maps human-readable names to Internet Protocol Addresses.  [John.Soban.Ski](https://john.soban.ski), for example, points to the IP address [65.9.83.48](https://www.nslookup.io/domains/john.soban.ski/dns-records/).
 
 In a similar manner, the [Ethereum Name Service (ENS)](https://ens.domains) maps our forty character Ethereum wallet address to a human readable name.  I will demonstrate this in action.
 
@@ -230,7 +228,7 @@ I can use Etherscan to profile my wallet using either my hex address (**0x849164
 # Decentralized Website Hosting
 Our IPFS website (above) lives on the decentralized, distributed, global IPFS file share. We will configure ENS to serve up the content of our IPFS website via a Content ID (CID) number.  The IPFS desktop client provides a Content ID (CID) for the website we launched.
 
-[ipfs://bafybeia4rjakzczwxbjllzcsx5h3wjmk6qy3hohkxwfwkvgqqjyebry7jq](ipfs://bafybeia4rjakzczwxbjllzcsx5h3wjmk6qy3hohkxwfwkvgqqjyebry7jq)
+**bafybeia4rjakzczwxbjllzcsx5h3wjmk6qy3hohkxwfwkvgqqjyebry7jq**
 
 To link this CID to our domain name, we must paste this CID in the **Content** section of ENS.  This tells ENS to map **gdit.eth** to the website hosted on IPFS.
 
@@ -251,4 +249,4 @@ Append **.link** to the end of Ethereum domains to use an IPFS proxy and access 
 # Conclusion
 In this demo we used two dApps to host a static website.  Our [website](https://gdit.eth.link) now reaps the benefits of the Ethereum ecosystem, including zero censorship, 100% availability, global reach and immutability.  
 
-If you enjoyed this blog post please click on some of the tags below to find similar content, or check out my NFT's on [Rarible](https://rarible.com/sobanski).
+If you enjoyed this blog post please click on some of the tags below to find similar content, or check out my NFT's on [Rarible](https://rarible.com/sobanski/owned).

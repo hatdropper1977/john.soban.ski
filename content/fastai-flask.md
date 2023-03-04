@@ -23,7 +23,7 @@ You enter your credit card and then click "run."
 
 ![Enter your credit card]({filename}/images/Fastai_Flask/02_Pay.png)
 
-Unfortunately, as of August 31st, 2019, [Crestle no longer provides their service to the public](https://doc.ai/blog/crestleai-transition-enterprise-model/).
+Unfortunately, as of August 31st, 2019, Crestle no longer provides their service to the public.
 
 > As the platform and its usage continues to evolve, we've decided to move Crestle.ai to an Enterprise model. This means that as of August 31, 2019, the service will no longer be available to individual participants.
 
