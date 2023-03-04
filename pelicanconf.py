@@ -25,12 +25,11 @@ DEFAULT_LANG = 'en'
 
 DEFAULT_PAGINATION = 25
 
-#CATEGORY_URL = 'category/{slug}/index.html'
-#CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+AUTHORS_SAVE_AS = 'authors.html'
 
 CATEGORY_URL = 'cat/{slug}.html'
 CATEGORY_SAVE_AS = 'cat/{slug}.html'
-#CATEGORIES_SAVE_AS = 'categories.html'
+CATEGORIES_SAVE_AS = 'categories.html'
 
 TAG_SAVE_AS = 'tag/{slug}.html'
 TAGS_SAVE_AS = 'tags.html'
@@ -56,6 +55,7 @@ DISQUS_SITENAME = 'freshlex'
 TWITTER_USERNAME = 'SkiSoban'
 
 MENUITEMS = (
+             ('Archives', '/archives.html'),
              ('Fork me on GitHub!', 'https://github.com/hatdropper1977/john.soban.ski'),
              ('AWS Architecture', '/cat/howto.html'),
              ('Coins', '/cat/coins.html'),
