@@ -263,4 +263,4 @@ When you launch the notebook, AWS will run the upgrade script.
 
 ![Python Pandas]({filename}/images/Sagemaker_Upgrade_Pandas/09_Pet_Python.png)
 
-Note:  I created the Panda/ Python artwork with [Jasper AI Art](https://www.jasper.ai/art?fpr=sobanski), see workflow [here]({filename}/jasper-art.md)
+Note:  I created the Panda/ Python artwork with Jasper AI Art, see workflow [here]({filename}/jasper-art.md)

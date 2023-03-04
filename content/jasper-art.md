@@ -8,7 +8,7 @@ Status: published
 
 I use the new Jasper Artificial Intelligence (AI) Art service to create the pictures in this blog post.
 
-[Jasper AI Art](https://jasper.ai/art?fpr=sobanski), for example, creates the following picture of the **World's Largest Turnip**.
+[Jasper AI Art](https://jasper.ai/art) (non-affiliate link), for example, creates the following picture of the **World's Largest Turnip**.
 
 ![The World's Largest Turnip]({filename}/images/Jasper_Art/00_Big_Turnip.png)
 
@@ -36,13 +36,13 @@ OpenAI invites the [public to use DALLE-2](https://labs.openai.com/auth/signup),
 You can try the API for free via [Huggingface](https://huggingface.co/spaces/dalle-mini/dalle-mini), or [Crayon](https://www.craiyon.com/), but (in July 2022) these services take minutes to produce images.  Jasper AI Art reduces the **wall clock** time down to seconds.
 
 # Jasper AI Art
-[Dave Rogenmoser](https://techcrunch.com/2022/10/18/ai-content-platform-jasper-raises-125m-at-a-1-7b-valuation/), J.P. Morgan and Chris Hull formed [Jasper AI](https://jasper.ai?fpr=sobanski) in early 2021. Since then, [Jasper AI](https://jasper.ai?fpr=sobanski) provides the GPT-3 model for [copywriting and Search Engine Optimization (SEO)]({filename}/jasper-ai.md) use cases.
+[Dave Rogenmoser](https://techcrunch.com/2022/10/18/ai-content-platform-jasper-raises-125m-at-a-1-7b-valuation/), J.P. Morgan and Chris Hull formed Jasper AI in early 2021. Since then, Jasper AI provides the GPT-3 model for [copywriting and Search Engine Optimization (SEO)]({filename}/jasper-ai.md) use cases.
 
-This month, Jasper opens their [Jasper Art](https://jasper.ai/art?fpr=sobanski) service to their customers.
+This month, Jasper opens their Jasper Art service to their customers.
 
 Jasper Art provides an easy-to-use interface to DALLE-2, and accelerates the image generation process to seconds.
 
-I use the [Jasper Art](https://jasper.ai/art?fpr=sobanski) service to create the following pictures.
+I use the Jasper Art service to create the following pictures.
 
 Fight Club Simpsons.
 
@@ -65,7 +65,7 @@ Too much baby powder!!!
 ![Too much baby powder!!!]({filename}/images/Jasper_Art/07_Too_Much.png)
 
 # Sign Up
-[Jasper](https://jasper.ai/?fpr=sobanski) sent me an invitation to try their new **Art** service.  They boast that **artificial intelligence now can create any image or art you can imagine in seconds**.
+Jasper sent me an invitation to try their new **Art** service.  They boast that **artificial intelligence now can create any image or art you can imagine in seconds**.
 
 ![Email]({filename}/images/Jasper_Art/09_Jasper_Email.png)
 
@@ -239,7 +239,7 @@ Finally, I just type **Ai Yiii Yiii Yiii** into the box.
 ![Ai Yiii Yiii Yiii]({filename}/images/Jasper_Art/42_Ayiii_Yiiyiii.png)
 
 # Conclusion
-I will use the [Jasper Art Service](https://jasper.ai/art?fpr=sobanski) to illustrate future blog posts.  I have writeups on Gerard Manley Hopkins and Yukio Mishima in the works that need interesting pictures.
+I will use the Jasper Art Service to illustrate future blog posts.  I have writeups on Gerard Manley Hopkins and Yukio Mishima in the works that need interesting pictures.
 
 I recommend the service for any small (or big) business that needs to create compelling pictures beyond stock art.  The services provide an inexpensive and timely alternative to hiring graphic artists.
 
