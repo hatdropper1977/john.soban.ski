@@ -14,7 +14,7 @@ I had Jasper write the introduction paragraph to this blog post.  I fed it only 
 
 Jasper also integrates with the machine learning driven [Surfer AI](https://surferseo.com/) (non-affiliate link) service, which provides guidance to the Jasper user on how to maximize Search Engine performance.  In this blog post, I will demonstrate how to quickly use Jasper and Surfer together to write an effective, [Search Engine Optimized (SEO)](https://en.wikipedia.org/wiki/Search_engine_optimization) blog post.
 
-# Get Started
+## Get Started
 Jasper uses a [Software as a Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) approach to get its AI into the hands of end users.  You just need to sign into the WebSite and put in your credit card information.
 
 ![Splash Screen]({filename}/images/Jasper_Ai/01_Splash_Screen.png)
@@ -43,7 +43,7 @@ I decide to try the cheaper option for my Proof of Concept.
 
 ![Pay Money]({filename}/images/Jasper_Ai/07_Pay_Money.png)
 
-# Use a Template
+## Use a Template
 The **starter** plan allows use of the Jasper templates.  
 
 I select the **Blog Post Intro Paragraph** template.  I want Jasper to write a blog post on [Decentralized Finance](https://en.wikipedia.org/wiki/Decentralized_finance), so I feed it the title **Decentralized Finance Drives Freedom**.
@@ -70,7 +70,7 @@ I also barf at the [passive voice](https://dilbertblog.typepad.com/the_dilbert_b
 
 I don’t blame Jasper too much, since I assume most of the Internet includes sloppy text, and Jasper trained the NLP model on 10% of the Internet.
 
-# Recipes
+## Recipes
 Jasper provides **recipes** to help content creators write more than an intro (or concluding) paragraph.
 
 ![Try Recipe]({filename}/images/Jasper_Ai/09_Try_Recipie.png)
@@ -101,7 +101,7 @@ Since I already have my Credit Card out, I also pay $59 for [Surfer SEO](https:/
 
 ![Pay Boss]({filename}/images/Jasper_Ai/13_Pay_Boss.png)
 
-# Create a Document
+## Create a Document
 Now that I paid the big bucks, Jasper rolls out the red carpet for me.
 
 It provides a wizard to hold my hand through the blog writing process.
@@ -123,7 +123,7 @@ Jasper provides a half dozen or so candidate titles.
 
 Once I select a title, Jasper spits out the intro paragraph.
 
-# Integrate Search Engine Optimization
+## Integrate Search Engine Optimization
 The target audience for Jasper writes blog posts for traffic.  Search Engine Optimization (SEO) tools maximize the return on (writing) investment in terms of increased traffic.  Surfer SEO provides a SaaS and integrates with Jasper AI.
 
 ![Create Surfer]({filename}/images/Jasper_Ai/16_Create_Surfer.png)
@@ -153,7 +153,7 @@ For example, when I place the cursor under **What exactly is DeFi?**, type the s
 
 I then have Jasper **compose** paragraphs for the remaining paragraph headers.
 
-# Tune SEO Effectiveness
+## Tune SEO Effectiveness
 Surfer provides a **word quota**, with recommended words and phrases that feed the hungry search engine algorithms.  The service colors each Phrase: Green indicates **acceptable**, Yellow indicates **needs work** and Red indicates **absent**. 
 
 ![Word Quota]({filename}/images/Jasper_Ai/20_Word_Quota.png)
@@ -173,27 +173,27 @@ You can see that I peppered in a lot of the phrases, turning them green
 
 ![Lotsa Green]({filename}/images/Jasper_Ai/24_Lotsa_Green.png)
 
-# Write Conclusion
+## Write Conclusion
 Jasper encourages you to update the “Content” box on the left side of the pane, to nudge the service a bit.  I type in **Write a concluding paragraph** into the content box, enter seed words into the document and then hit compile.
 
 ![Write Conclusion]({filename}/images/Jasper_Ai/25_Write_Conclusion.png)
 
 Jasper then writes a conclusion for me.
 
-# The Document
+## The Document
 I now present the AI written document for you:
 
-## Decentralized Finance: The Future of Freedom
+### Decentralized Finance: The Future of Freedom
 It's no secret that the world is becoming increasingly digitized. In fact, Decentralized Finance (DeFi) may be one of the most important aspects of this digital revolution. DeFi allows for a new level of freedom, liberty and autonomy that has never been seen before. With Decentralized Finance, users are in control of their own finances, and can execute financial transactions without the need for permission from centralized authorities or a centralized exchange. This is a huge step forward in terms of financial freedom and censorship resistance. As Decentralized Finance continues to grow in popularity, it will become an increasingly important part of our global economy.
 
-### What exactly is DeFi?
+#### What exactly is DeFi?
 Decentralized Finance (DeFi)  is a financial system that runs on decentralized infrastructure, such as the Ethereum blockchain. Peer to Peer DeFi protocols are built on top of Ethereum and allow users to interact with each other and create financial products without the need for a central authority. This means that DeFi is censorship-resistant and cannot be shut down by any single entity.  DeFi work includes the ability to use open source software to create a loan, set interest rates, earn interest or manage digital assets.
 
 Defi applications can be used for a variety of purposes, such as lending, borrowing, trading,  investing and flash loans. By using DeFi applications, users can have full control over the digital money in their bank account. DeFi also has the potential to provide a more level playing field for financial services, as it is accessible to anyone with an Internet connection.
 
 The DeFi ecosystem is still in its early stages, but it is growing rapidly. In 2019, the total value locked in DeFi applications was about $675 million. As of September 2020, that number has grown to over $13 billion. This rapid growth is indicative of the strong demand for decentralized applications and financial products.
 
-### What Contributed to the growth of Decentralized Finance?
+#### What Contributed to the growth of Decentralized Finance?
 There are a few factors that drive the growth of Decentralized Finance applications.
 
 First, the DeFi ecosystem is built on Ethereum, which is the most popular smart contract platform. This gives Decentralized Finance applications a large potential user base, as there are over 50 million Ethereum users.
@@ -202,37 +202,37 @@ Second, DeFi applications offer a variety of features and benefits that appeal t
 
 Third, DeFi is becoming increasingly popular due to its censorship-resistant nature. In a traditional financial system, central authorities can censor or shut down applications at will. However, DeFi applications are built on decentralized infrastructure, which makes them much more resistant to censorship.
 
-### What is a DeFi in crypto?
+#### What is a DeFi in crypto?
 DeFi in crypto is decentralized and open source, which allows for more  freedom and transparency. DeFi in crypto is built on trustless smart contracts, which eliminates the need for central authorities. This makes DeFi in crypto censorship-resistant and immune to shutdowns.
 
 DeFi in crypto has the potential to provide a more level playing field for financial services, as it is accessible to anyone with an Internet connection. DeFi in crypto also has the potential to reduce costs and increase efficiency by eliminating the need for intermediaries.
 
-### Is DeFi a good investment?
+#### Is DeFi a good investment?
 In terms of investing, DeFi is still in its early stages and there are no guarantees. However, DeFi does offer a number of advantages over traditional financial systems. For example, DeFi applications often have lower fees and faster transaction speeds. DeFi also offers users more control over their finances, which can be beneficial in times of market volatility.
 
 Overall, DeFi is still a relatively new phenomenon and there are no guarantees as to its future success. However, DeFi does offer a number of advantages over traditional financial systems and has the potential to revolutionize the way we interact with money.
 
-### What is the difference between DeFi and crypto?
+#### What is the difference between DeFi and crypto?
 Crypto is a digital or virtual asset that uses cryptography to secure its transactions. DeFi is a financial system that runs on decentralized infrastructure, such as the Ethereum blockchain. DeFi applications are built on top of Ethereum and allow users to interact with each other without the need for a central authority.
 
 Crypto assets can be used for a variety of purposes, such as investing, trading, and paying for goods and services. DeFi applications can be used for a variety of purposes, such as lending, borrowing, trading, and investing.
 
-### Can financial institutions stop DeFi?
+#### Can financial institutions stop DeFi?
 Central financial institutions can stop DeFi applications by shutting down the servers or blocking the IP addresses. However, DeFi is built on decentralized infrastructure, which makes it much more resistant to censorship. DeFi applications are also open source, so they can be copied and distributed freely. This makes it difficult for central authorities to shut them down without causing a significant amount of backlash.
 
-### What are liquidity pools?
+#### What are liquidity pools?
 Liquidity pools are a type of DeFi application that allow users to pool their funds together and make loans. This can be beneficial for both lenders and borrowers, as it allows them to get better rates and longer terms. Liquidity pools also offer increased liquidity, as they can provide access to a larger pool of funds.
 
-### What is word freedom?
+#### What is word freedom?
 Word freedom is the ability to use DeFi applications without the need for a central authority. DeFi applications are built on decentralized infrastructure, which makes them much more resistant to censorship. DeFi also offers users more control over their finances, as they are not reliant on centralized authorities.
 
-### What kind of Financial Transactions does DeFi enable?
+#### What kind of Financial Transactions does DeFi enable?
 DeFi enables a number of financial transactions, such as lending, borrowing, trading, and investing. 
 
-### Conclusion
+#### Conclusion
 In conclusion , DeFi is a financial system that runs on decentralized infrastructure and offers users more freedom and control over their finances. DeFi has the potential to revolutionize the way we interact with money and could eventually replace traditional financial institutions.
 
-# Final Thoughts
+## Final Thoughts
 Jasper provides an Artificial Intelligence service that produces contents for massive search engine algorithms.  With Jasper, you have a robot writing for robots.
 
 While (at present time) I do not recommend Jasper for polished technical content nor scientific papers writing I do recommend it to anyone who works in an industry that needs traffic.  The Jasper + Surfer combination produces easy to read blog posts in a casual voice with minimal effort and minimal time.
