@@ -8,9 +8,9 @@ Status: published
 
 In this blog post you will deploy your own personal Kraken terminal using the InfluxDB Cloud 2.0 platform.  With this terminal you can quickly filter data, plot data and apply math.  The first section provides a **Hello World** project to get up and running with the InfluxDB Cloud 2.0 API and platform.  The second section includes scripts to plumb and store Kraken exchange ticker information.
 
-# InfluxDB Cloud 2.0 Hello World
+## InfluxDB Cloud 2.0 Hello World
 
-## Introduction
+### Introduction
 [InfluxDB Cloud 2.0](https://www.influxdata.com/products/influxdb-cloud-2-0/) provides an integrated **Time Series Database** Platform as a Service (PaaS) with the following features:
 
  - Free (rate limited) tier
@@ -21,7 +21,7 @@ In this blog post you will deploy your own personal Kraken terminal using the In
  
 ![InfluxDB Logo]({filename}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
 
-## Sign Up
+### Sign Up
 Go to the [beta signup](https://cloud2.influxdata.com/beta/signup) page and enter your email address.
 
 ![Sign up]({filename}/images/Influx_Cloud_2_Kraken/01_Signup.png) 
@@ -42,9 +42,9 @@ Once you verify, InfluxDB will take you to the welcome screen.
 
 Leave the defaults and click **continue**.
 
-## Configure Platform
+### Configure Platform
 
-### Create a Bucket
+#### Create a Bucket
 Create a bucket to store data for analytics and plots.
 
 From the main control panel, click **settings**.
@@ -63,7 +63,7 @@ You will need to set the retention period to three or less days in order to use 
 
 ![Save Retention Period]({filename}/images/Influx_Cloud_2_Kraken/07_Save_Retention_Period.png) 
 
-### Generate a Token
+#### Generate a Token
 A token enables programmatic access to your InfluxDB Cloud 2.0 Platform API.
 
 Click **Generate** on the **Tokens** Tab.
@@ -80,7 +80,7 @@ Click **Copy to Clipboard** and save the token in a local file.
 
 Your Python script (found in the following sections) requires this token.
 
-### Find your Org Name
+#### Find your Org Name
 You will find the Org Name in the upper left corner of your console.
 
 You can also find it under the **Org Profile** tab.
@@ -93,9 +93,9 @@ In the following examples, I will use **your@email.com** in order to stave off s
 
 You will need the **Org Name** in order to hit the InfluxDB Cloud 2.0 platform API.
 
-## Hello World Workflow
+### Hello World Workflow
 
-### Put Data
+#### Put Data
 The following script creates an InfluxDB data point encoded in the Influx [line protocol](https://docs.influxdata.com/influxdb/v1.7/write_protocols/).
 
 The script includes a measurement (foo), a tag (bar) key/value pair and a field (anum) key/value pair.
@@ -145,7 +145,7 @@ Run the script a handful of times to push the data.
 
 If the script executes smoothly, you should see a response code of **204**, which means **no response**.
 
-## Get Data
+### Get Data
 I constructed a **Get** script to get the data.
 
 Once more, edit the **globals** to match your information.
@@ -195,7 +195,7 @@ Execute the script to see the data you just pushed to your bucket.
 
 The script returns data in Comma Separated Value (CSV) format.
 
-### Plot Data
+#### Plot Data
 You can now plot the data you stored.
 
 In your console, click **Data Explorer**.
@@ -212,7 +212,7 @@ Execute the script from your laptop/ server a few more times and then refresh th
 
 ![Second Plot]({filename}/images/Influx_Cloud_2_Kraken/14_Second_Plot.png) 
 
-# Kraken Terminal
+## Kraken Terminal
 In this section, we will use the [Kraken Ticker API](https://www.kraken.com/en-us/help/api) to get coin trade data.
 
 ![Kraken logo]({filename}/images/Influx_Cloud_2_Kraken/15_Kraken_Logo.png)
@@ -307,7 +307,7 @@ You can optionally create a **bash** for loop to run it on a uniform frequency.
 $  while true; do ./put_kraken.py; sleep 60; done
 ```
 
-## Plot the Data
+### Plot the Data
 Create a Dashboard for the new Kraken data.
 
 Click **Create Dashboard** under **Dashboards**.
@@ -334,7 +334,7 @@ Litecoin and XMR, for example, have similar prices and plot nicely together.
 
 ![XMR LTC]({filename}/images/Influx_Cloud_2_Kraken/20_XMR_LTC_Price.png)
 
-## Math in Action
+### Math in Action
 Let's say you wanted to plot the rate of change (velocity) for the Bitcoin price.
 
 Go back to your grade school calculus and remember that **derivative** gives us this number.
@@ -351,7 +351,7 @@ You can see that Stellar experienced a spike around 4am.
 
 ![Dashboard]({filename}/images/Influx_Cloud_2_Kraken/22_Dashboard.png)
 
-# Conclusion
+## Conclusion
 I hope you appreciate the power of the preceding project.  You demonstrated how to pull data from a remote API and push the data to a (free as in beer), cloud based Time Series Database as a service.  The InfluxDB Cloud 2.0 platform provides easy to use tools to plot, filter and perform math on the plumbed data.  
 
 Next month, I will demonstrate how to set up a bot that will alert you on volume spikes for different coins.
