@@ -6,7 +6,6 @@ Tags: HOWTO, SD-RAN, SDN, OpenDaylight
 Slug: install-opendaylight-ubuntu-lts-22-04
 Status: published
 
-# Introduction
 Internet Service Providers (ISP), Cloud Service Providers (CSP), Data Center Engineers and Academics use the [OpenDaylight (ODL)](https://www.opendaylight.org/) platform to tailor and automate computer networks.
 
 
@@ -497,7 +496,7 @@ If you log in with **admin**/**admin**, **DLUX** renders the **DLUX** console.
 
 ![OpenDaylight DLUX Console]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/03_DLUX.png)
 
-# Conclusion
+## Conclusion
 This HOWTO taught you how to install OpenDaylight with all the **karaf features**.  
 
 For more complicated methods of install, click the following:
