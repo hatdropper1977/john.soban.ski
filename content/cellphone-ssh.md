@@ -169,5 +169,5 @@ Accept the pairing request and type away!
 
 ![Pair It]({filename}/images/Cellphone_Ssh/30_Pair_It.png)
 
-# Conclusion
+## Conclusion
 Leverage the power of the cloud wherever you go.  JuiceSSH provides an SSH client on Android devices, and accepts private keys in lieu of insecure passwords.
