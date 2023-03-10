@@ -25,7 +25,7 @@ This post describes how to create an account on Rarible.  The following bulleted
 - Connect to Rarible
 - Customize your account
 
-# Background
+## Background
 The Rarible marketplace allows creators and collectors to sell and purchase digital goods.  Rarible puts buyers directly in front of sellers via an Ethereum fueled distributed network.  This Ethereum foundation enables peer-to-peer transactions, separate from Rarible.  Since the transactions do not require Rarible in the loop, Rarible does not force users trust their site or use Rarible web servers to prove their identity.  Rarible, rather, leverages the identity services provided by Ethereum protocols.
 
 [MetaMask](https://metamask.io) explains the Ethereum philosophy regarding account management on their website:
@@ -34,7 +34,7 @@ The Rarible marketplace allows creators and collectors to sell and purchase digi
 
 In summary, you don't need to give Rarible your email address or create a password to buy, sell or manage digital goods.  You do, however, need a way to connect the Rarible website to your Ethereum digital wallet.  The process to connect a digital wallet to a web page may appear cumbersome at first, but overall it provides a more secure and authoritative way to buy, sell and manage your digital goods.
 
-# Install MetaMask
+## Install MetaMask
 MetaMask provides a digital wallet to store Ethereum.  You create a wallet, and populate the wallet with Ethereum tokens.  MetaMask then allows you to manage your account and goods on Rarible using these Ethereum tokens.
 
 To install MetaMask, simply go to the Chrome web store and browse for the [MetaMask Chrome extension](https://chrome.google.com/webstore/search/metamask).  Click the icon, click **Install** and Click **Add Extension**.
@@ -45,7 +45,7 @@ Upon Successful installation, MetaMask will provide a welcome splash screen.
 
 ![Welcome To]({filename}/images/Create_Nft_With_Rarible_Part_1/04_Welcome_To.png)
 
-# Create A Wallet
+## Create A Wallet
 To create a new wallet, click **Get Started** and then click **Create a Wallet**.
 
 ![Create Wallet]({filename}/images/Create_Nft_With_Rarible_Part_1/05_Create_Wallet.png)
@@ -90,7 +90,7 @@ MetaMask now provides you with your Ethereum wallet address.  Copy this address.
 
 ![Copy Address]({filename}/images/Create_Nft_With_Rarible_Part_1/15_Copy_Address.png)
 
-# Send Ethereum to Your Wallet
+## Send Ethereum to Your Wallet
 Go to [Coinbase](https://www.coinbase.com/) to purchase Ethereum.  If you need help with creating an account, then open [this link](https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/create-a-coinbase-account) in a new tab and follow the directions.  
 
 > Note:  I do not get any referrals from Coinbase or Rarible
@@ -125,7 +125,7 @@ Wait a few minutes and return to your MetaMask wallet.  MetaMask will now show y
 
 ![Money Wallet]({filename}/images/Create_Nft_With_Rarible_Part_1/22_Money_Wallet.png)
 
-# Connect to Rarible
+## Connect to Rarible
 Navigate to the [Rarible web page](https://rarible.com).  Click **Connect Wallet** in the upper right corner.
 
 ![Click Connect]({filename}/images/Create_Nft_With_Rarible_Part_1/23_Click_Connect.png)
@@ -144,8 +144,9 @@ Click **Proceed** to accept the terms of service.
 
 You just created and logged into an account on Rarible.
 
-# Customize Your Profile
+## Customize Your Profile
 Click your picture in the upper right (looks like an Atari 2600 sprite) and then click **Edit Profile**
+
 ![Edit Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/27_Edit_Profile.png)
 
 Fill out your profile and Upload a picture.
@@ -158,7 +159,7 @@ Once you click **submit**, MetaMask will prompt you for a **Sign** request.  Met
 
 You now have an account on Rarible with a username and Avatar picture.
 
-# Conclusion
+## Conclusion
 NFTs provide an exciting and fun investment vehicle.  With Rarible you can buy and manage digital creations.  At this point you can buy NFTs, which you will own in perpetuity.
 
 Since you have an account on Rarible and some Ethereum in your wallet, you may want to purchase some of my digital artwork.  Click this link to [buy my isometric pixel art on Rarible](https://rarible.com/sobanski?tab=created).
