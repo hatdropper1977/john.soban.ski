@@ -26,7 +26,7 @@ The following cartoon, for example, illustrates a Data Scientist who downloads o
 
 The **sampling** approach works from a technical standpoint.  In order to accommodate resource constraints, however, the Data Scientist must **throw away** 99.9999% of the data.  The ignored data may contain interesting outliers that could, for example, predict **black swan** events.  So, from an information standpoint, the **sampling** approach lacks utility.
 
-# How can Data Scientists train and serve models on **Big Data**?
+## How can Data Scientists train and serve models on **Big Data**?
 
 The issues with **laptop models** and **sampling** approaches result from the attempts of the Data Scientist to **Bring the Data to the processing**.  A better approach, therefore, would be to **bring the processing to the Data.**
 
@@ -36,10 +36,10 @@ The following Cartoon captures this phenomenon:
 
 ![Bq Model]({filename}/images/Bigquery_Ml/03_Bq_Model.png)
 
-# Test Drive BigQuery ML
+## Test Drive BigQuery ML
 We now will test drive the in-situ BigQuery ML and AutoML services, which allow us to train and serve data without the need to transfer the data out of BigQuery.
 
-## Add Data to BigQuery
+### Add Data to BigQuery
 If you have data in BigQuery, you can test drive BigQuery ML immediately.  I will import the [UC Davis Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/wine+quality) into BigQuery.
 
 ![Wine Site]({filename}/images/Fast_And_Easy_Automl_Optimize/14_Wine_Site.png)
@@ -86,7 +86,7 @@ Select the **wine_red** table and then select preview to get a look at the data.
 
 ![Data Training]({filename}/images/Bigquery_Ml/12_Data_Preview.png)
 
-## Linear Regression Model
+### Linear Regression Model
 We will now create our first model.  To train a model in BigQuery we simply point BigQuery to a table, select the desired features and then indicate a **LABEL** feature, or target.
 
 The [wine quality dataset]({filename}/fast-and-easy-automl-optimize.md) includes chemical markers and a rating from zero (0) to ten (10).  Our wine model looks at the **wine quality** data to learn the relationship between these chemical markers and the **quality**.  In other words, given a set of chemical markers, our model will predict the rating.  For this reason, command BigQuery to use the **quality** feature for the target **label**.
@@ -164,7 +164,7 @@ BigQuery's **LINEAR_REG** model out-performed the two Tensorflow models executed
 
 Note that a Linear Model applied to our feature reduced dataset landed in second place last month, which supports the claim that too many features leads to over-fitting and therefore lower performance.
 
-# Conclusion 
+## Conclusion 
 Click the **training** tab and BQ provides training statistics.
 
 ![Model Train Time]({filename}/images/Bigquery_Ml/17_Model_Train_Time.png)
