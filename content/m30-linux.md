@@ -14,7 +14,7 @@ Once you deploy the configuration file, you can enjoy Street Fighter II, for exa
 
 ![Street Fighter]({filename}/images/M30_Linux/01_Street_Fighter.png)
 
-## Emulation
+### Emulation
 RetroPie delivers a premier emulation experience to retro gamers.  I will briefly discuss emulation in the next paragraph.
 
 > Note:  In order to have a tenuous relationship to the theme of Machine Learning I had [Jasper AI]({filename}/jasper-ai.md) write this section
@@ -24,7 +24,7 @@ Emulation imitates the behavior of one system with another. In the context of re
 
 > NOTE:  Only emulate games which you have a legal right to.  
 
-## 8BitDo
+### 8BitDo
 8BitDo designs controllers for modern consoles that recreate the feel of classic controllers. 8BitDo offers premium, sturdy controllers that allow retro gamers to play their favorite games without having to track down old hardware.
 
 The 8BitDo M30 copies the look and feel of the classic Sega Genesis Six (6) Button controller.  Sega released a Six button controller in 1993 to compete with Nintendo’s record smashing SNES. Gamers love the ergonomic design and extra buttons.
@@ -33,7 +33,7 @@ The 8BitDo M30 copies the look and feel of the classic Sega Genesis Six (6) Butt
 
 Six button games for the Sega genesis include Street Fighter II, Mortal Kombat, Virtua Fighter, Batman Forever and Ranger X. For the best gaming experience, these games require the use of all six buttons on the controller.
 
-# Connect the Controller
+## Connect the Controller
 To connect the controller, follow the printout instructions for Android devices.
 
 - Press & hold **B & start** to turn on the controller, **LED 1** blinks
@@ -45,7 +45,7 @@ You will see the Bluetooth controller connect under the Bluetooth menu.
 
 ![Bluetooth Connection]({filename}/images/M30_Linux/03_Bluetooth_Connected.png)
 
-# Map the Buttons
+## Map the Buttons
 The RetroPie Config files follow a SNES Controller approach, with four buttons on the face and two up top.  
 
 Through trial and Error, I managed to figure out how to map the SNES style button layout to the Sega Genesis layout, which presents all six buttons on the face of the controller.
@@ -127,7 +127,7 @@ The Emulator will then load your 8BitDo M30 Configuration for the Mega Drive.
 
 ![M30 Connected]({filename}/images/M30_Linux/06_M30_Connected.png)
 
-## Quick Menu
+### Quick Menu
 If RetroPie defaults to a three button controller, use the **Quick Menu** to force a six button controller configuration. 
 
 First, press the **Guide Button**, which looks like the checkboard Vans sneakers worn by Jeff Spiccoli.
@@ -158,7 +158,7 @@ RetroPie now displays the correct controller.
 
 Press the **G Button** to escape the menu and start your game!
 
-## Batman Forever 
+### Batman Forever 
 I recommend **Batman Forever** for the Sega Genesis.  
 
 ![Batman Forever]({filename}/images/M30_Linux/07_Batman_Forever.png)
@@ -179,7 +179,7 @@ Critics (and fans) hate the game, I consider it an underappreciated Gem, if not 
 
 Batman Forever uses the Sega Genesis six button controller, with Mortal Kombat style high attacks, low attacks and a block button.  Batman Forever also includes a button for the Bat Grapple Gun.
 
-# Conclusion
+## Conclusion
 RetroPie stands in first place on the leaderboard of emulator platforms.  RetroPie turns Raspberry Pi into a retro game console. RetroPie comes pre-loaded with many popular emulators, and provides a simple interface for gamers to add more. RetroPie developers created a great interface for gamers to navigate and play games with ease. RetroPie provides the option to add custom buttons to the controller for specific functions (e.g. rewind the game, save states).
 
 Emulation keeps the retro gaming hobby alive. Emulation provides a way for gamers to play their favorite games on modern hardware, which ensures that gamers will not forget these classics. It also allows new gamers to discover and enjoy seminal games. 
