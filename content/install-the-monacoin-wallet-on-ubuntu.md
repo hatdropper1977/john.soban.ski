@@ -6,7 +6,6 @@ Tags: Coins, HOWTO
 Slug: install-the-monacoin-wallet-on-ubuntu
 Status: published
 
-
 From the land of Nintendo and Samurai comes [Monacoin](https://github.com/monacoinproject/monacoin), a Japanese cryptographic currency based on [Litecoin](https://translate.google.com/translate?hl=en&sl=ja&u=https://ja.wikipedia.org/wiki/Monacoin).  If you look at [www.coinmarketcap.com](https://coinmarketcap.com/currencies/monacoin/) you will see that Monacoin increased about ***30x*** in the past three months.
 
 ![Monacoin]({filename}/images/Install_the_Monacoin_Wallet_on_Ubuntu/Monacoin.png)
@@ -33,8 +32,8 @@ I found it a bit challenging to install the Monacoin wallet on Ubuntu.  I worked
      * Wipe the keys
      * Re-import the deleted key and validate
 
-#1.  Workstation Prep
-##1.1  Update the OS
+## 1.  Workstation Prep
+### 1.1  Update the OS
 We want to first ensure that we have an up to date Operating System.  This will  protect against known security issues and patch any known bugs.
 
 ```bash
@@ -54,7 +53,7 @@ Reading package lists... Done
 ubuntu@ip-192-168-10-203:~$
 ```
 
-##1.2.  Install the required libraries (packages)
+### 1.2.  Install the required libraries (packages)
 To use the wallet, we first need to compile the wallet.  To compile the wallet, we must install the required libraries.
 
 ```bash
@@ -86,7 +85,7 @@ Processing triggers for libc-bin (2.23-0ubuntu9) ...
 ubuntu@ip-192-168-10-203:~$
 ```
 
-##1.3  Create a dedicated Monacoin user
+### 1.3  Create a dedicated Monacoin user
 To prevent privilege escalation, we create an independent Monacoin user.  Security best practices dictate that a system administrator create a separate user for each coin.  This way, if a wallet acts up (due to faulty or insecure code), the separation of user space reduces the blast radius.
 
 ```bash
@@ -112,8 +111,8 @@ ubuntu@ip-192-168-10-203:~$
 
 Log in as user ***mona*** to locally install a local copy of the [Berkley Database](https://en.wikipedia.org/wiki/Berkeley_DB).
 
-#2. Install the Berkley DB
-##2.1  Create the build directories
+## 2. Install the Berkley DB
+### 2.1  Create the build directories
 Create a directory for dependencies and source code.  Then, change directories to enter the source code directory, ***downloads***.
 
 ```bash
@@ -122,7 +121,7 @@ mona@ip-192-168-10-203:~$ cd mona/downloads/
 mona@ip-192-168-10-203:~/mona/downloads$
 ```
 
-##2.2  Download Berkley DB
+### 2.2  Download Berkley DB
 Download and extract the source code to the Berkley Database.  Since I provide the direct URL, you will not need to set up an Oracle user account.
 
  > ***NOTE***:  For the wallet to compile, you ***must*** download version ***4.8***.  ***DO NOT*** download the most recent version! 
@@ -133,7 +132,7 @@ mona@ip-192-168-10-203:~/mona/downloads$  wget http://download.oracle.com/berkel
 mona@ip-192-168-10-203:~/mona/downloads$  tar -xzvf db-4.8.30.NC.tar.gz
 ```
 
-##2.3  Run the configure script
+### 2.3  Run the configure script
 Enter the source code directory and execute the configure script.  Notice we tell the compiler to place the (soon to be) compiled binaries into the (currently empty) dependencies directory we just created.  If you see any errors, double check to see if you (or I) forgot to install a needed library.
 
 ```bash
@@ -155,7 +154,7 @@ config.status: executing libtool commands
 mona@ip-192-168-10-203:~/mona/downloads/db-4.8.30.NC/build_unix$
 ```
 
-##2.4  Make and install the Database
+### 2.4  Make and install the Database
 Compile and install the database via the ***make*** utility.  You can ignore any ***conflicting type*** warnings.
 
 ```bash
@@ -184,8 +183,8 @@ Installing documentation: /home/mona/mona/deps/docs ...
 mona@ip-192-168-10-203:~/mona/downloads/db-4.8.30.NC/build_unix$
 ```
 
-#3.  Install the Monacoin wallet
-#3.1  Download the Monacoin wallet
+## 3.  Install the Monacoin wallet
+### 3.1  Download the Monacoin wallet
 Go back to the ***downloads*** directory and download the Monacoin source code.
 
 ```
@@ -200,7 +199,7 @@ Resolving deltas: 100% (62407/62407), done.
 Checking connectivity... done.
 ```
 
-##3.2  Run the autogen script
+### 3.2  Run the autogen script
 The Monacoin wallet requires an extra step before we run the configure script.  We must first run [autogen](https://www.gnu.org/software/autogen/).  Extract the downloaded source code and enter the source directory.
 
 ```bash
@@ -225,7 +224,7 @@ parallel-tests: installing 'build-aux/test-driver'
 mona@ip-192-168-10-203:~/mona/downloads/monacoin$
 ```
 
-##3.3 Run the configure script
+### 3.3 Run the configure script
 Run the configure script with the flags I supply.  Note that the flag uses the letter ***O*** and not the number zero (***0***).
 
 ```bash
@@ -267,7 +266,7 @@ Options used to compile and link:
   LDFLAGS       = -L/home/mona/mona/deps/lib
 ```
 
-##3.4 Make and install the wallet
+### 3.4 Make and install the wallet
 Now make and install the wallet.
 
 ```bash
@@ -295,8 +294,8 @@ make[1]: Leaving directory '/home/mona/mona/downloads/monacoin'
 mona@ip-192-168-10-203:~/mona/downloads/monacoin$
 ```
 
-#4.  Test Drive the wallet
-##4.1 Hello World
+## 4.  Test Drive the wallet
+### 4.1 Hello World
 Now let\'s take this baby for a spin!  Change directories to the newly created binary directory (***bin***) and execute the freshly compiled ***monacoind*** (Monacoin Daemon) command.
 
 ```bash
@@ -330,7 +329,7 @@ mona@ip-192-168-10-203:~/mona/bin$ ./monacoin-cli getinfo
    ... a whole bunch of stuff on the screen...
 ```
 
-##4.2 Generate a new address and private key
+### 4.2 Generate a new address and private key
 Now we will generate a new address.  This also generates an associated private keys.  So, we will get to own all the coins sent to the address, as long as we hold on to the private key.
 
 ```bash
@@ -343,7 +342,7 @@ T7PtVHPpHwFbjcuwVA5YBsNShKodoVfgVH796eva13a3Ze9BRhHz
 
 Now, if anybody reading this blog sent coins to address ***MSuRjV1ogf3C7Yys82NvxQ35gacJYoctWk***, you can steal them with the private key ***T7PtVHPpHwFbjcuwVA5YBsNShKodoVfgVH796eva13a3Ze9BRhHz***!
 
-##4.3 Wipe the keys
+### 4.3 Wipe the keys
 I now present to you a fun experiment.  Kill the Monacoin daemon (***monacoind***) in the other terminall by hitting ***CTRL^C***.  Now completely wipe out the private key database in your wallet.
 
 > ***WARNING***:  Only perform this command in a junk or toy wallet.  ***DO NOT*** execute this command on a wallet that contains coins!!!  Execute at your own risk!  By reading this website you agree I am not liable for any damages whatsoever due to errors on your part.  See this website's [license](https://raw.githubusercontent.com/hatdropper1977/john.sobanski.io/master/LICENSE) for details.
