@@ -6,12 +6,11 @@ Tags:  GCP, Data Science, Machine Learning
 Slug: gcp-automl-vision
 Status: published
 
-#Introduction
 FastAI provides Jupyter notebooks to wrangle data, train models, optimize models and then serve models.
 
 I recommended FastAI to my Data Scientist friends and they found the FastAI Jupyter layout and workflow both cumbersome and confusing.
 
-As an alternative to FastAI (and any roll-your-own vision service, for that matter), GCP provides the Google AutoML Vision service, which automates the tedious aspects of AI Vision efforts.
+GCP provides the Google AutoML Vision service, an alternative to FastAI (and any roll-your-own vision service, for that matter), which automates the tedious aspects of AI Vision efforts.
 
 AutoML Vision simplifies labeling and then automates training, optimization and serving of the model.
 
@@ -27,7 +26,7 @@ In this HOWTO we will accomplish the following:
 - Serve a Vision model
 - Send our served model a test image
 
-# Create a bucket.
+## Create a bucket.
 We must get the [AutoML vision](https://cloud.google.com/vision/automl/docs) service some labeled data.
 
 We will create a [Google Cloud Storage](https://cloud.google.com/storage) bucket for this purpose.
@@ -102,12 +101,12 @@ Now create the bucket:
 sobanski_htc@cloudshell:~ (mods-rocker-project)$ gsutil mb -p $PROJECT_ID -c standard -l us-central1 gs://<your-bucket-name>/
 ```
 
-# Get a dataset.
+## Get a dataset.
 If you do not have a labeled dataset, use the [FastAI]({filename}/fastai-flask.md) dataset notebook to quickly download a labeled dataset, separated by folder.
 
 If you do have a labeled dataset you can skip this section.
 
-## Launch AI Platform
+### Launch AI Platform
 Spin up an AI platform notebook for this task.
 
 Log into the Google Cloud Platform (GCP) console at [console.cloud.google.com](https://console.cloud.google.com) [Non-referral link].
@@ -124,7 +123,7 @@ Launch a terminal.
 
 ![Launch_Terminal]({filename}/images/Gcp_Automl_Vision/03_Launch_Terminal.png)
 
-## Install FastAI Course v3
+### Install FastAI Course v3
 From the terminal install the FastAI course v3.
 
 ```bash
@@ -152,7 +151,7 @@ Successfully built nvidia-ml-py3
 Installing collected packages: wasabi, srsly, murmurhash, cymem, plac, preshed, catalogue, blis, thinc, spacy, torch, torchvision, nvidia-ml-py3, fastprogress, fastai
 ``` 
 
-## Download the images
+### Download the images
 From the GUI, Navigate to **nbs --> dl1 --> lesson2-download.ipynb.**
 
 Select **Edit --> Clear All Outputs**.
@@ -188,7 +187,7 @@ I present the updated code in the following graphic.
 
 Be sure to run the next **verify_images** cell.
 
-# Label the data
+## Label the data
 At this point you should have two folders, one named **mods** and one named **rockers**.
 
 If you used the AI platform to create your data set folders, then change directories to **brigton_seafront**.
@@ -242,8 +241,8 @@ Copy **labeled_data.csv**, the **mods** folder, the **rockers** folder and all o
 
 At this point be sure to destroy the AI Platform notebook so that you do not incur any charges.
 
-# Train the model
-## Enable the API
+## Train the model
+### Enable the API
 Log into the Google Cloud Platform (GCP) console at [console.cloud.google.com](https://console.cloud.google.com) [Once again, this is a non-affiliate link].  
 
 In the search bar, type **Vision** and then click **ENABLE AUTOML API**.
@@ -264,7 +263,7 @@ The import will take several minutes.
 
 ![Import_Image]({filename}/images/Gcp_Automl_Vision/08_Import_Image.png)
 
-##View Images
+### View Images
 After the import completes, you will see your labeled images.
 
 ![Successful_Import]({filename}/images/Gcp_Automl_Vision/09_Successful_Import.png)
@@ -299,7 +298,7 @@ This points to a labeling problem.
 
 > NOTE: Upon second glance, the picture on the right depicts Teddy Boys.  Should I label Teddy Boys Mods, Rockers or delete the picture?  Answer in the comments below!
 
-#Fix Labels
+## Fix Labels
 Click **images** and change the labels of the troublesome images (or just delete them if you're lazy right now).
 
 I have a **rocker** motorcycle labeled **mod** and a picture that includes both **mods** and **rockers** labeled as just **mods**.
@@ -310,7 +309,7 @@ I like this picture, a bunch of rockers attempting to murder two helmet-less mod
 
 ![Both_Mod_and_Rocker]({filename}/images/Gcp_Automl_Vision/15_Both_Mod_and_Rocker.png)
 
-#Re-train model
+## Re-train model
 After we clean up the data and re-train, we see a perfect confusion matrix.
 
 ![Much_Better]({filename}/images/Gcp_Automl_Vision/16_Much_Better.png)
@@ -319,7 +318,7 @@ Drilling down we see our model gave a **mod** under arrest the **rocker** label.
 
 ![One_Wrong]({filename}/images/Gcp_Automl_Vision/17_One_Wrong.png)
 
-#Deploy the model
+## Deploy the model
 Unlike FastAI, the Google AI Platform provides one-click deployment of your model.
 
 Click **Test & Use** and the **Deploy Model**.
@@ -338,7 +337,7 @@ The model reports, with 93% certainty that I fall under the **Mod** classificati
 
 My paisley shirt and Italian sunglasses give credence to this, although I do have a **Rocker** hair cut (styled with [Royal Crown](https://en.wikipedia.org/wiki/Pomade), no less).
 
-#Conclusion
+## Conclusion
 GCP provides an AutoML vision service that automates the manual FastAI tasks of training, optimizing and serving a Vision model.
 
 AutoML vision also provides an easy to use and intuitive labeling service.
