@@ -22,7 +22,7 @@ The following bulleted list captures the steps we will execute in this demonstra
 7.  Revisit the DNN
 8.  Compare, discuss and contextualize the results
 
-# 1. Explore the data set
+## 1. Explore the data set
 This demo revisits the [BUPA Liver Disorders](http://archive.ics.uci.edu/ml/machine-learning-databases/liver-disorders/bupa.data) data set, a classic, **tough** data set that I have explored in three prior blog posts:
 
 -  [Applying a Reduced Columb Energy (RCE) Neural Network to the Bupa Liver Disorders Data Set]({filename}/reduced_coulomb_energy_neural_network_bupa.md)
@@ -44,7 +44,7 @@ The dataset includes five biological features, a record of **drinks per day** an
  
 > Our **regression** problem seeks to **predict** the number of alcohol servings a person **drinks per day** (label) based on the recorded **biological stats** (features).  
 
-## Import the Data
+### Import the Data
 I prefer to use **requests** over the low level **urllib3** to pull the data from **Irvine**.  Once I retrieve the content I stuff the data into a **Pandas DataFrame** and immediately drop the **selector** column into the bitbucket.
 
 ```python
@@ -80,7 +80,7 @@ id | mcv | alkphos | sgpt | sgot | gammagt | drinks
 3 | 91 | 78 | 34 | 24 | 36 | 0
 4 | 87 | 70 | 12 | 28 | 10 | 0
 
-## Check for Correlation
+### Check for Correlation
 We pick a feature at random, **mcv** and use a simple scatter plot to check for any obvious correlation between this feature and our **target** variable, **drinks**.
 
 ```python
@@ -162,7 +162,7 @@ None of the features show strong (or any) correlation with **drinks**, so we wil
 
 ![Drinks vs. all features density plots]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/06_Drinks_Vs_Features.png)
 
-## Split the Data
+### Split the Data
 We split the data into three buckets:
 
 - Train - To train a model
@@ -213,7 +213,7 @@ Notice that each feature encompasses a different range of values.  To comply wit
 
 ![Histogram of Raw Features]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/07_Features_Hist.png)
 
-# 2. Normalize the data
+## 2. Normalize the data
 We **normalize** the data between **-1 and 1**.  Most blogs describe the **manual** normalization process.  TensorFlow 2.X, however, provides an **experimental** normalization engine.
 
 Import the required packages.
@@ -251,7 +251,7 @@ Much better!  The **normalized** data cluster around **zero**.
 
 ![Histogram of Normalized Features]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/08_Features_Norm_Hist.png)
 
-# 3. Create a Linear Model
+## 3. Create a Linear Model
 Keras makes life easy.  The following line of code creates a linear regression model.
 
 ```python
@@ -321,7 +321,7 @@ print(test_results)
 
 On the **holdout** set, the liner model produces an RMSE of ~3.2
 
-# 4. Train a Dense Neural Network (DNN)
+## 4. Train a Dense Neural Network (DNN)
 Keras lets us assemble a **Dense Neural Network (DNN)** model layer by layer.  The following function will use Keras to build and compile our DNN model.
 
 
@@ -402,7 +402,7 @@ print(test_results)
 
 The DNN model shows RMSE of 3.3, worse than the Linear Model.
 
-# Conclusion
+## Conclusion
 In this demonstration we first used the **requests** package to pull a dataset directly off the UC Irvine website and stuff the data into a **Pandas** data frame.  We explored the data using a combination of traditional analytics, **Seaborn**, **Matplotlib** and fundamentals of statistics.  We then used the **experimental** TensorFlow normalizer to normalize our data set.  We also used **TensorFlow** to create our **Train**, **Validate** and **Holdout** data sets.  **Keras** provided a vehicle to create both a **linear model** and a **Dense Neural Network (DNN)**.
 
 The added complexity of the DNN produced a reduction in performance over the linear model.  Worse performance due to added complexity points to **over-fitting**.  We will address the issue of DNN over-fitting [next month]({filename}/fast-and-easy-regression-with-tensorflow-part-2.md) by using **Principal Component Analysis (PCA)** to reduce the dimensionality of the data set.  We will [use PCA to drop features]({filename}/fast-and-easy-regression-with-tensorflow-part-2.md).
