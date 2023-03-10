@@ -54,10 +54,10 @@ Time **BUCKETS** enable us to analyze, summarize and visualize time series data.
 
 ![Less Data for Plots]({filename}/images/Elasticsearch_Aggs_For_Time_Series/05_Plot_Bucket.png)
 
-# Time Series Data Viz with Kibana
+## Time Series Data Viz with Kibana
 I will demonstrate the idea of using **BUCKETS** for **time series** data viz through Kibana.
 
-## Simple Date Histogram
+### Simple Date Histogram
 In the Kibana **Discover** panel, set the correct time range.
 
 ![Select Time]({filename}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
@@ -82,7 +82,7 @@ Elasticsearch placed the **hits** into time buckets for Kibana to display.  Elas
 
 ![Set Daily Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/09_Daily_Bucket.png) 
 
-## Nested Aggregation 
+### Nested Aggregation 
 In [Aggregations - The Elasticsearch GROUP BY]({filename}/aggregations-the-elasticsearch-group-by.md), I demonstrated how to chain, or nest **AGGS** together.  **Time Series** data plays nicely with nested **AGGS**.  The above diagram depicts **hits per day**.  Use a **Nested AGG** to display **hits per day** broken down by **country**.
 
 Under **X-Axis**, click **Add** and then **Split Series**.
@@ -101,7 +101,7 @@ Click **Update**.  Kibana presents the daily count by **country**.
 
 ![Day by Country Time Series Data Viz]({filename}/images/Elasticsearch_Aggs_For_Time_Series/13_Day_By_Country.png)
 
-## Name the Buckets
+### Name the Buckets
 Bucket names will clear things up in the next section, when you use the Elasticsearch API to create buckets.  First, give your parent bucket a name.  In the **Date Histogram** Aggregation, set **Custom Label** to **daily_agg**.
 
 ![Name the Daily Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/14_Name_The_Daily_Bucket.png)
@@ -110,10 +110,10 @@ Under the **Terms** sub-aggregation, set **Custom label** to **country_agg** and
 
 ![Name the Country Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/15_Name_The_Country_Bucket.png)
 
-## Kibana Takeaway
+### Kibana Takeaway
 Understand the key takeaways.  We first created a **Date Histogram** aggregation (named **daily_agg**) on the **listener_timestamp** field.  We then nested a **Terms** aggregation (named **country_agg**) on the field **geoip.country_name.keyword**.  The sub-aggregation added **child** country buckets into each of the **parent** daily buckets. 
 
-# Use the API
+## Use the API
 A good understanding of the terminology will help you navigate the API.  If you do not feel comfortable with the terminology I encourage you to re-visit the first post in this series, [Aggregations - The Elasticsearch GROUP BY]({filename}/aggregations-the-elasticsearch-group-by.md).
 
 The Kibana **Dev Tools** console allows you to drive the REST API.  **Dev Tools** auto-completes your input.  If you type the following into the console, **Dev Tools** will provide a popup with suggestions.
@@ -364,5 +364,5 @@ The complete **AGGS** JSON for Days 1 and 2 reads:
 
 The REST API returns the same data that the Kibana Data Viz returns, only in JSON format.
 
-# Conclusion
+## Conclusion
 In this blog post I demonstrated how to use **AGGS** to visualize time series data.  I also demonstrated how to use the Elasticsearch API to return time series data in JSON encoded format.
