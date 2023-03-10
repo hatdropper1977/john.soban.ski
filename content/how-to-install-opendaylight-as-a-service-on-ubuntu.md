@@ -8,13 +8,13 @@ Status: published
 
 [OpenDaylight](https://www.opendaylight.org/) allows cloud engineers to programmatically deploy, configure and control virtual network services.  As written on the OpenDaylight website, ODL helps Internet Service Providers, Academics and Cloud Service Providers to enable the following services:
 
-  -  [On-demand service delivery](https://www.opendaylight.org/use-cases-and-users/by-function/automated-service-delivery)
+  -  On-demand service delivery
      -  Programmatic acquisition of network transport or Virtual Private Network connections
-  -  [Network Function Virtualization](https://www.opendaylight.org/use-cases-and-users/by-function/cloud-and-nfv)
-     -  Add new network services to your existing Cloud Provider's (e.g. [OpenStack](https://wiki.opendaylight.org/view/OpenStack_and_OpenDaylight) ) network stack
-  -  [Network Resource Optimization](https://www.opendaylight.org/use-cases-and-users/by-function/network-resource-optimization)
+  -  Network Function Virtualization
+     -  Add new network services to your existing Cloud Provider's (e.g. OpenStack) network stack
+  -  Network Resource Optimization
      -  Load balance, prioritize and pre-empt traffic to reduce congestion and idle links
-  -  [Situational Awareness](https://www.opendaylight.org/use-cases-and-users/by-function/visibility-and-control)
+  -  Situational Awareness
      -  Get granular, instantaneous metrics plumbed from each and every data frame in your networks
 
 ![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)

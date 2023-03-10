@@ -29,7 +29,7 @@ In part two of this tutorial (this post), we will:
   6.  Create CloudFront distribution
   7.  Point DNS (Route 53) to CloudFront distribution
 
-As a reminder, to show the process in action, I demonstrate how to set up HTTPS with Redirection on S3 using a real world site, [***www.siliconebeltway.com***](www.siliconebeltway.com).  In this demonstration, you would simply replace ***siliconebeltway*** with your website's domain name.
+As a reminder, to show the process in action, I demonstrate how to set up HTTPS with Redirection on S3 using a real world site, [***www.siliconebeltway.com***](https://www.siliconebeltway.com).  In this demonstration, you would simply replace ***siliconebeltway*** with your website's domain name.
   
 As described in [part one]({filename}/how-to-configure-s3-websites-to-use-https-part-1.md), the following diagram depicts our desired Architecture:
 

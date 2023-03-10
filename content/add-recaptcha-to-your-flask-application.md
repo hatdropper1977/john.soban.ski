@@ -6,7 +6,7 @@ Tags: Flask, HOWTO, Python
 Slug: add-recaptcha-to-your-flask-application
 Status: published
 
-In this [HOWTO]({category}howto), I will demonstrate how to easily integrate the [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) service into a [Flask](http://flask.pocoo.org/) web application using [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/).
+In this [HOWTO]({category}howto), I will demonstrate how to easily integrate the [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) service into a [Flask](http://flask.pocoo.org/) web application using [Flask-WTF](https://wtforms.readthedocs.io/en/3.0.x/).
 
 The following cartoon depicts the end result.  
 
@@ -122,9 +122,9 @@ Now we update Flask to hook into the recaptcha service.
 
 First, look at our form model, modeled in [models.py](https://github.com/hatdropper1977/flask-recaptcha/blob/master/models.py).
 
-You will see we use [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) to generate our form.
+You will see we use [Flask-WTF](https://wtforms.read/thedocs.io/en/3.0.x/) to generate our form.
 
-All we need to do is import [RecaptchaField](http://flask-wtf.readthedocs.io/en/stable/form.html?highlight=recaptcha).
+All we need to do is import **RecaptchaField**.
 
 ```python
 from flask_wtf import Form, RecaptchaField

@@ -405,7 +405,7 @@ The model predicts our strong wine deserves a score of **5.194**
 The AutoML Tables Beta also service provides a REST API for machines to submit predictions to the model.
 
 ## Billing
-The AutoML Tables Beta service costs significantly less than our [Vision model](gcp-automl-vision.md).  We paid $28 for one and a half hour of compute time. 
+The AutoML Tables Beta service costs significantly less than our [Vision model]({filename}/gcp-automl-vision.md).  We paid $28 for one and a half hour of compute time. 
 
 ![Billing Metering]({filename}/images/Fast_And_Easy_Automl_Optimize/37_Billing.png)
 

@@ -24,8 +24,7 @@ As the name suggests, LCT uses layered coding to produce a coded stream of packe
 
 Imagine a web TV application split into three layers. A RX that joins the first channel would receive a black and white picture. An RX that had more capacity would join the first and second channel and receive a color picture. An RX with transparent capacity would be able to join all three layers, and receive a HD color picture. The key to this example is that the sender does not duplicate any data between layers. The RX joins successive layers to receive a higher quality picture at the cost of using more bandwidth. [[RFC5651](https://tools.ietf.org/html/rfc5651) 6]
 
-![LCT Diagram]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC
-/rm_1_2_lct_diagram-1024x650.png)
+![LCT Diagram]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_2_lct_diagram-1024x650.png)
 
 **LCT Operations**
 

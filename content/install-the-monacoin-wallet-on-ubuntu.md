@@ -319,7 +319,7 @@ $ ./monacoind --printtoconsole
     ...a whole bunch of stuff on the screen...
 ```
 
-Now that we started the Daemon, we can plug into it with the Monacoin client, also known as a [command line interface (CLI)](https://en.wikipedia.org/wiki/Command-line_interface`).  Leave the Daemon's terminal running, and then open a ***NEW*** terminal.  From the new terminal, run these commands:
+Now that we started the Daemon, we can plug into it with the Monacoin client, also known as a [command line interface (CLI)](https://en.wikipedia.org/wiki/Command-line_interface).  Leave the Daemon's terminal running, and then open a ***NEW*** terminal.  From the new terminal, run these commands:
 
 ```bash
 # From another terminal

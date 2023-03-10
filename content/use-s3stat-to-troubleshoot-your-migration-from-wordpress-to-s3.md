@@ -36,7 +36,7 @@ Amazon does not provide a turnkey solution for this user story, so I faced two h
      -  Cost
         -  The Amazon approach costs ~$15/month and the cheapest Elastic cloud approach costs [$45/month](https://www.elastic.co/cloud/as-a-service/subscriptions)
      -  Effort
-        -  The Amazon approach requires a significant amount of [integration and troubleshooting](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-s3-lambda-es) whereas the Elastic cloud approach just requires the deployment of a few [Logstash filters](https://medium.com/@LifeAndDev/using-the-elk-stack-to-analyze-your-s3-logs-981cb5cc5378)
+        -  The Amazon approach requires a significant amount of [integration and troubleshooting](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-s3-lambda-es) whereas the Elastic cloud approach just requires the deployment of a few Logstash filters
   -  Turn key
      -  Approach
         -  Use a __push button__ online service to ingest, parse and analyze the logs
@@ -62,7 +62,7 @@ I decided to try s3stat because their [cheap bastard plan](https://www.s3stat.co
 >
 > 2.  __Blog about S3STAT__, explaining to the world how awesome the product is, and how generous we are being to give it to a deadbeat like yourself for free.
 >
-> 3.  [Send us an email](info@s3stat.com) showing us where to find that blog post.
+> 3.  Send us an email showing us where to find that blog post.
 >
 > 4.  Get Hooked Up with a free, unlimited license for S3STAT.
 

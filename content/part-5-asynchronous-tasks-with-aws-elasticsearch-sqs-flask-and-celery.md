@@ -18,7 +18,7 @@ Welcome to the fifth part of this HOWTO, where we will call a remote web service
   - [Part Two:]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md)
     - Deploy a [Flask](http://flask.pocoo.org/) web server
     - Program the Flask web server to proxy and filter user inputs to ES
-    - Learn the Python [WTForms](https://wtforms.readthedocs.io/en/latest/) library and the Python [Elasticsearch Domain Specific Language (DSL)](http://elasticsearch-dsl.readthedocs.io/en/latest/)
+    - Learn the Python [WTForms](https://wtforms.readthedocs.io/en/3.0.x/) library and the Python [Elasticsearch Domain Specific Language (DSL)](http://elasticsearch-dsl.readthedocs.io/en/latest/)
   - [Part Three:]({filename}/part-3-professional-form-validation-with-bootstrap.md)
     - Use [Bootstrap](http://getbootstrap.com/) for form validation
     - Give the Proxy a professional, polished appearance
