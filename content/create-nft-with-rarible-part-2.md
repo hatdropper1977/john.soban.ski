@@ -10,7 +10,7 @@ Rarible enables artists to mint, sell and trade one-of-a-kind digital collectibl
 
 You don't need to be a Blockchain wiz to mint NFT, you only need some Ethereum and a Web Browser.  In this blog post, I will demonstrate how to mint your very own NFT and sell them in the Rarible marketplace.  I will also show you how to register with the Rarible Royalty incentive, which pays each Artist a commission on all future sales of their NFT.
 
-# Background
+## Background
 The scarcity, novelty and decentralized nature of Bitcoin and Ethereum attracts manic investors willing to pay top dollar for these speculative assets.  NFTs take the scarcity and novelty of these traditional cryptos to the next level.  Each NFT provides a unique token (or collection of tokens) that represents a piece of digital art.
 
 The NFT landscape witnessed asymptotic growth in the past few months, with plenty of ridiculous sales.  A certain Big Data Architect, for example, paid three (3) Ethereum for a [Taco Gif](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715:0x99f93b966021d6c6883b84e4b184957f49af8b32).
@@ -23,7 +23,7 @@ That same highly respected thought leader also paid two (2) Ethereum for a [Toil
 
 At least all proceeds went to Charity!
 
-# Intro
+## Intro
 Today I will demonstrate how to mint and sell a digital collectible on the [Rarible](https://rarible.com/) NFT marketplace.  I split this HOWTO into two parts.
 
 - Part 1: [Create an Account on Rarible]({filename}/create-nft-with-rarible-part-1.md)
@@ -33,7 +33,7 @@ Today I will demonstrate how to mint and sell a digital collectible on the [Rari
 
 This blog post describes how create and sell an NFT token on Rarible.  In order to proceed with the instructions, you must have an account with Rarible.  [Click Here]({filename}/create-nft-with-rarible-part-1.md) to find instructions on how to create an account on Rarible.
 
-# Create A Single Item
+## Create A Single Item
 In this section, we will create a single item, and not place it for sale.
 
 Click **create** in the upper right corner, right next to your Avatar picture.
@@ -85,7 +85,7 @@ Click your collectible and Rarible lists the NFT Metadata.  You can select four 
 - **History** records all events associated with the NFT.  This includes owners that put the item up for Sale, Bids made by collectors, purchase price, minting and transfers
 - **Bids** includes a subset of the **History** tab, and only presents offers made and canceled by prospective buyers
 
-# Create and Sell Multiple Copies of the Same Item
+## Create and Sell Multiple Copies of the Same Item
 In this section, we will create multiple copies of a collectible, and place them all on sale.
 
 Once more, click **create** in the upper right corner of the Rarible screen.
@@ -136,7 +136,7 @@ If you click the item, Rarible lists the details of the item.  You have the abil
 
 ![Sale Page]({filename}/images/Create_Nft_With_Rarible_Part_2/49_Sale_Page.png)
 
-# Conclusion
+## Conclusion
 Rarible provides an exciting and fun way to create valuable digital collectibles.
 
 ![Charmin Gif]({filename}/images/Create_Nft_With_Rarible_Part_2/00_Charmin.gif)
