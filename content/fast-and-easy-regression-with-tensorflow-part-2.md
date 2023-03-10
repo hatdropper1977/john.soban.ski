@@ -26,7 +26,7 @@ This month, we address the issue of over-fitting by using Principal Component An
 7.  Revisit the DNN
 8.  Compare, discuss and contextualize the results
 
-# 1. Dimensionality Reduction
+## 1. Dimensionality Reduction
 Model over-fitting leads to loss.  Dimensionality reduction, or feature removal, mitigates and reduces model over-fitting.  We use Principal Component Analysis (PCA) to reduce the dimensionality.
 
 If you stick a magnet at each point in the data space, and then stick an telescoping iron bar at the origin, the magnets will pull the bar into position and stretch the bar.  The bar will wiggle a bit at first and then eventually settle into a static position.  The final direction and length of the bar represents a principal component.  We can map the higher dimensionality space to the principal component by connecting a string directly from each magnet to the bar.  Where the string hits (taut) we make a mark.  The marks represent the mapped vector space.
@@ -35,7 +35,7 @@ If you want more information, George Dallas writes an excellent blog post that [
 
 You can either construct PCA from your Linear Algebra notes (I have mine from 1996 in a Marble Composition book) or just use a pre-built engine.  I use the package from Scikit Learn.
 
-## Reduce Five Dimensions to One Dimension
+### Reduce Five Dimensions to One Dimension
 The PCA workflow mirrors that of the ML models above.  Just set the number of desired components (dimensions) and pass the engine a data set.  We also pass a name for the **Principal Component**.  
 
 ```
@@ -102,7 +102,7 @@ The trendline does not indicate strong correlation.
 
 ![PCA Scatter Trendline]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/01_Princomp1_Vs_Drinks_Trend.png)
 
-## Reduce Five Dimensions to Two Dimensions
+### Reduce Five Dimensions to Two Dimensions
 A two dimension feature set allows us to graph the two Principal Components against our label (target) vector, **drinks**.
 
 ```python
@@ -151,7 +151,7 @@ The height of the bars depict the number of drinks.  The sloping of the bar char
 
 ![3D Bar Chart]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/03_Princomps_Vs_Drinks_Bar.png)
 
-# 2. Linear Model w/ PCA
+## 2. Linear Model w/ PCA
 We already normalized our train dataset before we applied PCA, so we do not include the TensorFlow normalizer.  We use Keras to construct and compile our new linear model.
 
 ```python
@@ -218,7 +218,7 @@ print(test_results)
 
 PCA reduces the RMSE of the Linear model from 3.2 to 3.0, pretty darn good!
 
-# 3. DNN with PCA-transformed Data
+## 3. DNN with PCA-transformed Data
 We use Keras to compile a DNN and once more we do not pass a normalizer.
 
 ```python
@@ -266,7 +266,7 @@ print(test_results)
 
 The DNN w/ PCA reduces the RMSE from 3.3 to 3.16 vs. the original DNN.
 
-# 4. Interpretation
+## 4. Interpretation
 The RMSE for the four models range from 3.07 (lowest) to 3.30 (highest).  Does our model do a good job in predicting how many drinks a person consumes in a day?
 
 To answer that, consider the formula for Root Mean Squared Error (RMSE):
