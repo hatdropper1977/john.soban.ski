@@ -15,7 +15,7 @@ Algorithm selection and hyperparameter tuning drive tedious manual processes whe
 
 This blog post demonstrates how to execute AutoML in-situ via the [GCP BQML](https://cloud.google.com/bigquery-ml/docs) service.
 
-# Background
+## Background
 In previous blog posts I used several platforms to train models on tabular data: TensorFlow, Google Cloud Platform (GCP) AutoML Tables, and BigQuery BQML.
 
 -  [Fast and Easy Regression with Keras and TensorFlow 2.3 (Part 1 - Data Exploration & First Models)]({filename}/fast-and-easy-regression-with-tensorflow.md)
@@ -31,7 +31,7 @@ The blog posts above capture a variety model training approaches:
 
 This blog post demonstrates how to use the BigQuery BQML service to trigger AutoML workflows in-situ.  The AutoML service runs through a variety of ML Algorithms and iterates through a range of hyperparameter settings for each algorithm.  The service then keeps and serves the **winning** approach.
 
-# AutoML Regressor
+## AutoML Regressor
 [Last month]({filename}/bigquery-ml.md) we used SQL syntax to command BigQuery to train a linear regression model in-situ. Open [that blog]({filename}/bigquery-ml.md) post in a new tab to review the steps required to train models in BigQuery.
 
 We used the following SQL statement to train a linear regression model, with the **model_type** set to **LINEAR_REG** in the SQL **OPTIONS** :
@@ -102,7 +102,7 @@ The AutoML process completes in about fifty (50) or so minutes.
 
 ![AutoML Done]({filename}/images/Bigquery_Automl/22_AutoML_Done.png)
 
-# AutoML Regressor Results
+## AutoML Regressor Results
 The **results** tab reports a reduction in Mean Square Error (MSE), compared to the prior Linear Regression model that used default parameters.
 
 ![Automl Results]({filename}/images/Bigquery_Automl/23_Automl_Results.png)
@@ -129,7 +129,7 @@ Rank | Platform | Approach | Dims | RMSE
 
 BigQuery AutoML under-performs compared to [GCP AutoML Tables]({filename}/fast-and-easy-automl-optimize.md) and a [dimensionality reduced TensorFlow model]({filename}/fast-and-easy-regression-with-tensorflow-part-2.md).
 
-# Serve Model
+## Serve Model
 After training, BigQuery saves and serves the new model in place.
 
 We use **SQL** to use the served model.  In the BigQuery console, click **QUERY MODEL**.
@@ -221,7 +221,7 @@ The model predicts a **quality** score (taste) of 1.7 out of 10 for a wine with 
 ]
 ```
 
-# Boosted Tree
+## Boosted Tree
 For fun, let's look at the success of an [ensemble method](https://en.wikipedia.org/wiki/Ensemble_learning).  
 
 BQML provides a **BOOSTED_TREE_REGRESSOR**, which we select via **SQL OPTIONS**.  
@@ -268,7 +268,7 @@ Rank | Platform | Approach | Dims | RMSE
 9 | TensorFlow | Linear Model | 2 | 0.735
 10 |Pandas | Guess Mean | N/A | 0.801
 
-# Dimensionality Reduced BQML
+## Dimensionality Reduced BQML
 Too many features drive over-fitting which increases RMSE.
 
 In a past blog post, we demonstrated that [dimensionality reduction through Principal Component Analysis (PCA) reduces over-fitting and reduces RMSE]({filename}/fast-and-easy-regression-with-tensorflow-part-2.md)
@@ -405,5 +405,5 @@ Rank | Platform | Approach | Dims | RMSE
 10 | TensorFlow | Linear Model | 2 | 0.735
 11 |Pandas | Guess Mean | N/A | 0.801
 
-# Conclusion
+## Conclusion
 Data Scientists have a plethora of tools and approaches to train models.  BigQuery provides in-situ Machine Learning and in-situ AutoML.  This blog post compared the BQML **AUTOML_REGRESSOR** algorithm against the **BOOSTED_TREE_REGRESSOR**, for both a complete and dimensionality reduced data set.
