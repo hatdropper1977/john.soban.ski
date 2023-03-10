@@ -25,14 +25,14 @@ This blog post discusses how to deploy the S3 backed Web Database Application th
 
 ![Final Web DB Architecture]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/02_Final_Web_DB_Architecture.png)
  
-# The Flask App
+## The Flask App
 This section describes the Flask implementation of the Web Database application.  Miguel Grinberg wrote the definative book on Flask.  I highly recommend you [purchase his book](https://blog.miguelgrinberg.com/post/about-me).  (You will see a familiar name on page XIV).
 
 ![Flask book shout out]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/04_Flask_Ack.png)
 
 I have written heavily about Flask on [this very site]({tag}flask).
 
-## The model
+### The model
 We use [Flask WTF]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md) to model the form.  We include a bunch of different form field types to demonstrate validation variety.
 
 ```python
@@ -52,7 +52,7 @@ class QuizForm(FlaskForm):
 
 Note that we accomodate a checkbox, an Integer, an IP Address, a text blob and a submit button.
 
-## The View
+### The View
 Flask uses a **Jinja2** template engine to render the view.  The engine generates client-side Java Script with [hooks to Bootstrap]({filename}/part-3-professional-form-validation-with-bootstrap.md) for pretty forms and client-side validation.  The WTF **quick_form()** method provides a macro to automatically generate a form element for every object in our model above.
 
 ```python
@@ -71,7 +71,7 @@ Flask uses a **Jinja2** template engine to render the view.  The engine generate
 {% endblock %}
 ```
 
-## The Controller
+### The Controller
 A Flask object orchestrates the client-side javascript generation and service routing.  The current Web DB App doesn't do much, it just validates form data and returns a static string.
 
 ```python
@@ -109,10 +109,10 @@ Enter "ABCD" into **IP Address**, for example.
 
 ![Client side validation]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/05_Client_Side_Validation.png) 
 
-# Persistence
+## Persistence
 Now we will persist the data to our "database," which happens to be an object store.
 
-## Persist the Data
+### Persist the Data
 First, let's import some new standard Python packages.  We will enrich the user's form data with some meta data, to include their IP address, a timestamp and a unique ID.  Notice **choice**,**datetime**,**json** and **string**.  We will also import **boto3** in order to write to S3.
 
 ```python
@@ -128,7 +128,7 @@ from random import choice
 I wrote a simple key-generation script so that our data will persist with a unique key name.
 
 ```python
-# Generate a random Obkect ID
+# Generate a random Object ID
 def random_string_gen(size=20, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits + '-_'):
     return ''.join(choice(chars) for _ in range(size))
 ```
@@ -199,7 +199,7 @@ $ cat mU93H9iAt3X7FKkmbZFL.json
 }
 ```
 
-## Retrieve the Data
+### Retrieve the Data
 We can easily add logic to pull the JSON data based on a user provided key.  We will set up a Flask **route** to get the desired Key from the URL.
 
 ```python
@@ -215,7 +215,7 @@ Now, go to your Flask endpoint and append /user/<Your user key> to the URL.  I r
 
 ![Retrieve User Data]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/06_Retrieve_User_Data.png) 
 
-## Make the Data Pretty
+### Make the Data Pretty
 Since this is Flask, we can make the data pretty by using a **Jinja2** template.
 
 ```jinja2
@@ -252,7 +252,7 @@ When you reload the web page, you will see a bulleted list of key/ value pairs.
 
 ![Retrieve User Data Pretty]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
 
-## Daily Bucket
+### Daily Bucket
 If you don't like the idea of having a single bucket holding every record, you can break up the storage into daily buckets.
 
 Add a string to your **take_test()** route that records the current date and then use this as your S3 sub-bucket name.
@@ -281,7 +281,7 @@ def show_user_data(user_date,user_key):
 
 This approach organizes all records by date in your parent bucket.
 
-# Code
+## Code
 The entire **application.py** follows:
 
 ```python
@@ -298,7 +298,7 @@ class Config(object):
 
 S3_BUCKET_NAME = 'transcribe-input-test'
 
-# Generate a random Obkect ID
+# Generate a random Object ID
 def random_string_gen(size=20, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits + '-_'):
     return ''.join(choice(chars) for _ in range(size)) 
 s3 = boto3.resource('s3')
@@ -341,7 +341,7 @@ if __name__ == '__main__':
     application.run(host='0.0.0.0', debug=True)
 ```
 
-# Try it out!
+## Try it out!
 I pushed the entire app to [Github](https://github.com/hatdropper1977/web-db-app-w-s3).  Merely clone it, switch to the 'Flask-App' tag, install **requirements.txt** and run it!
 
 ```bash
@@ -367,5 +367,5 @@ I pushed the entire app to [Github](https://github.com/hatdropper1977/web-db-app
  * Debugger PIN: 123-456-789
 ```
 
-#Conclusion
+## Conclusion
 We succesfully deployed a Flask application with an S3 backend.  In the next blog post, we will refactor the Web Database App to use [Lambda]({tag}lambda) instead of Flask.
