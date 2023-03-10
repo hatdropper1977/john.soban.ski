@@ -6,7 +6,6 @@ Tags: HOWTO, SD-RAN, SDN, OpenDaylight
 Slug: install-opendaylight-ubuntu-lts-fast
 Status: published
 
-# Introduction
 Network Engineers use the [OpenDaylight](https://www.opendaylight.org/) (ODL) platform to craft, deploy and manage interesting virtual network services.
 
 ![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
@@ -257,7 +256,7 @@ opendaylight-user@root>feature:list
 
 ![04_All_Features]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
 
-# Conclusion
+## Conclusion
 You now have the knowledge and experience to install any **release** version of OpenDaylight with all the **karaf features**.  If you would like a challenge, you can try some more complicated methods of install, to include [building OpenDaylight from Source]({filename}/how-to-install-opendaylight-on-centos-or-ubuntu.md) or [installing OpenDaylight as a Service]({filename}/how-to-install-opendaylight-as-a-service-on-ubuntu.md).
 
 You might also want to check out the demonstration I gave at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia.  I uploaded the slides to [SlideShare](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) and the Linux Foundation uploaded the video to [YouTube](https://www.youtube.com/watch?v=PGl43xJQQ0g).
