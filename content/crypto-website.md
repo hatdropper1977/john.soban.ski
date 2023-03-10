@@ -24,7 +24,7 @@ In this demo we will:
 -  Register an ENS domain
 -  Link our ENS domain to our IPFS website
 
-# Get a Wallet
+## Get a Wallet
 You must get an Ethereum wallet to use the new blockchain-enabled web.  An Ethereum wallet holds your private key and allows you to use Decentralized Applications (dApps).
 
 You can get a wallet from several providers.  In past [blog posts I demonstrated how to use Metamask]({tag}rarible) to get an Ethereum wallet.  In this blog post I will show you how to use the [Brave Browser]({tag}brave) to get an Ethereum wallet.  To get a wallet from [Brave]({filename}/brave-verified-creator.md), simply open Brave, click the Hamburger icon and select **Wallet**.
@@ -59,7 +59,7 @@ That $400 translates to about 0.08 ETH.
 
 ![Eth Bought]({filename}/images/Crypto_Website/06_Eth_Bought.png)
 
-# Distributed App Intro - OpenSea
+## Distributed App Intro - OpenSea
 Ethereum drives dApps, which use the global Ethereum blockchain to manage digital identities, content and ownership.
 
 [OpenSea](https://opensea.io), for example provides a Web based user interface to track, manage and sell [Non Fungible Tokens]({tag}nft) on the Ethereum blockchain.
@@ -76,7 +76,7 @@ OpenSea pulls your account info directly from the blockchain.  Right now we do n
 
 After we get some digital assets in our new wallet, however, we will look at several dApps to demonstrate the global nature of the Ethereum blockchain.  Also, later in this post, we will change the string of hex (**0x84916411a80C9C60AD3433A26aEe49805239Bd04**) that records our Ethereum wallet's address to a human-readable name via the [Ethereum Name Service](https://ens.domains).
 
-# Publish to InterPlanetary File System (IPFS)
+## Publish to InterPlanetary File System (IPFS)
 The [InterPlanetary File System (IPFS)](https://ipfs.tech) provides a massive, decentralized, distributed file system.  Think of an [Amazon Web Service (AWS) Simple Storage Service (S3)](https://aws.amazon.com/s3/) owned and maintained by the public, vs. a trillion dollar company. (To my stickler nerd friends - the IPFS protocol acts closer in spirt to AWS [CloudFront](https://aws.amazon.com/cloudfront/) vs. AWS S3).
 
 Each IPFS user hosts and receives data, following a protocol similar to [Napster](https://en.wikipedia.org/wiki/Napster) back in the day.  To use IPFS, you must first download and install the IPFS client.  The [IPFS website](https://ipfs.tech/#install) provides a desktop client for Windows, Linux and Mac.
@@ -128,7 +128,7 @@ To see the website, click the ellipses next to your uploaded web folder and then
 
 Paste this link into any browser to see your website.  Keep in mind that IPFS takes dozens of minutes to catch up.
 
-# Create an NFT
+## Create an NFT
 The Ethereum blockchain records both our Ethereum account's actions and our Ethereum account's assets.
 
 Let's create and sell an NFT to add some interesting history to our account.
@@ -175,7 +175,7 @@ OpenSea mints the item and completes the purchase.
 
 ![Purchased Nft]({filename}/images/Crypto_Website/26_Purchased_Nft.png)
 
-# Shared dApp Ecosystem 
+## Shared dApp Ecosystem 
 OpenSea used the Ethereum blockchain to mint, manage and sell my NFT.  Other dApps that use the Ethereum blockchain to mint, manage and sell NFTs see the transactions immediately.
 
 [Rarible]({tag}rarible), for example, displays the creation of the NFT.
@@ -188,7 +188,7 @@ OpenSea used the Ethereum blockchain to mint, manage and sell my NFT.  Other dAp
 
 In a Web 2.0 Architecture, OpenSea, Rarible and Darkblock would each have their own database to track NFT creation, logistics and permissions.  In the Web 3.0 (how long will that name stick?) construct, all three dApps use the same **database** for their back-ends... the Ethereum Blockchain.
 
-# Ethereum Name Service (ENS)
+## Ethereum Name Service (ENS)
 The Internet Domain Name Service (DNS) maps human-readable names to Internet Protocol Addresses.  [John.Soban.Ski](https://john.soban.ski), for example, points to the IP address [65.9.83.48](https://www.nslookup.io/domains/john.soban.ski/dns-records/).
 
 In a similar manner, the [Ethereum Name Service (ENS)](https://ens.domains) maps our forty character Ethereum wallet address to a human readable name.  I will demonstrate this in action.
@@ -225,7 +225,7 @@ I can use Etherscan to profile my wallet using either my hex address (**0x849164
 
 ![Etherscan Update]({filename}/images/Crypto_Website/35_Etherscan_Update.png)
 
-# Decentralized Website Hosting
+## Decentralized Website Hosting
 Our IPFS website (above) lives on the decentralized, distributed, global IPFS file share. We will configure ENS to serve up the content of our IPFS website via a Content ID (CID) number.  The IPFS desktop client provides a Content ID (CID) for the website we launched.
 
 **bafybeia4rjakzczwxbjllzcsx5h3wjmk6qy3hohkxwfwkvgqqjyebry7jq**
@@ -246,7 +246,7 @@ Append **.link** to the end of Ethereum domains to use an IPFS proxy and access 
 
 ![Eth Link]({filename}/images/Crypto_Website/38_Eth_Link.png)
 
-# Conclusion
+## Conclusion
 In this demo we used two dApps to host a static website.  Our [website](https://gdit.eth.link) now reaps the benefits of the Ethereum ecosystem, including zero censorship, 100% availability, global reach and immutability.  
 
 If you enjoyed this blog post please click on some of the tags below to find similar content, or check out my NFT's on [Rarible](https://rarible.com/sobanski/owned).
