@@ -55,12 +55,12 @@ Darkblock writes the following on their [website](https://darkblock.medium.com/d
 >
 > We call this protocol layer PeRM: Personal Rights Management. We feel that everyone should have control of their own creations and content without the possibility of interference as a matter of principle.
 
-# Create A Darkblock
+## Create A Darkblock
 You must be a creator of an NFT to create a Darkblock.  
 
 You do not, however, need to own the NFT to create a Darkblock.  
 
-## NFT I Created (But Do Not Own)
+### NFT I Created (But Do Not Own)
 To demonstrate, I will log into my **Hello World** [Rarible account](https://rarible.com/ultramagnus).
 
 ![Um Login]({filename}/images/Darkblock/01_Um_Login.png)
@@ -79,7 +79,7 @@ Ultra Magnus no longer owns the [Partu Media NFT](https://rarible.com/token/0x60
 
 ![All Gone2]({filename}/images/Darkblock/04_All_Gone2.png)
 
-## The Darkblock App
+### The Darkblock App
 Navigate to [app.darkblock.io](https://app.darkblock.io).
 
 ![App Darkblock]({filename}/images/Darkblock/05_App_Darkblock.png)
@@ -144,7 +144,7 @@ In addition to my [NFTP By Charmin NFT](https://rarible.com/token/0x60f80121c31a
 
 Darkblock indicates that I now have digital goodies to unlock.
 
-# View A Darkblock
+## View A Darkblock
 Darkblock provides an App to view the new, locked digital content.
 
 Today (October 30th, 2021) Darkblock provides an Application for the [Amazon Firestick](https://www.amazon.com/Darkblock-NFT-Display/dp/B09B4FLQZ6/) (They also provide applications for other [Google Media Devices](https://play.google.com/store/apps/details?id=io.darkblock.darkblock&hl=en&gl=US)).
@@ -193,10 +193,10 @@ Here I change the matte background to corkboard.
 
 ![With Borders]({filename}/images/Darkblock/27_With_Borders.png)
 
-# Conclusion
+## Conclusion
 Darkblock provides artists with an NFT control panel for access rights and Creator Rights Management.  Artists can use NFT for media distribution and permissions management, which opens the door for exciting possibilities.
 
-# A Note To Recent (Oct 2021) Rarible Creators
+## A Note To Recent (Oct 2021) Rarible Creators
 I attempted to [create a brand new NFT](https://rarible.com/token/0xf6793da657495ffeff9ee6350824910abc21356c:69644222009519936378771681436291690114697426885580689206684726473945885179905?tab=details) for this blog post.
 
 I selected **single collectible**.
