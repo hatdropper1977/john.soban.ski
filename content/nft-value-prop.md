@@ -16,8 +16,8 @@ Hackneyed critics quickly lobbed the knee-jerk **tulip mania** cliché at NFTs, 
 
 > **DISCLAIMER**:  I base the information on this blog on my personal opinion and experience and you **MUST** not consider this professional financial investment advice.  Do not ever use my opinions without first assessing your own personal and financial and situation and you **MUST** consult a financial professional before making any investment.  Keep in mind I will change my thoughts and opinions over time as I learn and accumulate more knowledge.  I am **NOT** a financial professional!  This blog is not a place for the giving or receiving financial advice, advice concerning investment decisions or tax or legal advice.
 
-# The Value Props
-## Value Prop #1: The Blessing
+## The Value Props
+### Value Prop #1: The Blessing
 Dim experts will point out a (perceived) shortcoming of NFTs: the ability for anyone to save a local copy.  Consider, for example, a token encoded in **JPEG** format.  A web surfer (90s slang) could buy the NFT for Ethereum, and own the **JPEG**.  Another web surfer, can also **right click** on the **JPEG** and save the **JPEG** to her desktop.  Both the purchaser and the downloader will have the **SAME EXACT JPEG**.
 
 Try it for yourself.  Open [this link](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:356990:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in another tab to find an Isometric Pixel Art NFT that tokenizes a **PNG** of a leaning bookcase.  You can either buy the NFT for 0.01 ETH, or just download the **PNG** for free.
@@ -28,7 +28,7 @@ Given that, why would anyone pay valuable (well, this week at least) Ethereum fo
 
 I will answer that question after a discussion about Bananas and Dots.
 
-### Bananas
+#### Bananas
 The Artist [Maurizio Cattelan](https://www.google.com/search?q=Maurizio+Cattelan) duct taped a banana to a wall, called the result a piece of art (**Comedian**) and then promptly sold two editions at **Perrotin, the Gallery** for [**$120,000 each**](https://en.wikipedia.org/wiki/Comedian_(artwork)).
 
 ![Maurizio Cattelan's Comedian from Perrotin the Gallery]({filename}/images/Nft_Value_Prop/02_Banana_Duct.png)
@@ -45,7 +45,7 @@ In other words, the collector buys **Commedian** for the COA, or more specifical
 
 > NOTE:  Cattelan released a third edition of **Comedian** and Perrotin expects the sale to close at $150,000.
 
-### Circles Art
+#### Circles Art
 Damien Hirst released a thousand or so paintings of dots (yes, just dots).  He did not paint these paintings, he hired someone else to paint them for him, and then he signed them.
 
 ![Damien Hirst Spots]({filename}/images/Nft_Value_Prop/03_Damien_Spot.png)
@@ -63,7 +63,7 @@ The home-made **comedian** or assistant painted **dots** pieces represent 1:1 eq
 
 The digital signature represents the Artist's blessing for digital pieces.
 
-## Value Prop 2: Investment
+### Value Prop 2: Investment
 At present time, NFTs hold their value in Ethereum. Ethereum swings high and low, and the NFT market price holds steady.
 
 I purchased a [Taco Bell NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in March for 3 ETH, with Ethereum at $1.8k/ ETH.  Another copy sold for 3 ETH in April with Ethereum at $2.3k/ ETH.  On May 9th, someone made an offer for 2 ETH with ETH at $4k/ coin.  In terms of dollar value, the May bid landed at 43% higher than my initial purchase, with no sellers willing to part.
@@ -86,7 +86,7 @@ The following chart captures recent **Crypto Punks** sales.
 
 ![Q1 2021 Cryptopunks chart]({filename}/images/Nft_Value_Prop/05_Crypto_Punks.png)
 
-## Value Prop 3: Durability
+### Value Prop 3: Durability
 I own Video Games Authority (VGA) graded video games, Wata graded video games, and Certified Guarantee Company (CGC) graded comic books.  
 
 ![Castlevania - Large Endlabel Logo WATA graded]({filename}/images/Nft_Value_Prop/06_Castlevania_Wata.png)
@@ -99,10 +99,10 @@ I plan to unload these collectibles, however, since I need to pay attention to h
 
 In other words, physical collectibles yield a logistical headache.  With an NFT, I just need to protect my seed phrase.  The blockchain will ensure that my collectible stays in **mint, case fresh** (nerd lingo) condition until the end of time.
 
-# Downsides
+## Downsides
 Now that I have discussed the value proposition of NFTs, I will now pivot to discussing some of the downsides (skipping the obvious downside associated with investing in a new, insanely speculative collectible category).
 
-## Downside 1: Security
+### Downside 1: Security
 I have about 5 ETH worth of NFTs.  In mid may, Ethereum hit $4.4k/ token.  At that point, I had a collection of NFTs valued at over $20,000.
 
 A **Crypto Punk** starts at 20 ETH, worth over $80,000 during that same time period.
@@ -121,7 +121,7 @@ Consider this on a smaller scale, where an indie artist gets verified on [Raribl
 
 She would have to go through the Rarible verification process once more, and alert buyers to the fact that she has two accounts (two signatures), one for pre-hack and one for post hack.  This fact would inject confusion into the collecting process.
 
-## Downside 2: Gas
+### Downside 2: Gas
 NFTs ride the Ethereum blockchain.
 
 An Artist must pay a fee to mint, auction or sell their NFT.  A buyer must pay a fee to bid on a piece or buy a piece.  The Ethereum standard calls this fee "gas."
@@ -130,7 +130,7 @@ From experience, I have paid $60-$80 to mint an NFT.  I paid $40 to bid on an NF
 
 Gas introduces friction into the NFT minting and transaction process, and disproportionately affects small scale artists.
 
-## Downside 3: Winner Take All
+### Downside 3: Winner Take All
 Right now, **Crypto Punks**, [Celebrities](https://rarible.com/lindsaylohan) and [Brands](https://rarible.com/charmin) own the NFT space.
 
 YouTube stars, professional athletes, musicians, reality TV stars and fast food chains muscle out the smaller indie artists.
@@ -141,10 +141,10 @@ I personally lost 99% of my investment in coins such as [BitGreen](https://bitg.
 
 The major players, Bitcoin, Ethereum, Monero and Litecoin emerged from the crash and hit all time highs several years later.  I do not see why NFTs would not follow this same playbook, where the top 1% of the NFTs will hold long term value whereas the rest could plummet in price to pennies.
 
-# What's Next
+## What's Next
 In this concluding section, I will discuss some interesting ideas around the NFT space that may materialize in the near or distant future.
 
-## Pedigree
+### Pedigree
 The Blockchain tracks the entire chain of ownership for a given NFT, the **provenance** if you will.
 
 When you own an NFT, collectors will see everyone who owned that NFT.  Given that, would an NFT once owned by Elon Musk or Skeet Ulrich (I've lost track of pop culture this decade) be more valuable than one owned by an anonymous non-celebrity?  I don't see why not.  Perhaps celebrity ownership will increase the value of certain tokens.
@@ -153,10 +153,10 @@ Lindsay Lohan, for example, owned [this token](https://rarible.com/token/0xd07dc
 
 ![Lindsay Lohan once owned this NFT!]({filename}/images/Nft_Value_Prop/08_Lohan_Nft.png)
 
-# Donations
+## Donations
 I would love to see some of my favorite non profits, such as [the Ronald McDonald House of Baltimore](https://rmhcmaryland.org/) set up a digital NFT wallet.  NFT collectors would then transfer tokens to the wallet, and the Charity would sell them for a profit.  This seems like a straight forward process.  The Charity would have to spend time accounting the NFT ownership and sales for tax purposes, but other than that, I think it would be a huge win for the non-profit space.
 
-# Deep Freeze
+## Deep Freeze
 I will now revisit a common complaint about NFTs: anyone can download a local copy of the artwork.  In reality, NFTs live on computers and developers can program computers to wrangle bits as they see fit.  In theory, a company could develop a service to prevent people from saving a local copy of a digital collectible.  A company could also develop a service to prevent them from snapping a picture with their cell phone.
 
 In 2021 I can watch the entire lineup of TGIF from 1987 anywhere on the planet using my cellphone, so anything is possible!
@@ -173,7 +173,7 @@ From their website:
 
 I look forward to seeing what Darkblock delivers in the near future.
 
-# Identity
+## Identity
 In conclusion, I will revisit the idea of managing verified NFT creators in the face of compromised keys.  Verification, in general, requires a service to map a persons identity to a private key.  
 
 We verify ourselves online in several different ways:
