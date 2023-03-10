@@ -42,7 +42,7 @@ Even though Elasticsearch does not use the **row** construct to identify a unit 
 
 The Elasticsearch API provides an expressive REST API to execute **Aggregations**.  Kibana also provides a Graphical User Interface (GUI) to execute **Aggregations**.  We will demonstrate both methods in this blog post.
 
-# Aside 1: Get Cloudfront logs into Elasticsearch
+## Aside 1: Get Cloudfront logs into Elasticsearch
 I ingested my AWS Cloudfront logs from S3 into Elasticsearch using Logstash.  I first set up an Elasticsearch cluster using the method I recorded in last mont's blog post, which describes [how to use Boto3 to connect an Ubuntu EC2 instance to the Amazon Elasticsearch Service]({filename}/boto3-ec2-to-amazon-elasticsearch.md).
 
 A quick Google search lead me to the [following filter](https://gist.github.com/mkleucker/35ba3a9a54cf976d4c9e2defb7288531), which I deployed to my Logstash instance.
@@ -108,7 +108,7 @@ filter {
 }
 ```
 
-# Aside 2: Why learn the Elasticsearch Aggregation API?
+## Aside 2: Why learn the Elasticsearch Aggregation API?
 You know and love Pandas.  The Elasticsearch **aggs** API appears to be bizarre and scary.  For now, you query Elasticsearch, convert the returned **JSON** to a Pandas Dataframe, and then apply a Pandas **GROUP BY** to the Dataframe to retrieve summary stats.  Modern laptops include 32GB of memory and you have had no issues with this method.  If you use Elasticsearch for non **time series** data, e.g. static data for blogs, you may not need to worry about running out of memory.
 
 ![Lazy Group By]({filename}/images/Aggregations_The_Elasticsearch_Group_By/01_Lazy_Group_By.png)
@@ -121,9 +121,9 @@ I recommend that you learn the **aggs** API.  This allows you to command Elastic
 
 ![Best Practice]({filename}/images/Aggregations_The_Elasticsearch_Group_By/03_Big_Data_Best_Practice.png)
 
-# Aggs
+## Aggs
 
-## Simple Tables 
+### Simple Tables 
 In the upper right corner of Kibana, select the appropriate time range.
 
 ![Select Time]({filename}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
@@ -145,14 +145,14 @@ Under **Aggregation** select **Terms** (A categorical bucketization) and then un
 ![Simple Table Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/08_Simple_Table_Configure.png)
 
 
-## Nested Tables
+### Nested Tables
 Elasticsearch created five big **Country** buckets based on the number of hits: (1) United States (2) India (3) United Kingdom (4) Germany and (5) France.  Now command Elasticsearch to create three little **City** buckets for each of the five big **Country** buckets, based on the most active **Cities**.
 
 Collapse the first **Split row** and click **add**.  An **Add Sub-bucket** menu pops up.  Once more, click **Split Rows**.  Select **Terms** for **Sub Aggregation** and **geoip.city_name.keyword** for **Field**.  Set **Size** to **3**.  Under **Custom Label** enter **city_agg** and press the **Play** icon to apply changes.
 
 ![Nested Table Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
 
-## Use the API
+### Use the API
 Now that you have some exposure to the terminology and structure of Elasticsearch **Aggregations** we will move from the Visualization GUI to the **REST API**.
 
 In Kibana, select the Dev Tools icon and then type the following:
@@ -233,7 +233,7 @@ Set size from **20** to **0** and press play.  You now see the **aggs** results.
 
 ![Size zero results]({filename}/images/Aggregations_The_Elasticsearch_Group_By/16_Size_Zero_Results.png)
 
-## Nested Aggs via the API
+### Nested Aggs via the API
 Look at our nested Table from the Kibana example above.
 
 ![Nested Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
@@ -347,5 +347,5 @@ If you expand the **city_agg** for one of the **country_agg** buckets, you will 
 
 ![More nested agg results]({filename}/images/Aggregations_The_Elasticsearch_Group_By/22_Nest_Agg_Results_2.png)
 
-# Conclusion
+## Conclusion
 In this blog post I demonstrated how to execute simple **GROUP BY** operations via Elasticsearch **aggregations**.  I demonstrated how to generate tables via both Kibana and the Elasticsearch API.  **GROUP BY** (RDBMS) and **Aggregation** (Elasticsearch) operations lend themselves well to **Time Series** data, since these operations allow you to **GROUP BY** or **Aggregate** results over a given time bucket (e.g. Hour, Day, Week, Month, etc.).  Next month, I will demonstrate how to use **Aggregations** for [time series analysis and Data Viz]({filename}/elasticsearch-aggs-for-time-series.md).
