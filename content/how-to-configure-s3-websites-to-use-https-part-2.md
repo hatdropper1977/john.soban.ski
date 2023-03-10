@@ -14,7 +14,7 @@ Once you complete this HOWTO, you will have a secure website, that Google approv
 
 HTTPS and Naked Domain redirection will increase your security, reduce customer bounce rate and increase SEO.
 
-# Outline
+## Outline
 
 In [part one]({filename}/how-to-configure-s3-websites-to-use-https-part-1.md) of this tutorial, we executed the following:
 
@@ -35,7 +35,7 @@ As described in [part one]({filename}/how-to-configure-s3-websites-to-use-https-
 
 ![Route 53 Cloudfront S3]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/000_Route_53_Cloudfront_S3.png)
 
-# Upload a web page
+## Upload a web page
 I will use a simple ***hello world*** web page to make sure everything works.  At this point, you could upload an existing static website.  In this example, I assume your site uses ***index.html*** for the main page's name.
 
 First, go to the S3 console:
@@ -65,7 +65,7 @@ Again, on the 'Upload' screen, ensure that you ***grant public access***.
 
 Now that you have a test file uploaded, see if AWS completed your certificate validation.
 
-# Create CloudFront distribution
+## Create CloudFront distribution
 S3 does not natively support HTTPS for websites, so we will use CloudFront.  We requested a certificate from ACM to install into CloudFront.  Check to see if ACM completed issuing the certificate.  It takes about a half of an hour to complete.  Go to the Certificate Manager console, click your website, and wait until you see the following success page.  Ensure that both the ***naked*** and ***www*** domain completed.
 
 ![Certificate Validation Complete]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_2/50_Certificate_Validation_Complete.png)
@@ -117,7 +117,7 @@ Click through all the 'Save' menus and you will be taken back to the main CloudF
 
 ![Deployment Complete]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_2/61_Deployment_Complete.png)
 
-# Point DNS (Route 53) to CloudFront distribution
+## Point DNS (Route 53) to CloudFront distribution
 From the main AWS console, open Route 53.
 
 ![Find Route 53 Console]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/02_Find_Route_53_Console.png)
