@@ -22,7 +22,7 @@ The AI service also produces a picture of ET in a phone booth.
 
 This month, I demonstrate the service and discuss the history of the service, which begins with the **OpenAI foundation**.
 
-# OpenAI
+## OpenAI
 [Elon Musk](https://twitter.com/elonmusk) (Tesla), [Sam Altman](https://en.wikipedia.org/wiki/Sam_Altman) (Y Combinator), [Greg Brockman](https://gregbrockman.com/) (Stripe) and [Ilya Sutskever](https://www.cs.toronto.edu/~ilya/) (Google) pledged over $1B to found [OpenAI](https://openai.com/) in December, 2015.  
 
 OpenAI funds the development of **friendly** Artificial General Intelligence (AGI) that drives the health, happiness and improvement of our human race.
@@ -35,7 +35,7 @@ OpenAI invites the [public to use DALLE-2](https://labs.openai.com/auth/signup),
 
 You can try the API for free via [Huggingface](https://huggingface.co/spaces/dalle-mini/dalle-mini), or [Crayon](https://www.craiyon.com/), but (in July 2022) these services take minutes to produce images.  Jasper AI Art reduces the **wall clock** time down to seconds.
 
-# Jasper AI Art
+## Jasper AI Art
 [Dave Rogenmoser](https://techcrunch.com/2022/10/18/ai-content-platform-jasper-raises-125m-at-a-1-7b-valuation/), J.P. Morgan and Chris Hull formed Jasper AI in early 2021. Since then, Jasper AI provides the GPT-3 model for [copywriting and Search Engine Optimization (SEO)]({filename}/jasper-ai.md) use cases.
 
 This month, Jasper opens their Jasper Art service to their customers.
@@ -64,7 +64,7 @@ Too much baby powder!!!
 
 ![Too much baby powder!!!]({filename}/images/Jasper_Art/07_Too_Much.png)
 
-# Sign Up
+## Sign Up
 Jasper sent me an invitation to try their new **Art** service.  They boast that **artificial intelligence now can create any image or art you can imagine in seconds**.
 
 ![Email]({filename}/images/Jasper_Art/09_Jasper_Email.png)
@@ -73,7 +73,7 @@ Clicking through the links takes me to a payment page.  Unlimited access to the 
 
 ![Sign Up]({filename}/images/Jasper_Art/10_Sign_Up.png)
 
-# The User Interface
+## The User Interface
 Jasper provides a User Interface (UI) to generate art.  You enter a text description and then use the drop down selector boxes to set the **Style, Medium, Artist** and **Mood**.
 
 ![Blank Jasper Art UI]({filename}/images/Jasper_Art/11_Jasper_Ui.png)
@@ -163,7 +163,7 @@ We get a vulture in the airplane cabin, but no Carrion.
 
 ![Sans Carry On]({filename}/images/Jasper_Art/24_Vulture_Artdeco.png)
 
-# A Toddler gets Silly
+## A Toddler gets Silly
 At this point my toddler walks over and asks me to make **planet earth made out of poop emoji**.
 
 ![planet earth made out of poop emoji]({filename}/images/Jasper_Art/25_Poop_Ui.png)
@@ -202,7 +202,7 @@ Pumpkin Skeleton.
 
 ![Pumpkin Skeleton.]({filename}/images/Jasper_Art/34_Pumpkin_Skeleton.png)
 
-# I get Silly
+## I get Silly
 The silliness inspires me.  I think of some more ideas.
 
 Propaganda  Wario.
@@ -238,12 +238,12 @@ Finally, I just type **Ai Yiii Yiii Yiii** into the box.
 
 ![Ai Yiii Yiii Yiii]({filename}/images/Jasper_Art/42_Ayiii_Yiiyiii.png)
 
-# Conclusion
+## Conclusion
 I will use the Jasper Art Service to illustrate future blog posts.  I have writeups on Gerard Manley Hopkins and Yukio Mishima in the works that need interesting pictures.
 
 I recommend the service for any small (or big) business that needs to create compelling pictures beyond stock art.  The services provide an inexpensive and timely alternative to hiring graphic artists.
 
-# Paw Patrol
+## Paw Patrol
 Before you go, my Toddler re-appears and demands the following Paw Patrol related pieces.  I leave them here for prosperity.  He will get a kick out of them twenty years from now or so.
 
 Cat Paw Patrol.
