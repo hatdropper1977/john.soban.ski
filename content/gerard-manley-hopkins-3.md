@@ -14,7 +14,7 @@ Harris calls Hopkins’ situation “a recurrence of the melancholia” he exper
 
 > [Click Here]({filename}/gerard-manley-hopkins-1.md) to read [Part 1]({filename}/gerard-manley-hopkins-1.md) or [here]({filename}/gerard-manley-hopkins-2.md) to read [Part 2]({filename}/gerard-manley-hopkins-2.md)
 
-# I Wake and Feel the Fell of Dark, Not Day
+## I Wake and Feel the Fell of Dark, Not Day
 Hopkins also deals with City-induced madness and depression in his “I Wake and Feel the Fell of Dark, Not Day.” 
 
 ![England Skyscrapers]({filename}/images/Gerard_Manley_Hopkins_3/02_England_Skyscrapers.png)
@@ -76,7 +76,7 @@ Ellis says the last two lines faintly echo one of Hopkins’ earlier prayers: �
 
 This poem captures a depressed, isolated Priest unable to reach communication with God. He cannot reach God on account of his self-imposed prison. Hopkins constructs a prison to punish himself for failings he has acquired on account of the City’s influence. His confinement then leads to “the fell of dark,” or depression.
 
-# To Seem the Stranger
+## To Seem the Stranger
 “To Seem the Stranger” also represents depression. “To Seem the Stranger” reads less obfuscate than the other “Terrible Sonnets.” “No Worst, There is None” and “I wait and feel the fell of dark, not day” deliver enigmas that the reader addresses through vigorous explication and a thorough understanding of Hopkins’ life history. “To Seem the Stranger,” however, nearly states outright the causes for the pain it depicts. Concrete, tangible incidents cause Hopkins’ pain in “To Seem the Stranger.”
 
 Hopkins opens with the first reason for his pain:
@@ -119,7 +119,7 @@ MacKenzie writes that Hopkins “considered that a great work of art by an Engli
 
 Hopkins, “idle a being but by where wars are rife” states “his impotence not only as teacher-lover of humanity but as a soldier” (Ellis 276). Instead of being an active member in the crusade to bring England, and furthermore, Catholicism, honor, he finds himself “a mere sidelined soldier, an observer ‘but by’ (only on the periphery of) the war... in which he should but cannot be engaged” (276). Furthermore, Hopkins’ choice of the word “idle” imparts a “bare existence, without energy or purpose or choice... the futile and tedious continuation of something that ought to be life and action but is endlessly thwarted and inactive” (276). Hopkins writes this sonnet in response to his sense of failure at not producing any works of worth in Ireland. He blames this lack of muse on the city itself.  
 
-# Patience, hard thing!
+## Patience, hard thing!
 “Patience, hard thing!” also depicts a cowardly spectator (Hopkins), rather than an active soldier, in the war for God:
 
 > 1   Patience, hard thing! the hard thing but to pray,  
@@ -162,7 +162,7 @@ In addition, Ellis points out that the poem ends with Hopkins knowing but not do
 
 Hopkins’ fear of admitting his failure incites pride and condemns him to a potentially “endless circularity of search and suffering” in the quest for peace. He turns his fear into anger and attacks the virtue of patience. He becomes defensive and irrational and refuses to accept the obvious. When he finally realizes his irrational pride, he identifies a course to ameliorate his situation. Fear causes his pride. Hopkins wears an inflated, false pride to shield himself from emotional pain. He does not feel pride from superiority over any other human being or divine being. He wears the pride of a panicked individual, sprung irrationally to postpone the inevitable acceptance of a painful truth.
 
-# My own Heart let me more have pity on
+## My own Heart let me more have pity on
 “Patience, hard thing!” ends with Hopkins **knowing** how to improve his life. In “My own Heart let me more have pity on,” Hopkins acts on this knowledge.
 
 Unlike the other Terrible Sonnets, Hopkins attempts to break free of his psychological ruminations in this one:
@@ -203,7 +203,7 @@ God “whose smile / ‘s not wrung” alone controls Hopkins’ life and fate. 
 
 Regardless, this sonnet shows an attempt on Hopkins’ part to rid himself of demons.
 
-# Conclusion
+## Conclusion
 While “My Own Heart” ends on a positive note, the speaker of the “Terrible Sonnets” never finds a resolution. Literary analysts do not know conclusively that Hopkins intended “My own Heart” to end the “Terrible Sonnets.”  Literary circles agree that Hopkins did not intend the “Terrible Sonnets” to follow a particular order, and discourage any attempts to do so. Harris writes that we must read the poems “not as a developmental sequence but as a group whose unity [is] derived primarily from a common emotive pressure” (Harris 10). Hopkins' depression applies the “emotive pressure.” Hopkins' feeling of inadequacy, brought upon by the squalor and suffocation of the city, drives his depression.  
 
 Hopkins' earlier works lack deep philosophical rumination. “Pied Beauty,” “God’s Grandeur” and “Spring” demonstrate unquestioning obedience and wide-eyed awe at the splendor of God. The “Terrible Sonnets,” however, witness a dramatic departure from this paradigm, and deal with the pain of self-reflection. Hopkins questions his maker in the ‘Terrible Sonnets,” a contrast to his earlier unconditional acceptance. 
@@ -218,7 +218,7 @@ The city causes a heightened sense of failure in Hopkins during the period of th
 
 We can with certainty claim that Hopkins would never write the "Terrible Sonnets” if he avoided the metropolises of England and Dublin. If he stayed in St. Beuno’s, we would remember him for a catalog of poems akin to “Spring” and “Pied Beauty.” Inspired by the splendor of nature around him, he would produce innocent, carefree poems uncritical of himself or humanity. Hopkins' constitution would benefit from a life devoid of the city and devoted to nature. The English literary canon, however, would suffer.
 
-# Works Cited:
+## Works Cited:
 -  Abrams, M.H [ed.]. *The Norton Anthology of English Literature: Volume Two*. 6th ed. New York: W.W. Norton & Company, 1993.
 - Bergonzi, Bernard. *Gerard Manley Hopkins*. New York: Collier Books, 1977.
 - Bristow, Joseph. “’Churlsgrace’: Gerard Manley Hopkins and the working­class male body." *Victorian Poetry* 59(1992):693-711.
