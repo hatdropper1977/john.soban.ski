@@ -12,7 +12,7 @@ Speaking of his “Terrible Sonnets,” Gerard Manley Hopkins suggests in a lett
 
 The “Terrible Sonnets" do not capture an “attack” against God for some perceived “transgression” but rather depict a lambaste against modem urban life and degeneracy. Constant exposure to the city-spawned dregs of humanity incites Hopkins to lose faith in the greatness of his fellow man. A Jesuit priest must esteem and empathize with mankind. Hopkins’ inability to do so institutes feelings of failure within him and sends him into a spiral of maddening depression. This depression at his and humanity’s perceived failings in the eyes of God, and not any loss of faith in God on his part, motivate his “Terrible Sonnets.”
 
-# The Squalid City
+## The Squalid City
 Gerard Manley Hopkins finds metropolitan life repugnant. He tersely conveys his view of London to a friend, Paravicini, when he calls it “a hellhole” (Martin 325). Dublin fares no better in Hopkins’ esteem. He tells another friend, Bridges, that he finds Dublin “as smoky as London, and covered in soot” (368). Hopkins sees Dublin “in a deeply dispiriting state of decline” (366), bearing “the signs of years of neglect” when he arrives (Bergonzi 125). Martin writes of:
 
 > patrician Georgian townhouses [that] had declined into squalid congeries of rooms in each of which lived an entire family... a woman might be giving birth on a newspaper-covered bed, surrounded by eight or ten other children intent on their play beneath the swags of an ornately plastered ceiling. It was the kind of contrast that shocked the sensibilities of the tender-hearted Hopkins and provoked him into both sympathy and rage. After his death [sic] his sister told Bridges that ‘he was made miserable by the untidiness, disorder and dirt of Irish ways, the ugliness of it all’ (368)
@@ -27,14 +27,14 @@ The city depresses Hopkins. He writes to Bridges:
 
 > The state of the country [England] is indeed sad, I might say it is heartbreaking, for I am a very great patriot. Lamentable as the condition of Ireland is, there is hope of things mending, but the Transvaal is an unrelieved disgrace. And people do not seem to mind (Bridges 131)
 
-## Elusive Muse
+### Elusive Muse
 But Hopkins faces more than just literal death in the city. Hopkins' city also leads to creative death. Hopkins finds that his “muse eludes [him] in urban physical surroundings” (Thesing 386). Martin reiterates verbatim at two points of his biography that Hopkins feels “dried out by cities, spiritually and poetically” (325 & 335). Hopkins discovers that “urban work and poetic creation seem to be antagonistic or at best mutually exclusive” (Thesing 388). The “horrible place,” the city, exists to “stifle” creative endeavors (Bridges 126).
 
 ![Victorian Dublin]({filename}/images/Gerard_Manley_Hopkins_1/04_Victorian_Dublin.png)
 
 Thesing says “the city represents [to Hopkins] recalcitrant material opposed to the creation of poetry” (389). Hopkins supports Thesing’s conclusion when he comments: “Liverpool is of all the places the most museless. It is indeed a most unhappy and miserable spot” (Correspondence 42). Ideas for poems germinate in Hopkins' mind, yet somehow the city parasitically sucks away the energy necessary for their manifestations. Any poem Hopkins mentions “in the course of its composition would never be finished... he had more than enough imagination for a dozen poets and scarcely the energy for one” (Martin 331).
 
-## Nature and the Divine
+### Nature and the Divine
 The vampiric city must feed off the lifeblood of nature to flourish. Developers must either entirely raze nature to make room for a city or instead portion Nature into controllable cells. The lack or destruction of nature brings pain to Hopkins, who says “I always knew in my heart Walt Whitman’s mind to be more like my own than any other man’s living” (Bridges 155). The Jesuit Priest emphasizes that, while he disagrees with Whitman’s homosexual tendencies, he feels a kinship with the American poet thanks to Whitman's passionate views on nature (155). 
 
 ![Whitman Hopkins]({filename}/images/Gerard_Manley_Hopkins_1/05_Whitman_Hopkins.png)
@@ -59,7 +59,7 @@ Over time, the relationship between nature and the divine evolves and becomes mo
 
 Hopkins believes that decent men must appreciate and embrace the redeeming qualities of nature. Unfortunately, repeated contempt by men towards nature starts to make it difficult for Hopkins “to be confident that man could not ruin the world” (304). Clausen writes, “ecological destruction" indicates to Hopkins, “a symptom of human depravity” (184). The city, and its killing of nature, therefore, indicates Man’s ability to be contemptuous towards a divine mechanism.
 
-## Man, the Animal
+### Man, the Animal
 The city reduces Mankind in Hopkins’ estimation on multiple levels. To Hopkins, the vice-like city squeezes humanity, the most beautiful and dignified creation in the universe, into a lesser animalistic being. 
 
 ![City Vice]({filename}/images/Gerard_Manley_Hopkins_1/08_City_Vice.png)
@@ -110,7 +110,7 @@ Modem man’s failure to live up to his potential physically, spiritually, and i
 
 [Click Here for Part Two]({filename}/gerard-manley-hopkins-2.md)
 
-# Works Cited:
+## Works Cited:
 -  Abrams, M.H [ed.]. *The Norton Anthology of English Literature: Volume Two*. 6th ed. New York: W.W. Norton & Company, 1993.
 - Bergonzi, Bernard. *Gerard Manley Hopkins*. New York: Collier Books, 1977.
 - Bristow, Joseph. “’Churlsgrace’: Gerard Manley Hopkins and the working­class male body." *Victorian Poetry* 59(1992):693-711.
