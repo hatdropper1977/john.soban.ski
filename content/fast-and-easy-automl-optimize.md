@@ -10,7 +10,7 @@ Model optimization on traditional Artificial Intelligence and Machine Learning (
 
 AutoML services **democratize** model development via no-code, graphical user interface (GUI) based optimization services.  We discuss the Google Compute Platform's (GCP) [AutoML Vision]({filename}/gcp-automl-vision.md) service in an [earlier blog post]({filename}/gcp-automl-vision.md).  In this blog post we discuss the GCP [AutoML Tables Beta](https://cloud.google.com/automl-tables) service.
 
-# The Data Set
+## The Data Set
 The GCP AutoML Tables Beta service requires structured, Data Frame encoded data.  To test drive the service, we use the [BUPA Liver Disorders](http://archive.ics.uci.edu/ml/machine-learning-databases/liver-disorders/bupa.data) data set.  For a refresher on the **BUPA Liver Disorders** data set, please right click and open one or more of the following blog posts in a new tab (or set of tabs):
 
 -  [Applying a Reduced Columb Energy (RCE) Neural Network to the BUPA Liver Disorders Data Set]({filename}/reduced_coulomb_energy_neural_network_bupa.md)
@@ -39,7 +39,7 @@ We iterate over the different model scenarios and draw the interesting conclusio
 
 Let's see if the Google AutoML service can beat our idiotic, yet successful **choose mean** algorithm.
 
-# Enable GCP AutoML tables
+## Enable GCP AutoML tables
 Engineers at Google call the menu selection icon the **hamburger**, a bit of slang that simultaneously makes me laugh and makes me hungry.  Click the **hamburger** icon in the upper left corner and then scroll down to **Artificial Intelligence** and select **Tables --> Datasets**.
 
 ![Hamburger Menu]({filename}/images/Fast_And_Easy_Automl_Optimize/01_Hamburger.png)
@@ -132,7 +132,7 @@ The service does not accept data sets that contain **less than** 1,000 rows.  Fo
 
 The Beta version of the **Google AutoML Tables** service dashed my plans of providing a consistent machine learning narrative centered on the **BUPA Liver Disorders** data set.  Un-cooperative software slayed my plans (and dreams) enough times in my professional career to vaccinate me against such roadblocks.  With a heavy heart, I will re-group and select a new data set for us to test drive the with the **AutoML Tables Beta** service.
 
-# The UCI Wine Data Set
+## The UCI Wine Data Set
 Our BUPA liver disorders [TensorFlow model]({filename}/fast-and-easy-regression-with-tensorflow.md) predicts the number of drinks that a boozer drinks each day based on biological markers.  We stick with the wino theme and use the University of California Irvine (UCI) [wine quality data set](http://archive.ics.uci.edu/ml/datasets/Wine+Quality).  The Wine Quality data set uses biological (and chemical) markers to predict the quality of wine, which the sommeliers give a score from one to ten.  I would assume that Thunderbird would score low on such a scale.
 
 Download the [wine dataset](http://archive.ics.uci.edu/ml/datasets/Wine+Quality) from the same UCI website that hosts the BUPA data set.
@@ -274,7 +274,7 @@ The dimensionality reduced Linear Model wins.
 
 Can Google AutoML tables beat the dimensionality reduced Linear Model?  Let's find out!
 
-# Import the UCI Wine Data Set
+## Import the UCI Wine Data Set
 Download the [Wine Data Set from UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv) to your workstation and execute the following two actions.
 
 1.  Replace all semi-colons (**;**) with commas (**,**)
@@ -315,7 +315,7 @@ After about forty-five minutes, Google sends an email that reports a successful 
 
 With our imported data set, we can now train the model.
 
-# Train the Model
+## Train the Model
 Click the **Train** tab in the console.
 
 ![Click Train Button]({filename}/images/Fast_And_Easy_Automl_Optimize/22_Click_Train_Button.png)
@@ -338,7 +338,7 @@ The Google singularity then gets to work and creates the infrastructure needed t
 
 ![Training Progress]({filename}/images/Fast_And_Easy_Automl_Optimize/26_Training_Progress.png)
 
-# View Results
+## View Results
 After a few hours, Google sends an email that notifies us of model completion.
 
 ![Training Email]({filename}/images/Fast_And_Easy_Automl_Optimize/27_Training_Email.png)
@@ -361,7 +361,7 @@ Guess Mean | N/A | 0.801
 
 > NOTE: We achieved the best results with the least amount of work: Upload a CSV and click train!  
 
-# Model Meta Data
+## Model Meta Data
 The service provides feature importance.  Google reports that **alcohol** drives **quality** more than any other feature.
 
 ![Feature Importance]({filename}/images/Fast_And_Easy_Automl_Optimize/29_Feature_Importance.png)
@@ -376,7 +376,7 @@ Trial fifteen uses a Gradient Boosted Decision Tree (GBDT).
 
 The logs provide a cumbersome UI to investigate the trials.  Perhaps the **Alpha** service will clean up the UI and present a friendlier dashboard.
 
-# Deploy the Model
+## Deploy the Model
 Now that we developed the model, we will deploy the model for use.  The AutoML service provides one-click, no-code model deployment.
 
 Click **Test And Use --> Online Prediction --> Deploy Model**.
@@ -389,7 +389,7 @@ Google emails an alert once the model deployment completes.
 
 ![Deployed Email]({filename}/images/Fast_And_Easy_Automl_Optimize/33_Deployed_Email.png)
 
-# Test the Model
+## Test the Model
 The **online prediction** tab provides a web form to test the model.  
 
 ![Deployed Model]({filename}/images/Fast_And_Easy_Automl_Optimize/34_Deployed_Model.png)
@@ -404,14 +404,14 @@ The model predicts our strong wine deserves a score of **5.194**
 
 The AutoML Tables Beta also service provides a REST API for machines to submit predictions to the model.
 
-# Billing
+## Billing
 The AutoML Tables Beta service costs significantly less than our [Vision model](gcp-automl-vision.md).  We paid $28 for one and a half hour of compute time. 
 
 ![Billing Metering]({filename}/images/Fast_And_Easy_Automl_Optimize/37_Billing.png)
 
 Google gave us a credit for the training, so we did not need to pay any out-of-pocket fee.
 
-# Conclusion
+## Conclusion
 In this blog post we test-drove the **Google AutoML Tables Beta** service.  The service did not accommodate our **BUPA** data, so we needed to pivot and try another Data Set, the UCI **Wine Quality** data set.
 
 We used **Pandas**, **SciKit Learn** and **TensorFlow 2.3** to wrangle, explore, normalize, visualize and split the **Wine Quality** data set.  We used **Keras 2.3** to train a linear model and DNN model and compared the results.  We then iterated on dimensionality reduction approaches, converging on a **good-enough** number of features.  PCA provided the vehicle to reduce dimensionality.  The **TensorFlow/ Keras/ Pandas** approach required domain knowledge of AI/ML concepts and also required familiarity with various Python libraries and methods.  In other words, the Python approach required considerable Math, Data Science and Software Development skills.
