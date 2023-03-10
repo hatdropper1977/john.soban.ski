@@ -18,8 +18,8 @@ In the screen grab below, you will see that [this site](https://john.soban.ski) 
 
 This blog post walks us through the process of receiving that blue check.
 
-# Install the Brave Browser
-In order to reap the benefits of **Brave**, we must first install the software.
+## Install the Brave Browser
+To reap the benefits of **Brave**, we must first install the software.
 
 Open the [Brave Download Page](https://brave.com/download) in a new tab and click the **Download** button.
 
@@ -55,7 +55,7 @@ After the Installer completes, it launches the **Brave Browser**.
 
 ![Successfull installation]({filename}/images/Brave_Verified_Creator/08_Install_Success.png)
 
-# Configure the Browser
+## Configure the Browser
 Brave allows you to import bookmarks, apps and history from another browser.  Select **Chrome Person 1** if you previously used Chrome.
 
 ![Import Chrome Bookmarks, Apps and History]({filename}/images/Brave_Verified_Creator/09_Import_Chrome.png)
@@ -68,7 +68,7 @@ Select [DuckDuckGo](https://duckduckgo.com) for your default search engine.  Duc
 
 ![Select DuckDuckGo for Private Browsing]({filename}/images/Brave_Verified_Creator/11_Select_Duckduckgo.png)
 
-# Register and Connect Crypto Wallet
+## Register and Connect Crypto Wallet
 In addition to security and privacy, the Brave browser pays you to surf the Internet.
 
 In order to get rewards, you must link a Crypto wallet to your browser.  Click **Start Using Rewards** to begin.  
@@ -175,7 +175,7 @@ Close the message and select the **Enable Two Factor Authentication** button.  U
 
 ![Enable Two Factor]({filename}/images/Brave_Verified_Creator/34_Two_Factor.png)
 
-# Register for Creator Rewards
+## Register for Creator Rewards
 At this point you installed the **Brave** browser and connected a crypto wallet.  Now you will register with **Brave** to receive **Creator Rewards**.
 
 **Creator Rewards** pay you crypto each time a visitor views your original content.
@@ -234,7 +234,7 @@ After verification, my **publishers** page listed my new channel.
 
 ![Congratulations]({filename}/images/Brave_Verified_Creator/45_Connect_Success.png)
 
-# Conclusion
+## Conclusion
 The **Brave** project provides a new exciting way to receive a commission for web traffic.
 
 Please comment below with a link to your **Brave Rewards** enabled website and I will leave you a tip!
