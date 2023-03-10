@@ -6,7 +6,6 @@ Tags: HOWTO, SD-RAN, SDN, OpenDaylight
 Slug: how-to-install-opendaylight-as-a-service-on-ubuntu
 Status: published
 
-#Introduction
 [OpenDaylight](https://www.opendaylight.org/) allows cloud engineers to programmatically deploy, configure and control virtual network services.  As written on the OpenDaylight website, ODL helps Internet Service Providers, Academics and Cloud Service Providers to enable the following services:
 
   -  [On-demand service delivery](https://www.opendaylight.org/use-cases-and-users/by-function/automated-service-delivery)
@@ -340,7 +339,7 @@ Dec 29 18:01:14 ip-172-31-18-10 stop[22114]: link: /usr/local/karaf/karaf-0.8.4/
 Dec 29 18:01:18 ip-172-31-18-10 systemd[1]: Stopped OpenDaylight Controller.
 ```
 
-# Conclusion
+## Conclusion
 Now that you installed OpenDaylight as a service on Ubuntu LTS 18.04, head over to my Oracle Ravello [blog](https://blogs.oracle.com/ravello/opendaylight-on-on-aws) and try out the fun little project that I put together a few years back.
 
 You may be interested in the demo I gave at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia back in 2015.  Find the slides [here](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) or watch the video [here](https://www.youtube.com/watch?v=PGl43xJQQ0g).
