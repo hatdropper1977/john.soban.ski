@@ -12,7 +12,7 @@ The City fuels Hopkins' sense of failure. The City provokes him to lose faith in
 
 > NOTE: [Click here for part one]({filename}/gerard-manley-hopkins-1.md) if you missed it last month
 
-# No Worst, There is None
+## No Worst, There is None
 The poem “No Worst, There is None” expresses Hopkins' pain and depression caused by his and society’s failings. This “Terrible Sonnet” imparts a grim mood and desolate tone:
 
 > 1&nbsp;&nbsp;&nbsp;No worst, there is none. Pitched past pitch of grief,  
@@ -52,7 +52,7 @@ The seemingly Job-esque lines of: “Comforter, where, where is your comforting?
 
 We must reject counterarguments that claim the distance between the speaker and the poet nullifies any use of Hopkins’ history to explain the poem’s intent. MacKenzie writes that “Hopkins frequent declarations that a writer should be ‘in earnest’ and not use a theme for trying style on’” should dissuade “critics whose canons of interpretation forbid them to read any poem as basically autobiographical” (170).
 
-# Comforter, where, where is your comforting?
+## Comforter, where, where is your comforting?
 “Comforter, where, where is your comforting?” (3) does not declare an indignant loss of faith, but rather a lamentation by Hopkins regarding his own inability to “enact the gradual attainment of colloquy with God” (Harris xiii). The line describes Hopkins’ “failure to achieve the climactic and redemptive colloquy with Christ which, he knew, Ignatius and others stipulated should” come naturally to a priest (Harris 3). A Priest must perform the functions that Christ did while on Earth. Given the severity of this responsibility, Priests should have a special relationship with God, to properly perform His Sacraments. 
 
 ![Jesuit Yells]({filename}/images/Gerard_Manley_Hopkins_2/04_Jesuit_Yells.png)
@@ -63,7 +63,7 @@ In his mind, Hopkins' relationship with Christ falls short, and this leads to th
 
 In regards to an absent “comforter,” Harris attributes Christ's absence not to His own accord, but rather because the modem man excised Him from his world (34). Modem man’s creation of the city and destruction of nature leaves “the world to be reshapen in licentious metamorphosis according to human will,” thereby “withdraw[ing] the divine breath” (Harris 34). Harris writes, “‘the fact,’ as St. Ignatius puts it ‘of God’s being in every creature by essence, presence and power’ was no longer an emotional reality to Hopkins, though he sturdily maintained it in principle” (34). Mankind's ability to push the divine out of his machinations yields “a chief-/ woe, world-sorrow; ... an age old anvil...” that hearkens back to the original sin of Eden and the associated apple-eating (5-6).
 
-# \[Carrion Comfort\]
+## \[Carrion Comfort\]
 We also see **to eat or not to eat** at the beginning of “[Carrion Comfort]:”
 
 > 1   Not, I’ll not, carrion comfort, Despair, not feast on thee,  
@@ -115,7 +115,7 @@ He stammers off his pathetic attacks one after another, in a futile, animal-like
 
 Hopkins fears for his eternal life in the second quatrain and makes panicked, if not misguided, attempts to save it. His inability to live up to his Jesuit priest duties threatens his eternal life. Martin agrees with this reading and writes that the Terrible Sonnets “do not reflect doubt of the existence of God but a belief in something far more terrifying, the certainty that He exists and an almost equal certainty that His mercy does not extend to the poet himself’ (382). He further says that for “Terrible Sonnets, the inspiration comes directly out of terror and does not really transcend it” (Martin 382).
 
-# Works Cited:
+## Works Cited:
 -  Abrams, M.H [ed.]. *The Norton Anthology of English Literature: Volume Two*. 6th ed. New York: W.W. Norton & Company, 1993.
 - Bergonzi, Bernard. *Gerard Manley Hopkins*. New York: Collier Books, 1977.
 - Bristow, Joseph. “’Churlsgrace’: Gerard Manley Hopkins and the working­class male body." *Victorian Poetry* 59(1992):693-711.
