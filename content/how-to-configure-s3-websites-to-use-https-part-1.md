@@ -8,14 +8,14 @@ Status: published
 
 This [HOWTO]({category}howto) demonstrates how to secure your [Simple Storage Service (S3)](https://aws.amazon.com/s3/) hosted website via  [Hypertext Transfer Protocol Secure (HTTPS)](https://en.wikipedia.org/wiki/HTTPS).  While the S3 [Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer) enpoint supports native HTTPS, an S3 bucket configured to serve web pages [does not](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html#WebsiteRestEndpointDiff).  In addition to demonstrating [how to]({category}howto) enable HTTPS, this blog demonstrates how to configure both [protocol](https://moz.com/community/q/best-practice-to-redirect-http-to-https) and [***naked*** domain](https://en.wikipedia.org/wiki/URL_normalization) redirection.  Protocol redirection ensures security, and ***naked*** domain redirection (e.g. ***yoursite.com*** to ***www.yoursite.com***) improves [Search Engine Optimization](https://www.solidstratagems.com/www-vs-non-www-url/).
 
-# Why use HTTPS?
+## Why use HTTPS?
 Starting July 2018, Google will mark all vanilla HTTP sites as "[not secure](https://security.googleblog.com/2018/02/a-secure-web-is-here-to-stay.html)."  If you do not enable HTTPS, visitors will see a garish "Not Secure" to the left of your website name.  That scarlet letter could possibly cause potential readers or customers to immediately close their tab (***bounce***).
 
 ![Not Secure]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/00_Not_Secure.png)
 
 In addition, most sites rely on Google to drive traffic.  Google [includes the presence of HTTPS](https://security.googleblog.com/2014/08/https-as-ranking-signal_6.html) in their secret algorithm that calculates your site's page rank.  In other words, enabling HTTPS will boost your score, and as a result will drive more readers and customers to your site.
 
-# Outline
+## Outline
 
 In part one (this post) of this tutorial, we will execute the following:
 
@@ -38,7 +38,7 @@ At the end of this demonstration, your architecture will look like the following
 
 As shown in the diagram above, you will create a CloudFront distribution and S3 bucket pair for both your ***naked*** domain (e.g. [siliconebeltway.com](https://www.siliconebeltway.com)) and your ***www*** domain (e.g. [www.siliconebeltway.com](https://www.siliconebeltway.com)).  Route 53 will point users to either the ***naked*** or ***www*** CloudFront distribution depending on which one they request.  The ***naked*** CloudFront distribution sends the session to the ***naked*** S3 bucket, which immediately redirects the session to the authoritative ***www*** bucket.  If the client uses the HTTP protocol, the ***naked*** S3 bucket redirects them to use the HTTPS protocol.  Alternatively, if the user attempts to go to [http://www.siliconebeltway.com](http://www.siliconebeltway.com) (e.g. including ***www***) via HTTP, the protocol redirection occurs at the ***www*** CloudFront distribution.  It's a little confusing, but if you follow the green arrows on the diagram, you'll see all requests are redirected to ***www.siliconebeltway.com*** using ***HTTPS***.
 
-# Configure DNS
+## Configure DNS
 In order to use HTTPS, you must have a [Secure Socket Layer (SSL)/ Transport Layer Security (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) certificate installed on your website.  In order for Chrome (and all browsers, for that matter) to trust your certificate, it must be signed by a trusted [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority).  Normally, this process is very tedious and frustrating.  If, however, you configure AWS to be the [Start of Authority (SOA)](https://en.wikipedia.org/wiki/SOA_record) (e.g. they manage DNS) for your website's domain name, life becomes very, very easy.  If [Route 53](https://aws.amazon.com/route53/) manages your domain name, then you can use [Certificate Manager](https://aws.amazon.com/certificate-manager/) to generate a certificate and install it on your website.  I strongly recommend, therefore, that you use Route 53 to provide DNS for your website.
 
 If you already use Route 53 for your domain name, you can skip this section.  I registered [siliconebeltway.com](https://www.siliconebeltway.com) with [GoDaddy](https://www.godaddy.com/), so I will now show you how to point GoDaddy to use Route 53.
@@ -81,9 +81,9 @@ Oops!  GoDaddy does not like the trailing "dot."  Delete the Dots and click save
 
 It may take GoDaddy (or your provider) a few minutes to update your domain's name server.
 
-# Create Log, WWW and Naked Domain S3 Buckets
+## Create Log, WWW and Naked Domain S3 Buckets
 
-## Create the Logs Bucket
+### Create the Logs Bucket
 Find and select the S3 console.
 
 ![Find S3 Console]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/11_Find_S3_Console.png)
@@ -108,7 +108,7 @@ Review and click "Create Bucket."
 
 ![Click Create Bucket]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/16_Click_Create_Bucket.png)
 
-## Create the WWW bucket
+### Create the WWW bucket
 Go back to the S3 console and click "+ Create" bucket once more.  On the first screen, enter your domain name as the bucket name.  Be sure to include ***www***.  I name my bucket ***www.siliconebeltway.com***.  Click "Next."
 
 ![Create WWW Bucket]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/17_Create_WWW_Bucket.png)
@@ -127,7 +127,7 @@ Grant public read access to this bucket (since it is for a public website).
 
 Click through to the Review tab and then create the bucket.
 
-## Create Naked Domain Bucket.
+### Create Naked Domain Bucket.
 On the S3 console, click "+ Create Bucket" once more.
 
 Enter the name of your ***naked*** domain (without the ***www***).  I name my bucket "siliconebeltway.com."  Click next.
@@ -144,9 +144,9 @@ Grant the public read access to the bucket.
 
 Click through to step four and create the bucket.
 
-# Configure S3 Bucket Naked Domain and Protocol Redirection
+## Configure S3 Bucket Naked Domain and Protocol Redirection
 
-## Configure your WWW bucket to host a website
+### Configure your WWW bucket to host a website
 At the S3 console, select your ***www*** bucket.
 
 ![Select WWW Bucket]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/24_Select_WWW_Bucket.png)
@@ -190,7 +190,7 @@ S3 barks.  You can ignore it.  You want the public to ***GetObject***, i.e. see 
 
 Save your changes.
 
-## Configure your ***naked*** domain bucket to redirect
+### Configure your ***naked*** domain bucket to redirect
 At the S3 console, select your ***naked*** domain bucket, the one without the ***www***.
 
 ![Select Naked Domain Bucket]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/30_Select_Naked_Domain_Bucket.png)
@@ -205,7 +205,7 @@ This bucket exists for two reasons:  (1) redirect ***naked*** domain requests to
 
 Save all of your changes.
 
-#  Request a Certificate
+##  Request a Certificate
 At the main AWS console screen, search for and select "Certificate Manager."
 
 ![Open Certificate Manager]({filename}/images/How_To_Configure_S3_Websites_To_Use_Https_Part_1/33_Open_Certificate_Manager.png)
