@@ -14,7 +14,7 @@ Instead of grinding through the Lambda development and integration by hand, [Zap
 
 ![Zappa Lambda]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/01_Zappa_Lambda.png)
 
-# Test Drive Original App
+## Test Drive the Original App
 Before we get started, download and run my test app.
 
 Be sure to edit ***application.py*** to reflect your S3 bucket name.
@@ -50,7 +50,7 @@ Once you submit a message, enter ***http://your ip:5000/user/your user key*** in
 
 ![Retrieve User Data]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
 
-# Deploy Zappa
+## Deploy Zappa
 Now that we have a working Flask application, let's install and run [Zappa](https://github.com/Miserlou/Zappa).
 
 Execute ***zappa init*** and select the defaults for all of the Zappa questions.
@@ -78,7 +78,7 @@ Deploying API Gateway..
 Deployment complete!: https://hbjj91si68.execute-api.us-east-1.amazonaws.com/dev
 ```
 
-# Test Drive the Deployed App
+## Test Drive the Deployed App
 Type the URL of the API Gateway into a browser and you will see the APP.
 
 ![Zappa Lambda]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/02_API_Gateway.png)
@@ -97,8 +97,7 @@ Note that since this is a "dev" deployment, I need to include dev in the URL.  S
 
 ![Add Dev to URL]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/05_DEV.png)
 
-# Zappa Goodies
-
+## Zappa Goodies
 If you go to your console, you will see that Zappa automatically created an API gateway for your project.  I used the default project name ***web-db-app-w-s3***.
 
 ![API GW]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/06_API_GW.png)
@@ -115,7 +114,7 @@ If you navigate to the IAM roles screen, you will see that Zappa generated an au
 
 ![Policy]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/09_Inline.png)
 
-# Improving the Application
+## Improving the Application
 I created the ***web-db-app-w-s3*** application to demonstrate the bare minimum of database interaction, and demonstrate writes and reads of form data to/ from S3 via a web browser.
 
 To demonstrate the read, the user needs to copy and paste his user key by hand.
@@ -197,7 +196,7 @@ def take_test():
         return render_template('show_key_after_submit.html', user_date=S3_SUB_BUCKET_NAME,user_key=S3_OBJECT_NAME)
 ```
 
-# Deploy Updated App
+## Deploy Updated App
 We can update the app via the Zappa ***update*** command.
 
 ```bash
@@ -214,7 +213,7 @@ When you click the link, Flask routes to the correct view.
 
 ![Correct URL]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/13_Success.png)
 
-# Conclusion
+## Conclusion
 We deployed a Flask app to the horizontally scalable Lambda ecosystem.  The S3 back end also scales on-demand, in contrast to traditional RDBMS which have a capacity limit, and therefore introduce bottlenecks.  Zappa took care of all the hard work, setting up roles, policies and the API Gateway/ FaaS integration.
 
 You may want to consider using this approach for your web database application.  It works well with text based Web Database applications with human (vs. machine) users, such as blogs or report generation.  Since we save our form data as JSON encoded text, we can easily use Amazon [Athena](https://aws.amazon.com/athena/) to mine and/ or trend data.
