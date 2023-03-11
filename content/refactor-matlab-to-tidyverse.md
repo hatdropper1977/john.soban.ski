@@ -16,10 +16,10 @@ The following graphic captures an animation of the RCE NN Algorithm in action.
 
 You can find the original Matlab script and the new R script on [GitHub](https://github.com/hatdropper1977/bupa-rce-octave).
 
-# Loading Data
+## Loading Data
 The algorithm loads the BUPA liver disorders database from the University of California, Irvine (UCI) [machine learning repository](http://archive.ics.uci.edu/ml/machine-learning-databases/liver-disorders/bupa.data).
 
-##Matlab
+### Matlab
 In Matlab, we simply encode the CSV as matrix using brackets and assignment.
 
 ```matlab
@@ -36,7 +36,7 @@ data = [85,92,45,27,31,0.0,1
 98,99,57,45,65,20.0,1];
 ```
 
-##Tidyverse
+### Tidyverse
 Tidyverse allows us to read the raw CSV and store it in a [Tibble](https://tibble.tidyverse.org/).
 
 In addition to storing the CSV data in a Tibble, we use the **readr** library to add column names (***col_names***) and an ID column (***rowid_to_column***).
@@ -56,7 +56,7 @@ Bupa.Tib <- read_csv( "bupa.data", col_names = columns ) %>%
   tibble::rowid_to_column("id")
 ```
 
-# Selecting Features
+## Selecting Features
 The BUPA data has six features and two classes (one for alcohol related liver disorder, and one for alcohol unrelated liver disorder).  
 
 The six (6) BUPA features include: 
@@ -71,14 +71,14 @@ The six (6) BUPA features include:
 	
 I discussed the salient features in my [RCE]({filename}/reduced_coulomb_energy_neural_network_bupa.md) writeup.  Three features, "alkphos", "sgpt" and "gammagt" stand out in terms of the algorithm's classification performance.  We still would like to provide the Data Scientist with flexibility in selecting the features, for "what if" scenarios, so we write our code to accommodate an arbitrary number of features.
 
-##Matlab
+### Matlab
 In Matlab, we use the column index to select the features.  In this case, we use ***alkphos == 2***, ***sgpt == 5***, and ***gammagt == 6***.
 
 ```matlab
 feats = [2 5 6];
 ```
 
-##Tidyverse
+### Tidyverse
 Tidyverse allows us to name the columns and then select by name.
 
 When we created ***Bupa.Tib*** we named the columns, so now we can ***select*** columns by name.
@@ -89,9 +89,9 @@ We create a list that records the column names that we intend to keep.
 features <- c( "alkphos", "sgpt", "gammagt")
 ```
 
-# Creating the training set
+## Creating the training set
 
-##Matlab
+### Matlab
 In Matlab, we sort the data by the ***class***, which the matrix stores in column seven (7).
 
 We then use index operations to select all features, excluding the class.
@@ -115,7 +115,7 @@ class1 = data(73:144,:)';
 class2 = data(145:216,:)';
 ```
 
-##Tidyverse
+### Tidyverse
 The ***MagrittR*** package of Tidyverse enables a pipe forward operator.  The pipe forward operation provides a more readable feature selection operation.
 
 We use ***filter*** to filter points of each class, ***select*** to select the features and ***slice*** to pull specific rows.
@@ -138,12 +138,12 @@ Class.2.Train.Tib <- Bupa.Tib %>%
 
 ```
 
-# Find Radii
+## Find Radii
 The RCE NN algorithm requires us to find the radii between a train point and the nearest train point of the opposite class.
 
 We compute the euclidean distance to all other training points of the other class, and store the distance (named ***lambda***) of the closest one.
 
-##Matlab
+### Matlab
 In Matlab, we create a function that ingests both the ***Class 1*** and ***Class 2*** training matrices, along with ***epsilon*** and ***lambda max***.  ***Lambda max*** provides an upper bound in terms of the maximum radius the algorithm will consider.  ***Epsilon*** is a very small value that we subtract from the calculated ***lambda***.  For more details, see my writeup of the [RCE NN]({filename}/reduced_coulomb_energy_neural_network_bupa.md) algorithm.
 
 The Matlab code performs Matrix operations via nested functions to calculate the euclidean distance to all other points and then record the minimum.
@@ -177,7 +177,7 @@ We apply the function to the training matrices as follows:
 [lambda_1 lambda_2] = rce_train(class1,class2,eps,lambda_max);
 ```
 
-##Tidyverse
+### Tidyverse
 R best practices do not encourage ***for loops***, since R follows a ***functional*** programming convention.
 
 In addition, the ***MagrittR*** pipes allow us to avoid ***nested functions***.
@@ -272,10 +272,10 @@ The following output tibble depicts what ***Class.1.Train.Tib*** looks like afte
 
 The closest data point in Class 2, for example, to the first Class 1 observation exists 29.1 units away.
 
-# Classify the Data
+## Classify the Data
 We first take the remaining BUPA data to create test patterns for each class.  
 
-##Matlab
+### Matlab
 In Matlab:
 
 ```matlab
@@ -283,7 +283,7 @@ test_class1 = data(1:72,:)';
 test_class2 = data(217:288,:)';
 ```
 
-##Tidyverse
+### Tidyverse
 In Tidyverse I decided to create one ***Tibble*** for all Test Patterns, via the ***bind_rows*** operation.
 
 ```R
@@ -297,7 +297,7 @@ Test.Patterns <- Bupa.Tib %>%
 
 Once we have test data, we need to classify it.
 
-##Matlab
+### Matlab
 In Matlab, I wrote a function named ***rce_clasify***.  As you can see, the function contains a ton of nested functions and a for loop.
 
 Each training pattern includes a circular "footprint" around it that extends to the nearest point of the ***other*** class, with radius equal to the ***lambda*** we calculated above.
@@ -337,7 +337,7 @@ function [cl] = rce_classify(class1,lambda_1,class2,lambda_2,test_patterns)
 end
 ```
 
-##Tidyverse
+### Tidyverse
 In the ***Tidyverse*** classification approach, we use nested functions in the logical sense, since our code exclusively uses pipes.
 
 We create a generic function to discover how many "footprints" the given observation lives in.
@@ -383,7 +383,7 @@ Test.Data.Tib %<>%
 We then apply these functions to our data.
 
 
-##Matlab
+### Matlab
 In Matlab:
 
 ```Matlab
@@ -391,7 +391,7 @@ In Matlab:
 	cl2 = rce_classify(class1,lambda_1,class2,lambda_2,test_class2);
 ```
 
-##Tidyverse
+### Tidyverse
 In Tidyverse:
 
 ```
@@ -399,7 +399,7 @@ Test.Patterns %<>%
   rce_classify_tib(Class.1.Train.Tib, Class.2.Train.Tib, features)
 ```
 
-# Graphing RCE NN
+## Graphing RCE NN
 We can graph the RCE NN in action by creating a uniform data grid and running ***rce_classify*** against every point.
 
 First, create the data grid.  We find the highest valued observation in the data set, in order to ensure that our graph includes this data point.
@@ -468,7 +468,7 @@ ggplot( ) +
 
 ![RCE 2D]({filename}/images/Refactor_Matlab_To_Tidyverse/02_90k.png)
 
-#Conclusion
+## Conclusion
 This blog post described how to convert a Matlab script that uses for loops and nested function into a functional, pipe based Tidyverse script.
 
 If you enjoyed this, you may enjoy these other Machine Learning posts.
