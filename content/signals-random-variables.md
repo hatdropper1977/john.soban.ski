@@ -6,12 +6,11 @@ Tags: Satellite Communications, Digital
 Slug: signals-random-variables
 Status: published
 
-
 This blog post summarizes the first three chapters of Bernard Sklar's [Digital Communication - Fundamentals and Applications](https://www.pearson.com/us/higher-education/product/Sklar-Digital-Communications-Fundamentals-and-Applications/9780132119399.html) textbook.
 
 ![Sklar Digital Communications]({filename}/images/Signals_Random_Variables/01_Sklar_Dc.png)
 
-# Signals
+## Signals
 A Digital Communication System (DCS) transmitter (XMT) sends a waveform selected from a finite set of waveforms. A receiver (RCV) does not need to reproduce the waveform entirely, but only needs to determine from the degraded signal which waveform the signal best matches. The **RCV** regenerates digital signals with less effort and power than their analog counterparts.
 
 Similar to computer networking’s seven layer [Open System Interconnection (OSI) model](https://en.wikipedia.org/wiki/OSI_model), engineers break **DCS** into several discrete layers.  Source Encoding, Encryption, Channel Encoding, Multiplexing, pulse modulation, bandpass modulation, frequency spreading and multiple access encompasses the signal transforms from the source to the **XMT**. The reverse path encompasses the signal transforms from the **RCV** to the **sink**. Most **DCS** convert data to a bit stream, which they convert to a voltage or current waveform with a pulse for baseband and sinusoid for bandpass **XMT**.
@@ -26,7 +25,7 @@ Engineers characterize distribution of a signal's energy or power in the frequen
 
 Autocorrelation measures how closely a signal matches a copy of itself through shifts in time. A real valued energy signal’s **autocorrelation** sits symmetric in time difference about zero, with a maximum value at zero. The autocorrelation and **ESD** form a Fourier transform pair. A real valued power signal shares the same properties, substituting in the fact that it forms a Fourier transform pair with its **PSD**.
 
-# Random Variables
+## Random Variables
 Standard probability and statistics help define and characterize random signals, to include the probability density function (PDF), expected value, moment generating function and variance. **Random** or **Stochastic** processes collect **N** sample Random Variables over time, all of which we refer call an **ensemble**. 
 
 Strict sense stationary random processes witness no statistics change with a shift in the time origin. Wide sense stationary (WSS) processes witness no change to their mean and autocorrelation.  Variance gives a sense of randomness for a **random variable**. Autocorrelation does the same for a **random process**.
@@ -39,7 +38,7 @@ Engineers can use signals in either the time or frequency domain to characterize
 
 A distortionless transmission medium can never be created, since it requires infinite bandwidth. Engineers can attain an ideal filter through minimum and maximum cutoff frequencies. A zero minimum cutoff frequency and a finite maximum cutoff frequency produces a **low pass filter**.  A non-zero minimum cutoff frequency combined with a finite maximum cutoff frequency produces a **bandpass filter**. A filter with a non zero minimum cutoff frequency combined with a maximum cutoff frequency that approaches infinity produces a **high pass filter**.
 
-# Digital Messages
+## Digital Messages
 **XMT** transform information into digital messages, and pulse modulate the messages into baseband waveforms. A **baseband** signal's spectrum extends from (or near) **dc** to some finite value, usually less than a few megahertz (MHz). Coaxial cable provides an example baseband **channel**.  Engineers format an analog waveform into a form compatible with **DCS** through sampling, with **sample and hold** the most popular method. A transistor and capacitor, for example, sample an incoming analog signal and output pulse amplitude modulation (PAM). Engineers then use low pass filtering to retrieve the original analog waveform.
 
 The sampling theorem states that a bandlimited signal having no spectral components above **f<sub>m</sub>** hertz can be determined uniquely from a sampling rate of **f<sub>s</sub> >= 2 f<sub>m</sub>**, the [Nyquist](https://en.wikipedia.org/wiki/Nyquist_frequency) rate. **Aliasing** refers to lost information due to undersampling. Higher sample rates eliminate aliasing by separating the spectral replicates.
@@ -58,7 +57,7 @@ Pulse code modulation (PCM) represents the act of encoding each quantized **PAM 
 
 For baseband transmission, the **XMT** transforms these words into pulse waveforms. **PCM** encompass numerous types and each have different levels of efficiency in using bandwidth. **<sup>hertz</sup>/<sub>symbols</sub>** notes the spectral attributes of **PCM** waveforms . A **PCM** waveform that uses more than **1 hertz per symbol** yields less efficiency than one that uses **less than 1**. In order to define the **PCM** word size, we use the formula **1 >= log<sub>2</sub>(<sup>1</sup>/<sub>2</sub>p) bits**, with **p** equal to the acceptable quantization distortion, which indicates the percentage of the peak-to-peak analog signal.
 
-# Equalization
+## Equalization
 Equalization refers to any signal processing or filtering technique that eliminates or reduces Intersymbol Interference (ISI). **ISI** captures the overlap or smearing that distorts a transmitted sequence of pulses. A communication channel needs a constant amplitude response, or the channel distorts a signal’s amplitude. A channel needs a linear function of frequency for phase response, or the channel distorts phase. Equalization includes two broad categories: Maximum Likelihood sequence estimation (MLSE) and Equalization with filters, which we further categorize into **transversal or decision feedback**, **preset or adaptive** and **symbol or fractionally spaced**.
 
 **MLSE** measures impulse response and then adjusts the receiver to allow the detector to make good estimates from the demodulated distorted pulse sequence. The MLSE receiver does not reshape or compensate for the distorted signals, instead, it adjusts itself to better deal with the distorted samples.
