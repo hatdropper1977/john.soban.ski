@@ -8,16 +8,16 @@ Status: published
 
 This blog post describes how to configure Flask to emit form data to your own personal Gmail account.  You don't need to use Gmail, in fact, you can configure Flask to send data to any email account you have access to.  This architecture uses Amazon Web Services' (AWS) Simple Email Service (SES).  In order to use SES, we simply call the SES Application Programming Interface (API) using the Python **boto** library in our Flask **controller**.
 
-# Architecture
+## Architecture
 
 The following cartoon captures the system architecture.
 
 ![Flask Gmail]({filename}/images/Send_To_Gmail_Flask_Ses/01_Flask_Gmail.png) 
 
-# The Flask App
+## The Flask App
 This section describes the Web Database application, deployed via the [Flask framework]({tag}/flask).
 
-## Flask Model
+### Flask Model
 Consistent with earlier deployments of toy Flask servers, [Flask WTF]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md) allows us to model the form as a Pythonic object.
 
 The form presents a variety of different form field types to demonstrate validation approaches.
@@ -39,7 +39,7 @@ class QuizForm(FlaskForm):
 
 This example includes validation for a **checkbox**, an **Integer**, an **Email Address**, a **text blob** and a **submit button**.
 
-## The View
+### The View
 Flask renders views via the **Jinja2** template engine.  
 
 We configure **Jinja2** to use [Bootstrap]({filename}/part-3-professional-form-validation-with-bootstrap.md) to create pretty forms that include client-side validation.
@@ -63,7 +63,7 @@ The WTF provided **quick_form()** method creates a form element for every object
 {% endblock %}
 ```
 
-## The Controller
+### The Controller
 The controller commands both **javascript generation** and **service routing**.  
 
 ```python
@@ -99,7 +99,7 @@ Notice the validation in action in the screencap below.
 
 ![Web DB App]({filename}/images/Send_To_Gmail_Flask_Ses/02_Web_DB_App.png)
 
-# Register an SES account
+## Register an SES account
 To use SES you must register an account.
 
 SES allows your Web Database Application to send form data to a Gmail (for example) account.
@@ -125,19 +125,19 @@ SES reports verification success.
 ![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
 
 
-## Set up your development environment
+### Set up your development environment
 This section provides a walk through on how to configure your **dev environment** to use **boto3**, which commands **SES** logic.
 
 > Note - for operations, use IAM roles instead of security keys.  If you would like to see how to set up IAM roles to enable programmatic access to an AWS API, see [here]({filename}part-1-connect-ec2-to-the-amazon-elasticsearch-service.md).
 
 First, create a Python **virtual environment** to sandbox Python libraries.
 
-### Python 3 Method
+#### Python 3 Method
 ```bash
 [centos@ip-172-31-1-82 ~]$ python3 -m venv sandbox
 ```
 
-### Python 2 Method
+#### Python 2 Method
 ```bash
 [centos@ip-172-31-1-82 ~]$ sudo yum -y install python-virtualenv
 [centos@ip-172-31-1-82 ~]$ virtualenv sandbox
@@ -166,7 +166,7 @@ Default output format [None]:
 (sandbox)[centos@ip-172-31-1-82 ~]$
 ```
 
-## Update the Application to return HTML
+### Update the Application to return HTML
 Our Flask application currently returns **Success!** on **Submit**.
 
 The SES **send_email** method allows you to send an **HTML** portion.
@@ -215,7 +215,7 @@ Take the test and you will see dynamic, **Jinja2** rendered **HTML**.
 
 ![Return HTML]({filename}/images/Send_To_Gmail_Flask_Ses/03_Pretty_HTML.png)
 
-## Wire SES into the Application
+### Wire SES into the Application
 In **application.py** make the following edits (full code appears at the bottom of this page).
 
 ```python
@@ -301,10 +301,10 @@ When I go to Gmail, I see my beautiful email, which includes the submitted form 
 
 ![Success Email]({filename}/images/Send_To_Gmail_Flask_Ses/06_Email.png)
 
-# Conclusion
+## Conclusion
 This toy application demonstrates how to easily have web users submit form data directly to your GMAIL account via *AWS SES.*
 
-## Full application.py code
+### Full application.py code
 ```python
 #!/usr/bin/env python
 # application.py
