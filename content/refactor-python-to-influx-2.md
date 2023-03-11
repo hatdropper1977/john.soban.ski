@@ -10,9 +10,9 @@ InfluxDB provides an exciting Time Series database with tons of industry momentu
 
 The classic 1.X InfluxDB service provides a Python library that enables Create, Retrieve Update and Delete (CRUD) operations via Python models.  You may have used this library in the past to command InfluxDB.  In this blog post I will walk through an Influx Provided test script and modify it for InfluxDB 2.0 compatibility.  I will also walk through the install procedure for InfluxDB 2.0.
 
-# Installing InfluxDB 2.0
+## Installing InfluxDB 2.0
 
-## Introduction
+### Introduction
 This section walks through an on-premise installation of InfluxDB 2.0.  You can alternatively use their cloud offering, which provides a free, rate-limited option.  I wrote about this cloud service in a previous blog post, named [Deploy a Personal Kraken Exchange Terminal to InfluxDB Cloud 2.0]({filename}/influx-cloud-2-kraken.md).
 
 The on premise version of [InfluxDB 2.0](https://dl.influxdata.com/influxdb/releases/influxdb_2.0.0-alpha.17_linux_amd64.tar.gz) provides an integrated Time Series database platform with useful features:
@@ -25,9 +25,9 @@ The on premise version of [InfluxDB 2.0](https://dl.influxdata.com/influxdb/rele
  
 ![InfluxDB Logo]({filename}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
 
-## InfluxDB 2.0 Configuration
+### InfluxDB 2.0 Configuration
 
-### Download the Source
+#### Download the Source
 As of August 2019, InfluxData does not yet provide an RPM for InfluxDB 2.0.
 
 Download the [binary](https://v2.docs.influxdata.com/v2.0/get-started/) and then unzip it.
@@ -41,7 +41,7 @@ influxdb_2.0.0-alpha.17_linux_amd64/influx
 influxdb_2.0.0-alpha.17_linux_amd64/influxd
 ```
 
-### Start the Service
+#### Start the Service
 Enter the directory and start the service.
 
 ```bash
@@ -49,7 +49,7 @@ Enter the directory and start the service.
 [influxdb_2.0.0-alpha.17_linux_amd64]$ influxd
 ```
 
-### Configure your Service
+#### Configure your Service
 Navigate to **<your ip>:9999** in a web browser.
 
 You will be greeted with the following splash page.
@@ -73,26 +73,26 @@ Now click **Configure Later**.
 
 ![Configure Later]({filename}/images/Refactor_Python_To_Influx_2/03_Configure_Later.png) 
 
-### Get your API token
+#### Get your API token
 The API token enables access via REST calls.
 
 Click **settings --> tokens --> \<your user name\>'s token**.
 
 ![Find your token]({filename}/images/Refactor_Python_To_Influx_2/04_Find_Your_Token.png) 
 
-### Copy token to clipboard.
+#### Copy token to clipboard.
 Click **Copy to Clipboard** and paste this eighty-eight (88) byte token into a local text file for later use.
 
 In the graphic below, I replaced my actual token with a randomly generated string.
 
 ![Copy your token]({filename}/images/Refactor_Python_To_Influx_2/05_Copy_Your_Token.png) 
 
-## Refactor 1.X Code
+### Refactor 1.X Code
 [Noah Crowley](https://www.influxdata.com/blog/author/noah-crowley/) wrote a blog post that [demonstrates the Python API client in action](https://www.influxdata.com/blog/writing-data-to-influxdb-with-python/).
 
 He provides a script along with a walk-through of the code, collected [here](https://gist.githubusercontent.com/noahcrowley/941e87422cd6fc43b0e9e8f0d0877836/raw/03dac338390c28bce74b360f2f357917cde1c223/write_test.py).
 
-### Put Data
+#### Put Data
 Let's **PUT** some data trying the existing **write_test.py** script.
 
 The **write_test.py** script generates some data.
@@ -213,7 +213,7 @@ print( r.status_code )
 
 You should see a **204**, which means InfluxDB stored the data point, with no response.
 
-### Batch Data
+#### Batch Data
 The original InfluxDB client includes a **write_points** method, that batches the posts.
 
 We can send multiple data a points at once by newline separating them.
@@ -249,7 +249,7 @@ If you go to your InfluxDB 2.0 console, you will see your points!
 
 ![Graph It!]({filename}/images/Refactor_Python_To_Influx_2/06_Graph.png)
 
-# Code
+## Code
 The full, refactored code follows:
 
 ```python
