@@ -24,7 +24,7 @@ Certain messages can lose data without incident.  If a receiver, for example, ca
 
 Communication engineers do not apply lossy compression to data files that must retain all information without loss or edits. A bank, for example, must not lose any information contained in its customer database. Communication engineers use **lossless encoding** for these scenarios.  Channel encoding enables lossless compression ([Tanenbaum](#Tanenbaum) 494).
 
-# Coding Gain
+## Coding Gain
 DCS engineers must reliably transmit an acceptable number of bits per second through a noisy channel (**B**) using at most **W** watts.  Engineers call this trade **B** vs. **W**.  A transmitter, (e.g. radio station, handy talkie or satellite) has an average energy of **E<sub>b</sub> = W/B** Joule per user bit available to generate a signal destined for a receiver.  Coding can improve this ratio, which engineers call **coding gain.**  
 
 With no coding, a transmitter maps a user bit onto a signal using **E<sub>b</sub>** energy.  The resultant signals have amplitude **s = sqrt(E<sub>b</sub>)** for a transmitted **1** and **s = -sqrt(E<sub>b</sub>)** for a transmitted **0**.  Engineers typically model noisy channels using Additive White Gaussian Noise (**AWGN**), with **r = s + n** representing the received signal amplitude.  The noise **n** comes from the Normal Zero mean Gaussian distribution.  
@@ -37,7 +37,7 @@ Inserting this information into the same AWGN channel and maximum likelihood rec
 
 To achieve coding gain, channel encoding uses variable length symbol codes, which encode one source symbol at a time.  We call a collection of symbols or characters an **alphabet**.  For a given **E<sub>b</sub>/N<sub>0</sub>**, coding trades throughput for noise mitigation by adding **code** bits along with the **error** bits.  When we use an **n** bit code word to transmit **k** data bits, then we have **m = n – k** code bits per code word.  Coding Theorists named this efficiency **code rate**, represented by either **(n,k)** or **k/n** ([Gremeny](#Gremeny) 9- 7).  
 
-#Hamming Distance
+## Hamming Distance
 The Hamming distance, **d**, captures the number of bits that differ between two code words.  **d<sub>min</sub> >= t + 1** represents the minimum Hamming distance for **detection** of **t** errors, while the minimum Hamming distance for **detection and correction** of **t** errors requires a Hamming distance of **d<sub>min</sub> >= 2t + 1**.  For example, with the code efficiency of a deep space application of **1/100** coding, we have a Hamming distance of **99**, and therefore can reliably detect and correct up to **(99 -1)/2** or **49** errors.  ([Gremeny](#Gremeny) 9-10).  
 
 If two binary vectors describe the code words, then the number of coordinates where the two vectors differ yields the Hamming distance.  The distance between these two vectors aid in discovering the probability we will decode in error.  Decoding errors occur when noise transforms a transmitted codeword **t** into a received vector **r**, with **r** closer to another (wrong) codeword ([MacKay](#MacKay) 206).
@@ -50,7 +50,7 @@ Getting a qualitative feeling for the effect of the minimum distance on decoding
 
 If a block code has distance **d**, then it must have a block error probability of at least this, independent of blocklength **N**.  Above, we labeled codes with d independent of **N** **very bad.**  Engineers, however, have a habit of bending mathematics to get the job done.  In reality, **very bad** codes work in practice.  Consider disk drives.  If we have a disk drive system with **10e-3 Pe** then a codeword distance of **d = 30** clocks in smaller than **10e-20**.  Good codes for disk drives need an error probability smaller than **10e-18**, so this **very bad** distance suffices ([MacKay](#MacKay) 215).
 
-#Channel Coding:  Block Codes
+## Channel Coding:  Block Codes
 In Block encoding, we map data (message) words to code words.   We encode each block of **k** data bits by a unique code word with a length of **n** data bits.  We name a code that can correct up to **t** errors an **(n,k,t)** code ([Gremeny](#Gremeny) 9 - 13).  Additionally, we name an n-length k-dimensional linear code with minimum distance **d** an **[n,k,d]** code, or **(n,M,d)** with **M** representing the number of codewords.  ([Lint](#Lint) 35).
 
 We need to briefly discuss some definitions to continue our discussion on block encoding.  A space **R<sup>n</sup>** consists of all column vectors **v** with **n** components ([Strang](#Strang) 111).  The two essential vector operations inside the vector space include (1) we can add any vectors in **R<sup>n</sup>** and (2) we can multiply any vector by any scalar ([Strang](#Strang) 112).  A subspace of a vector space includes a set of vectors, including **0** that satisfies two requirements.  If we have two vectors  **v** and **w** in the subspace and any scalar **c**, then the subspace includes both (i) **v + w** and (ii) **cv** ([Strang](#Strang) 113).
@@ -65,14 +65,14 @@ We consider a code **C** systematic on **k** positions if **|C| = 2<sup>k</sup>*
  
 A systematic linear block code generator matrix has the form **G = [ P | I<sub>k</sub> ]**.  We call **P**, the first part of matrix **G** the parity matrix.  From this we can create the parity-check matrix **H = [ I<sub>n-k</sub> | P<sup>T</sup> ]**.  We use **H** to create the syndrome test matrix **S = rH<sup>T</sup>**, with **r** a received code vector.  The syndrome test matrix produces a syndrome.  We have a coset on hand that maps all expected syndromes to error patterns.  Once we lookup the error pattern for a given syndrome, we add it to the received vector at which point **modulo 2** addition will correct the error ([Sklar](#Sklar) 333).
 
-#Conclusion
+## Conclusion
 In this blog post we discused noisy channels, coding gain, hamming distance and block codes.  Next month we will deep dive into Convolutional codes.
 
 If you enjoyed this blog post, you may be interested my discussion of a [Discrete Event Simulation (DES) for Adaptive Forward Error Correction (AFEC)]({filename}/afec-ka-band-discrete-event-simulation.md).
 
 Otherwise, be sure to proceed to [part 2]({filename}/visual-guide-to-forward-error-correction-part-two.md).
  
-#Bibliography
+## Bibliography
 
 - <a name="Gremeny"></a>Gremeny, Steven E. Ground System Design and Operation.  Chantilly, VA: Applied Technology Institute, 2003.
 - <a name="Lint"></a>Lint, J.H. van. Introduction to Coding Theory Third Edition.  Eindhoven, Netherlands:  Springer, 1991.
