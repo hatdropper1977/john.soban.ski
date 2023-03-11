@@ -13,7 +13,7 @@ In this tutorial you will:
   - Use Bootstrap to validate forms on the client side
   - Use a Flask "flash" message to validate forms on the server side
 
-![Bootstrap]({filename}/images/Part_3_Professional_form_validation_with_Bootstrap/bootstrap-1024x551.png)
+![Bootstrap]({static}/images/Part_3_Professional_form_validation_with_Bootstrap/bootstrap-1024x551.png)
 
 Let's get right into it.  If you haven't already, ensure you are in the virtual environment for your **__flask\_to\_es__** project.
 
@@ -76,11 +76,11 @@ Now, edit **__templates/take\_quiz\_template.html__** to match the following:
 
 Look at the beauty of "*{{ wtf.quick\_form(form) }}*."  That one line of template magic converts your form model (in models.py) into a clean, professional HTML form, complete with client side form validation.  Now start your server and go to the page in a browser (don't forget the *:5000*).  If you recall from HOWTO 2, our form page looked very ugly:
 
-![Yucky web page]({filename}/images/Part_3_Professional_form_validation_with_Bootstrap/ugly_web_page-300x109.png)
+![Yucky web page]({static}/images/Part_3_Professional_form_validation_with_Bootstrap/ugly_web_page-300x109.png)
 
 Now, thanks to bootstrap, we have a beautiful page, replete with client-side validation.  Try to submit without filling out either field and you will get an alert.
 
-![Pretty form]({filename}/images/Part_3_Professional_form_validation_with_Bootstrap/pretty_form-300x240.png)
+![Pretty form]({static}/images/Part_3_Professional_form_validation_with_Bootstrap/pretty_form-300x240.png)
 
 Fill out the form and click submit and shut down the flask server.  For the last part of this HOWTO, we will use the Flask "flash" object to send fancy alerts to our client's browser.  We create our function in the "before\_first\_request" decorator's stanza (I'll show the complete code for **__application.py__** as well):
 
@@ -108,11 +108,11 @@ def take_test():
 
 Now if you leave the email section blank, bootstrap will complain.  If you put in garbage text (i.e., not an email) then the Flask server performs validation and you see the flash message.  Try it out.  Type in nonsense for the email field:
 
-![Bad email]({filename}/images/Part_3_Professional_form_validation_with_Bootstrap/bad_email-1024x687.png)
+![Bad email]({static}/images/Part_3_Professional_form_validation_with_Bootstrap/bad_email-1024x687.png)
 
 Click submit and you will see the flash error beneath the email field.
 
-![Flash error]({filename}/images/Part_3_Professional_form_validation_with_Bootstrap/flash_error-1024x698.png)
+![Flash error]({static}/images/Part_3_Professional_form_validation_with_Bootstrap/flash_error-1024x698.png)
 
 The code for the updated **__application.py__** follows:
 

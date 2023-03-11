@@ -84,35 +84,35 @@ ubuntu@ip-172-31-35-80:~/flask_to_es$
 
 We need to give our jumpbox credentials both to deploy an ElasticBeanstalk (EBS) service and pass a role to the EBS service.  The *awsebcli* provided "*eb init*" command automatically creates the necessary roles and profiles for your ElasticBeanstalk environment.  In order for this to occur, your jumpbox must also have the necessary credentials to create, list and pass IAM roles and profiles.  Grant accesses to your jumpbox via the AWS Console.  First, click the IAM dashboard icon.
 
-![IAM Menu]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/iam_menu-300x190.png)
+![IAM Menu]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/iam_menu-300x190.png)
 
 Then, under "Dashboard" click "roles:"
 
-![Roles]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/roles-139x300.png)
+![Roles]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/roles-139x300.png)
 
 You may or may not have several roles.  Pick the IAM role you applied to your jumpbox in [HOWTO-1]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md), the role named "EC2\_Can\_Use\_Services:"
 
-![EC2 Can use services name]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/ec2_can_use_service_name-1024x463.png)
+![EC2 Can use services name]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/ec2_can_use_service_name-1024x463.png)
 
 You will see the policy we attached in [HOWTO-1]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md).  Click "Attach Policy:"
 
-![Attach Policy]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_policy3-1024x552.png)
+![Attach Policy]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_policy3-1024x552.png)
 
 In the "Filter: Policy Type" search box, type "IAM" (1).  Then, check the "IAMFullAccess" policy (2).  Then click "Attach Policy" (3):
 
-![Attach IAM]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_iam_policy-1024x636.png)
+![Attach IAM]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_iam_policy-1024x636.png)
 
 The "EC2\_Can\_Use\_Services" IAM role that you applied to your jumpbox now lists two attached policies.
 
-![Two Policies]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/two_policies-1024x461.png)
+![Two Policies]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/two_policies-1024x461.png)
 
 Click "Attach Policy" once more and in the search box type "Beanstalk Full."  Select and attach this policy.
 
-![Attach EBS]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_ebs-1024x432.png)
+![Attach EBS]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/attach_ebs-1024x432.png)
 
 Your role console now shows three attached policies.  Good work!
 
-![Three Policies]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/3_Policies-1024x464.png)
+![Three Policies]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/3_Policies-1024x464.png)
 
 Go back to your shell and listen to the good news.  We already configured our application for compatible deployment to ElasticBeanstalk.
 
@@ -271,4 +271,4 @@ CNAME: flask-to-es-dev.elasticbeanstalk.com
 
 Once deployment completes, put this CNAME into your web browser and you will find your application.
 
-![Desktop Screenshot]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/Desctop-screenshot-1024x659.png)
+![Desktop Screenshot]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/Desctop-screenshot-1024x659.png)

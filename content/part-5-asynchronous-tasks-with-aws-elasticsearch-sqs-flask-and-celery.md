@@ -8,7 +8,7 @@ Status: published
 
 Welcome to the fifth part of this HOWTO, where we will call a remote web service to locate our test takers. Once you complete this HOWTO, you will have implemented the following architecture:
 
-![Celery Architecture]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/0-Celery-Arch-1024x545.png)
+![Celery Architecture]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/0-Celery-Arch-1024x545.png)
 
 **To recap what we’ve done so far:**
 
@@ -45,11 +45,11 @@ The controller takes the data from the test taker, validates it and sends it to 
 
 A simple graphic illustrates this. Imagine that the web services remain in line. The controller cannot commit the document data until both services return. The server blocks for about 1/2 a second until it can update the document store (I use representative data for latency due to processing and propagation delay).
 
-![Timeline Bad]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/1-Timeline-Bad-300x231.png)
+![Timeline Bad]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/1-Timeline-Bad-300x231.png)
 
 Now consider a parallel approach that uses worker nodes and a message queue. We now get the same functionality, with the server freed up in 1/8 of a second.
 
-![Timeline Good]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/2-Timeline-Good-300x254.png)
+![Timeline Good]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/2-Timeline-Good-300x254.png)
 
 The free ‘IP to geolocation’ coordinate service does not require a login. We can use an HTTP GET to access it like any web page. In order to use Celery, we need to both configure application.py (the controller) as well as deploy worker nodes as separate services.
 
@@ -58,46 +58,46 @@ Launch an Amazon Simple Queue Service (SQS)
 
 Amazon made the deployment of a Simple Queue Service (SQS) easy. First, from the Amazon Console, find the “Application Services” section and then click SQS.
 
-![AWS Console]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/3-AWS-Console-SQS-298x300.png)
+![AWS Console]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/3-AWS-Console-SQS-298x300.png)
 
 When you enter the SQS console, click “Create Queue.”
 
-![Create Queue]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/4-Create-Queue-1024x160.png)
+![Create Queue]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/4-Create-Queue-1024x160.png)
 
 Then, when you see the queue creation wizard, enter the name “flask-es.”
 
-![Enter SQS Name]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/5-Enter-SQS-Name-1024x691.png)
+![Enter SQS Name]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/5-Enter-SQS-Name-1024x691.png)
 
 Click “Create Queue” to create the queue. Once AWS deploys the queue, make note of the URL for the SQS queue. In the example below, the SQS queue lives at ‘sqs://sqs.us-east-1.amazonaws.com//flask-es.’
 
-![SQS URL]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/image00-1024x629.png)
+![SQS URL]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/image00-1024x629.png)
  
 Add SQS Policy to your Jumpbox Role
 -----------------------------------
 
 [HOWTO-1]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md) we created and assigned an IAM role to our Jumpbox. If you remember, we named that role EC2\_Can\_Use\_Services.
 
-![EC2\_Can\_Use\_Services]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
+![EC2\_Can\_Use\_Services]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
 
 That hard work pays off again and again. Right now we will simply add an SQS policy to our existing role. On the AWS console, click on the IAM icon.
 
-![IAM SQS]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/6-IAM-SQS-300x226.png)
+![IAM SQS]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/6-IAM-SQS-300x226.png)
 
 Then select "Roles" from the choices on the right.
 
-![IAM Roles]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/7-IAM-Roles-221x300.png)
+![IAM Roles]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/7-IAM-Roles-221x300.png)
  
 Now filter the roles and locate "EC2\_Can\_Use\_Services." 
 
-![EC2\_Can\_Use\_Services]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/8-Can-Use-Role-1024x555.png) 
+![EC2\_Can\_Use\_Services]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/8-Can-Use-Role-1024x555.png) 
 
 Click the "Attach Policy" Button.
 
-![Attach Policy]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/9-Attach-Policy-1024x555.png)
+![Attach Policy]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/9-Attach-Policy-1024x555.png)
 
 Filter for "SQS," select "Full Access" and attach. All done!
 
-![SQS Policy]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/10-SQS-Policy-1024x555.png)
+![SQS Policy]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/10-SQS-Policy-1024x555.png)
 
 Make Celery on the Controller
 -----------------------------
@@ -184,7 +184,7 @@ Run the following command from your shell:
 
 When you deploy to operations, you will want to daemonize the process with supervisord, and for now the command line suffices. When you run the command, you will see a very colorful splash screen:
 
-![Celery Splash]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/11-Celery-Splash-1024x704.png)
+![Celery Splash]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/11-Celery-Splash-1024x704.png)
 
 Open a second console, activate the virtual environment and run your server:
 
@@ -203,7 +203,7 @@ Test Drive
 
 Go to your application. We did not yet deploy to ElasticBeanstalk so you will need to go to the Public IP of your jump box, port 5000. Fill in the survey and click ‘submit.’ If everything works, you should see “Thank You” on your web browser.
 
-![Thank You]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/12-Thank-You-300x133.png)
+![Thank You]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/12-Thank-You-300x133.png)
 
 In your Celery window, you will read the following messages:
 
@@ -253,7 +253,7 @@ Extra Credit
 
 Since you completed all of the HOWTO’s so far, you have the skills needed to deploy the Flask web server and Celery worker nodes to Elastic Beanstalk. For extra credit, deploy the following architecture:
 
-![Extra Credit]({filename}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/13-EB-Architecture-1024x603.png)
+![Extra Credit]({static}/images/Part_5_Asynchronous_tasks_with_AWS_Elasticsearch_SQS_Flask_and_Celery/13-EB-Architecture-1024x603.png)
 
 application.py full code
 ------------------------

@@ -13,7 +13,7 @@ In this tutorial you will learn
   - How to deploy web forms in Flask
   - How to get Flask to send validated web form data to the AWS provided Elasticsearch service
 
-![Howto]({filename}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/howto2-1024x387.png)
+![Howto]({static}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/howto2-1024x387.png)
 
 In the [last tutorial]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md), we laid the foundation to have auto-scaled or auto-deployed EC2 instances connect to the Amazon provided Elasticsearch service via Identity and Access Management (IAM) roles.  Wannabe AWS button mashers copy and paste their access credentials, which works at first and then doesn’t, quickly.  We need the IAM approach in order to use the phenomenal, groundbreaking, disruptive and easy to use ElasticBeanstalk service.  The IAM roles allow us to use ElasticBeanstalk without any heartburn, since we do not need to worry about hard coded credentials or static IP addresses.
 
@@ -288,11 +288,11 @@ Now we need to punch a hole in our firewall so we can test our beautiful web pag
 
 Go to your AWS management console.  Then click on your policy, incoming.  Add HTTP from my IP and also custom TCP rule, 5000 from my IP.  (If you are so inclined, you can add an NGINX proxy in front of your flask application).  Once you this start your application on the shell via 'python application.py.'
 
-![Custom Security Group]({filename}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/custom_sec_group-1024x503.png)
+![Custom Security Group]({static}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/custom_sec_group-1024x503.png)
 
 Now, drumroll please, go to your Public IP from a browser (add :5000 to the end if you did not opt to add an NGINX proxy) and fill out your form.
 
-![Ugly Web Page]({filename}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/ugly_web_page.png)
+![Ugly Web Page]({static}/images/Part_2_Let_Internet_facing_forms_update_Elasticsearch_via_Flask/ugly_web_page.png)
 
 Click submit and…
 
