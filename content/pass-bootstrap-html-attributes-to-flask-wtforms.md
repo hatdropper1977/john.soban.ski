@@ -18,10 +18,10 @@ In this blog post you will:
   -   Tweak the appearance of the web page using a Flask-WTF macro
   -   Tweak the appearance of the web page using a Flask-Bootstrap method
 
-# The Baseline App
+## The Baseline App
 The following code shows the baseline Flask application, which uses "quick\_form" to render the form's web page. Keep in mind that this application doesn't do anything, although you can easily extend it to persist data using an [ORM](https://www.sqlalchemy.org/) (for example). I based the web app on the following Architecture:
 
-![Architecture]({filename}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_1_architecture-1024x611.jpg)  
+![Architecture]({static}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_1_architecture-1024x611.jpg)  
 
 The web app contains ***models.py*** (contains form model), ***take\_quiz\_template.html*** (renders the web page) and ***application.py*** (the web app that can route to functions based on URL and parse the form data).
 
@@ -111,7 +111,7 @@ This application uses the ***quick\_form*** method to generate a web page. Note 
 
 Now imagine that your customer wants to change the look of the ***submit*** button, or add some default text. In this situation, the ***quick\_form*** does not suffice.
 
-# Attempt 1: Use a Flask-WTF Macro
+## Attempt 1: Use a Flask-WTF Macro
 We can use vanilla Flask-WTF (vs. Flask-Bootstrap) to pass Bootstrap HTML attributes to WTForms.  
 
 To see this in action, check out the second version of the ***app*** via its Git [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
@@ -181,13 +181,13 @@ You will also see an orange submit button that spans the width of the page:
 
 You can see both of these changes on the web page:
 
-![Custom Submit Box No Validation]({filename}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_no_validation.jpg)
+![Custom Submit Box No Validation]({static}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_no_validation.jpg)
 
 Unfortunately, if you click submit without entering any text, you will notice that we have reverted to ugly validations.
 
-![Custom Submit Box With Ugly Validation]({filename}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_w_ugly_validation.jpg)
+![Custom Submit Box With Ugly Validation]({static}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_w_ugly_validation.jpg)
 
-# Attempt 2: Use Flask-Bootstrap
+## Attempt 2: Use Flask-Bootstrap
 In this attempt, we will use [Flask-Bootstap](https://pythonhosted.org/Flask-Bootstrap/) directly to pass the attributes to Flask-WTF, thus obviating the need for the ***\_formhelpers.html*** macro.
 
 Although pretty much hidden in the Flask-Bootstrap documents, it turns out you can add extra HTML elements directly to the template engine using ***form\_field***.
@@ -241,11 +241,11 @@ We then customize the submit button. You can customize the button however you wo
 
 This gives us a bootstrap rendered page with pretty validation:
 
-![Custom Submit Box With Pretty Validation]({filename}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_w_pretty_validation.jpg)
+![Custom Submit Box With Pretty Validation]({static}/images/Pass_Bootstrap_HTML_attributes_to_Flask-WTForms/ff_custom_submit_box_w_pretty_validation.jpg)
 
 As you can see, we get a popup if we attempt to submit without entering text, submit without entering an email, or enter an invalid email address.
 
-# Conclusion
+## Conclusion
 You now have a working web application that easily renders professional looking forms with validation and pop-ups. In the future you can trade ease of deployment against customability.
 
 If you enjoyed this blog post, you may be interested in how to [quickly add reCAPTCHA to your app using Flask-WTF]({filename}/add-recaptcha-to-your-flask-application.md), how to use the Flask-like [Chalice](https://github.com/aws/chalice) to [quickly deploy a web app to Lambda]({filename}/connect_aws_lambda_to_elasticsearch.md), or  my five part series on how to deploy a Flask application (with an [Elasticsearch](https://aws.amazon.com/elasticsearch-service/) back-end) to the Amazon Web Services ecosystem:
