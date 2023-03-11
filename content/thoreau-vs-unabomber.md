@@ -7,7 +7,7 @@ Slug: thoreau-vs-unabomber
 Status: published
 
 
-# **Good Vs. Evil** - Two Opposing paths Taken by a Similar Genius
+## **Good Vs. Evil** - Two Opposing paths Taken by a Similar Genius
 This blog post provides a comparison between Henry David Thoreau's **Walden** and Ted Kaczynski's **Unabomber Manifesto.** 
 
 ![Walden Book]({filename}/images/Thoreau_Vs_Unabomber/01_Walden_Thoreau.png)
@@ -18,10 +18,10 @@ To compare these two works, I use both a modern Natural Language Processing (NLP
 
 The Google Cloud Natural Language Application Programming Interface (API) quantifies the authors' sentiment (positive or negative) and intensity of emotion while traditional Literary Analysis compares and contrasts themes.  
 
-# Google Cloud Natural Language Analysis
+## Google Cloud Natural Language Analysis
 The [Google Cloud Natural API](https://cloud.google.com/natural-language/docs) allows developers to use Google's advanced, massive and validated language model to infer sentiment, extract entities and classify documents.  I will use the API to infer sentiment from the two texts, and then compare the results.  Sentiment analysis provides quantifiable metrics (hard numbers) which drive mathematical comparisons.
 
-## Process Text
+### Process Text
 I use the Google API to infer sentiment (score) and intensity (magnitude).
 
 The [Google Cloud Natural Language API documentation](https://cloud.google.com/natural-language/docs/basics#interpreting_sentiment_analysis_values) defines **score** and **magnitude**:
@@ -94,7 +94,7 @@ score,magnitude,text
 -0.6000000238418579,2.0,"Some of you, we all know, are poor, find it hard to live, are sometimes, as it were, gasping for breath. I have no doubt that some of you who read this book are unable to pay for all the dinners which you have actually eaten, or for the coats and shoes which are fast wearing or are already worn out, and have come to this page to spend borrowed or stolen time, robbing your creditors of an hour. It is very evident what mean and sneaking lives many of you live, for my sight has been whetted by experience; always on the limits, trying to get into business and trying to get out of debt, a very ancient slough, called by the Latins æs alienum, another’s brass, for some of their coins were made of brass; still living, and dying, and buried by this other’s brass; always promising to pay, promising to pay, tomorrow, and dying today, insolvent; seeking to curry favor, to get custom, by how many modes, only not state-prison offences; lying, flattering, voting, contracting yourselves into a nutshell of civility or dilating into an atmosphere of thin and vaporous generosity, that you may persuade your neighbor to let you make his shoes, or his hat, or his coat, or his carriage, or import his groceries for him; making yourselves sick, that you may lay up something against a sick day, something to be tucked away in an old chest, or in a stocking behind the plastering, or, more safely, in the brick bank; no matter where, no matter how much or how little."
 ```
 
-## Numerical Analysis
+### Numerical Analysis
 The output includes **score**, **magnitude** and **text**.
 
 I input each CSV into Pandas for analysis, for example:
@@ -123,7 +123,7 @@ Kaczynski includes three paragraphs tied for most negative (-0.6), so I selected
 
 This quick analysis demonstrates that the Google NLP Model appears to correctly identify sentiment.
 
-## Graphical Analysis
+### Graphical Analysis
 Since each work includes hundreds of paragraphs, I use Data Visualization (Data Viz) in the form of a Histogram to summarize the output data.
 
 The following Histogram records the sentiment of "The Unabomber Manifesto."  Note that the paragraphs skew negative.  
@@ -156,10 +156,10 @@ The near forty-five degree angle of the contour map (the blue, green and yellow 
 
 Overall, however, most of his text lands in the **medium-negative** sentiment range.
 
-# Literary Analysis
+## Literary Analysis
 Ted Kaczynski and Henry David Thoreau (despite the separation of a century) live lives of uncanny similarity. Both tackle their field of expertise in unorthodox, pioneering and peerless manners, and both graduated from Harvard. These individuals tried their hand at teaching, but eventually withdrew from the profession and instead became **hermits** living in the wilderness in modest shanties. During their seclusion from society they produced their most influential works: [Walden](https://www.gutenberg.org/files/205/205-h/205-h.htm) and [The Manifesto](http://www.self.gutenberg.org/articles/unabomber_manifesto).
 
-## Common View of Technology and Over-Socialization
+### Common View of Technology and Over-Socialization
 The effect of technology and over-socialization negatively reducing the human experience represents the first (and most prevalent) issue found in both works. The Unabomber opens his tirade with:
 
 > The Industrial Revolution and its consequences have been disastrous for the human race... [it has] reduce(d) human beings and many other living organisms to engineered products and mere cogs in the social machine [Kaczynski 1]
@@ -189,7 +189,7 @@ The Unabomber shares the same sentiment that modern man should go back to nature
 
 > We attribute the social and psychological problems of modern society to the fact that society requires people to live under conditions radically different from those under which the human race has evolved and to behave in ways that conflict with the patterns of behavior that the human race developed while living under the earlier conditions [Kaczynski 46]
 
-## Common View of Workaholic/ Novelty Culture
+### Common View of Workaholic/ Novelty Culture
 Thoreau and Kaczynski both focus on the detrimental effects of our workaholic/ consumer culture, where workers work long hours to pay for disposable, novelty items and engage in meaningless activities for distraction. Kaczynski writes:
 
 > ...even if they have a great deal of money, [modern workers] cannot satisfy their constant craving for the shiny new toys that the marketing industry dangles before their eyes.  So, they always feel hard pressed financially, even if their income is large, and their cravings are frustrated [Kaczynski 80]
@@ -226,7 +226,7 @@ Thoreau also lambastes the **collecting surrogate activity**. He writes:
 
 Thoreau suggests that nonspiritual, superficial pastimes do not substitute for the higher principles of Self, God nor freedom.  The Unabomber wraps a similar sentiment in psychological jargon. 
 
-## Common View of Rage Against the Machine
+### Common View of Rage Against the Machine
 Kaczynski and Thoreau both desire to eliminate **the Machine** or what they label the ugly and evil influence of technology from the world.
 
 ![Earth Crisis Destroy the Machines Album Art]({filename}/images/Thoreau_Vs_Unabomber/07_Earth_Crisis.png)
@@ -251,7 +251,7 @@ His statment provides an uncanny response to Thoreau’s rhetorical question:
 
 > What is the pill which will keep us well, serene, contented? [Thoreau 1563]
 
-## Differences
+### Differences
 The two works have their differences in addition to their similarities. First of all, the writing styles of the two authors clash quite severely. Thoreau uses a flowery, poetic style and injects a sense of humor into the text (see the “Cenobites” pun).  Kaczynski’s uses a staccato, scientific and analytic voice and his work contains not a single iota of brevity.
 
 In addition, **Walden** includes an overall tone of optimism, whereas Kandinsky focuses on dire pessimism. Finally, Thoreau’s “tangents” mainly describe nature, his possessions, how he built his house,  etc., which all deal with his environment. Kaczynski's tangents on the other focus on political themes.
@@ -264,7 +264,7 @@ Contrast this with Kaczynski, who clearly states :
 
 Kaczynski did in fact resort to violence, and killed people.  We must not forget his cowardly actions.
 
-# Conclusion
+## Conclusion
 Based on literary analysis, Thoreau and Kaczynski see eye to eye in relation to their works’ major themes. Both authors appear to be steadfast in their pro-nature (and all the good that comes from it) / anti-technology (and all the ills that are a result of it) convictions. 
 
 AI inference provides hard numbers that indicate Kaczynski communicates in a strong, negative tone and Thoreau uses a neutral tone in terms of both emotion and intensity.
