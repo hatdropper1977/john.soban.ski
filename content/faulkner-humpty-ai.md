@@ -6,9 +6,9 @@ Tags: Literature, Machine Learning, NLP
 Slug: faulkner-humpty-ai
 Status: published
 
-In this blog post write an entry for the (now defunct) **Faux Faulkner Contest**.  I write **Humpty Dumpty** in the voice of William Faulkner.
+In this blog post I write an entry for the (now defunct) **Faux Faulkner Contest**.
 
-I then command Generative AI to write an entry for the contest and compare the results.
+I first write **Humpty Dumpty** in the voice of William Faulkner. I then command Generative AI to write an entry for the contest and compare the results.
 
 You can read my full entry at the [end of this blog post](#Eggs).
 
@@ -17,25 +17,21 @@ You can read my full entry at the [end of this blog post](#Eggs).
 ## My Approach
 I take a **collage** (not **college**) approach to write my Faux Faulkner contest entry. I read the text of [Absalom, Absalom!](https://en.wikipedia.org/wiki/Absalom,_Absalom!) and look for interesting sentences that propel the **Humpty Dumpty** narrative.
 
-I look for sentences that require minimum edits to fit into the **Humpty Dumpty** tale.
+![Absalom, Absalom!]({static}/images/Faulkner_Humpty_Ai/02_William_Faulkner.png)
 
 For example, on page one we read the following.
 
-![Absalom, Absalom!]({static}/images/Faulkner_Humpty_Ai/02_William_Faulkner.png)
-
-In the excerpt below I bold the words that I change in the **Humpty Dumpty** version.
-
 > From a little after two o'clock until almost sundown of the long still hot weary dead September afternoon **they** sat **in** what **Miss Coldfield still** called **the office** because **her** father had called it that--    
 
-I change the original text to the following.
+I change the original text above to the following.
 
 > From a little after two o'clock until almost sundown of the long still hot weary dead September afternoon **Humpty** sat **on** what **the King** called **a wall** because **his** father had called it that--    
 
-I jump around the book.  I take the following, for example, from late in the book.
+I jump around the book. Page 164 presents the following text:
 
-> the **justice and the others present** did not recognize him, did not recognize this **slight man with his bandaged head and arm**, his sullen impassive (and now bloodless) olive face, who refused to answer any questions, make any statement
+> the **justice and the others present** did not recognize him, did not recognize this **slight man with his bandaged head and arm**, his sullen impassive (and now bloodless) olive face, who refused to answer any questions, make any statement, or make any pleas for help (pg. 164)
 
-I transform this into the following.
+I transform this into text that propels the **Humpty Dumpty** tale.
 
 >  A little bit later some of the **King's men** came across him and did not recognize him, did not recognize this **mess of gooey raw egg** integrated with dirt, his shattered and sullen impassive face all over the place, which was unable to answer any questions, make any statement, or make any pleas for help (pg. 164).
 
@@ -44,7 +40,7 @@ My approach requires me to:
 1. Read the entire text
 2. Use my judgment to select salient sentences
 3. Use creativity to swap or omit critical words
-4. Use my storytelling ability to paste the sentences into a compelling narrative.
+4. Use my storytelling ability to paste the sentences into a compelling narrative
 
 In total, I select fifteen sentences throughout **Absalom, Absalom!**, edit them, and then paste them into my **Faux Faulkner Contest** entry.
 
@@ -57,12 +53,10 @@ OpenAI develops the ([GPT-3](https://en.wikipedia.org/wiki/GPT-3)) Large Languag
 
 I use ChatGPT to create an Artificial Intelligence generated **Faux Faulkner Contest** entry.
 
-
 ### Attempt 1
 I begin and instruct ChatGPT to **Tell the tale of "Humpty Dumpty" in the voice of William Faulkner.**
 
 ![Instruct ChatGPT to Tell the tale of "Humpty Dumpty" in the voice of William Faulkner.]({static}/images/Faulkner_Humpty_Ai/03_First_Command.png)
-
 
 ChatGPT replies.
 
@@ -79,7 +73,6 @@ ChatGPT replies.
 I give ChatGPT's response a **D minus**.
 
 ### Attempt 2
-
 I provide more detailed instructions.  I decide to paste in my **word swap** introduction.
 
 > Now use the text of "Absalom, Absalom!" for the base.   
@@ -121,7 +114,6 @@ This echoes Faulkner's quote:
  [[Source](https://www.goodreads.com/quotes/12124-the-past-is-never-dead-it-s-not-even-past)]
 
 ### Attempt 3
-
 I clobber ChatGPT over the head with explicit instructions.
 
 > Use only quotes from the text of "Absalom, Absalom!" and modify them to tell the tale of "Humpty Dumpty."   
@@ -144,7 +136,6 @@ I clarify the instructions.
 > Modify passages from Faulkner's writings to tell the tale of Humpty Dumpty.
 
 ![Fourth Attempt at ChatGPT]({static}/images/Faulkner_Humpty_Ai/06_Fourth_Command.png)
-
 
 ChatGPT balks.
 
@@ -205,12 +196,12 @@ And so, all of the King’s Horses and all of the King's men gave up on Humpty, 
 
 The other knights watched their brother, but none ventured forth to help the torn and anguished man who knew, even while Humpty was dying, that for hours now the sacrifice and anguish were in vain (pg. 105). And then, not before long, that was all. Or rather, not all, since there is no all, no finish; it not the blow we suffer from but the tedious repercussive anti-climax of it, the rubbishy aftermath to clear away from the very threshold of despair (pg. 121). Humpty was no more.
 
-Mrs. Dumpty walked up to the knight who was standing over Humpty’s remains in front of the tali gray rocky wall with the bricks all plastered and fastened together with concrete for forty-three summers because when the king was a boy his father had believed that a wall-less castle invited barbarians and that having walls and moats was always safer (pg. 3). She then said, “He was to die; I know that, knew that, as soon as first I came upon his shattered shell (pg. 120). But don’t you worry. I think that in time the Humpty Dumptys are going to conquer the western hemisphere. Of course it won’t be in our time and of course as they spread towards the poles their oval shapes will flatten out like the rabbits and the birds do, so they won’t show up so sharp against the flat terrain. But it will still be Humpty Dumpty; and so in a few thousand years, I regard you will also have sprung from the loins of Gargantuan Chickens. Now I just want to say one thing more. It was inevitable that all of the King’s horses and all the King's men could not put Humpty together again, so do not worry too much about it."
+Mrs. Dumpty walked up to the knight who was standing over Humpty’s remains in front of the tall gray rocky wall with the bricks all plastered and fastened together with concrete for forty-three summers because when the king was a boy his father had believed that a wall-less castle invited barbarians and that having walls and moats was always safer (pg. 3). She then said, “He was to die; I know that, knew that, as soon as first I came upon his shattered shell (pg. 120). But don’t you worry. I think that in time the Humpty Dumptys are going to conquer the western hemisphere. Of course it won’t be in our time and of course as they spread towards the poles their oval shapes will flatten out like the rabbits and the birds do, so they won’t show up so sharp against the flat terrain. But it will still be Humpty Dumpty; and so in a few thousand years, I regard you will also have sprung from the loins of Gargantuan Chickens. Now I just want to say one thing more. It was inevitable that all of the King’s horses and all the King's men could not put Humpty together again, so do not worry too much about it."
 
 “I can put him together,” Quentin said, quickly, at once, immediately; “I can I can put him together,” he said. *I can put him together he thought*, panting in the cold air, the iron England dark: *I can. I can! I can put him together! I can put him together!*
 (pg. 303).
 
-The End
+**The End**
 
 ## Bibliography
 Faulkner, William. Absalom, Absalom! the Corrected Text. Vintage Internat, 1990.
