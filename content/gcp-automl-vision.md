@@ -249,7 +249,7 @@ In the search bar, type **Vision** and then click **ENABLE AUTOML API**.
 
 ![Enable_API]({filename}/images/Gcp_Automl_Vision/05_Enable_API.png)
 
-##Upload your Dataset
+### Upload your Dataset
 Click **Get Started --> New Dataset  --> Multi-label classification**
 
 ![AutoML Import Dataset]({filename}/images/Gcp_Automl_Vision/06_AutoML_Import_Dataset.png)
@@ -274,7 +274,7 @@ A brief perusal of the images shows that some pictures (highlighted in red) incl
 
 For now, let's ignore the bad labels and see what happens.  
 
-#Train your Model
+## Train your Model
 Select **Start Training**
 
 ![Start training bad labels]({filename}/images/Gcp_Automl_Vision/11_Start_Training_Bad_Labels.png)
@@ -283,7 +283,7 @@ The training will use 16 GPU hours.
 
 Since GCP farms the training out in parallel, the 16 GPU hours take less than an hour.
 
-#Evaluate your Model
+## Evaluate your Model
 After the training completes, click **Evaluate**.
 
 You will see that the model provides sub 90% precision and recall, as noted by the confusion matrix (highlighted in green).
