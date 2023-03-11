@@ -16,7 +16,7 @@ In summary, if you want to be able to use the snapshots (e.g. move the data betw
 
 Amazon provides a reference document on how to execute a manual snapshot.  When I first began my AWS journey back in 2015, I found the [documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-snapshots.html) to be overwhelming and highly technical.  I created this visual HOWTO to make life easier for everyone.
 
-# Workflow
+## Workflow
 To take a manual snapshot we must first give the **Elasticsearch** service permission to use a **Simple Storage Service (S3)** bucket.  Once the **Elasticsearch** service can use **S3**, we can command **Elasticsearch** to snapshot to our bucket using the **Elasticsearch** REST API.
 
 The following list captures the steps in the workflow.
@@ -27,7 +27,7 @@ The following list captures the steps in the workflow.
 4. Attach this **Policy** to an IAM **Role**
 5. Pass the role to **Elasticsearch** via our local Python client
 
-# Step 1: Create a bucket
+## Step 1: Create a bucket
 In order to tell Elasticsearch to write a snapshot to a bucket, you must create a bucket.  
 
 Type **S3** into the search bar in order to locate service in AWS.
@@ -42,7 +42,7 @@ Name the bucket something unique and then click **Create**.
 
 ![Name Bucket]({filename}/images/Snapshot_Aws_Es_To_S3/03_Name_Bucket.png)
 
-# Step 2:  Connect Python to Elasticsearch
+## Step 2:  Connect Python to Elasticsearch
 The AWS provided manual snapshot procedure reads:  
 
 > You can't use curl to perform this operation 
@@ -122,7 +122,7 @@ authorized to perform: es:ESHttpGet"}
 
 ...then you did not properly set up your environment to sign URL requests to the **Elasticsearch** service.  In order to fix this issue, [create an IAM Policy that can read and write to Elasticsearch, attach this policy to an IAM role, and then attach this role to your EC2 instance]({filename}/boto3-ec2-to-amazon-elasticsearch.md).
 
-# Step 3: Create an S3 CRUD policy
+## Step 3: Create an S3 CRUD policy
 In an earlier blog post I describe how to [create an IAM policy that allows us to Create Retrieve Update and Delete (CRUD) Elasticsearch documents]({filename}/boto3-ec2-to-amazon-elasticsearch.md).  We then attached this policy to an IAM role named **EC2\_Can\_Use\_Services**, and then attached this role to our **EC2** instance.  We will now create a new policy that lets **Elasticsearch** CRUD the contents of **S3** buckets and attach that to our pre-existing role.
 
 From the home screen, type **IAM** into the search bar and click **IAM**.
@@ -167,7 +167,7 @@ Click **Review policy**, name your policy and then click **Create policy**.
 
 > NOTE:  The last line of our **Action** stanza (above) reads **iam:PassRole**.  This line allows our Python client to give **Elasticsearch** the right to CRUD **S3** buckets.
 
-# Step 4:  Attach our new policy to a Role
+## Step 4:  Attach our new policy to a Role
 In the last blog we [created a role that we attached to our EC2 instance]({filename}/boto3-ec2-to-amazon-elasticsearch.md).  This role allowed Python clients on that instance to sign requests to **Elasticsearch** without the need for hard-coding **AWS_SECRET_KEY** or **AWS_ACCESS_KEY**.  In that blog post we attached a **Policy** that enables **Elasticsearch** CRUD operations and now we will attach our new policy to allow **S3** CRUD operations.
 
 Bring up the IAM console:
@@ -186,7 +186,7 @@ Type **Can** in the search bar, select **Can\_CRUD\_S3** and then click **Attach
 
 ![Attach the S3 CRUD Policy]({filename}/images/Snapshot_Aws_Es_To_S3/10_Attach_S3_Policy.png)
 
-## Trust Relationship
+### Trust Relationship
 In order for the **EC2\_Can\_Use\_Services** role to grant **Elasticsearch** permissions, the role must trust **Elasticsearch**.  Command the role to trust **Elasticsearch** via a **trust relationship**.
 
 We already configured **EC2\_Can\_Use\_Services** to [trust Elasticsearch in the first part of this tutorial]({filename}/boto3-ec2-to-amazon-elasticsearch.md).  To see this, go to the IAM console.
@@ -227,7 +227,7 @@ If it does not exist, then paste in the following:
 
 The trust role allows our Python client to "delegate" the **Can\_CRUD\_S3** policy to the **Elasticsearch** service via a role pass. In other words, we use a one-time command line script to tell our AWS **Elasticsearch** service to use **S3**.
 
-# Step 3: Pass the ability to CRUD S3 to Elasticsearch
+## Step 3: Pass the ability to CRUD S3 to Elasticsearch
 Now we pass the role to **Elasticsearch**.  The role includes a policy to CRUD **S3** which means that, once-passed, **Elasticsearch** can CRUD S3.
 
 Unlike most services, we cannot use the console GUI to pass a role to **Elasticsearch**.  Instead, we sign a request and send it directly to the **Elasticsearch** API.
@@ -312,7 +312,7 @@ payload = {
 }
 ```
 
-# Snapshot and Restore
+## Snapshot and Restore
 Now that you passed the role to **Elasticsearch**, you can use Kibana **Dev Tools** to trigger backup and restore.
 
 In Dev Tools, create a new index and document.
@@ -379,5 +379,5 @@ POST /_snapshot/s3-flask-es/snapshot_1/_restore
 
 ![RESTORE Index]({filename}/images/Snapshot_Aws_Es_To_S3/19_Restored.png)
 
-# Conclusion
+## Conclusion
 Congratulations!  You now deployed an Elasticsearch service, connected to it, created an index, backed up an index and restored an index - all within the AWS ecosystem.
