@@ -10,7 +10,7 @@ Over the air communications, such as text messages, satellite radio, walkie talk
 
 [Part One]({filename}/visual-guide-to-forward-error-correction.md) of this blog series discusses the use of Block Codes in channel coding.  This blog post discusses channel coding via the use of Convolutional codes.
 
-#Channel Coding: Convolutional Codes
+## Channel Coding: Convolutional Codes
 Convolutional codes produce **n** code bits in response to the **k** input bits from both the current time unit and the previous **N-1** input data bits.  We refer to convolution codes as **(n,k,L)**, with **n** and **k** equal to output and input bits respectively.  We define **L**, the constraint length, as **L = k(m-1)**, with **m** equal to the number of memory registers.  The figure below describes an encoding device:
 
 ![Convolutional Code Encoding Device]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/02_Convolutional_Code_Encoding_Device.png)
@@ -37,7 +37,7 @@ The preferred method is the Trellis diagram.  We draw all states on the y-axis. 
 
 ![Convolutional Code Trellis Diagram]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/05_Convolutional_Code_Trellis_Diagram.png)
 	 
-#Channel Coding: Decoding convolutional codes
+## Channel Coding: Decoding convolutional codes
 The decoding of convolutional codes almost resembles the decoding of block codes since we’re comparing the received word with all codewords.  Convolutional codes, however, have infinitely long codewords so the receiver must only look at the first **l** symbols of the received message ([Lint](#Lint) 185).
 
 Convolutional decoding, therefore, deals with decoding sequences of length **s** without having to check every one of the possible **2s** codewords.   The two main types of convolutional decoding are sequential decoding (Wozencraft and then Fano) and maximum likely-hood decoding (Viterbi).  We will look at the Viterbi algorithm here.
@@ -46,11 +46,11 @@ Viterbi implements maximum likely-hood decoding by reducing the options of a Tre
 
 The key to Viterbi decoding algorithm is to assign metrics to each of the paths and sloughing off one of them.  The winning path is known as the survivor.  The Viterbi algorithm uses these principles (1) That errors occur infrequently and the probability of error is small and (2) The probability of burst errors is much less than that of a single error ([Langton](#Langton) 21).
 
-#Conclusion
+## Conclusion
 FEC using either block or convolutional codes trade bandwidth for a lower bit error rate for fixed power.  Communication can be simplex and real time, but the receiver must decode and correct errors.  Block codes operate on blocks of bits.  We break a chunk of data up and add error correcting bits to it.  Convolutional codes are continuous, and operate on bits continuously.
  
 If you enjoyed this blog post, you may be interested my discussion of a [Discrete Event Simulation (DES) for Adaptive Forward Error Correction (AFEC)]({filename}/afec-ka-band-discrete-event-simulation.md).
 
-#Bibliography
+## Bibliography
 - <a name="Langton"></a>Langton, Charan. Coding and decoding with Convolutional Codes. 2008.
 - <a name="Lint"></a>Lint, J.H. van. Introduction to Coding Theory Third Edition.  Eindhoven, Netherlands:  Springer, 1991.
