@@ -24,7 +24,7 @@ At a high level, RCE draws a circle around each labeled **training** observation
 
 ![RCE in action]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
 
-# RCE vs. Nearest Neighbor (NN)
+## RCE vs. Nearest Neighbor (NN)
 The following two-dimensional (2d) plot shows five data points, two of class **X**, two of class <span style="color:red">**O**</span> and one unknown observation, <span style="color:green">**?**</span>, we wish to classify.
 
 ![How would you classify this green question mark]({filename}/images/Rce_Python_Part_1/01_Classify_Green.png)
@@ -37,7 +37,7 @@ The **NN** algorithm uses the classes of the nearest data points to classify an 
 
 Based on this model, the green question mark lands in the footprint of the red class, and **RCE** indicates that the unknown observation belongs to class <span style="color:red">**O**</span>.
 
-# Explore the Data
+## Explore the Data
 I use the [Pima Indians Diabetes](https://www.kaggle.com/uciml/pima-indians-diabetes-database) dataset to craft my model.  The dataset includes observations of eight features and a two-class label.  The labels indicate the presence or absence of diabetes.
 
 First, import the data into a **Pandas** [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
@@ -67,7 +67,7 @@ A quick glance shows that 2/3 of the observations indicate **no diabetes**.
 
 ![Histogram of Outcome]({filename}/images/Rce_Python_Part_1/04_Outcome_Hist.png)
 
-## Explore One Feature
+### Explore One Feature
 Of all the given features, I assume that **Glucose** will impact **Outcome** the most, so I update the histogram to depict the relationship between the two.
 
 ```python
@@ -92,7 +92,7 @@ This view also shows the lack of clear separation between the two **Outcomes** b
 
 ![Glucose Outcome Kernel Density Estimation]({filename}/images/Rce_Python_Part_1/06_Glucose_Density.png)
 
-## Explore Two Features
+### Explore Two Features
 Use **PairGrid** to cycle through all features in order to depict their relationships to **Outcome**.
 
 ```python
@@ -166,7 +166,7 @@ Look for dark red tiles in the **Outcome** row.  The dark red tiles of **Glucose
 
 ![Heatmap of Feature Correlation]({filename}/images/Rce_Python_Part_1/09_Corr_Heatmap.png)
 
-## Explore Three Features
+### Explore Three Features
 Create a function to plot three features against **Outcome**.
 
 ```python
@@ -227,7 +227,7 @@ This combination yields significantly less separability of the classes than the 
 
 ![Another view in 3d]({filename}/images/Rce_Python_Part_1/11_More_3d.png)
 
-## Normalize
+### Normalize
 First, split the **pima_df** DataFrame into **train** and **test**.
 
 - **Train** - Data to build our exemplar model
@@ -291,7 +291,7 @@ The features cluster around **zero** post-normalization.
 
 ![Histogram of Normalized Features]({filename}/images/Rce_Python_Part_1/13_Norm_Features.png)
 
-# Reduce Dimensionality
+## Reduce Dimensionality
 The correlation heatmap above indicates strong correlation between some features.  Highly correlated features input redundancy (noise) into our model.  Principal Component Analysis (PCA) maps the features onto orthogonal planes and also provides a means to reduce dimensions.  Too many dimensions (features) leads to over-fitting which reduces the predictive effectiveness of ML models.
 
 > Open [George Dallas' blog post](https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/) in a new tab for an excellent explanation of PCA
@@ -404,7 +404,7 @@ The result shows slight separability of the two classes if you imagine sliding a
 
 ![3d plot of Principle Components vs. Outcome]({filename}/images/Rce_Python_Part_1/17_Princomp_3d.png)
 
-# Develop Model
+## Develop Model
 We will use a 2d **train** data set to walk through model development.
 
 ```python
@@ -422,7 +422,7 @@ We re-attach the **train** labels to our DataFrame.  Our exemplar algorithm requ
 train_df = pca_train_features_df.assign(outcome = train_labels)
 ```
 
-## Calculate Lambda
+### Calculate Lambda
 The following function finds the radii (lambda) for each row.  For a given observation, it calculates the euclidean distance to every observation of the **opposite** class, and then returns the closest point.
 
 (Note the complete absence of any **for** statements in the code below.)
@@ -478,7 +478,7 @@ The following table captures the resulting **lambda** for a handful of example *
 
 ![The calculated Lambdas in a table]({filename}/images/Rce_Python_Part_1/18_Train_Lambda.png)
 
-## Classify Test Data
+### Classify Test Data
 **Test** data does not include a label.  The ML Engineer feeds **test** data into the **trained** model, and the model predicts a label.
 
 We will now develop the logic to predict a label.
@@ -570,7 +570,7 @@ The following graphic captures the footprint of each class.  **Purple** for **Ou
 
 ![The RCE 2d decision boundaries]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
 
-# Evaluate RCE
+## Evaluate RCE
 Our Pima **test** DataFrame includes labels, which we use to **evaluate** the model.
 
 To prepare the **test** DataFrame for classification, we normalize and PCA transform the DataFrame.
@@ -630,5 +630,5 @@ calc_success(test_df)
  'ambiguity': 0.2662337662337662}
 ```
 
-# Conclusion
+## Conclusion
 In this blog post we developed an exemplar RCE neural net classifier from scratch.  Our initial attempt yielded a model with an F1 Score of **0.42** and ambiguity of **26.6%**.  [Next month]({filename}/rce-python-part-2.md), we will tune hyperparameters in order to improve model success and reduce ambiguity.  We will investigate the number of principal components and tune **r**.  **r** indicates the maximum value for **Lambda** and puts an upper limit on the maximum size of each circle that represents a given **hit footprint**.
