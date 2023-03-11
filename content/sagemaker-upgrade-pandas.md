@@ -32,7 +32,7 @@ I receive the following error:
 
 > ERROR: No matching distribution found for pandas==1.3.5
 
-# Background
+## Background
 I created a Notebook instance from the AWS Console via **AWS Sagemaker -> Notebook instances -> Create Notebook instance**.
 
 I then selected the Kernel **conda_Python3**.
@@ -79,7 +79,7 @@ Requirement already satisfied: numpy>=1.15.4 in /home/ec2-user/anaconda3/envs/py
 Requirement already satisfied: six>=1.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from python-dateutil>=2.7.3->pandas) (1.15.0)
 ```
 
-## Root Cause Analysis
+### Root Cause Analysis
 **Pandas** does not provide support for **Python 3.6** beyond Pandas version **1.1.5**.  
 
 Earlier versions of **AWS SageMaker JupyterLab Notebooks** delivered **Python 3.6** Kernels by default, via their **Platform identifier** configuration item.
@@ -90,7 +90,7 @@ I verified that my Notebook runs the **Amazon Linux 1** Operating System via the
 
 ![AWS Sagemaker Instance Amazon Linux 1]({filename}/images/Sagemaker_Upgrade_Pandas/01_Old_Version.png)
 
-## Solution
+### Solution
 Through trial and error, I identified the solution to my problem.
 
 To install the most recent version of **Pandas** into a **SageMaker JupyterLab Notebook**, I must install the most recent version of **Python**.
@@ -100,7 +100,7 @@ To install the most recent version of Python to my JupyterLab environment, I mus
 1.  Select the Amazon Linux 2 Operating System
 2.  Select JupyterLab Version 3.0+
 
-## Select the Amazon Linux 2 Operating System
+### Select the Amazon Linux 2 Operating System
 AWS released [Amazon Linux](https://aws.amazon.com/amazon-linux-ami/) in 2010 and then an improved [Amazon Linux 2](https://aws.amazon.com/about-aws/whats-new/2017/12/introducing-amazon-linux-2/) in 2017.  
 
 AWS [End of Life'ed (EOL)](https://aws.amazon.com/blogs/aws/update-on-amazon-linux-ami-end-of-life/) their standard support for the original Amazon Linux in late 2020.
@@ -113,7 +113,7 @@ These **Amazon Linux 2 based notebook instances** support the **Python 3.8** ker
 
 The AWS developer guides catalog all the differences between [Amazon Linux 2 and Amazon Linux (2010) notebook instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-al2.html).
 
-### Execution
+#### Execution
 Upon Launch of your SageMaker JupyterLab Notebook Instance, navigate to the **Platform identifier** option.
 
 The dropdown box provides three choices for **Platform identifier**.
@@ -126,7 +126,7 @@ If you select an **Amazon Linux 1** based notebook instance, the Console alerts 
 
 Select **Amazon Linux 2, JupyterLab 3**.
 
-## Select JupyterLab Version 3.0+
+### Select JupyterLab Version 3.0+
 Amazon SageMaker notebooks provide the JupyterLab service.  JupyterLab features a web-based Integrated Development Environment (IDE) for Python code, data and models.
 
 Upon launch of your Notebook, AWS allows you to [choose either JupyterLab Version 1 or JupyterLab Version 3](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-jl.html)
@@ -148,7 +148,7 @@ To enjoy the above features, select **Amazon Linux 2, JupyterLab 3**
 
 ![Select Amazon Linux 2, JupyterLab 3]({filename}/images/Sagemaker_Upgrade_Pandas/04_Lab_Three.png)
 
-# Success
+## Success
 After I launch my new **AWS SageMaker JupyterLab Notebook** I select the **conda_Python3** environment from the launcher.
 
 ![Select conda_Python3]({filename}/images/Sagemaker_Upgrade_Pandas/05_Conda_Three.png)
@@ -217,7 +217,7 @@ The output reads:
 
 Success!!!
 
-## Create a Lifecycle Config
+### Create a Lifecycle Config
 A Sagemaker Lifecycle Configuration allows you to upgrade Pandas at launch.
 
 When you log into your Notebook for the first time, the Notebook will present to you the most recent version of Pandas.
@@ -258,7 +258,7 @@ Under **Amazon SageMaker --> Notebook instances --> Notebook instance settings**
 
 When you launch the notebook, AWS will run the upgrade script.
 
-# Conclusion
+## Conclusion
 **AWS SageMaker Notebook Instances** host and manage **JupyterLab Notebooks**.  In this blog post we discussed how to configure your **Notebook Instance** to maximize the available features in Pandas and JupyterLab.
 
 ![Python Pandas]({filename}/images/Sagemaker_Upgrade_Pandas/09_Pet_Python.png)
