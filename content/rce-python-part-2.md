@@ -24,7 +24,7 @@ I will also see how RCE performs with a reduced training set.  In Pattern Classi
 
 > This classifier is similar to a k-nearest neighbor classifier in that it adapts rapidly over time, but it typically requires many fewer exemplar nodes than a nearest neighbor classifier. 
 
-# Tune Number of Features
+## Tune Number of Features
 [Last time]({filename}/rce-python-part-1.md), I left off with the following confusion matrix for the two principal component scenario.  In that scenario, I applied RCE to the diabetes dataset after I used Principal Component Analysis (PCA) to reduce the data set down to two features.
 
 ![The Confusion Matrix for two Principle Components]({filename}/images/Rce_Python_Part_1/22_2d_Confuse.png)
@@ -37,7 +37,7 @@ calc_success(test_df)
  'ambiguity': 0.2662337662337662}
 ```
 
-## Three Principal Components
+### Three Principal Components
 I use the following code to reduce the diabetes training dataset down to three components and yield a Pandas dataframe named **test_df**.
 
 ```python
@@ -100,7 +100,7 @@ Both **F1** (bad) and **ambiguity** (good) decrease with an extra principal comp
 {'f1_score': 0.41666666666666663,
 'ambiguity': 0.2532467532467532}
 ```
-## Four Principal Components
+### Four Principal Components
 The following code fits the train dataset to four principal components, classifies the resulting data frame and then plots the confusion matrix.
 
 ```python
@@ -142,7 +142,7 @@ The F1 score increases slightly and the ambiguity shoots up.
  'ambiguity': 0.34415584415584416}
 ```
 
-## Five Principal Components
+### Five Principal Components
 I use the following code to look at the five Principal Component scenario.
 
 ```python
@@ -186,7 +186,7 @@ Five principal components decrease the F1 score and increase the ambiguity.
 'ambiguity': 0.36363636363636365}
 ```
 
-## Principal Component Results
+### Principal Component Results
 
 The following table captures the results of the investigation.
 
@@ -197,7 +197,7 @@ P | f1 | Ambig.
 4 | .419 | .344
 5 | .393 | .363
 
-# Tune the Radius
+## Tune the Radius
 The original **find_lambda** formula increases the radius of the hit footprint until the footprint collides with a point of the opposite class.
 
 ```python
@@ -339,7 +339,7 @@ The following confusion matrix captures the results for **r=0.58**.
 
 ![Radius Pointfive]({filename}/images/Rce_Python_Part_2/08_Radius_Pointfive.png)
 
-# Tune the Algorithm
+## Tune the Algorithm
 Our Algorithm declares regions with either (1) no footprint, or (2) **overlapping** footprints **ambiguous**.  The Python code follows:
 
 ```python
@@ -400,7 +400,7 @@ pd.DataFrame(loss).set_index('r').plot()
 
 The tuning identifies an ideal **r** of 0.40, which yields an **f1_score** of 0.4 and **ambiguity** of 0.2.  The ambiguity drops from the non-voting algorithm, which yielded .27.
 
-# Small Training Sets
+## Small Training Sets
 In Pattern Classification Using Neural Networks (IEEE Communications Magazine, Nov. 1989) Richard P. Lippman writes that RCE handles small training sets with aplomb:   
 
 > This classifier is similar to a k-nearest neighbor classifier in that it adapts rapidly over time, but it typically requires many fewer exemplar nodes than a nearest neighbor classifier. 
@@ -425,7 +425,7 @@ The following plot shows the RCE hit footprints given one-quarter of the trainin
 
 ![Quarter Datamap]({filename}/images/Rce_Python_Part_2/13_Quarter_Datamap.png)
 
-# Conclusion
+## Conclusion
 RCE provides an interesting alternative to the more popular **K-Nearest** exemplar classifier.  The RCE classifier learns quickly with limited training data.
 
 Comment below if you think Tensorflow or MXNet should include this classifier in their ML libraries!
