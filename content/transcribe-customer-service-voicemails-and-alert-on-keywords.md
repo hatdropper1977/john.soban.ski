@@ -5,14 +5,14 @@ Category: HOWTO
 Tags: AWS, HOWTO, Elasticsearch
 Slug: transcribe-customer-service-voicemails-and-alert-on-keywords
 Status: published
-# Introduction
+
 In this [HOWTO]({category}howto), I will demonstrate a very quick and dirty method to transcribe customer service voicemails to text and emit the text to an [Elasticsearch]({tag}elasticsearch) NoSQL document store.  Once in Elasticsearch, you can search the voicemails for Keywords and visualize Keyword frequency/ metadata via the GUI. You can programmatically send Keyword alerts via emails by using the Elasitcsearch API.
 
 The following graphic depicts the AWS Architecture (courtesy of [Angela Wang](https://github.com/aws-samples/amazon-transcribe-comprehend-podcast)).  Do not be intimidated by the complexity, you will literally only need to click a single button to deploy it!
 
 ![Transcribe Architecture]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/01_Architecture.png)
 
-# Deploy the Architecture
+## Deploy the Architecture
 To deploy the architecture, sign into your AWS console and then click the following button.(Note that you will deploy to US-East-1):
 
 [![Launch Stack]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/02_Launch_Stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=podcast-transcribe-index&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/discovering-podcasts/packaged.yaml)
@@ -30,7 +30,7 @@ Follow these [instructions](https://github.com/aws-samples/amazon-transcribe-com
 >
 > Wait for CloudFormation stack to complete creation. It takes about 15-20 minutes to create the stack, mostly due to the time required to create and configure an Amazon Elasticsearch cluster.
 
-# Identify your RSS feed
+## Identify your RSS feed
 The deployed system watches an RSS feed and ingests new Podcasts as they arrive.  You can point to any RSS feed on the Internet to see this demo in action.  In operations, you would deploy your own RSS feed for customer service audio and protect it such that only the transcribe process can access it.
 
 The simplest way to achieve this would be to put a proxy in front of your S3 bucket that password protects access.
@@ -50,7 +50,7 @@ For that reason, I recommend you simply use an existing RSS feed that includes a
 
 You can use my RSS feed, which includes audio files that I pulled from YouTube videos dealing with the mid-term elections.  
 
-# Point the Pipeline to your RSS feed
+## Point the Pipeline to your RSS feed
 In the AWS search bar, type in "Step Functions" and click the **Step Functions** console.
 
 ![Step Functions]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/03_Step_Functions.png)
@@ -74,8 +74,8 @@ You can click any of the pipeline boxes to see status.
 
 ![Progress]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/05_State_Machine_Progress.png)
 
-# Explore the Data in Kibana
-## Find the Console URL
+## Explore the Data in Kibana
+### Find the Console URL
 First, open the CloudFormation console.
 ![CF Console]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/06_CF.png)
 
@@ -89,7 +89,7 @@ Click the URL and then enter the username and password that the output file indi
 
 Providing an identity/ authentication layer to Kibana is actually a tricky problem.  The **CloudFormation** template, however, created one for us automatically!!!
 
-## Configure Kibana to Serve Your Documents
+### Configure Kibana to Serve Your Documents
 Once in Kibana, set up index patterns for the **episodes** and **paragraphs** indices.  Click the 'Create Index' button.
 
 ![Kibana Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/09_Index_Pattern.png)
@@ -102,15 +102,15 @@ If you are asked to pick a Time Filter Field, choose 'I don’t want to use the 
 
 Repeat the process for 'paragraphs.'
 
-## Explore the data
+### Explore the data
 Now you have a fully searchable index!  Click discover, select 'paragraphs' and type in a term.  Since my feed addresses the midterm elections, you can type in a political term, such as **President Trump**.  The search engine returns and highlights all of the hits.
 
 ![Episodes Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/11_President_Trump.png)
 
-# Programmatically Access your Documents
+## Programmatically Access your Documents
 In this section, we will write a script to search for terms so that we can automatically monitor and send an email when a certain keyword arrives.
 
-## Set up your development environment
+### Set up your development environment
 This section assumes you are on a Linux distribution (CentOS).  If you use windows, you may need to alter it slightly.  First, install **python-virtualenv**, which allows you to have separate, sandboxed versions of Python libraries running on a single machine.
 
 ```bash
@@ -148,7 +148,7 @@ Default output format [None]:
 
 > Note - for best practice AWS recommends you use IAM roles instead of security keys.  If you would like to see how to set up IAM roles to enable programmatic access to an Elasticsearch endpoint, please read [this]({filename}part-1-connect-ec2-to-the-amazon-elasticsearch-service.md) blog post.  
 
-## Create the Search Script
+### Create the Search Script
 I wrote the following script that queries an Elasticsearch endpoint, searches for a term and then outputs the result to standard out.  The intention is to use this for alerts.  Therefore, if it finds a hit, it updates the document with a field named **Warning_Sent**.
 
 ```python
@@ -241,7 +241,8 @@ The script uses the robust and useful [Elasticsearch Domain Specific Language (D
   "size": 1
 }
 ```
-## Create your Config Module
+
+### Create your Config Module
 We auto-populate the ***should*** array of the ***bool*** stanza via a ***config*** file.
 
 In your working directory, make a directory named **chalicelib**.
@@ -268,7 +269,7 @@ SEARCH_TERMS = ['Trump','Democrat', 'Republican']
 
 Leave the **ELASTIC_INDEX_NAME** and **DOCTYPE_NAME** as is.  You can add, edit or remove items in the **SEARCH_TERMS** list.  As for **ELASTICSEARCH_ENDPOINT**, you will need to put the URL for your endpoint here.
 
-## Find Your Elasticsearch Endpoint
+### Find Your Elasticsearch Endpoint
 Open up the Elasticsearch console.
 
 ![ES Console]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/12_Find_ES.png)
@@ -290,7 +291,7 @@ DOCTYPE_NAME = '_doc'
 SEARCH_TERMS = ['Trump','Democrat', 'Republican']
 ```
 
-## Test Run the Script
+### Test Run the Script
 Once everything is configured, go back up to your **sandbox** directory.
 
 ```bash
@@ -305,7 +306,7 @@ Start time: 513.552
 Message: hopes for did not have a victory celebration tuesday night. Despite a last minute push celebrity pushed by oprah winfrey. Democrat stacey abrams has not yet secured the governor's mansion in georgia. That race may end up in a recount, and in florida, democrat andrew gillum got last minute help on the campaign trail from former president barack obama. But republican ron to santa's, a congressman appears to have won by a razor thin margin. But that race, of course, could also be contested in the coming weeks. And in texas, as i...
 ```
 
-## Update Kibana
+### Update Kibana
 Since you added a new field **Update_Sent**, you need to refresh the Kibana index.
 
 On the Kibana console, click 'Management.'
@@ -328,7 +329,7 @@ Click save and you will see your document.
 
 ![True]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/19_True.png)
 
-# Configure Simple Email Service
+## Configure Simple Email Service
 We now need to configure SES to send emails.  You first 
 
 Open the SES console and click **Email Addresses**.
@@ -347,7 +348,7 @@ You will see verification success.
 
 ![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
 
-# Send alert via email
+## Send alert via email
 We will now have our **search** script emit an email.  First, update **config.py** with the following.
 
 ```python
@@ -463,7 +464,7 @@ If you go to your inbox, you will see an email that contains the *start time* of
 
 ![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/24_Victory.png)
 
-# Install in Cron
+## Install in Cron
 If you would like to periodically watch the index for new audio files that trap on a keyword, simply execute the following commands.
 
 Edit the **crontab**.
@@ -487,5 +488,5 @@ Verify the edit.
 
 If you would prefer a serverless approach, you can use Lambda to schedule the check.  See [this]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md) blog post on how to integrate Lambda and Elasitcsearch.
 
-# Conclusion
+## Conclusion
 This blog post demonstrates a quick and dirty method of alerting on voicemail keywords using a combination of RSS feeds, Transcribe, Comprehend, Step Functions, Lambda, Elasticsearch and Python.
