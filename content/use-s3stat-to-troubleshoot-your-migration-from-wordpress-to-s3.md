@@ -1,4 +1,4 @@
-Title: Use s3stat To Troubleshoot Your Migration from Wordpress To S3
+Title: s3stat Troubleshoots Your Migration from Wordpress To S3
 Date: 2018-01-17 20:56
 Author: john-sobanski
 Category: HOWTO

@@ -1,4 +1,4 @@
-Title: Deploy a Personal Kraken Exchange Terminal to InfluxDB Cloud 2.0
+Title: A Personal Kraken Exchange Terminal via InfluxDB Cloud 2.0
 Date: 2019-06-30 10:26
 Author: john-sobanski
 Category: Coins

@@ -1,4 +1,4 @@
-Title: A Hand Crafted Exemplar Machine Learning Algorithm (Part 2 - Optimization)
+Title: A New Exemplar Machine Learning Algorithm (Part 2: Optimize)
 Date: 2021-12-23 12:23
 Author: john-sobanski
 Category: Data Science

@@ -1,4 +1,4 @@
-Title: Upgrade Your SageMaker JupyterLab Notebook to the Latest Pandas
+Title: Upgrade SageMaker JupyterLab Notebooks to the Latest Pandas
 Date: 2022-10-29 10:29
 Author: john-sobanski
 Category: Data Science

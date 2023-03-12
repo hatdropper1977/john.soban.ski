@@ -1,4 +1,4 @@
-Title: Use Boto3 to Connect an Ubuntu EC2 Instance to the Amazon Elasticsearch Service 
+Title: Connect Ubuntu EC2 to Amazon Elasticsearch Service w/ Boto3
 Date: 2020-05-31 02:48
 Author: john-sobanski
 Category: HOWTO

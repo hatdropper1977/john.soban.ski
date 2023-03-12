@@ -1,4 +1,4 @@
-Title: Fast and Easy Regression with Keras and TensorFlow 2.3 (Part 2 - Dimensionality Reduction)
+Title: Fast & Easy Regression w/ Keras and TensorFlow 2.3 (Part 2)
 Date: 2020-11-28 10:26
 Author: john-sobanski
 Category: Data Science

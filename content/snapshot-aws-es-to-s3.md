@@ -1,4 +1,4 @@
-Title: Use Boto3 to Snapshot AWS Managed Elasticsearch Service indices to S3
+Title: Use Boto3 to Snapshot AWS Elasticsearch indices to S3
 Date: 2020-07-26 20:38
 Author: john-sobanski
 Category: HOWTO

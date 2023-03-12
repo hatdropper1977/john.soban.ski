@@ -1,4 +1,4 @@
-Title: Reliable Multicast at Internet Scale (Part 2):  LCT, WEBRC and FEC 
+Title: Internet Scale Reliable Multicast (Part 2):  LCT, WEBRC, FEC
 Date: 2016-12-17 15:48 
 Author: john-sobanski
 Category: IETF

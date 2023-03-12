@@ -1,4 +1,4 @@
-Title: The World's Cheapest (And Easiest) Web Database App deployment
+Title: The World's Cheapest and Easiest Web Database App deployment
 Date: 2019-05-31 23:26
 Author: john-sobanski
 Category: HOWTO

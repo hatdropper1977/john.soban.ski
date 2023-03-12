@@ -1,4 +1,4 @@
-Title: LTE and Beyond:  The Evolution from Heirarchical to Flat IP Mobile Network Architectures (Part 2)
+Title: LTE: Heirarchical to Flat IP Mobile Architectures (Part 2)
 Date: 2022-06-25 01:11
 Author: john-sobanski
 Category: IETF

@@ -1,4 +1,4 @@
-Title: Have Jasper Artificial Intelligence (AI) Write Your Blog Posts
+Title: Jasper Artificial Intelligence (AI) Writes Your Blog Posts
 Date: 2022-03-26 01:23
 Author: john-sobanski
 Category: Data Science

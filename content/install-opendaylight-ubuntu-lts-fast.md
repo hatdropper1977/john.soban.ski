@@ -1,4 +1,4 @@
-Title: Install OpenDaylight on Ubuntu 20.04 LTS (All Features, Any Version)
+Title: OpenDaylight (ODL) Install Instructions on Ubuntu 20.04 LTS
 Date: 2020-09-27 03:33
 Author: john-sobanski
 Category: HOWTO

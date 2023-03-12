@@ -1,4 +1,4 @@
-Title: How to enable HTTPS with Naked Domain and Protocol Redirects on your S3 Website (Part Two)
+Title: S3 HTTPS Sites w/ Naked Domain & Protocol Redirects (Part 2)
 Date: 2018-06-23 10:26
 Author: john-sobanski
 Category: HOWTO

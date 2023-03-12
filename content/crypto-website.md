@@ -1,4 +1,4 @@
-Title: Host a Website on the Ethereum Platform with InterPlanetary File System (IPFS) and Ethereum Name Service (ENS)
+Title: Host a 100% Decentralized Website on the Ethereum Platform
 Date: 2021-11-25 15:26
 Author: john-sobanski
 Category: Coins

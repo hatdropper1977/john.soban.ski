@@ -1,4 +1,4 @@
-Title: Create Your First Non Fungible Token (NFT) with Rarible (Part 1)
+Title: Create Your First Non Fungible Token (NFT) w/ Rarible Part 1
 Date: 2021-02-28 10:26
 Author: john-sobanski
 Category: Coins

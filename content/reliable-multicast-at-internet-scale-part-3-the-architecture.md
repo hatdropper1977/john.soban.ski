@@ -1,4 +1,4 @@
-Title: Reliable Multicast at Internet Scale (Part 3):  The Architecture
+Title: Internet Scale Reliable Multicast (Part 3): Architecture
 Date: 2017-01-14 01:12
 Author: john-sobanski
 Category: IETF

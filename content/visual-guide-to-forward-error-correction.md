@@ -1,4 +1,4 @@
-Title: A Visual Guide To Forward Error Correction Part One: Block Codes
+Title: Forward Error Correction (FEC) Visualized - Block Codes
 Date: 2022-01-29 23:26
 Author: john-sobanski
 Category: IETF

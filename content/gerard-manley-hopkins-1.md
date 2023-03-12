@@ -1,4 +1,4 @@
-Title: Written In Blood:  Gerard Manley Hopkins and the City (Part 1 of 3)
+Title: Written In Blood: Gerard Manley Hopkins & the City (1 of 3)
 Date: 2022-11-26 04:20
 Author: john-sobanski
 Category: Literature

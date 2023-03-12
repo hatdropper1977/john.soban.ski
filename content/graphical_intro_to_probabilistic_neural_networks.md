@@ -1,4 +1,4 @@
-Title: A Graphical Introduction to Probabilistic Neural Networks - Normalization and Implementation
+Title: A Graphical Intro to Probabilistic Neural Networks (PNN)
 Date: 2018-10-30 23:47
 Author: john-sobanski
 Category: Data Science

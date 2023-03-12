@@ -1,4 +1,4 @@
-Title: Darkblock Levels Up Non Fungible Token (NFT) Distribution and Access
+Title: Darkblock Levels Up Non Fungible Tokens (NFT) 
 Date: 2021-10-30 6:56
 Author: john-sobanski
 Category: Coins

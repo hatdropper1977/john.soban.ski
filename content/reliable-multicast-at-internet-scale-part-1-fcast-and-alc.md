@@ -1,4 +1,4 @@
-Title: Reliable Multicast at Internet Scale (Part 1):  FCAST and ALC 
+Title: Internet Scale Reliable Multicast (Part 1):  FCAST and ALC
 Date: 2016-10-15 01:58 
 Author: john-sobanski
 Category: IETF

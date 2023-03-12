@@ -1,4 +1,4 @@
-Title: Part 5:  Asynchronous tasks with AWS Elasticsearch, SQS, Flask and Celery
+Title: Asynch tasks with AWS Elasticsearch, SQS, Flask and Celery
 Date: 2016-08-20 10:26
 Author: john-sobanski
 Category: HOWTO

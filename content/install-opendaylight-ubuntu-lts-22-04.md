@@ -1,4 +1,4 @@
-Title: Install OpenDaylight on Ubuntu 22.04 LTS (All Features, Any Version)
+Title: Install OpenDaylight on Ubuntu 22.04 LTS (Any Version)
 Date: 2022-07-30 03:33
 Author: john-sobanski
 Category: HOWTO

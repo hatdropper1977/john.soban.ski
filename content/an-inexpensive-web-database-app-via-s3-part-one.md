@@ -1,4 +1,4 @@
-Title: An Inexpensive Web Database App via S3 - Part One:  A Flask Approach
+Title: A Web Database App via S3 - Part One:  A Flask Approach
 Date: 2019-03-30 10:26
 Author: john-sobanski
 Category: HOWTO

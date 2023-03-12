@@ -1,4 +1,4 @@
-Title: Part 4:  Connect ElasticBeanstalk to Elasticsearch via AWS Identity and Access Management (IAM)
+Title: Connect ElasticBeanstalk to Elasticsearch via AWS IAM
 Date: 2016-07-16 12:24
 Author: john-sobanski
 Category: HOWTO

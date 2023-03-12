@@ -1,4 +1,4 @@
-Title: Part 2:  Let Internet facing forms update Elasticsearch via Flask
+Title: Let Internet facing forms update Elasticsearch via Flask
 Date: 2016-04-16 19:32
 Author: john-sobanski
 Category: HOWTO

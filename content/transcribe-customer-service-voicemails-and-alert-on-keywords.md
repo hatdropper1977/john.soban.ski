@@ -1,4 +1,4 @@
-Title: The Quick and Dirty Guide to Transcribing Customer Service Voicemails (with Alerts)
+Title: Easily Transcribe Customer Service Voicemails (with Alerts)
 Date: 2018-11-30 23:53
 Author: john-sobanski
 Category: HOWTO

@@ -1,4 +1,4 @@
-Title: Backup AWS provided Elasticsearch to Amazon Simple Storage Service (S3)
+Title: Backup AWS Elasticsearch to the Simple Storage Service (S3)
 Date: 2017-09-16 20:38
 Author: john-sobanski
 Category: HOWTO

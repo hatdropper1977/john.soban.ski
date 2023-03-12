@@ -1,4 +1,4 @@
-Title: Discrete Event Simulation (DES) of an Adaptive Forward Error Correction (AFEC) scheme for the Ka band
+Title: Adaptive Forward Error Correction (AFEC) for the Ka band
 Date: 2021-07-31 01:58 
 Author: john-sobanski
 Category: IETF

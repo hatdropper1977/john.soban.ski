@@ -1,4 +1,4 @@
-Title: Have Jasper Artificial Intelligence (AI) Create Marketing Pictures from Scratch
+Title: Jasper Artificial Intelligence (AI) for Marketing Pictures 
 Date: 2022-09-24 03:21
 Author: john-sobanski
 Category: Data Science
