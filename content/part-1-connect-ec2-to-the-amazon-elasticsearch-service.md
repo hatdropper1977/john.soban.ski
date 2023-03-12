@@ -1,4 +1,4 @@
-Title: Part 1: Connect EC2 to the Amazon Elasticsearch Service
+Title: Connect EC2 to the Amazon Elasticsearch Service
 Date: 2016-02-20 02:48
 Author: john-sobanski
 Category: HOWTO

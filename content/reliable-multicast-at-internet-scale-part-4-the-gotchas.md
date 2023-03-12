@@ -1,4 +1,4 @@
-Title: Reliable Multicast at Internet Scale (Part 4):  The Gotchas
+Title: Internet Scale Reliable Multicast (Part 4):  The Gotchas
 Date: 2017-08-19 02:47
 Author: john-sobanski
 Category: IETF

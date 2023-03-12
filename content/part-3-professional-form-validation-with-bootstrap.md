@@ -1,4 +1,4 @@
-Title: Part 3:  Professional form validation with Bootstrap
+Title: Professional form validation with Bootstrap
 Date: 2016-05-21 02:21
 Author: john-sobanski
 Category: HOWTO
