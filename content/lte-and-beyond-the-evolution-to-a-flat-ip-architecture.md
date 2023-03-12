@@ -1,4 +1,4 @@
-Title: LTE: Heirarchical to Flat IP Mobile Architectures (Part 1)
+Title: LTE: Hierarchical to Flat IP Mobile Architectures (Part 1)
 Date: 2022-05-28 01:12
 Author: john-sobanski
 Category: IETF
