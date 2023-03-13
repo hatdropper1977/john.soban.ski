@@ -18,7 +18,7 @@ The following (see diagram) illustrates a scenario where switching from an RP to
 
 Thus, the RX computes the MRTT for TX-A as 60ms, and the MRTT for TX-B as 60ms. At this point the multicast enabled routers switch to shortest path tree. The multicast from TX-A to the RX now only takes one hop, so the MRTT would be 2 \* 10ms or 20ms. The multicast from TXB to the RX is now four hops, so the actual MRTT should be 80ms. Thus, as a result of ASM, the RX sets the target reception rate for TX-A as 66% too low, and the target reception rate for TX-B as 33% too high.
 
-![Pelican]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_4_The_Gotchas/rm_1_5_webrc_corrpution_of_asm_calc-1024x605.png)
+![Pelican]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_4_The_Gotchas/rm_1_5_webrc_corrpution_of_asm_calc-1024x605.png)
 
 The “saving grace” in the case for TX-B would be the dropped packets, since 1/3 would drop and the RX would change the target reception rate accordingly. WEBRC, however, adjusts rates at points in time that are separated by seconds. In addition, if we lost packets during the switch over from RP to SPT then the RX would have incorrect parameters for packet loss (based on receiving or not receiving monotonically increasing sequence numbers), which would skew the target reception rate. The solution to this issue is to use SSM multicast, which does not use RP. If we must use ASM, then have one RP (and thus multicast address) per sender and put the RP as close to the sender as possible (i.e. on the first hop router at the demarc). [[RFC5775](https://tools.ietf.org/html/rfc5775) 6]
 
@@ -26,7 +26,7 @@ Another design issue with WEBRC deals with setting the appropriate wave channel 
 
 The following diagram illustrates a poor design choice. We have three channels, the base channel is set to T1, wave 1 is an OC-12 and wave 2 is an OC-192. A receiver with an OC-12 does not have enough capacity to join the base and wave 1, so he is stuck with just the T1 rate, a very poor efficiency.
 
-![Pelican]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_4_The_Gotchas/rm_1_6_poor_lct_rate_channel_choices-1024x619.png)
+![Pelican]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_4_The_Gotchas/rm_1_6_poor_lct_rate_channel_choices-1024x619.png)
 
 The final issue for WEBRC deals with the length of periods for joins. We need to balance the join/leave times against available BW fluctuations. For example, if a receiver joins a channel and the BW drops significantly, the receiver can’t leave that channel until the next time slot ([RFC3738](https://tools.ietf.org/html/rfc3738) 13). For the duration of the time slot, the traffic congestion may choke other congestion protocols (like TCP). The RFC recommends 10s/period ([RFC3738](https://tools.ietf.org/html/rfc3738) 9). Since our data rate is constant, the receivers should not have any surprises, and this period duration should suffice. This however is still an issue and needs to be observed and addressed during live transmissions.
 

@@ -25,31 +25,31 @@ The agenda for this HOWTO follows:
 
 Amazon makes Elasticsearch deployment a snap.  Just click the Elasticsearch Service icon on your management screen: 
 
-![Elasticsearch Choice]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/Elasticsearch_Choice.png)
+![Elasticsearch Choice]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/Elasticsearch_Choice.png)
 
 If you see the "Get Started" screen, click "Get Started."
  
-![Get Started]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/get_started-1024x925.png)
+![Get Started]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/get_started-1024x925.png)
 
 Or, if you've used the Elasticsearch service before and see the option for "New Domain," click “New Domain.”
  
-![AWS MGMT Console]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/Amazon-Elasticsearch-Service-Management-Console-1024x440.png)
+![AWS MGMT Console]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/Amazon-Elasticsearch-Service-Management-Console-1024x440.png)
 
 Name your domain “test-domain” (Or whatever). 
 
-![Name your domain]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/name_domain-1024x580.png)
+![Name your domain]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/name_domain-1024x580.png)
 
 Keep the defaults on the next screen “Step 2: Configure Cluster.”  Just click “next.”   On the next screen, select: “Allow or deny access to one or more AWS accounts or IAM users”.
 
-![Set up access]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/set_up_access-1024x569.png)
+![Set up access]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/set_up_access-1024x569.png)
 
 Amazon makes security easy as well.  On the next menu they list your ***ARN***.  Just copy and paste it into the text field and hit “next.”
  
-![User Access]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/User-Access-1024x623.png)
+![User Access]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/User-Access-1024x623.png)
 
 AWS generates the JSON for your Elasticsearch service: 
 
-![JSON]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/es_json-1024x374.png)
+![JSON]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/es_json-1024x374.png)
 
 Click “Next” and then “confirm and create.
 
@@ -163,7 +163,7 @@ At this point, your Elasticsearch endpoint should be up and running.
  
 Copy the fully qualified domain name (FQDN) for your new endpoint.  You will copy this FQDN into the application below.
 
-![ES Endpoint]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/elasticsearch_endpoint-1024x580.png)
+![ES Endpoint]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/elasticsearch_endpoint-1024x580.png)
 
 The following application uses the [boto](https://aws.amazon.com/sdk-for-python/) library to access an
 authorized IAM role to sign and encrypt calls to  your Elasticsearch endpoint.  Be sure to configure the host parameter with your Endpoint address.
@@ -225,7 +225,7 @@ Enter the URL of the service endpoint in your browser.  In my case, I will go t
 
 Connect_AWS_Lambda_to_Elasticsearch
  
-![Lambda Error]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/lambda_error-993x1024.png)
+![Lambda Error]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/lambda_error-993x1024.png)
  
 Yes.  For some reason the steps on the [Chalice quick start](https://github.com/awslabs/chalice) does not seem to work.  If you take a look at ***policy.json*** you'll see that Chalice over-wrote it.
 
@@ -271,7 +271,7 @@ It may take a few minutes for the new Lambda function to bake in.  Be sure to h
 
 From the command line, use ***httpie*** to access your new proxy.
  
-![Victory]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/victory-1024x462.png)
+![Victory]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/victory-1024x462.png)
  
 Congratulations!  Your Lambda function can hit your [Elasticsearch]({tag}elasticsearch) service!
 

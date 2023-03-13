@@ -24,7 +24,7 @@ As the name suggests, LCT uses layered coding to produce a coded stream of packe
 
 Imagine a web TV application split into three layers. A RX that joins the first channel would receive a black and white picture. An RX that had more capacity would join the first and second channel and receive a color picture. An RX with transparent capacity would be able to join all three layers, and receive a HD color picture. The key to this example is that the sender does not duplicate any data between layers. The RX joins successive layers to receive a higher quality picture at the cost of using more bandwidth. [[RFC5651](https://tools.ietf.org/html/rfc5651) 6]
 
-![LCT Diagram]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_2_lct_diagram-1024x650.png)
+![LCT Diagram]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_2_lct_diagram-1024x650.png)
 
 **LCT Operations**
 
@@ -56,7 +56,7 @@ After joining a session, the RX adjusts its rate upwards by joining wave channel
 
 Once the receiver joins a wave channel, the receiver remains joined to the wave channel until it deactivates ([RFC3738](https://tools.ietf.org/html/rfc3738) 8). The following diagram illustrates the relationship between wave channels, layers and target reception rate.
 
-![Pelican]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_3_webrc_example-1024x799.png)
+![Pelican]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_3_webrc_example-1024x799.png)
  
 In the above figure, assume the receiver wants a target rate of 7λ/4 packets per second (pps). This means the receiver must join the base (λ/4pps), layer 0 (λ/4pps), layer 1 (λ/2pps) and layer 2 (3λ/4pps). The receiver joins layers by joining underlying channels, sending joins and leaves to their respective multicast addresses. We see in the figure that for time t, layer 2 contains wave channel 4, layer 1 contains wave channel 3 and layer 0 contains wave channel 2. The receiver leaves channel 1 (which is now quiescent). The receiver stays joined to the base and wave channels 3 and 2. The receiver sends a join to wave channel 4. At time t+1, the layers change again. The receiver stays joined to the base, 4 and 3. The receiver leaves channel 2 and joins channel 0. For time t+2, the receiver stays joined to the base, 0 and 4. The receiver leaves channel 3 and joins channel 1.
 
@@ -68,7 +68,7 @@ Content Delivery Protocols (CDP) have many options available to them to increase
 
 A data carousel solution partitions objects into equal length pieces of data (source symbols), puts them into packets and cycles through and sends these packets. Each RX receives the packets until they have a copy of every packet. While the data carousel solution requires no back channel, if an RX misses a packet, the RX has to wait on Carousel until it's sent again. [[RFC6968](https://tools.ietf.org/html/rfc6968) 8]
 
-![Pelican]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_4_data_carousel-1024x667.png) 
+![Pelican]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_2_LCT_WEBRC_and_FEC/rm_1_4_data_carousel-1024x667.png) 
 
 RFC 3454 describes, therefore, how to use FEC codes to augment/ provide reliability for one-to-many reliable data transport using IP multicast. RFC 3454 uses the same packets containing FEC data to simultaneously repair different packet loss patterns at multiple RX. [[RFC3453](https://www.ietf.org/rfc/rfc3453.txt) 4]
 

@@ -165,7 +165,7 @@ make: *** [erlang] Error 1
 
 A quick Google search for ***"rpm build errors file not found buildroot crypto"*** leads me to the following [page](https://github.com/rabbitmq/erlang-rpm/issues/22) with the following solution:
 
-![Rabbit Fix]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitmq_fix.png)
+![Rabbit Fix]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitmq_fix.png)
 
 It turns out during my first attempt, I negleted to install ***openssl-devel***. To fix the Error, I installed ***openssl-devel***...
 
@@ -255,7 +255,7 @@ You can follow the instructions on the RabbitMQ web site to install the service.
 
 Change directories and then ***wget*** the RPM. You may have a different URL from this blog post.  Go to <https://www.rabbitmq.com/install-rpm.html> to fetch the most recent RPM URL.
 
-![Download]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/download.png)
+![Download]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/download.png)
 
 ```
 [ec2-user@ip-172-31-4-69 erlang-rpm]$ cd
@@ -276,7 +276,7 @@ rabbitmq-server-3.6.10-1.el 100%[=========================================>]   4
 
 Now install the signing key. Go to <https://www.rabbitmq.com/install-rpm.html> to ensure you use the most recent URL.
 
-![Signing Key]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/signing_key.png)
+![Signing Key]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/signing_key.png)
 
 ```bash
 [ec2-user@ip-172-31-4-69 ~]$ sudo rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
@@ -351,26 +351,26 @@ To use the service, punch a hole in the EC2 firewall via a custom security group
 
 First, on the AWS GUI, select EC2 under ***compute***.
 
-![Rabbit SG 1]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg1.png)
+![Rabbit SG 1]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg1.png)
 
 Next,  select ***Security Groups*** under ***NETWORK & SECURITY.***
 
-![Rabbit SG 2]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg2.png)
+![Rabbit SG 2]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg2.png)
 
 Click ***Create Security Group***.
 
-![Rabbit SG 3]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg3.png)
+![Rabbit SG 3]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg3.png)
 
 Edit the ***name*** to read ***rabbit\_mq***, the TCP ***port range*** to ***5672*** and set the network that can access your new RabbitMQ service.  In the example below, I set it to the address of my RabbitMQ server's Local Area Network (LAN).
 
-![Rabbit SG 4]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg4.png)
+![Rabbit SG 4]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg4.png)
 
 In the EC2 console, click your ***rabbit\_mq*** server, click ***Actions***, click ***Networking*** and then ***Change Security Groups***.
 
-![Rabbit SG 5]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg5.png)
+![Rabbit SG 5]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg5.png)
 
 Attach the ***rabbit\_mq*** security group.  If you don't see the security group, ensure you configured the correct VPC when you created the security group.
 
-![Rabbit SG 6]({filename}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg6.png)
+![Rabbit SG 6]({static}/images/Install_RabbitMQ_and_Minimal_Erlang_on_Amazon_Linux/rabbitsg6.png)
 
 You now have a dedicated RabbitMQ service. Now you are ready to try a simple "[hello world](https://www.rabbitmq.com/tutorials/tutorial-one-python.html)" program.

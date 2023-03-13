@@ -119,19 +119,19 @@ $ ./create_doc.py
  
 If you look at the mapping, you see the ***published\_from*** field maps to a ***Date*** type. To see this in ***Kibana***, go to ***Management*** --\> ***Index Patterns*** as shown below.
 
-![Add Timestamp]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t1_mgmt_index_patterns.png)
+![Add Timestamp]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t1_mgmt_index_patterns.png)
    
 Now type ***blog*** (the name of the index from the model) into the ***Index Name or Pattern*** box.
 
-![Index Name]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t2_blog_index_name-1024x593.png)
+![Index Name]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t2_blog_index_name-1024x593.png)
 
 From here, you can select ***published\_from*** as the ***time-field*** name.
 
-![Published From]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t3_published_from-1024x471.png) 
+![Published From]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t3_published_from-1024x471.png) 
 
 If you go to ***Discover***, you will see your ***blog*** post.
 
-![In Kibana]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t4_published_from_in_kibana-1024x593.png) 
+![In Kibana]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t4_published_from_in_kibana-1024x593.png) 
  
 [***Logstash***](https://www.elastic.co/products/logstash), however, uses ***@timestamp*** for the time-field name. It would be nice to use the standard name instead of a one-off, custom name. To use ***@timestamp***, we must first update the model.
 
@@ -160,15 +160,15 @@ $ ./create_doc.py
 
 Then, go back to ***Kibana --\> Management --\> Index Patterns*** and delete the old ***blog*** pattern.
 
-![Delete]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t4.5_delete.png)
+![Delete]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t4.5_delete.png)
  
 When you re-create the ***index pattern***, you will now have a pull down for ***@timestamp***.
 
-![Now with timestamp]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t5_now_w_timestamp-1024x470.png) 
+![Now with timestamp]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t5_now_w_timestamp-1024x470.png) 
 
 Now go to ***discover*** and you will see the ***@timestamp*** field in your ***blog*** post. 
 
-![At timestamp]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t6_at_timestamp_kibana_1-1024x637.png)
+![At timestamp]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t6_at_timestamp_kibana_1-1024x637.png)
 
 You can go back to the ***\_mapping*** API to see the new mapping for ***@timestamp***.  
 
@@ -230,6 +230,6 @@ def save(self, ** kwargs):
 
 You can see the change in ***Kibana*** as well (view the raw JSON).
 
-![Raw JSON]({filename}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t7_at_timestamp_json-1024x645.png) 
+![Raw JSON]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t7_at_timestamp_json-1024x645.png) 
 
 That's it!  The more you use the [Python Elasticsearch DSL](https://elasticsearch-dsl.readthedocs.io/en/latest/), the more you will love it.

@@ -10,11 +10,11 @@ In this [HOWTO]({category}howto), I will demonstrate how to easily integrate the
 
 The following cartoon depicts the end result.  
 
-![reCAPTCHA Architecture]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/recaptcha-arch.png)
+![reCAPTCHA Architecture]({static}/images/Add_Recaptcha_To_Your_Flask_Application/recaptcha-arch.png)
 
 A Flask application server provides a simple (beautified) survey to the user.  When the user clicks SUBMIT, Flask first checks to see if the user filled out all the fields.  Flask then uses the Google reCAPTCHA service to make sure the user is not a Robot.  
 
-![Sad Robots]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/sad_robot.png)
+![Sad Robots]({static}/images/Add_Recaptcha_To_Your_Flask_Application/sad_robot.png)
 
 reCAPTCHA makes robots very sad! (p.s. that dope MS Paint [isometric pixel art](https://en.wikipedia.org/wiki/Pixel_art#Categories) is all me baby!)
 
@@ -92,7 +92,7 @@ Start your flask application and then navigate to your IP address. Since this is
 
 If you navigate to your web page on port ***5000***, you will see the following form.
 
-![Original Web Page]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/original_web_page.png)
+![Original Web Page]({static}/images/Add_Recaptcha_To_Your_Flask_Application/original_web_page.png)
 
 This application uses the ***quick\_form*** method to generate a web page. Note that the application includes all sorts of goodies, such as CSFR avoidance, professional looking highlights and validation. Play around with the page to look at the different validation pop-ups and warnings.
 
@@ -102,17 +102,17 @@ Now that we have a working baseline application, let's get reCAPTCHA keys.
 
 First, go to the [reCAPTCHA](https://www.google.com/recaptcha/intro/) website and click 'Get reCAPTCHA'.
 
-![Get reCAPTCHA]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/get_recaptcha.png)
+![Get reCAPTCHA]({static}/images/Add_Recaptcha_To_Your_Flask_Application/get_recaptcha.png)
 
 Now, you will need to register a site.  I will register this blog, [FreshLEX]({filename}).
 
 It's pretty straight forward.  Register your domain under the domain section.  You can look at my registration for help.
 
-![Register a site]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/sign_up_recaptcha.png)
+![Register a site]({static}/images/Add_Recaptcha_To_Your_Flask_Application/sign_up_recaptcha.png)
 
 Once you submit the form, Google immediately provides you with a reCAPTCHA key.
 
-![reCAPTCHA Key]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/captcha_key.png).
+![reCAPTCHA Key]({static}/images/Add_Recaptcha_To_Your_Flask_Application/captcha_key.png).
 
 Save the site key and secret key someplace safe - they are both critical!
 
@@ -191,13 +191,13 @@ OK!  Now we can test the service.  Execute your new [recaptcha_app.py](https://g
 
 Now, navigate to your web site on port ***5000*** and...
 
-![Didn't work]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/didnt_work.png)
+![Didn't work]({static}/images/Add_Recaptcha_To_Your_Flask_Application/didnt_work.png)
 
 WHOOPS!  It failed?  Yes, it failed, and the reason is that I registered my domain as [freshlex.com]({filename}) and yet I attempted to access the server by raw IP.
 
 Since this is a test box, let me go back to reCAPTCHA and create keys for the raw IP.  In the domain field, I set the raw IP.
 
-![Correct domain]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/correct_domain.png)
+![Correct domain]({static}/images/Add_Recaptcha_To_Your_Flask_Application/correct_domain.png)
 
 Now, armed with the correct keys, let me update [config.py](https://github.com/hatdropper1977/flask-recaptcha/blob/master/config.py).
 
@@ -209,19 +209,19 @@ RC_SECRET_KEY='CWEjrxRHdrjSJ39L848Lq2JMc4964wEREYdguwux'
 
 Now, re-start the Flask application, navigate to the web page on port ***5000*** and you will see a reCAPTCHA option.
 
-![Works]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/works.png)
+![Works]({static}/images/Add_Recaptcha_To_Your_Flask_Application/works.png)
 
 Now, lets act like a robot and attempt to submit without clicking the box.  Flask-WTF validates the form and barks.
 
 
-![I am a robot]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/I_am_a_robot.png)
+![I am a robot]({static}/images/Add_Recaptcha_To_Your_Flask_Application/I_am_a_robot.png)
 
 Enough horseplay, let's click the box.
 
-![I am not a robot]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/I_am_not_a_robot.png)
+![I am not a robot]({static}/images/Add_Recaptcha_To_Your_Flask_Application/I_am_not_a_robot.png)
 
 If you pass all of the validation rules, Flask lets you ***submit*** the form, and responds with a success message.
 
-![It works]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/submitted.png)
+![It works]({static}/images/Add_Recaptcha_To_Your_Flask_Application/submitted.png)
 
 I hope you enjoyed this quick HOWTO. If so, check out some of my other [Flask HOWTOS]({tag}flask).

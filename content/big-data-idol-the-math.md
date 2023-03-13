@@ -28,7 +28,7 @@ The bullets below outline the steps we take.  A flow diagram follows.
   -   Guess Distribution
   -   Fit, Graph, QQ-Plot
 
-![Workflow]({filename}/images/Big_Data_Idol_The_Math/workflow.jpg)
+![Workflow]({static}/images/Big_Data_Idol_The_Math/workflow.jpg)
  
 **Extract and Transform**  
 
@@ -279,11 +279,11 @@ par(new=T); points(dgamma(seq(0,100),shape=gamma_fit[,1][1],rate=gamma_fit[,1][2
 
 You can see a good fit for "Hellraiser" and "Celebrity," but a poor fit for "Boy Scout."
 
-![Hellraiser Gamma]({filename}/images/Big_Data_Idol_The_Math/hellraiser_gamma-300x242.png)
+![Hellraiser Gamma]({static}/images/Big_Data_Idol_The_Math/hellraiser_gamma-300x242.png)
 
-![Celebrity Gamma]({filename}/images/Big_Data_Idol_The_Math/celebrity_gamma-300x242.png)
+![Celebrity Gamma]({static}/images/Big_Data_Idol_The_Math/celebrity_gamma-300x242.png)
 
-![Boy Scout Gamma]({filename}/images/Big_Data_Idol_The_Math/boy_scout_gamma-300x242.png)
+![Boy Scout Gamma]({static}/images/Big_Data_Idol_The_Math/boy_scout_gamma-300x242.png)
 
 
 ```R
@@ -293,11 +293,11 @@ x.empirical <- norm_answers[,1]
 qqplot(x.empirical,x.fit, main="Sample vs. Theoretical for Hellraiser Fit"); abline(0,1)
 ```
 
-![QQ-Plot Hellraiser]({filename}/images/Big_Data_Idol_The_Math/qq_hellraiser-300x242.png)
+![QQ-Plot Hellraiser]({static}/images/Big_Data_Idol_The_Math/qq_hellraiser-300x242.png)
 
-![QQ-Plot Celebrity]({filename}/images/Big_Data_Idol_The_Math/qq_celebrity-300x242.png)
+![QQ-Plot Celebrity]({static}/images/Big_Data_Idol_The_Math/qq_celebrity-300x242.png)
 
-![QQ-Plot Boyscout]({filename}/images/Big_Data_Idol_The_Math/qq_boyscout_gamma-300x242.png)
+![QQ-Plot Boyscout]({static}/images/Big_Data_Idol_The_Math/qq_boyscout_gamma-300x242.png)
 
 Again, good fits for all the factors except for "boy scout." With this guidance, I re-fit the "boy scout" data to a "normal" theoretical model.  
 
@@ -308,9 +308,9 @@ std_boyscout_fit <- fitdistr(norm_answers[,2],"normal")
 
 The calculation produces a much better fit, as witnessed by the new "Boy Scout" overlay plot and QQ-Plot.
 
-![Normal Boyscout]({filename}/images/Big_Data_Idol_The_Math/normal_boyscout-300x242.png)
+![Normal Boyscout]({static}/images/Big_Data_Idol_The_Math/normal_boyscout-300x242.png)
 
-![QQ-Plot Boyscout Normal]({filename}/images/Big_Data_Idol_The_Math/qq_boyscout_normal-300x242.png)
+![QQ-Plot Boyscout Normal]({static}/images/Big_Data_Idol_The_Math/qq_boyscout_normal-300x242.png)
 
 We know the factor weight sums for each user. We then use our new density functions to find out where they stand compared to the other users. We give them a percentile and send each user sum weight vector to the appropriate theoretical model, with the appropriate density function parameters.  
 

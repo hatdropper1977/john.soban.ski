@@ -8,7 +8,7 @@ Status: published
 
 From the land of Nintendo and Samurai comes [Monacoin](https://github.com/monacoinproject/monacoin), a Japanese cryptographic currency based on [Litecoin](https://translate.google.com/translate?hl=en&sl=ja&u=https://ja.wikipedia.org/wiki/Monacoin).  If you look at [www.coinmarketcap.com](https://coinmarketcap.com/currencies/monacoin/) you will see that Monacoin increased about ***30x*** in the past three months.
 
-![Monacoin]({filename}/images/Install_the_Monacoin_Wallet_on_Ubuntu/Monacoin.png)
+![Monacoin]({static}/images/Install_the_Monacoin_Wallet_on_Ubuntu/Monacoin.png)
 
 I found it a bit challenging to install the Monacoin wallet on Ubuntu.  I worked through the kinks and present to you this simple HOWTO.  The steps include:
 

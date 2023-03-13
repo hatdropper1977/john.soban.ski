@@ -12,7 +12,7 @@ In [that tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md), we showed
 
 This HOWTO builds upon that simple use case.  In this HOWTO, we extend the API gateway to proxy user requests to the downstream Elasticsearch [Application Programming Interface (API)](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html).  
 
-![Proxy Cartoon]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Proxy_Cartoon.png)
+![Proxy Cartoon]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Proxy_Cartoon.png)
 
 A user POSTS a JSON encoded Elasticsearch [Document](https://www.elastic.co/guide/en/elasticsearch/guide/master/document.html) to our API gateway.  The API gateway then validates the JSON against an authoritative schema, and if the Document passes, the API gateway will send the Document to our document store over an encrypted channel.  
 
@@ -136,7 +136,7 @@ This pulls the source code for a working Chalice package.  If you change directo
 
 Before we move on, please make sure that you edited **config.py** to reflect your Elasticsearch endpoint.  You can find this in the Elasticsearch console, under the **elastic** domain.  Leave off **https://** and the trailing slash.
 
-![Endpoint]({filename}/images/Connect_AWS_Lambda_to_Elasticsearch/elasticsearch_endpoint-1024x580.png)
+![Endpoint]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/elasticsearch_endpoint-1024x580.png)
 
 ### 4. Use Chalice to deploy your Lambda function and create/ attach an API gateway
 
@@ -192,13 +192,13 @@ https://9z8cesjny0.execute-api.us-east-1.amazonaws.com/api/
 Once you execute this command, Chalice should report an endpoint.  If you would like, you can go to your AWS console and take a look at what Chalice deployed.
 
 Chalice deploys a Lambda function:
-![Lambda_Function]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Lambda_Function.png)
+![Lambda_Function]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Lambda_Function.png)
 
 Chalice deploys an API Gateway that reflects the logic you included in **app.py**:
-![API_Gateway]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/API_Gateway.png)
+![API_Gateway]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/API_Gateway.png)
 
 Chalice also deploys an IAM Role and Policy for your Lambda Function:
-![IAM_ROLE]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/IAM_Role.png)
+![IAM_ROLE]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/IAM_Role.png)
 
 ### 5. Test drive your new Elasticsearch proxy
 
@@ -209,15 +209,15 @@ You can use **httpie** to test out your new API gateway.  By default, **httpie**
 ```
 
 **HTTPIE** reports success:
-![HTTPIE_Victory]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/HTTPIE_Victory.png)
+![HTTPIE_Victory]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/HTTPIE_Victory.png)
 
 From your Kibana endpoint, go to Management --> Kibana --> Index Patterns.  
 
 Type in **bigsurvey** for your index pattern and **@timestamp** for the Time Filter Name.  If you modified **ELASTIC_INDEX_NAME** in **chalicelib\config.py**, then input that name in **index pattern**.
-![Index_Pattern]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Index_Pattern.png)
+![Index_Pattern]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Index_Pattern.png)
 
 Now go to the **Discover** tab.  You will see the Document that **HTTPIE** just posted to our API gateway.
-![Kibana_Discover]({filename}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Kibana_Discover.png)
+![Kibana_Discover]({static}/images/Deploy_An_Advanced_Elasticsearch_Proxy_With_Lambda/Kibana_Discover.png)
 
 ### Conclusion
 

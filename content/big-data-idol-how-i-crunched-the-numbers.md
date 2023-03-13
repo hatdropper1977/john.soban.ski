@@ -24,7 +24,7 @@ The Big Data Personality Test follows a similar process. I feed 1 billion test r
 
 Now answer the following question. You may find the question a little tricky so I drew a picture to help you "cheat." Think of a row on a "*Tic Tac Toe*" board. You have three spaces and can place either an "X" or "O" on each space. How many unique rows (patterns) can you make from this?
 
-![Tic Tac Toe]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/tictac.png)
+![Tic Tac Toe]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/tictac.png)
 
 As you can see from the picture, each row in a game of *Tic Tac Toe* can only have one of eight possible patterns. Three spaces in a row, with an "X" or "O" on each space gives us *eight unique patterns*. You will see this phenomenon in the next section, where I reduce each test taker to a "row" with three "factors" (i.e.*Tic Tac Toe* spaces) that can be "on" or "off" (i.e. an "X" or "O").
 
@@ -36,19 +36,19 @@ Are you still with me or are you bored? Here is a fun game. The "big data" progr
 
 What would you name this spectrum?
 
-![Veg]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/veg.png)
+![Veg]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/veg.png)
 
 How about "The Vegetarian Spectrum"
 
 What about this one?
 
-![Lib]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/lib.png)
+![Lib]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/lib.png)
 
 I'd name it "The Libertarian Spectrum"
 
 And finally, we have this one:
 
-![NY]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/ny.png)
+![NY]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/ny.png)
 
 I'd name it "New Yorker Spectrum"
 
@@ -56,11 +56,11 @@ We call these three spectrum **independent**. If you're from New York, you migh
 
 We can combine two of these spectrum.  Let's combine, for example, the "Vegetarian" and "Libertarian" spectrum. Then we have four types of people: "Libertarian Vegetarians," "Libertarian Meat Eaters," "Big Government Vegetarians" and "Big Government Meat Eaters."  Take a look at the chart below.
 
-![2d]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/2d.png)
+![2d]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/2d.png)
 
 We can still have a pretty picture in three dimensions if we overlay the third spectrum on the graph:
 
-![3d]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/3d.png)
+![3d]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/3d.png)
 
 **Name the Groups**
 
@@ -82,21 +82,21 @@ I graphed the factors against each other.
 
 Take a look at Hellraiser vs. Boy Scout. If this graph confuses you, take a look at some of New York magazines' [Approval Matricies](http://nymag.com/nymag/culture/approvalmatrix/archive/). You will quickly get an idea of how the matricies work.
 
-![HR vs BS]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/hr_v_bs-1024x794.png)
+![HR vs BS]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/hr_v_bs-1024x794.png)
 
 Look at the "left/ right" axis above. You can see, all the way to the right, that positive attitudes towards **drinking** and **drugs** defines a test taker as a "hellraiser" and negative attitudes (all the way to the left) about **trusting cops** and **belief in God** also define them as a "hellraiser." On the "up/ down" axis (Boy Scout), **championing others** and **learning from failures** define the Boy Scout. Notice how "**Champion**," high up on the "Up/ Down" axis, falls right near the middle of the "Left/ Right" axis. So attitudes about "**Championing others**" weights the "Boy Scout" judgement but doesn't do much for the "Hellraiser" judgement. Likewise, "**drugs**" greatly defines the "Hellraiser," but doesn't weigh either way for the "Boy Scout" factor (look at how close it lies to the horizontal dotted line.)
 
 On the "Hellraiser" vs. "Celebrity" scale, most of the "Hellraiser" qualities do not provide much weight to the "Celebrity" judgement. You can see that most of the Hellraiser factors lie close to the zero point (i.e. the dotted horizontal line) for the "Celebrity" spectrum. **Pretty Men**, and **Pretty Women**, however, hugely weigh in on the celebrity scale.
 
-![HR vs C]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/hr_v_c-1024x794.png)
+![HR vs C]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/hr_v_c-1024x794.png)
 
 We witness the same distribution on "Boy Scout" vs. "Celebrity." Most "Boy Scout" traits do not weigh heavily on the "Celebrity" decision and vice versa. You can see this by simply noticing the words closely align with the x and y access.
 
-![BS vs C]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/bs_v_c-1024x794.png)
+![BS vs C]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/bs_v_c-1024x794.png)
 
 If you're interested, you can see the three factors plotted on a three dimensional graph. Again, the graph below shows the actual placement on the graph, based on the real-life test takers.
 
-![3d-1]({filename}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/3d-1-1024x794.png)
+![3d-1]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/3d-1-1024x794.png)
 
 **Get the Results**
 

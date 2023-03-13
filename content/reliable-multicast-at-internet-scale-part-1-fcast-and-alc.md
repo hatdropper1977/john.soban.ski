@@ -67,7 +67,7 @@ Asynchronous Layered Coding (ALC) provides massively scalable, asynchronous, mul
 
 The diagram below shows the FCAST/ALC architecture and packet format.
 
-![ALC Packet]({filename}/images/Reliable_Multicast_at_Internet_Scale_Part_1_FCAST_and_ALC/rm_1_1_fcast_alc_packet-1024x676.png) 
+![ALC Packet]({static}/images/Reliable_Multicast_at_Internet_Scale_Part_1_FCAST_and_ALC/rm_1_1_fcast_alc_packet-1024x676.png) 
 
 **Features**
 

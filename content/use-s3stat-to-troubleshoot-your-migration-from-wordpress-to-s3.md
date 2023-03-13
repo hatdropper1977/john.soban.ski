@@ -69,17 +69,17 @@ I decided to try s3stat because their [cheap bastard plan](https://www.s3stat.co
 ### Test Drive
 It took about thirty seconds to connect s3stat to my Cloudfront S3 logs bucket.  s3stat provides both a wizard and web app to help you get started.  Once I logged in, I saw widgets for Daily Traffic, Top Files, Total Traffic, Daily Average and Daily Unique.  s3stat also provides the costs to your AWS account.
 
-![Splash Page]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/01_Login_Screen.png)
+![Splash Page]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/01_Login_Screen.png)
 
 
 ### Troubleshooting
 I clicked the other menu items and noticed that my new S3 hosted website threw a lot of error codes.
 
-![Error Codes]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/02_Error_Codes.png)
+![Error Codes]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/02_Error_Codes.png)
 
 I noticed that people still clicked links from my old web page.  I could tell because when I migrated from Wordpress to S3, I took the dates out of the URL.  If a user bookmarked the Wordpress style link (which includes date), they would receive a 404 when they attempted to retrieve it.  I highlighted the stale URLs in red below.  
 
-![Error Pages]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/03_Error_Pages.png)
+![Error Pages]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/03_Error_Pages.png)
 
 When I moved from Wordpress to S3, I submitted a [URL map](https://help.disqus.com/customer/en/portal/articles/912757-url-mapper) to their [migration tool](https://www.disqus.com/admin/discussions/migrate/) to migrate my comments to fit with my site's new URL approach.
 
@@ -118,23 +118,23 @@ Sitemap: https://www.freshlex.com/freshlex_sitemap.xml
 
 I use __s3stat__ to sanity check the error pages and notice that one error returns a weird URL.
 
-![Error Pages]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/04_Trashed.png)
+![Error Pages]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/04_Trashed.png)
 
 I attempt to click a stale link (that follows the Wordpress aproach) and of course get a hideous error.
 
-![Bad Link]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/05_Bad_Link.png)
+![Bad Link]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/05_Bad_Link.png)
 
 After some investigation, I notice that I did not include this weird URL in my __URL map__.  It turns out, a user that goes to my site with the new links will see an 'also on Freshlex' callbox from Disqus that points to the old URL.
 
-![Bad Link]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/06_Also_On_Freshlex.png)
+![Bad Link]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/06_Also_On_Freshlex.png)
 
 Thanks to s3stat, I identified the root cause of the issue.  I quickly go back to Disqus, and add the weird URL to the migration tool.
 
-![Bad Link]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/07_Submit_Migration.png)
+![Bad Link]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/07_Submit_Migration.png)
 
 After the migration tool works its magic, the 'also on' box now points to the correct, new URL.
 
-![Bad Link]({filename}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/08_Works.png)
+![Bad Link]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/08_Works.png)
    
 ### Conclusion
 Thanks again to s3stat for providing an excellent product, as well as hooking me up with a free lifetime subscription thanks to the [cheap bastard plan](https://www.s3stat.com/web-stats/cheap-bastard-plan)!
