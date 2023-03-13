@@ -10,7 +10,7 @@ Status: published
 
 OpenDaylight provides a Software Defined Network ([SDN](https://en.wikipedia.org/wiki/Software-defined_networking)) [controller](https://www.sdxcentral.com/sdn/definitions/sdn-controllers/) that allows network engineers to programmatically direct network services via a Representational state transfer ([REST](https://en.wikipedia.org/wiki/Representational_state_transfer)) Application Programming Interface ([API](https://en.wikipedia.org/wiki/Application_programming_interface)).  
 
-![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
+![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
 When I [played](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) around with OpenDaylight [a bit](https://ask.opendaylight.org/users/420/runamuck/) a couple of [years back](https://blogs.oracle.com/ravello/opendaylight-on-on-aws), I came from a Systems/ Network engineering background.  I found the required Java domain experience a bit frustrating.  I put together this blog post, therefore, to make the valuable OpenDaylight platform more accessible to Systems/ Network Engineers.
 
@@ -231,7 +231,7 @@ $ sudo yum -y install git
 ###  Install Maven
 You will need Maven to build OpenDaylight.  Navigate to the Maven [download page](https://maven.apache.org/download.cgi).  Find the section that reads **Files** and right click the link for "Binary tar.gz archive."  Select "Copy Link Address." 
 
-![01_Copy_Maven_Link]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/01_Copy_Maven_Link.png)
+![01_Copy_Maven_Link]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/01_Copy_Maven_Link.png)
 
 Download the most recent Maven source code.  In my case, I download **v3.5.4**.
 
@@ -298,7 +298,7 @@ The OpenDaylight release zip provides the easiest way to get OpenDaylight up and
 
 Navigate to the OpenDaylight [downloads](https://docs.opendaylight.org/en/latest/downloads.html) page,  Right click the link for the most recent zip and the select "Copy link address."
 
-![02_Copy_ODL_Link]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/02_Copy_ODL_Link.png)
+![02_Copy_ODL_Link]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/02_Copy_ODL_Link.png)
 
 Download the OpenDaylight source via **WGET**.
 
@@ -321,7 +321,7 @@ $ cd karaf-0.8.2
 [karaf-0.8.2]$ ./bin/karaf
 ```
 
-![03_ODL_Splash]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/03_ODL_Splash.png)
+![03_ODL_Splash]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/03_ODL_Splash.png)
 
 Now, since you installed the release distribution, you will be able to choose from **all** features for install.
 
@@ -330,7 +330,7 @@ Now, since you installed the release distribution, you will be able to choose fr
 opendaylight-user@root>feature:list
 ```
 
-![04_All_Features]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
+![04_All_Features]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
 
 ## <a name="build"></a>Build OpenDaylight
 If you would like to build the current release without using a Maven archetype, proceed to the next section.  Otherwise, skip ahead to [Build OpenDaylight from a Maven archetype](#maven)
@@ -373,7 +373,7 @@ If you switch releases, you may be tempted to attempt to build.  Due to the natu
 
 In the screengrab below, I attempt to build the **Helium** release.  The operation fails with the error "Non-resolvable parent POM for org.opendaylight.integration:root:0.5.0-SNAPSHOT: Could not find artifact org.opendaylight.odlparent:odlparent:pom:1.7.0-SNAPSHOT."
 
-![045_Helium_Build_Fail]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/045_Helium_Build_Fail.png)
+![045_Helium_Build_Fail]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/045_Helium_Build_Fail.png)
 
 (If you would like to build a previous release, then skip to the [Build OpenDaylight from a Maven architype](#maven) section below.)
 
@@ -385,7 +385,7 @@ From the master branch then, execute the Maven build/install.  This will take a 
 ```
 After about five minutes, the build completes.
 
-![05_Build_Success]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/05_Build_Success.png)
+![05_Build_Success]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/05_Build_Success.png)
 
 Now you can start OpenDaylight.
 
@@ -393,7 +393,7 @@ Now you can start OpenDaylight.
 ```bash
 [distribution]$ ./karaf/target/assembly/bin/karaf
 ```
-![06_Build_Karaf_Splash]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/06_Build_Karaf_Splash.png)
+![06_Build_Karaf_Splash]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/06_Build_Karaf_Splash.png)
 
 This approach builds **all** OpenDaylight features.
 
@@ -402,7 +402,7 @@ This approach builds **all** OpenDaylight features.
 opendaylight-user@root>feature:list
 ```
 
-![04_All_Features]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
+![04_All_Features]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
 
 ### <a name="maven"></a>Build OpenDaylight from a [Maven](https://maven.apache.org/) archetype
 Double check that you went through all the preliminary steps recorded in [Install packages for build](#packbuild):  Install JAVA SDK (Not JRE), Maven, wget, unzip and git; set the JAVA_HOME, M2_HOME and MAVEN_OPTS environment variables; and copy **settings.xml** from **odlparent**.
@@ -497,7 +497,8 @@ Now build the release.
 If you get any errors, delete your **~/.m2** files and re-download **settings.xml** as described in [Install packages for build](#packbuild).
 
 After a few minutes, your build completes:
-![Build Snapshot Success]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/07_Build_SNAPSHOT_Success.png)
+
+![Build Snapshot Success]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/07_Build_SNAPSHOT_Success.png)
 
 Now start Karaf:
 
@@ -506,7 +507,7 @@ Now start Karaf:
 $ ./karaf/target/assembly/bin/karaf
 ```
 
-![Karaf]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/06_Build_Karaf_Splash.png)
+![Karaf]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/06_Build_Karaf_Splash.png)
 
 ## Conclusion
 

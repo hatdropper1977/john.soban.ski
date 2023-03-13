@@ -92,7 +92,7 @@ sns.scatterplot(x = bupa_df['mcv'],
 
 No obvious correlation jumps out in the scatter plot below.
 
-![MCV vs. Drinks Scatterplot]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/01_Mcv_Vs_Drinks.png)
+![MCV vs. Drinks Scatterplot]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/01_Mcv_Vs_Drinks.png)
 
 To be sure, we will use **Seaborn** to plot the best fit trend line and error bands.
 
@@ -103,7 +103,7 @@ sns.regplot(x = bupa_df['mcv'],
 
 The graph depicts fat error bands and a near-horizontal trend line, which reflects little to no correlation.
 
-![MCV vs. Drinks Scatterplot with Trendline]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/02_Mcv_Vs_Drinks_W_Trend.png)
+![MCV vs. Drinks Scatterplot with Trendline]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/02_Mcv_Vs_Drinks_W_Trend.png)
 
 We plot a Kernel Density Estimation (KDE) of the **drinks** variable.  KDE plots estimate the density of a continuous random variable, in this case, **drinks**.  Imagine a smooth histogram, or a histogram with really skinny bars.
 
@@ -114,7 +114,7 @@ sns.displot( x = bupa_df['drinks'],
 
 From the density plot we see that most people drink less than a couple of drinks per day.
 
-![KDE of Drinks]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/03_Bupa_Drinks_Kde.png)
+![KDE of Drinks]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/03_Bupa_Drinks_Kde.png)
 
 A continuous bivariate joint density function captures the probability distribution of two random variables.  Imagine a top down view of the density plot above, with the density plot for **MCV** mixed in.
 
@@ -126,7 +126,7 @@ sns.displot(x = bupa_df['mcv'],
 
 The near-circular shape shows the dearth of correlation between **MCV** and **Drinks**.
 
-![MCV vs. Drinks Bi-Variate Joint Density Plot]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/04_Mcv_Vs_Drinks_Corr.png)
+![MCV vs. Drinks Bi-Variate Joint Density Plot]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/04_Mcv_Vs_Drinks_Corr.png)
 
 To contrast, observe two features with excellent correlation, **SGPT** and **SGOT**.  We will leverage this correlation when we apply **dimensionality reduction** to our data set.
 
@@ -138,7 +138,7 @@ sns.displot(x = bupa_df['sgpt'],
 
 Notice the sharp, nearly 45 degree angle of the bi-variate density plot, which indicates strong correlation.
 
-![SGPT Vs. SGOT Bi-Variate Joint Density Plot]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/05_Sgpt_Vs_Sgot_Corr.png)
+![SGPT Vs. SGOT Bi-Variate Joint Density Plot]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/05_Sgpt_Vs_Sgot_Corr.png)
 
 We plot the correlation between **drinks** and all features.  If one feature presents strong correlation then we can simply use that feature, throw out the rest and then take a nap.
 
@@ -160,7 +160,7 @@ g.add_legend()
 
 None of the features show strong (or any) correlation with **drinks**, so we will need to proceed with Machine Learning approaches for our prediction model.
 
-![Drinks vs. all features density plots]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/06_Drinks_Vs_Features.png)
+![Drinks vs. all features density plots]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/06_Drinks_Vs_Features.png)
 
 ### Split the Data
 We split the data into three buckets:
@@ -211,7 +211,7 @@ train_features.plot.hist(subplots=True,
 
 Notice that each feature encompasses a different range of values.  To comply with Machine Learning best practices, we will **normalize** the data.
 
-![Histogram of Raw Features]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/07_Features_Hist.png)
+![Histogram of Raw Features]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/07_Features_Hist.png)
 
 ## 2. Normalize the data
 We **normalize** the data between **-1 and 1**.  Most blogs describe the **manual** normalization process.  TensorFlow 2.X, however, provides an **experimental** normalization engine.
@@ -249,7 +249,7 @@ The **normalizer** inputs a data set, and the **numpy()** method returns a matri
 
 Much better!  The **normalized** data cluster around **zero**.
 
-![Histogram of Normalized Features]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/08_Features_Norm_Hist.png)
+![Histogram of Normalized Features]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/08_Features_Norm_Hist.png)
 
 ## 3. Create a Linear Model
 Keras makes life easy.  The following line of code creates a linear regression model.
@@ -305,7 +305,7 @@ Our loss on the train data set (blue line) lands at around nine (MSE), or a root
 
 The validation set, however, fares better, with an MSE of under eight, and an RMSE of ~2.8.
 
-![Linear Model Error]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/09_Linear_Model_Error.png)
+![Linear Model Error]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/09_Linear_Model_Error.png)
 
 Good loss on train and validate sets do not mean much.  Data Scientists can overfit a model to their train data, which does not generalize well in **the wild**.
 
@@ -389,7 +389,7 @@ plot_loss(history)
 
 The train loss slopes down and the validation loss holds constant.
 
-![DNN Error]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow/10_Dnn_Error.png)
+![DNN Error]({static}/images/Fast_And_Easy_Regression_With_Tensorflow/10_Dnn_Error.png)
 
 The **evaluate** method checks the holdout (test) set.
 

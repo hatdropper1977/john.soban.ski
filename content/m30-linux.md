@@ -12,7 +12,7 @@ In this blog post I will walk us through how to connect the new controller to Re
 
 Once you deploy the configuration file, you can enjoy Street Fighter II, for example, in Six Button mode.
 
-![Street Fighter]({filename}/images/M30_Linux/01_Street_Fighter.png)
+![Street Fighter]({static}/images/M30_Linux/01_Street_Fighter.png)
 
 ### Emulation
 RetroPie delivers a premier emulation experience to retro gamers.  I will briefly discuss emulation in the next paragraph.
@@ -29,7 +29,7 @@ Emulation imitates the behavior of one system with another. In the context of re
 
 The 8BitDo M30 copies the look and feel of the classic Sega Genesis Six (6) Button controller.  Sega released a Six button controller in 1993 to compete with Nintendo’s record smashing SNES. Gamers love the ergonomic design and extra buttons.
 
-![M30 Controller]({filename}/images/M30_Linux/02_M30_Controller.png)
+![M30 Controller]({static}/images/M30_Linux/02_M30_Controller.png)
 
 Six button games for the Sega genesis include Street Fighter II, Mortal Kombat, Virtua Fighter, Batman Forever and Ranger X. For the best gaming experience, these games require the use of all six buttons on the controller.
 
@@ -43,7 +43,7 @@ To connect the controller, follow the printout instructions for Android devices.
 
 You will see the Bluetooth controller connect under the Bluetooth menu.
 
-![Bluetooth Connection]({filename}/images/M30_Linux/03_Bluetooth_Connected.png)
+![Bluetooth Connection]({static}/images/M30_Linux/03_Bluetooth_Connected.png)
 
 ## Map the Buttons
 The RetroPie Config files follow a SNES Controller approach, with four buttons on the face and two up top.  
@@ -52,11 +52,11 @@ Through trial and Error, I managed to figure out how to map the SNES style butto
 
 I present to you the results of my scientific method.
 
-![SNES to Genesis Map]({filename}/images/M30_Linux/04_Snes_Genesis.png)
+![SNES to Genesis Map]({static}/images/M30_Linux/04_Snes_Genesis.png)
 
 Through further investigations, I identified the numbers associated with each button on the M30 controller.
 
-![M30 Button Numbers]({filename}/images/M30_Linux/05_Button_Numbers.png)
+![M30 Button Numbers]({static}/images/M30_Linux/05_Button_Numbers.png)
 
 The following config file captures the proper map.
 
@@ -125,7 +125,7 @@ Once you configure the M30 for the Main Menu, you can select a Mega Drive game.
 
 The Emulator will then load your 8BitDo M30 Configuration for the Mega Drive.
 
-![M30 Connected]({filename}/images/M30_Linux/06_M30_Connected.png)
+![M30 Connected]({static}/images/M30_Linux/06_M30_Connected.png)
 
 ### Quick Menu
 If RetroPie defaults to a three button controller, use the **Quick Menu** to force a six button controller configuration. 
@@ -134,46 +134,46 @@ First, press the **Guide Button**, which looks like the checkboard Vans sneakers
 
 This button brings up the **Quick Menu**.
 
-![Quick Menu]({filename}/images/M30_Linux/08_Quick_Menu.png)
+![Quick Menu]({static}/images/M30_Linux/08_Quick_Menu.png)
 
 Scroll down to the **Controls** selection.
 
-![Controls Selection]({filename}/images/M30_Linux/09_Controls_Selection.png)
+![Controls Selection]({static}/images/M30_Linux/09_Controls_Selection.png)
 
 Select **Port 1 Controls**.
 
-![Port 1 Controls]({filename}/images/M30_Linux/10_Port1_Controls.png)
+![Port 1 Controls]({static}/images/M30_Linux/10_Port1_Controls.png)
 
 Select **Device Type**.
 
-![Device Type]({filename}/images/M30_Linux/11_Device_Type.png)
+![Device Type]({static}/images/M30_Linux/11_Device_Type.png)
 
 Select **MD Joypad 6 Button**.
 
-![MD Joypad]({filename}/images/M30_Linux/12_Md_Joypad.png)
+![MD Joypad]({static}/images/M30_Linux/12_Md_Joypad.png)
 
 RetroPie now displays the correct controller.
 
-![Correct Controller]({filename}/images/M30_Linux/13_Correct_Controller.png)
+![Correct Controller]({static}/images/M30_Linux/13_Correct_Controller.png)
 
 Press the **G Button** to escape the menu and start your game!
 
 ### Batman Forever 
 I recommend **Batman Forever** for the Sega Genesis.  
 
-![Batman Forever]({filename}/images/M30_Linux/07_Batman_Forever.png)
+![Batman Forever]({static}/images/M30_Linux/07_Batman_Forever.png)
 
 I play my copy in High Definition on my [Analogue SG](https://www.analogue.co/mega-sg).  You can buy a used [Batman Forever cart on ebay](https://www.ebay.com/sch/i.html?_nkw=batman+forever+genesis) (clean link, non-affiliate) for around ten bucks.
 
-![Batman Forever!]({filename}/images/M30_Linux/15_Analogue_Sg.png)
+![Batman Forever!]({static}/images/M30_Linux/15_Analogue_Sg.png)
 
 Acclaim entertainment released the video game **Batman Forever**, based on the hit movie of the same name, in 1995.  Acclaim unleashed the game onto multiple consoles.  The Genesis, SNES, Gameboy, Game Gear and Sega CD each received a version.  
 
-![Batman Forever!]({filename}/images/M30_Linux/14_Batman_Forever.png)
+![Batman Forever!]({static}/images/M30_Linux/14_Batman_Forever.png)
 
 Acclaim used very expensive (at the time) motion capture technology to create photo-realistic sprites.  They overlaid the sprites on the Mortal Kombat engine and plopped the characters into a Metroidvania style open world/ exploratory level design.
 
-![Batman Forever!]({filename}/images/M30_Linux/16_Wata_Batman.png)
+![Batman Forever!]({static}/images/M30_Linux/16_Wata_Batman.png)
 
 Critics (and fans) hate the game, I consider it an underappreciated Gem, if not masterpiece!  I played countless hours of Mortal Kombat back in the 90s and love the idea of (1) Playing Batman and (2) Breaking out of the limited Mortal Kombat levels into a huge world with jumps and platforms.
 

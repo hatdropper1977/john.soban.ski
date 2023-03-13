@@ -36,23 +36,23 @@ In Elasticsearch parlance, we put the rows into **BUCKETS**, with one **BUCKET**
 
 First, consider a query for total hits.  The Elasticsearch API reports that I received ~100k hits in the month of June.
 
-![Total Hits]({filename}/images/Elasticsearch_Aggs_For_Time_Series/01_Total_Hits.png)
+![Total Hits]({static}/images/Elasticsearch_Aggs_For_Time_Series/01_Total_Hits.png)
 
 Our client uses the **AGGS** API to count the hits by country.
 
-![Country Buckets]({filename}/images/Elasticsearch_Aggs_For_Time_Series/02_Country_Buckets.png)
+![Country Buckets]({static}/images/Elasticsearch_Aggs_For_Time_Series/02_Country_Buckets.png)
 
 We now use the API to count the hits by day.
 
-![Daily Buckets]({filename}/images/Elasticsearch_Aggs_For_Time_Series/03_Daily_Buckets.png)
+![Daily Buckets]({static}/images/Elasticsearch_Aggs_For_Time_Series/03_Daily_Buckets.png)
 
 Time **BUCKETS** enable us to analyze, summarize and visualize time series data.  We need **BUCKETS** because we cannot plot every datum from a **big data** document store.
 
-![Too Much Data Makes Boom]({filename}/images/Elasticsearch_Aggs_For_Time_Series/04_Plot_Kaboom.png)
+![Too Much Data Makes Boom]({static}/images/Elasticsearch_Aggs_For_Time_Series/04_Plot_Kaboom.png)
 
 **BUCKETS** return a smaller amount of data, for example, **hits per hour**.
 
-![Less Data for Plots]({filename}/images/Elasticsearch_Aggs_For_Time_Series/05_Plot_Bucket.png)
+![Less Data for Plots]({static}/images/Elasticsearch_Aggs_For_Time_Series/05_Plot_Bucket.png)
 
 ## Time Series Data Viz with Kibana
 I will demonstrate the idea of using **BUCKETS** for **time series** data viz through Kibana.
@@ -60,55 +60,55 @@ I will demonstrate the idea of using **BUCKETS** for **time series** data viz th
 ### Simple Date Histogram
 In the Kibana **Discover** panel, set the correct time range.
 
-![Select Time]({filename}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
+![Select Time]({static}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
 
 Click **Visualization --> Create New Visualization**
 
-![New Viz]({filename}/images/Aggregations_The_Elasticsearch_Group_By/05_Create_New_Viz.png)
+![New Viz]({static}/images/Aggregations_The_Elasticsearch_Group_By/05_Create_New_Viz.png)
 
 Type **Vertical** into the search bar and select **Vertical Bar** and then click the name of your index.
 
-![Select Vertical Bar]({filename}/images/Elasticsearch_Aggs_For_Time_Series/06_Vert_Bar.png)
+![Select Vertical Bar]({static}/images/Elasticsearch_Aggs_For_Time_Series/06_Vert_Bar.png)
 
 Elasticsearch uses **Metric** and **Bucket** parameters to drive **AGGS**.  Leave **Metrics** to the default of **Y-axis Count** (this gives us hits), and expand **Buckets**.  Click **X-Axis**.  
 
-![Select X-Axis Series]({filename}/images/Elasticsearch_Aggs_For_Time_Series/07_X_Series.png)
+![Select X-Axis Series]({static}/images/Elasticsearch_Aggs_For_Time_Series/07_X_Series.png)
 
 Now select **Date Histogram** and click **Update.**
 
-![Select Date Histogram]({filename}/images/Elasticsearch_Aggs_For_Time_Series/08_Date_Hist.png)
+![Select Date Histogram]({static}/images/Elasticsearch_Aggs_For_Time_Series/08_Date_Hist.png)
 
 Elasticsearch placed the **hits** into time buckets for Kibana to display.  Elasticsearch chose **twelve hour buckets** for the bucket size.  Change **minimum interval** to **Daily** and Elasticsearch cuts the number of **BUCKETS** in half.
 
-![Set Daily Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/09_Daily_Bucket.png) 
+![Set Daily Bucket]({static}/images/Elasticsearch_Aggs_For_Time_Series/09_Daily_Bucket.png) 
 
 ### Nested Aggregation 
 In [Aggregations - The Elasticsearch GROUP BY]({filename}/aggregations-the-elasticsearch-group-by.md), I demonstrated how to chain, or nest **AGGS** together.  **Time Series** data plays nicely with nested **AGGS**.  The above diagram depicts **hits per day**.  Use a **Nested AGG** to display **hits per day** broken down by **country**.
 
 Under **X-Axis**, click **Add** and then **Split Series**.
 
-![Select sub-bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/10_Sub_Bucket.png)
+![Select sub-bucket]({static}/images/Elasticsearch_Aggs_For_Time_Series/10_Sub_Bucket.png)
 
 You want to split on the term **Country**, so select the **TERMS** sub aggregation.
 
-![Select Terms Aggregation]({filename}/images/Elasticsearch_Aggs_For_Time_Series/11_Terms_Sub.png)
+![Select Terms Aggregation]({static}/images/Elasticsearch_Aggs_For_Time_Series/11_Terms_Sub.png)
 
 Type **country** into the **field** pull-down and select **geoip.country_name.keyword**.
 
-![Select country_name]({filename}/images/Elasticsearch_Aggs_For_Time_Series/12_Country_Name.png)
+![Select country_name]({static}/images/Elasticsearch_Aggs_For_Time_Series/12_Country_Name.png)
 
 Click **Update**.  Kibana presents the daily count by **country**.
 
-![Day by Country Time Series Data Viz]({filename}/images/Elasticsearch_Aggs_For_Time_Series/13_Day_By_Country.png)
+![Day by Country Time Series Data Viz]({static}/images/Elasticsearch_Aggs_For_Time_Series/13_Day_By_Country.png)
 
 ### Name the Buckets
 Bucket names will clear things up in the next section, when you use the Elasticsearch API to create buckets.  First, give your parent bucket a name.  In the **Date Histogram** Aggregation, set **Custom Label** to **daily_agg**.
 
-![Name the Daily Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/14_Name_The_Daily_Bucket.png)
+![Name the Daily Bucket]({static}/images/Elasticsearch_Aggs_For_Time_Series/14_Name_The_Daily_Bucket.png)
 
 Under the **Terms** sub-aggregation, set **Custom label** to **country_agg** and click update.
 
-![Name the Country Bucket]({filename}/images/Elasticsearch_Aggs_For_Time_Series/15_Name_The_Country_Bucket.png)
+![Name the Country Bucket]({static}/images/Elasticsearch_Aggs_For_Time_Series/15_Name_The_Country_Bucket.png)
 
 ### Kibana Takeaway
 Understand the key takeaways.  We first created a **Date Histogram** aggregation (named **daily_agg**) on the **listener_timestamp** field.  We then nested a **Terms** aggregation (named **country_agg**) on the field **geoip.country_name.keyword**.  The sub-aggregation added **child** country buckets into each of the **parent** daily buckets. 
@@ -120,7 +120,7 @@ The Kibana **Dev Tools** console allows you to drive the REST API.  **Dev Tools*
 
 > Note:  Change **sobanski-logs-2020-06-27** to the name your Cloudfront log index.
 
-![Auto Complete]({filename}/images/Aggregations_The_Elasticsearch_Group_By/10_Dev_Tools_Auto_Complete.png)
+![Auto Complete]({static}/images/Aggregations_The_Elasticsearch_Group_By/10_Dev_Tools_Auto_Complete.png)
 
 Select the **aggs** suggestion and **Dev tools** populates the **Dev Tools** console with the following **JSON**.
 
@@ -137,7 +137,7 @@ GET sobanski-logs-2020-06-27/_search
 
 In the Kibana demonstration above, we first created a parent **Date Histogram** (named **daily_agg**) on the **listener_timestamp** field.  In order to command the REST API to create a **Date Histogram**, first replace **AGG_TYPE** with **date_histogram**.  
 
-![Date Histogram Autocomplete]({filename}/images/Elasticsearch_Aggs_For_Time_Series/16_Dev_Tools_Date_Hist_Autocomplete.png)
+![Date Histogram Autocomplete]({static}/images/Elasticsearch_Aggs_For_Time_Series/16_Dev_Tools_Date_Hist_Autocomplete.png)
 
 **Dev Tools** will auto-populate the JSON with the required **date_histogram** fields.
 
@@ -173,11 +173,11 @@ GET sobanski-logs-2020-06-27/_search
 
 In addition, set **size** to zero, in order to filter out unwanted hits.
 
-![Set size to zero]({filename}/images/Elasticsearch_Aggs_For_Time_Series/17_Set_Size.png)
+![Set size to zero]({static}/images/Elasticsearch_Aggs_For_Time_Series/17_Set_Size.png)
 
 When you execute the script, Elasticsearch returns the JSON encoded results.
 
-![Return hits per day in JSON]({filename}/images/Elasticsearch_Aggs_For_Time_Series/18_Hits_By_Day.png)
+![Return hits per day in JSON]({static}/images/Elasticsearch_Aggs_For_Time_Series/18_Hits_By_Day.png)
 
 The **daily_agg** object contains an field named **buckets**, which contains an array of JSON objects.  In this case, each bucket represents a day.
 
@@ -211,11 +211,11 @@ In the Kibana example, we clicked the **add** button to add a sub aggregation.  
 
 First, collapse the **date_histogram** object under the **daily_agg** object.
 
-![Collapse the Date Histogram stanza]({filename}/images/Elasticsearch_Aggs_For_Time_Series/19_Collapse_Hist.png)
+![Collapse the Date Histogram stanza]({static}/images/Elasticsearch_Aggs_For_Time_Series/19_Collapse_Hist.png)
 
 After **date_histogram**, add a **comma** and a **quote** followed by **aggs**.  An auto-complete pop-up lets you know that you clicked the correct spot.
 
-![Add a comma]({filename}/images/Elasticsearch_Aggs_For_Time_Series/20_Add_Sub_Agg.png)
+![Add a comma]({static}/images/Elasticsearch_Aggs_For_Time_Series/20_Add_Sub_Agg.png)
 
 > Note:  No auto-complete means that you put the comma in the wrong spot.
 
@@ -243,11 +243,11 @@ GET sobanski-logs-2020-06-27/_search
 
 Now, type **terms** into **AGG_TYPE** and click the pop-up.
 
-![Terms pop up]({filename}/images/Elasticsearch_Aggs_For_Time_Series/21_Terms_Sub_Agg.png)
+![Terms pop up]({static}/images/Elasticsearch_Aggs_For_Time_Series/21_Terms_Sub_Agg.png)
 
 **TERMS** aggregations require a **field** (e.g. the **GROUP_BY** field).  Begin to type **city** and the pop-up provides a list.  Select **geoip.city_name.keyword**.
 
-![Select City Name Field]({filename}/images/Elasticsearch_Aggs_For_Time_Series/22_City_Name_Keyword.png)
+![Select City Name Field]({static}/images/Elasticsearch_Aggs_For_Time_Series/22_City_Name_Keyword.png)
 
 Set **size** to **3**. Also, to match the Kibana example, set **NAME** to **country_agg**. 
 
@@ -278,7 +278,7 @@ GET sobanski-logs-2020-06-27/_search
 
 Each **day** bucket in the **daily_agg** aggregation includes a nested **country_agg**.
 
-![Nested Agg]({filename}/images/Elasticsearch_Aggs_For_Time_Series/23_Nested_Agg.png)
+![Nested Agg]({static}/images/Elasticsearch_Aggs_For_Time_Series/23_Nested_Agg.png)
 
 Each nested **country_agg** object contains an field named **buckets**, which contains an array of JSON objects.  In this case, each bucket represents a country.  A zoom into Day 1, for example, reads:
 

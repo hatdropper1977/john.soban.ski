@@ -8,7 +8,7 @@ Status: published
 
 In this demonstration we [continue]({filename}/fast-and-easy-regression-with-tensorflow.md) to use Keras and TensorFlow 2.3 to explore data, normalize data, and build both a linear model and Deep Neural Network (DNN) to solve a regression problem.  Today we use Principal Component Analysis (PCA) to address over-fitting via dimensionality reduction
 
-![TensorFlow and Keras 2.3 Logo]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/00_Tf_Keras_Logo.png)
+![TensorFlow and Keras 2.3 Logo]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/00_Tf_Keras_Logo.png)
 
 > NOTE: TensorFlow Core 2.3 includes tf.keras, which provides the high level (high abstraction) Keras Application Programming Interface (API) that simplifies the command and control of TensorFlow.
 
@@ -100,7 +100,7 @@ sns.regplot(x = pca_train_features_df['princomp1'],
 
 The trendline does not indicate strong correlation.
 
-![PCA Scatter Trendline]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/01_Princomp1_Vs_Drinks_Trend.png)
+![PCA Scatter Trendline]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/01_Princomp1_Vs_Drinks_Trend.png)
 
 ### Reduce Five Dimensions to Two Dimensions
 A two dimension feature set allows us to graph the two Principal Components against our label (target) vector, **drinks**.
@@ -122,7 +122,7 @@ sns.scatterplot(x = pca_train_features_df['princomp1'],
                 size = train_labels)
 ```
 
-![PCA 1 and 2 vs Drinks Heatmap]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/02_Princomps_Vs_Drinks_Heat.png)
+![PCA 1 and 2 vs Drinks Heatmap]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/02_Princomps_Vs_Drinks_Heat.png)
 
 Classic **MATPLOTLIB** allows us to plot on three axes.
 
@@ -149,7 +149,7 @@ plt.show()
 
 The height of the bars depict the number of drinks.  The sloping of the bar charts indicates we may have found some slight correlation.
 
-![3D Bar Chart]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/03_Princomps_Vs_Drinks_Bar.png)
+![3D Bar Chart]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/03_Princomps_Vs_Drinks_Bar.png)
 
 ## 2. Linear Model w/ PCA
 We already normalized our train dataset before we applied PCA, so we do not include the TensorFlow normalizer.  We use Keras to construct and compile our new linear model.
@@ -184,7 +184,7 @@ plot_loss(history)
 
 The train set MSE clocks in over 10, with the validate set under 8.
 
-![Linear PCA Loss]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/04_Linear_Model_Pca_Error.png)
+![Linear PCA Loss]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/04_Linear_Model_Pca_Error.png)
 
 In order to evaluate the model with the holdout set, we first must project the five feature holdout set to two dimensional space via the PCA map matrix.
 
@@ -253,7 +253,7 @@ plot_loss(history)
 
 The MSE for the validation set crosses above 8 after the 70th epoch or so.
 
-![DNN Data Error]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/05_Dnn_Pca_Error.png)
+![DNN Data Error]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/05_Dnn_Pca_Error.png)
 
 We evaluate the DNN model with the transformed, two dimensional holdout set.
 
@@ -271,17 +271,17 @@ The RMSE for the four models range from 3.07 (lowest) to 3.30 (highest).  Does o
 
 To answer that, consider the formula for Root Mean Squared Error (RMSE):
 
-![RMSE]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/06_Rmse_Formula.png)
+![RMSE]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/06_Rmse_Formula.png)
 
 We subtract the actual value from the estimated value for each observation, square the result to remove the negative sign, sum everything up and then take the square root.
 
 Now, assume we just guess the mean for every observation.
 
-![Guess Mean for all]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/07_Guess_Mean_For_All.png)
+![Guess Mean for all]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/07_Guess_Mean_For_All.png)
 
 If we substitute this guess vector into our RMSE formula, we get the formula for **Standard Deviation**.
 
-![Standard Deviation Formula]({filename}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/08_Std_Formula.png)
+![Standard Deviation Formula]({static}/images/Fast_And_Easy_Regression_With_Tensorflow_Part_2/08_Std_Formula.png)
 
 We consider, therefore, any RMSE that comes in under Standard Deviation a victory.
 

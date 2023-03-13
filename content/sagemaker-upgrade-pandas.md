@@ -12,7 +12,7 @@ These notebooks allow Data Scientists and ML Engineers to explore, operationaliz
 
 Pandas contributes a critical piece to the Data Scientists' toolbox, via the Data Frame construct.  Each new version of Pandas provides improvements, upgrades and new conveniences.
 
-![Python Pandas]({filename}/images/Sagemaker_Upgrade_Pandas/00_Pandas_Python.png)
+![Python Pandas]({static}/images/Sagemaker_Upgrade_Pandas/00_Pandas_Python.png)
 
 I run into an issue with my **AWS SageMaker Notebook**, however, when I try to upgrade Pandas.
 
@@ -88,7 +88,7 @@ Upon launch of my notebook, I selected **Amazon Linux 1** for my **Platform iden
 
 I verified that my Notebook runs the **Amazon Linux 1** Operating System via the **Amazon SageMaker --> Notebook Instances --> Notebook instance settings** Console page.
 
-![AWS Sagemaker Instance Amazon Linux 1]({filename}/images/Sagemaker_Upgrade_Pandas/01_Old_Version.png)
+![AWS Sagemaker Instance Amazon Linux 1]({static}/images/Sagemaker_Upgrade_Pandas/01_Old_Version.png)
 
 ### Solution
 Through trial and error, I identified the solution to my problem.
@@ -118,11 +118,11 @@ Upon Launch of your SageMaker JupyterLab Notebook Instance, navigate to the **Pl
 
 The dropdown box provides three choices for **Platform identifier**.
 
-![Pick Amazon Linux 2]({filename}/images/Sagemaker_Upgrade_Pandas/02_Pick_Two.png)
+![Pick Amazon Linux 2]({static}/images/Sagemaker_Upgrade_Pandas/02_Pick_Two.png)
 
 If you select an **Amazon Linux 1** based notebook instance, the Console alerts you to the End of Life (EOL) support.
 
-![End of Life Amazon Linux 1]({filename}/images/Sagemaker_Upgrade_Pandas/03_One_Eol.png)
+![End of Life Amazon Linux 1]({static}/images/Sagemaker_Upgrade_Pandas/03_One_Eol.png)
 
 Select **Amazon Linux 2, JupyterLab 3**.
 
@@ -146,12 +146,12 @@ I recommend Jupyter Lab 3, which delivers a [half dozen new  features](https://b
 
 To enjoy the above features, select **Amazon Linux 2, JupyterLab 3**
 
-![Select Amazon Linux 2, JupyterLab 3]({filename}/images/Sagemaker_Upgrade_Pandas/04_Lab_Three.png)
+![Select Amazon Linux 2, JupyterLab 3]({static}/images/Sagemaker_Upgrade_Pandas/04_Lab_Three.png)
 
 ## Success
 After I launch my new **AWS SageMaker JupyterLab Notebook** I select the **conda_Python3** environment from the launcher.
 
-![Select conda_Python3]({filename}/images/Sagemaker_Upgrade_Pandas/05_Conda_Three.png)
+![Select conda_Python3]({static}/images/Sagemaker_Upgrade_Pandas/05_Conda_Three.png)
 
 In my notebook I check for the Python version and the output reads **3.8**.
 
@@ -224,11 +224,11 @@ When you log into your Notebook for the first time, the Notebook will present to
 
 In Amazon Sagemaker, click **Lifecycle configurations --> Notebook Instance --> Create Configuration**.
 
-![Create Configuration]({filename}/images/Sagemaker_Upgrade_Pandas/06_Create_Config.png)
+![Create Configuration]({static}/images/Sagemaker_Upgrade_Pandas/06_Create_Config.png)
 
 I name my lifecycle config **sobanski-update-pandas**.
 
-![Paste in Bash Script]({filename}/images/Sagemaker_Upgrade_Pandas/07_Lifecycle_Config.png)
+![Paste in Bash Script]({static}/images/Sagemaker_Upgrade_Pandas/07_Lifecycle_Config.png)
 
 Paste the following script under **Start notebook**.
 
@@ -254,13 +254,13 @@ The script upgrades **Pandas** in the **conda_Python3** environment.
 
 Under **Amazon SageMaker --> Notebook instances --> Notebook instance settings** select **Edit** and set **Lifecycle configuration** to the name of your file.
 
-![Select your config]({filename}/images/Sagemaker_Upgrade_Pandas/08_Select_Config.png)
+![Select your config]({static}/images/Sagemaker_Upgrade_Pandas/08_Select_Config.png)
 
 When you launch the notebook, AWS will run the upgrade script.
 
 ## Conclusion
 **AWS SageMaker Notebook Instances** host and manage **JupyterLab Notebooks**.  In this blog post we discussed how to configure your **Notebook Instance** to maximize the available features in Pandas and JupyterLab.
 
-![Python Pandas]({filename}/images/Sagemaker_Upgrade_Pandas/09_Pet_Python.png)
+![Python Pandas]({static}/images/Sagemaker_Upgrade_Pandas/09_Pet_Python.png)
 
 Note:  I created the Panda/ Python artwork with Jasper AI Art, see workflow [here]({filename}/jasper-art.md)

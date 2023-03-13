@@ -8,7 +8,7 @@ Status: published
 
 Speaking of his “Terrible Sonnets,” Gerard Manley Hopkins suggests in a letter that “if ever anything is written in blood one of these is” (Bridges 219). The poems recount Hopkins' tumultuous examination of the pain and ambivalence that defines his existence. The “Terrible Sonnets” tempt uncritical readers into inaccurate Job comparisons. Hopkins does not wrestle with his faith in God. Hopkins’ merciless interrogations reflect not a loss of faith in God, but an indignation towards his and Humanity’s gross failure to live up to God’s greatness (Ellis 242). 
 
-![Gerard Hopkins]({filename}/images/Gerard_Manley_Hopkins_1/01_Gerard_Hopkins.png)
+![Gerard Hopkins]({static}/images/Gerard_Manley_Hopkins_1/01_Gerard_Hopkins.png)
 
 The “Terrible Sonnets" do not capture an “attack” against God for some perceived “transgression” but rather depict a lambaste against modem urban life and degeneracy. Constant exposure to the city-spawned dregs of humanity incites Hopkins to lose faith in the greatness of his fellow man. A Jesuit priest must esteem and empathize with mankind. Hopkins’ inability to do so institutes feelings of failure within him and sends him into a spiral of maddening depression. This depression at his and humanity’s perceived failings in the eyes of God, and not any loss of faith in God on his part, motivate his “Terrible Sonnets.”
 
@@ -17,11 +17,11 @@ Gerard Manley Hopkins finds metropolitan life repugnant. He tersely conveys his 
 
 > patrician Georgian townhouses [that] had declined into squalid congeries of rooms in each of which lived an entire family... a woman might be giving birth on a newspaper-covered bed, surrounded by eight or ten other children intent on their play beneath the swags of an ornately plastered ceiling. It was the kind of contrast that shocked the sensibilities of the tender-hearted Hopkins and provoked him into both sympathy and rage. After his death [sic] his sister told Bridges that ‘he was made miserable by the untidiness, disorder and dirt of Irish ways, the ugliness of it all’ (368)
 
-![Women Children]({filename}/images/Gerard_Manley_Hopkins_1/02_Women_Children.png)
+![Women Children]({static}/images/Gerard_Manley_Hopkins_1/02_Women_Children.png)
 
 The untidiness and dirt of Irish ways results in an “...appalling death rate...which had been so bad that many country families were afraid to visit there” (369). While contagions hit the poor living amidst overcrowded squalor the hardest, even the higher classes suffer huge casualties. Daly states, “mortality among the professionals and middle classes seems to have been considerably above the levels prevailing at this time in English cities” (98). Martin attributes the High incidence of mortality in Dublin to the “poor sanitation of practically all the houses” (Martin 369). City health and engineering officials report the “appalling state of house drains, not just among the poor, many of whose houses lacked any sewage system at all, but among the more prosperous classes” (Daly 98). Hopkins lives in a residence with a basement “full of filth and rats, two of which found their way into the stew-pot in the kitchen on one occasion” (Martin 371). 
 
-![Rats Teapot]({filename}/images/Gerard_Manley_Hopkins_1/03_Rats_Teapot.png)
+![Rats Teapot]({static}/images/Gerard_Manley_Hopkins_1/03_Rats_Teapot.png)
 
 The city depresses Hopkins. He writes to Bridges:
 
@@ -30,24 +30,24 @@ The city depresses Hopkins. He writes to Bridges:
 ### Elusive Muse
 But Hopkins faces more than just literal death in the city. Hopkins' city also leads to creative death. Hopkins finds that his “muse eludes [him] in urban physical surroundings” (Thesing 386). Martin reiterates verbatim at two points of his biography that Hopkins feels “dried out by cities, spiritually and poetically” (325 & 335). Hopkins discovers that “urban work and poetic creation seem to be antagonistic or at best mutually exclusive” (Thesing 388). The “horrible place,” the city, exists to “stifle” creative endeavors (Bridges 126).
 
-![Victorian Dublin]({filename}/images/Gerard_Manley_Hopkins_1/04_Victorian_Dublin.png)
+![Victorian Dublin]({static}/images/Gerard_Manley_Hopkins_1/04_Victorian_Dublin.png)
 
 Thesing says “the city represents [to Hopkins] recalcitrant material opposed to the creation of poetry” (389). Hopkins supports Thesing’s conclusion when he comments: “Liverpool is of all the places the most museless. It is indeed a most unhappy and miserable spot” (Correspondence 42). Ideas for poems germinate in Hopkins' mind, yet somehow the city parasitically sucks away the energy necessary for their manifestations. Any poem Hopkins mentions “in the course of its composition would never be finished... he had more than enough imagination for a dozen poets and scarcely the energy for one” (Martin 331).
 
 ### Nature and the Divine
 The vampiric city must feed off the lifeblood of nature to flourish. Developers must either entirely raze nature to make room for a city or instead portion Nature into controllable cells. The lack or destruction of nature brings pain to Hopkins, who says “I always knew in my heart Walt Whitman’s mind to be more like my own than any other man’s living” (Bridges 155). The Jesuit Priest emphasizes that, while he disagrees with Whitman’s homosexual tendencies, he feels a kinship with the American poet thanks to Whitman's passionate views on nature (155). 
 
-![Whitman Hopkins]({filename}/images/Gerard_Manley_Hopkins_1/05_Whitman_Hopkins.png)
+![Whitman Hopkins]({static}/images/Gerard_Manley_Hopkins_1/05_Whitman_Hopkins.png)
 
 The felling of trees nearly spurs Hopkins to suicide, thanks to “his sense of the impossibility of ever making amends for destruction or of replacing any object or created thing, since the inscape of each made it literally irrecoverable” (Martin 306). In ***The Journals and Papers of Gerard Manley Hopkins***, he writes:
 
 > The ashtree growing in the comer of the garden was felled. It was lopped first:  I heard the sound and looking out and seeing it maimed there came at that moment a great pang and ***I wished to die*** and not see the inscapes of the world destroyed any more (230: Italics mine)
 
-![Felled Tree]({filename}/images/Gerard_Manley_Hopkins_1/06_Felled_Tree.png)
+![Felled Tree]({static}/images/Gerard_Manley_Hopkins_1/06_Felled_Tree.png)
 
 St. Beuno’s surrounds Hopkins with more nature than any locale and thus fills him with “unusual happiness” (Martin 261). While staying in St. Beuno’s, he “walk[s], fishe[s] and wr[ites] poetry” (268), and takes in the “lovely sights” of “a flock of seagulls wheeling and sailing high up in the air, sparkles of white as bright as snowballs in the vivid blue” (Further 157). 
 
-![Hopkins Seagulls]({filename}/images/Gerard_Manley_Hopkins_1/07_Hopkins_Seagulls.png)
+![Hopkins Seagulls]({static}/images/Gerard_Manley_Hopkins_1/07_Hopkins_Seagulls.png)
 
 The nature around him provides a great muse and drives him to write “approximately one third of all his mature poetry” (Martin 261). This period of his life marks copious poems that celebrate the wonders of Nature. For example, in “Spring,” he writes “Nothing is so beautiful as Spring / When weed, in wheels, shoot long and lovely and lush; / Thrush’s eggs look little low heavens...” (1-3).
 
@@ -62,7 +62,7 @@ Hopkins believes that decent men must appreciate and embrace the redeeming quali
 ### Man, the Animal
 The city reduces Mankind in Hopkins’ estimation on multiple levels. To Hopkins, the vice-like city squeezes humanity, the most beautiful and dignified creation in the universe, into a lesser animalistic being. 
 
-![City Vice]({filename}/images/Gerard_Manley_Hopkins_1/08_City_Vice.png)
+![City Vice]({static}/images/Gerard_Manley_Hopkins_1/08_City_Vice.png)
 
 Hopkins sees the city degrade men on spiritual, intellectual, and physical planes. These observations lead Hopkins to lose his hope for humankind.
 
@@ -72,11 +72,11 @@ Spiritually speaking, the city breeds human degeneracy and filth. Its suffocatin
 
 The “things” that Hopkins “sees” constantly in the city include unloved, disheveled children, prostitutes, and an array of public displays of immorality. Near his Oxford residence lies “an oasis in which was to be found ... children begging or selling matches” and “omnipresent tramps and drunks” (Martin 369). 
 
-![Victorian Drunks]({filename}/images/Gerard_Manley_Hopkins_1/09_Victorian_Drunks.png)
+![Victorian Drunks]({static}/images/Gerard_Manley_Hopkins_1/09_Victorian_Drunks.png)
 
 His time in Dublin exposes him to “...the depths of the city’s poverty and deprivation” (Daly 97). Daly deems Hopkins' Dublin locale “the worst tenement area in the city, a haunt of prostitutes serving the nearby Dublin Castle garrison, containing innumerable public houses” (97).
 
-![Victorian Prostitutes]({filename}/images/Gerard_Manley_Hopkins_1/10_Victorian_Prostitutes.png)
+![Victorian Prostitutes]({static}/images/Gerard_Manley_Hopkins_1/10_Victorian_Prostitutes.png)
 
 Hopkins’ letters during his city residence “...convey the sense that, in the city, moral degeneracy is out of control” (Thesing 388). The alcohol consumed by working-class residents contributes to runaway degeneracy. Hopkins believes alcohol causes immorality amongst city-dwellers because:
 
@@ -96,7 +96,7 @@ Hopkins also witnesses intellectual decline in the city. Hopkins loves learning 
 
 Hopkins’ students see no utility in his classical subjects and feel “no compulsion to listen to him,” instead “talk[ing], laugh[ing] and creat[ing] a constant disturbance” (Martin 376). The students have so little respect for Hopkins and his intellectual endeavors that they actually drag him “around the table by his heels to demonstrate Hector’s fate at Troy” (377). 
 
-![Students_Tackle]({filename}/images/Gerard_Manley_Hopkins_1/11_Students_Tackle.png)
+![Students_Tackle]({static}/images/Gerard_Manley_Hopkins_1/11_Students_Tackle.png)
 
 Hopkins tries to maintain his humility in this situation but “object[s] to them being rude to their professor and a priest” (Bergonzi 128). The apathy of his students and their parents fortifies his bleak opinions of humanity.  
 

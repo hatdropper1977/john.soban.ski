@@ -31,7 +31,7 @@ Mathworks provides a simple definition of a [Parzen Probabilistic Neural Network
 
 PPNN allow a non-parametric approach to estimate the required Bayesian Classifier probabilities ***P(x|w<sub>i</sub>)*** and ***P(w<sub>i</sub>)***.
 
-![Bayes Classifier]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/00_Bayes_Classifier.png)
+![Bayes Classifier]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/00_Bayes_Classifier.png)
 
 In action, the PPNN mechanics are easy to follow.  The PPNN takes a training vector, dot products it with the weights of the hidden layer vector and then chooses the winning class based on the highest output value.  The  next section includes an Animated cartoon that shows the PPNN visually.
 
@@ -78,25 +78,25 @@ I use the following data set for this trade.
  
 Here is a plot of the training data.
  
-![Original Data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/01_Original.png)
+![Original Data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/01_Original.png)
  
 *Note that in this toy example, we can set up a simple classifier via a vertical line at ***X = 2.25*** and just use the ***x*** values to decide.  Never mind that, though, since the point of this section is to illustrate different normalization techniques and then look at the effectiveness of different classification approaches.*
  
 When we normalize over all the training data, you see that the ***(x, y)*** axis scale to ***( 1, 1 )***.
 
-![Normalized over all training data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/02_Normalized_Over_All_Training_Data.png)
+![Normalized over all training data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/02_Normalized_Over_All_Training_Data.png)
 
 If we center the data and normalize, the scale goes from ***-1*** to ***1*** on both axis.
 
-![Centered and normalized over all training data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/03_Centered_And_Normailzed_Over_All_Training.png)
+![Centered and normalized over all training data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/03_Centered_And_Normailzed_Over_All_Training.png)
 
 If we normalize to class specific magnitude, it makes matters worse.  We no longer have clean separation of the classes.
 
-![04_Notmalized_To_Class_Specific_Magnitude]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/04_Notmalized_To_Class_Specific_Magnitude.png)
+![04_Notmalized_To_Class_Specific_Magnitude]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/04_Notmalized_To_Class_Specific_Magnitude.png)
 
 If we normalize on a per-vector basis, we get build in error.  Pattern ***(0.75, 0.75)*** now belongs to both Class ***X*** and Class ***+***.
 
-![05_Normalized_On_A_Per_Vector_Basis]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/05_Normalized_On_A_Per_Vector_Basis.png)
+![05_Normalized_On_A_Per_Vector_Basis]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/05_Normalized_On_A_Per_Vector_Basis.png)
 
 ###  Effectiveness of approaches - Parzen vs. Nearest Neighbor
 
@@ -104,51 +104,51 @@ Now let's look at the effectiveness of PPNN vs. the [*k*-nearest neighbor](https
 
 First lets look at the case where we normalized each training pattern to class specific magnitude.  If you recall it appeared to look bad, scrunching the two classes close to each other.
 
-![06_Case_1_Normalized_To_Class_Specific_Magnitude]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/06_Case_1_Normalized_To_Class_Specific_Magnitude.png)
+![06_Case_1_Normalized_To_Class_Specific_Magnitude]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/06_Case_1_Normalized_To_Class_Specific_Magnitude.png)
 
 KNN, believe it or not, does a good job of classifying the data.
 
-![07_Nearest_Neighbor_Normalized_By_Class]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/07_Nearest_Neighbor_Normalized_By_Class.png)
+![07_Nearest_Neighbor_Normalized_By_Class]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/07_Nearest_Neighbor_Normalized_By_Class.png)
 
 The PPNN, fails, classifying all of Class 2 as Class 1.
 
-![08_Parzen_Neural_Net_Normalized_By_Class]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/08_Parzen_Neural_Net_Normalized_By_Class.png)
+![08_Parzen_Neural_Net_Normalized_By_Class]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/08_Parzen_Neural_Net_Normalized_By_Class.png)
 
 The second case scales the training data to ***(0,1)*** on both axis.
 
-![09_Case_2_Normalized_Over_All_Training_Data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/09_Case_2_Normalized_Over_All_Training_Data.png)
+![09_Case_2_Normalized_Over_All_Training_Data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/09_Case_2_Normalized_Over_All_Training_Data.png)
 
 KNN handles the classification with ease.
 
-![10_Nearest_Neighbor_Over_All_Samples_Norm]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/10_Nearest_Neighbor_Over_All_Samples_Norm.png)
+![10_Nearest_Neighbor_Over_All_Samples_Norm]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/10_Nearest_Neighbor_Over_All_Samples_Norm.png)
 
 The PPNN (using ***&#963; = <sup>1</sup>/<sub>4</sub>*** ) fails.  It allocates a tiny box region to Class 1, and classifies everything else to Class 2.
 
-![11_Parzen_Neural_Net_Over_All_Samples_Norm]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/11_Parzen_Neural_Net_Over_All_Samples_Norm.png)
+![11_Parzen_Neural_Net_Over_All_Samples_Norm]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/11_Parzen_Neural_Net_Over_All_Samples_Norm.png)
 
 Normalizing over a per-sample basis introduces built in error.  Note again the overlap of the ***X*** and ***+*** at ***( 0.75, 0.75)***.
 
-![12_Case_3_Normalized_On_A_Per_Sample_Basis]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/12_Case_3_Normalized_On_A_Per_Sample_Basis.png)
+![12_Case_3_Normalized_On_A_Per_Sample_Basis]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/12_Case_3_Normalized_On_A_Per_Sample_Basis.png)
 
 The KNN of course takes a hit due to the build in error.
 
-![13_Nearest_Neighbor_Per_Sample_Norm]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/13_Nearest_Neighbor_Per_Sample_Norm.png)
+![13_Nearest_Neighbor_Per_Sample_Norm]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/13_Nearest_Neighbor_Per_Sample_Norm.png)
 
 The PPNN (using ***&#963; = <sup>1</sup>/<sub>4</sub>*** ) misses twice, once for the built in error and once for a Class 1 observation.
 
-![14_Parzen_Over_Per_Sample_Norm]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/14_Parzen_Over_Per_Sample_Norm.png)
+![14_Parzen_Over_Per_Sample_Norm]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/14_Parzen_Over_Per_Sample_Norm.png)
 
 The final normalization approaches centers and normalizes the data.
 
-![15_Case_4_Centered_And_Normalized_Over_All_Training_Data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/15_Case_4_Centered_And_Normalized_Over_All_Training_Data.png)
+![15_Case_4_Centered_And_Normalized_Over_All_Training_Data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/15_Case_4_Centered_And_Normalized_Over_All_Training_Data.png)
 
 The KNN handles this with aplomb.
 
-![16_Nearest_Neighbor_Centered_And_Normalized_Over_All_Training_Data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/16_Nearest_Neighbor_Centered_And_Normalized_Over_All_Training_Data.png)
+![16_Nearest_Neighbor_Centered_And_Normalized_Over_All_Training_Data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/16_Nearest_Neighbor_Centered_And_Normalized_Over_All_Training_Data.png)
 
 The PPNN also correctly classifies all observations.
 
-![17_Parzen_Centered_And_Normalized_Over_All_Training_Data]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/17_Parzen_Centered_And_Normalized_Over_All_Training_Data.png)
+![17_Parzen_Centered_And_Normalized_Over_All_Training_Data]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/17_Parzen_Centered_And_Normalized_Over_All_Training_Data.png)
 
 ##  Reduced Coulomb Energy Networks
 So far I showed several normalization approaches and then the effectiveness of different non-parametric classification techniques on the normalized data.  I demonstrated, PPNN and KNN effectiveness.  Now I would like to describe a third non-parametric classification algorithm.  The [Reduced Coulomb Energy]({filename}/reduced_coulomb_energy_neural_network_bupa.md) (RCE) net.  
@@ -178,24 +178,24 @@ The following animation shows the classification footprints for the centered and
 
 The next animation shows the RCE classification footprints on the non-centered all samples normalized training data.
 
-![All Samples Norm]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/All_Samples_Norm.gif)
+![All Samples Norm]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/All_Samples_Norm.gif)
 
 Normalized by class increases the amount of ambiguous regions.
 
-![Norm by class]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Norm_Per_Class.png)
+![Norm by class]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Norm_Per_Class.png)
 
 Once more, the built in error of the normalize by per-sample magnitude approach results in a miss.
 
-![Norm by per sample]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Norm_Per_Sample.png)
+![Norm by per sample]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Norm_Per_Sample.png)
 
 ###  Benefits of Ambiguous Regions
 RCE provides the benefit of ambiguous regions.  Ambiguous regions pinpoint areas that would provide useful training samples.  The data scientist can then execute observations in those regions to fill in the gaps.
 
-![18_Good_Ambiguous_Regions]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/18_Good_Ambiguous_Regions.png)
+![18_Good_Ambiguous_Regions]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/18_Good_Ambiguous_Regions.png)
 
 The following graphic shows how additional training observations filled in the ambiguity.
 
-![19_Useful_Training_Samples]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/19_Useful_Training_Samples.png)
+![19_Useful_Training_Samples]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/19_Useful_Training_Samples.png)
 
 
 ##  RCE applied to the Bupa Liver disorders data set
@@ -225,23 +225,23 @@ For the two feature case, separation analysis showed the best feature combinatio
 
 Out of the box, you can see these two are poorly separable.
 	 
-![20_Poor_Two_Feature_Separability]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/20_Poor_Two_Feature_Separability.png)
+![20_Poor_Two_Feature_Separability]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/20_Poor_Two_Feature_Separability.png)
 
 For the three feature case, the scatter method (left) added ***alkphos*** to the mix, whereas divergence and Bhattacharyya added ***sgpt***.
 
-![21_Three_Feature_Separability]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/21_Three_Feature_Separability.png)
+![21_Three_Feature_Separability]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/21_Three_Feature_Separability.png)
 
 The following diagrams show the three dimensional separation approaches based on a normalized test set.  I used the training ***&#956;*** and ***&#963;*** to normalize the test set.
 
-![22_Further_Three_D_Separability_Approaches]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/22_Further_Three_D_Separability_Approaches.png)
+![22_Further_Three_D_Separability_Approaches]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/22_Further_Three_D_Separability_Approaches.png)
 
 This graphic shows the same approach, only using the test set's ***&#956;*** and ***&#963;*** to normalize the test set.
 
-![23_Three_D_Separability_On_Train_Set]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/23_Three_D_Separability_On_Train_Set.png)
+![23_Three_D_Separability_On_Train_Set]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/23_Three_D_Separability_On_Train_Set.png)
 
 The following graphic shows the classification footprints using a normalized, two feature (***gamma-glutamyl*** and ***number of drinks***) train and test set.
 
-![24_Results_Of_Two_Feature_Two_Five]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/24_Results_Of_Two_Feature_Two_Five.png)
+![24_Results_Of_Two_Feature_Two_Five]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/24_Results_Of_Two_Feature_Two_Five.png)
 
 For detailed results of my investigation, I encourage you to read my [detailed investigation of RCE]({filename}/reduced_coulomb_energy_neural_network_bupa.md) applied to the BUPA liver disorders data set.
 

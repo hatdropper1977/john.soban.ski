@@ -10,11 +10,11 @@ Status: published
 ## **Good Vs. Evil** - Two Opposing paths Taken by a Similar Genius
 This blog post provides a comparison between Henry David Thoreau's **Walden** and Ted Kaczynski's **Unabomber Manifesto.** 
 
-![Walden Book]({filename}/images/Thoreau_Vs_Unabomber/01_Walden_Thoreau.png)
+![Walden Book]({static}/images/Thoreau_Vs_Unabomber/01_Walden_Thoreau.png)
 
 To compare these two works, I use both a modern Natural Language Processing (NLP) Artificial Intelligence (AI) tool and traditional literary analysis.
 
-![Unabomber Sketch]({filename}/images/Thoreau_Vs_Unabomber/02_Unabomber_Sketch.png)
+![Unabomber Sketch]({static}/images/Thoreau_Vs_Unabomber/02_Unabomber_Sketch.png)
 
 The Google Cloud Natural Language Application Programming Interface (API) quantifies the authors' sentiment (positive or negative) and intensity of emotion while traditional Literary Analysis compares and contrasts themes.  
 
@@ -130,11 +130,11 @@ The following Histogram records the sentiment of "The Unabomber Manifesto."  Not
 
 Zero indicates a **neutral** sentiment.
 
-![Unabomber Score Histogram]({filename}/images/Thoreau_Vs_Unabomber/03_Unabomber_Hist.png)
+![Unabomber Score Histogram]({static}/images/Thoreau_Vs_Unabomber/03_Unabomber_Hist.png)
 
 Compare Kaczynski’s Data Viz to Thoreau’s.  Thoreau's paragraphs provide a symmetrical Histogram, and most of the paragraphs land in the **neutral** zone.
 
-![Thoreau Score Histogram]({filename}/images/Thoreau_Vs_Unabomber/04_Walden_Hist.png)
+![Thoreau Score Histogram]({static}/images/Thoreau_Vs_Unabomber/04_Walden_Hist.png)
 
 Remember that the Google API returns both **score** and **magnitude**.  We need to include the **magnitude** data into the analysis, to get a feel for the overall intensity of emotion.
 
@@ -144,13 +144,13 @@ The colors represent the **density**.  The darker the color, the more instances 
 
 Note that I multiply the Score by ten in order to make the Data Viz more readable.
 
-![Walden Bivariate Density Plot]({filename}/images/Thoreau_Vs_Unabomber/05_Walden_Density.png)
+![Walden Bivariate Density Plot]({static}/images/Thoreau_Vs_Unabomber/05_Walden_Density.png)
 
 Again, we see that Thoreau's text concentrates around Neutral tone, with the Magnitude higher around scores of zero.
 
 Contrast Thoreau’s Data Viz to Kaczynski.
 
-![Unabomber Bivariate Density Plot]({filename}/images/Thoreau_Vs_Unabomber/06_Unabomber_Density.png)
+![Unabomber Bivariate Density Plot]({static}/images/Thoreau_Vs_Unabomber/06_Unabomber_Density.png)
 
 The near forty-five degree angle of the contour map (the blue, green and yellow oval) indicates strong correlation between sentiment and magnitude.  The more negative Kaczynski writes, the stronger his emotions.  
 
@@ -229,7 +229,7 @@ Thoreau suggests that nonspiritual, superficial pastimes do not substitute for t
 ### Common View of Rage Against the Machine
 Kaczynski and Thoreau both desire to eliminate **the Machine** or what they label the ugly and evil influence of technology from the world.
 
-![Earth Crisis Destroy the Machines Album Art]({filename}/images/Thoreau_Vs_Unabomber/07_Earth_Crisis.png)
+![Earth Crisis Destroy the Machines Album Art]({static}/images/Thoreau_Vs_Unabomber/07_Earth_Crisis.png)
 
 Kaczynski writes:
 

@@ -22,7 +22,7 @@ Dim experts will point out a (perceived) shortcoming of NFTs: the ability for an
 
 Try it for yourself.  Open [this link](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:356990:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in another tab to find an Isometric Pixel Art NFT that tokenizes a **PNG** of a leaning bookcase.  You can either buy the NFT for 0.01 ETH, or just download the **PNG** for free.
 
-![Isometric Pixel Art NFT Leaning Bookcase Sobanski Art]({filename}/images/Nft_Value_Prop/01_Leaning_Bookcase.png)
+![Isometric Pixel Art NFT Leaning Bookcase Sobanski Art]({static}/images/Nft_Value_Prop/01_Leaning_Bookcase.png)
 
 Given that, why would anyone pay valuable (well, this week at least) Ethereum for the **PNG** when he could download the **PNG** for free?
 
@@ -31,7 +31,7 @@ I will answer that question after a discussion about Bananas and Dots.
 #### Bananas
 The Artist [Maurizio Cattelan](https://www.google.com/search?q=Maurizio+Cattelan) duct taped a banana to a wall, called the result a piece of art (**Comedian**) and then promptly sold two editions at **Perrotin, the Gallery** for [**$120,000 each**](https://en.wikipedia.org/wiki/Comedian_(artwork)).
 
-![Maurizio Cattelan's Comedian from Perrotin the Gallery]({filename}/images/Nft_Value_Prop/02_Banana_Duct.png)
+![Maurizio Cattelan's Comedian from Perrotin the Gallery]({static}/images/Nft_Value_Prop/02_Banana_Duct.png)
 
 Each edition comes with a Banana, a piece of duct tape, a certificate of authenticity (COA) and an instruction manual.  If the banana rots, the manual instructs the owner to replace the banana with a new one, available at her local grocery store.  If the duct tape loses stick, the manual instructs the owner to buy a new roll of Duct tape from a hardware store, cut a new piece, and replace the old piece.
 
@@ -48,7 +48,7 @@ In other words, the collector buys **Commedian** for the COA, or more specifical
 #### Circles Art
 Damien Hirst released a thousand or so paintings of dots (yes, just dots).  He did not paint these paintings, he hired someone else to paint them for him, and then he signed them.
 
-![Damien Hirst Spots]({filename}/images/Nft_Value_Prop/03_Damien_Spot.png)
+![Damien Hirst Spots]({static}/images/Nft_Value_Prop/03_Damien_Spot.png)
 
 Business Insider [writes](https://www.businessinsider.com.au/why-damien-hirst-is-controversial-2013-6):
 
@@ -68,7 +68,7 @@ At present time, NFTs hold their value in Ethereum. Ethereum swings high and low
 
 I purchased a [Taco Bell NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in March for 3 ETH, with Ethereum at $1.8k/ ETH.  Another copy sold for 3 ETH in April with Ethereum at $2.3k/ ETH.  On May 9th, someone made an offer for 2 ETH with ETH at $4k/ coin.  In terms of dollar value, the May bid landed at 43% higher than my initial purchase, with no sellers willing to part.
 
-![History of a five figure Taco Gif]({filename}/images/Nft_Value_Prop/04_Taco_History.png)
+![History of a five figure Taco Gif]({static}/images/Nft_Value_Prop/04_Taco_History.png)
 
 We set the floor at 3 ETH.
 
@@ -84,16 +84,16 @@ Crypto punks, the NFT **gold standard** followed the same trend, until early May
 
 The following chart captures recent **Crypto Punks** sales.
 
-![Q1 2021 Cryptopunks chart]({filename}/images/Nft_Value_Prop/05_Crypto_Punks.png)
+![Q1 2021 Cryptopunks chart]({static}/images/Nft_Value_Prop/05_Crypto_Punks.png)
 
 ### Value Prop 3: Durability
 I own Video Games Authority (VGA) graded video games, Wata graded video games, and Certified Guarantee Company (CGC) graded comic books.  
 
-![Castlevania - Large Endlabel Logo WATA graded]({filename}/images/Nft_Value_Prop/06_Castlevania_Wata.png)
+![Castlevania - Large Endlabel Logo WATA graded]({static}/images/Nft_Value_Prop/06_Castlevania_Wata.png)
 
 I sent my comic and video game collections from the 80s and 90s in to get graded early last year, and the grading increased their resale value significantly.
 
-![The final issue of Transformers, CGC 9.8 Grade]({filename}/images/Nft_Value_Prop/07_Transformers_Cgc.png)
+![The final issue of Transformers, CGC 9.8 Grade]({static}/images/Nft_Value_Prop/07_Transformers_Cgc.png)
 
 I plan to unload these collectibles, however, since I need to pay attention to humidity and temperature when storing them.  Too much humidity will irreversibly wrinkle the pages, despite the hermetic seals. In the mean time, I need to insure my investment or rent a (climate controlled) safe deposit box to store the items. A simple Home owners' policy won't suffice, I'll need to get [special insurance](https://www.youtube.com/watch?v=FXh0RJumRqQ) to properly cover the collectibles.
 
@@ -151,7 +151,7 @@ When you own an NFT, collectors will see everyone who owned that NFT.  Given tha
 
 Lindsay Lohan, for example, owned [this token](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:181471?tab=history) at one point, and you can see her Avatar in the token's history.
 
-![Lindsay Lohan once owned this NFT!]({filename}/images/Nft_Value_Prop/08_Lohan_Nft.png)
+![Lindsay Lohan once owned this NFT!]({static}/images/Nft_Value_Prop/08_Lohan_Nft.png)
 
 ## Donations
 I would love to see some of my favorite non profits, such as [the Ronald McDonald House of Baltimore](https://rmhcmaryland.org/) set up a digital NFT wallet.  NFT collectors would then transfer tokens to the wallet, and the Charity would sell them for a profit.  This seems like a straight forward process.  The Charity would have to spend time accounting the NFT ownership and sales for tax purposes, but other than that, I think it would be a huge win for the non-profit space.
@@ -163,7 +163,7 @@ In 2021 I can watch the entire lineup of TGIF from 1987 anywhere on the planet u
 
 One such company, [Darkblock](https://www.darkblock.io/) promises to prevent the issue with local downloads.
 
-![Darkblock logo]({filename}/images/Nft_Value_Prop/09_Darkblock_Logo.png)
+![Darkblock logo]({static}/images/Nft_Value_Prop/09_Darkblock_Logo.png)
 
 From their website:
 > Darkblock enables managed display rights for your rare NFTs.
@@ -185,6 +185,6 @@ We verify ourselves online in several different ways:
 
 A company could provide a service to map our physical identity using traditional identity documents to a private key, or better yet a set of private keys, with lifecycle management to retire compromised keys.  [Bloom](https://bloom.co/) provides this service, so to me it appears to be a natural fit for the NFT space.
 
-![Bloom Token Logo]({filename}/images/Nft_Value_Prop/10_Bloom_Token.png)
+![Bloom Token Logo]({static}/images/Nft_Value_Prop/10_Bloom_Token.png)
 
 Thank you for reading and please leave your comments below!

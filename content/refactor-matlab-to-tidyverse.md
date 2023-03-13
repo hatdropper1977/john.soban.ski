@@ -431,7 +431,7 @@ test_grid %>% filter( rce_class != 3 ) %>%
   plot_ly( x = ~alkphos, y = ~sgpt, z = ~gammagt , color = ~rce_class )
 ```
 
-![RCE 3D]({filename}/images/Refactor_Matlab_To_Tidyverse/01_3d.png)
+![RCE 3D]({static}/images/Refactor_Matlab_To_Tidyverse/01_3d.png)
 
 
 If you would like to see a 2D graph, then re-run the script using two features.
@@ -466,7 +466,7 @@ ggplot( ) +
   geom_point( data = test_grid %>% filter( rce_class == 2 ), aes(x = alkphos, y = sgpt, color = class.2.hits ))
 ```
 
-![RCE 2D]({filename}/images/Refactor_Matlab_To_Tidyverse/02_90k.png)
+![RCE 2D]({static}/images/Refactor_Matlab_To_Tidyverse/02_90k.png)
 
 ## Conclusion
 This blog post described how to convert a Matlab script that uses for loops and nested function into a functional, pipe based Tidyverse script.

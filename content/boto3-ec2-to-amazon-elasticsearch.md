@@ -8,7 +8,7 @@ Status: published
 
 In this [HOWTO]({category}howto), I will describe the process to connect an Ubuntu [EC2](https://aws.amazon.com/ec2/) instance to the Amazon Web Services (AWS) provided [Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) via the [boto3](https://aws.amazon.com/sdk-for-python/) Python library. This blog updates my incredibly popular original post on this topic which describes the process using [boto2]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md).  In the spirit of my original post, I once more capture and present the easiest and most direct method to connect an EC2 instance to the AWS ES service. 
 
-![Howto]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/howot1.png)
+![Howto]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/howot1.png)
 
 As before, I present a caveat before we begin. You must trust me that the [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) based security approach that I present below will make your life easy. This approach yields greater flexibility, greater security, greater automation (vs. an IP whitelist approach) and AWS labels it a **best practice**.  The IAM security approach provides a quick, **pull off the band-aid** method that will save you a ton of heartache and debugging down the road.
 
@@ -28,44 +28,44 @@ In summary, you will:
 ##1.  Find your Amazon Account ID
 You will use your Account ID to configure security on the Elasticsearch Service.  To find your account ID, simply click **Support** in the AWS console and then write down your Account ID, or copy and paste into a text document.
 
-![Account ID]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/00_Account_ID.png)
+![Account ID]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/00_Account_ID.png)
 
 
 ##2. Deploy an AWS Elasticsearch Instance
 
 Amazon makes Elasticsearch deployment a breeze.  Type **Elasticsearch** into the AWS console search bar and then click it:
 
-![Find Elasticsearch]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/01_Find_Elasticsearch.png)
+![Find Elasticsearch]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/01_Find_Elasticsearch.png)
 
 Then click **Create a new domain**.
 
-![Create New Domain]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/02_Create_New_Domain.png)
+![Create New Domain]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/02_Create_New_Domain.png)
 
 Select the desired deployment type and Elasticsearch version.
 
-![Select Deployment Type]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/03_Select_Deployment_Type.png)
+![Select Deployment Type]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/03_Select_Deployment_Type.png)
 
 Name your domain something super-creative, like **test-domain** and select your instance type.  I select the cheapest option here, so I can save my money and invest in WATA graded NES games.
 
-![Name your Elasticsearch Service]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/04_Name_Your_Elasticsearch_Service.png)
+![Name your Elasticsearch Service]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/04_Name_Your_Elasticsearch_Service.png)
 
 Click Next until you arrive at **Step 3:  Configure access and security**.
 
 You can choose, if you prefer, to deploy your service into a [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/).  Since we will require all access to use **signed, encrypted** requests, the public Internet will suffice.  Bots and bad actors can hit our API, but they will not be able to proceed without the proper crpytographic credentials.  If you plan to operationalize this service, then you may want to consider using a VPC.  A VPC shuts down all external paths to your service.  For now, we will rely on the security of enforcing signed requests.
 
-![Network Config]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/05_Network_Config.png)
+![Network Config]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/05_Network_Config.png)
 
 Scroll down to **Domain access policy** and select **Custom access policy**.
 
 Do you remember your **Account ID**?  Paste it into the middle box as shown.  In the first box, select **IAM ARN**, in the second box, paste in your **Account ID** and then in the third box select **Allow**.  Be sure to select **Encryption**.
 
-![Domain Access Policy]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/06_Domain_Access_Policy.png)
+![Domain Access Policy]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/06_Domain_Access_Policy.png)
 
 Click next until you see the prompt to deploy the service and then deploy the service.
 
 After about ten minutes you will see the Elasticsearch endpoint, ready for use.
 
-![Elasticsearch Endpoint]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/07_Elasticsearch_Endpoint.png)
+![Elasticsearch Endpoint]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/07_Elasticsearch_Endpoint.png)
 
 If you click the endpoint, you will receive the following error:
 
@@ -81,11 +81,11 @@ If you want to use the service, you must sign and encrypt the **GET** request.  
 
 Type "IAM" into the AWS console search bar and then click it.
 
-![IAM Menu]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/08_Find_IAM.png)
+![IAM Menu]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/08_Find_IAM.png)
 
 Select "Policies."
 
-![Select Policy]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/09_Create_Policy.png)
+![Select Policy]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/09_Create_Policy.png)
 
 Select **JSON** and paste in the following JSON:
 
@@ -108,35 +108,35 @@ Select **JSON** and paste in the following JSON:
 }
 ```
 
-![Create Policy]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/10_JSON_Policy.png)
+![Create Policy]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/10_JSON_Policy.png)
 
 Click **Review policy**, name your policy **Can\_CRUD\_Elasticsearch** and then click **Create policy**
 
-![Validate]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/11_Save_Policy.png)
+![Validate]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/11_Save_Policy.png)
 
 ###3.2 Create an IAM Role with attached Policy
 On the Dashboard, click "Roles."
 
-![Roles]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/12_Click_Roles.png)
+![Roles]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/12_Click_Roles.png)
 
 Under **Create Role** select **AWS service** for your trusted entity and then **EC2** under common use case.
 
-![Roles]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/13_Role_One.png)
+![Roles]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/13_Role_One.png)
 
 On the second page of **Create Role** attach the policy you created above.  Simply type **Can\_CRUD\_Elasticsearch** into the search bar and then check the box next to its name.
 
-![Roles]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/14_Attach_Policy.png)
+![Roles]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/14_Attach_Policy.png)
 
 Skip the **Tags** and go to page four.  Since this role grants EC2 instances (e.g. Ubuntu servers) access to Amazon services, I named it **EC2\_Can\_Use\_Services**.
 
-![Name the service role]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/15_Name_Role.png)
+![Name the service role]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/15_Name_Role.png)
 
 Click **Create role**.
 
 ###3.3 Trust Elasticsearch
 After you click **Create role**,  AWS returns you to the IAM Role dashboard. If not, enter **EC2\_Can\_Use\_Services** into the **find** bar and click your new **EC2\_Can\_Use\_Services** role.  From here, click the **Trust Relationship** tab and click **Edit Trust Relationships**.
 
-![Edit Trust]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/edit_trust_relationships-1024x460.png)
+![Edit Trust]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/edit_trust_relationships-1024x460.png)
 
 Copy and paste the following JSON into the "Policy Document" field.
 
@@ -158,14 +158,14 @@ Copy and paste the following JSON into the "Policy Document" field.
 
 After you click **update trust relationship**, the IAM dashboard reads as follows:
 
-![IAM Role Done]({filename}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
+![IAM Role Done]({static}/images/Part_1_Connect_EC2_to_the_Amazon_Elasticsearch_Service/iam_role_done-1024x584.png)
 
 ##4. Connect to the Elasticsearch Service
 ###4.1 Launch an EC2 instance with the IAM role
 
 From the AWS Management Console, click **Launch a Virtual Machine** or type **EC2** into the search bar and then click **Launch Instance**.
 
-![Launch an EC2]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/16_Launch_EC2.png)
+![Launch an EC2]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/16_Launch_EC2.png)
 
 In **Step 1: Choose an AMI Instance,** select **Ubuntu Server 18.04 LTS**.
 
@@ -173,7 +173,7 @@ In **Step 2: Choose an Instance Type** select **t2.micro** or your preferred ins
 
 In **Step 3:  Configure Instance Details** select **EC2\_Can\_Use\_Services** under **IAM role**.
 
-![Apply IAM Role]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/17_Apply_IAM.png)
+![Apply IAM Role]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/17_Apply_IAM.png)
 
 Now click "Review and Launch" and then launch.  AWS will take a few minutes to launch the instance.
 
@@ -259,7 +259,7 @@ urllib3==1.25.9
 ###4.4 Write a Python Script
 In the **AWS management console**, click the **Elasticsearch service** and copy the address for your endpoint.
 
-![Elasticsearch Endpoint]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/07_Elasticsearch_Endpoint.png)
+![Elasticsearch Endpoint]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/07_Elasticsearch_Endpoint.png)
 
 In my example, I have the following **URI** for my Elasticsearch endpoint:
 

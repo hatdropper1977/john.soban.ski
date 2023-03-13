@@ -8,7 +8,7 @@ Status: published
 
 Hopkins refers to a “year” of “done darkness.”  1885 marks this year, the year Hopkins wrote “[Carrion Comfort].”  For Hopkins, 1885 includes “encroaching derangement” that consumes him (Harris 12). 
 
-![No Worst]({filename}/images/Gerard_Manley_Hopkins_3/01_No_Worst.png)
+![No Worst]({static}/images/Gerard_Manley_Hopkins_3/01_No_Worst.png)
 
 Harris calls Hopkins’ situation “a recurrence of the melancholia” he experiences in 1866 (12). Harris says how Hopkins uses the prose “fits of sadness” which “resemble madness” to refer to “melancholia” (12). The year in which Hopkins “lay wrestling” with God, therefore, marks madness, a madness of depression induced by the City (14).
 
@@ -17,11 +17,11 @@ Harris calls Hopkins’ situation “a recurrence of the melancholia” he exper
 ## I Wake and Feel the Fell of Dark, Not Day
 Hopkins also deals with City-induced madness and depression in his “I Wake and Feel the Fell of Dark, Not Day.” 
 
-![England Skyscrapers]({filename}/images/Gerard_Manley_Hopkins_3/02_England_Skyscrapers.png)
+![England Skyscrapers]({static}/images/Gerard_Manley_Hopkins_3/02_England_Skyscrapers.png)
 
 Akin to the other “Terrible Sonnets," the presence of depression and madness in the poem reflects not an absence of faith within Hopkins, but rather an absence of God’s presence within Hopkins’ world. Ellis writes, “the evidence of this sonnet... testifies mainly not to the priest’s abandonment of faith but to the poet-priest’s attempt to shape into art and insight a great darkness, a darkness that was most terrible because it issued from great faith” (280). The poem casts Hopkins into a seemingly eternal night of misery, combining “thwarted hope of reprieve with doomed acceptance of continued disaster” (Harris 77).
 
-![Carrion Comfort]({filename}/images/Gerard_Manley_Hopkins_3/03_Carrion_Comfort.png)
+![Carrion Comfort]({static}/images/Gerard_Manley_Hopkins_3/03_Carrion_Comfort.png)
 
 The metaphorical night represents a period of depression that Hopkins experiences. The internal poem unravels in Hopkins’ mind, from a place with no connection to God. Instead of any Divine presence, there exists only chaos in Hopkins’ mind. He finds no reality “but the self, the inner mind and the foul body in which that mind is locked, and the unimaginably remote cosmic spaces, where perhaps a departed God ‘lives alas! away’” (Ellis 281). The first quatrain of the poem relates the endless nature of the metaphorical night:
 
@@ -32,13 +32,13 @@ The metaphorical night represents a period of depression that Hopkins experience
 
 Lines two and three tease us. The past tense of these two lines insinuates the night's end, with the poet free from the turmoil of the night’s machinations. Unfortunately, line four reveals more to come. The quatrain, therefore, shows the inarticulate and obfuscate nature of the rules of the night. The absence of a definitive end to the night gives the reader “the nightmarish sense that time is wholly disjointed, that it is both terribly present and terribly endless” (Ellis 282). 
 
-![The Fear]({filename}/images/Gerard_Manley_Hopkins_3/04_The_Fear.png)
+![The Fear]({static}/images/Gerard_Manley_Hopkins_3/04_The_Fear.png)
 
 The verb “saw” in line three conveys that, despite the darkness, Hopkins sees the “sights” of night. He sees and registers all of the atrocities of the night that give him pain. Ellis writes, “darkness does not bring blessed blindness...the heart must instead ‘see’ only too clearly the horrors besetting its dark journeyings [sic]” (283).
 
 Hopkins uses “fell” in both the title and the first line of the poem. “Fell” to the common reader elicits notions of felled trees. With this definition, we read that God fells darkness (like a tree), and the weight falls on Hopkins. MacKenzie, however, points out that those classically educated in the manner of Hopkins recognize “fell”  to define a type of “skin or hide (from the Greek word ***pellis***)” (MacKenzie 181). 
 
-![Shaggy Beast]({filename}/images/Gerard_Manley_Hopkins_3/05_Shaggy_Beast.png)
+![Shaggy Beast]({static}/images/Gerard_Manley_Hopkins_3/05_Shaggy_Beast.png)
 
 The “fell,” or hide, of dark anthropomorphizes it into a feral beast of some sort (1). Ellis writes, the word fell “convey[s] the crushing weight and terrifyingly tactile presence of this huge and shaggy beast of darkness, a creature that is clearly not the **lion-limbed savior** of ‘[Carrion Comfort]’ and may be in part the poet’s own dark physicality” (282). 
 
@@ -54,7 +54,7 @@ Imprisonment results from sentencing, and sentencing results from a court proces
 
 The statement “But where I say / Hours I mean years, mean life” (5-6) further strengthens the inconclusive, seemingly eternal nature of the night. On this night, with no end in sight, Hopkins detaches from God, who “lives alas! away,” and never receives Hopkins' “countless” cries, making them akin to “dead letters” (7-8). Notice, however, “that the second quatrain does not state that for Hopkins God is dead. On the contrary, he specifically implies that ***He lives*** (8)— but unreachably somewhere else” (MacKenzie 182). 
 
-![Depressed City]({filename}/images/Gerard_Manley_Hopkins_3/06_Depressed_City.png)
+![Depressed City]({static}/images/Gerard_Manley_Hopkins_3/06_Depressed_City.png)
 
 Nonetheless, the “dead letters” simile may seem rather amateurish for the accomplished poet Hopkins. But Ellis writes, “a more elevated simile could not make us feel and recognize the sense conveyed here of deep personal injury and loss, the loss of a once dear and intimate friend who has now moved on, without a word, without caring” (284). In addition, much of Hopkins’ dialog with God uses the written word (284). “Letters” compose Hopkins’ sonnets, sermons, and journal entries. 
 
@@ -70,7 +70,7 @@ In the Sextet, Hopkins analyzes the physicality of his prison, and compares it t
 
 Hopkins tastes his own physicality, he dines on his “flesh” and “blood” and “sour dough” of spirit in a perversion of the Eucharist (Ellis 286). Digestion or rather indigestion produces “Gall” and “Heartburn.” His autocannibalism (flesh-eating) sickens him, which symbolizes an act of sin. Hopkins says that God decrees him to a predisposition for sin because God creates his “fleshy vessel of sin” in the first place (Ellis 286). Hopkins builds the mental prison to punish his sin. 
 
-![Mental Prison]({filename}/images/Gerard_Manley_Hopkins_3/07_Mental_Prison.png)
+![Mental Prison]({static}/images/Gerard_Manley_Hopkins_3/07_Mental_Prison.png)
 
 Ellis says the last two lines faintly echo one of Hopkins’ earlier prayers: “O Jesus, O alas Jesus Christ our Lord, we are sinners, spare us; they died impenitent, they lie in hell, we are on earth, there is time yet, we are sorry for our sins, we do repent, thou spare us” (287). Hopkins compares his situation to that of “the lost,” but admits he has a better situation since he can still repent. These lines provide “evidence of Hopkins' spiritual honesty and discipline” (Ellis 288). MacKenzie reminds us of the inconclusive ending. He says that “the fell of dark remains in this poem unalleviated” (184).
 
@@ -88,7 +88,7 @@ Hopkins opens with the first reason for his pain:
 
 The first line, “To seem the stranger lies my lot” reflects Hopkins’ feelings of ostracism. Hopkins, an Englishman, lives in an Irish city and belongs to a predominantly Irish religion, Catholicism. The rest of the stanza indicates the pain he feels from the “removal from his family by their differences in religion” (Martin 384). 
 
-![Irish Englishman]({filename}/images/Gerard_Manley_Hopkins_3/08_Irish_Englishman.png)
+![Irish Englishman]({static}/images/Gerard_Manley_Hopkins_3/08_Irish_Englishman.png)
 
 His conversion to Catholicism, “though it brought his mind peace, parted him in sympathy from his own family, who were Anglicans” (MacKenzie 179). For the first two stanzas, Hopkins “laments, first, his separation from his family in matters of religion, and secondly, his physical separation from England” (Bergonzi 134):
 
@@ -99,7 +99,7 @@ His conversion to Catholicism, “though it brought his mind peace, parted him i
 
 The second stanza deals with the collective “Englishman's misunderstanding of him as a Catholic” (Martin 384). Their disapproval of his conversion inflicts pain on Hopkins. His extension of “weary” over two lines demonstrates this pain and “reflects an exhaustion that can barely drag itself from one word to the next” (Ellis 276). Martin points out this “is in part a poem about human relations as well as Divine,” noticing the glaring insertion of the word “wife” by Hopkins in line 5 (385). 
 
-![Written Blood]({filename}/images/Gerard_Manley_Hopkins_3/09_Written_Blood.png)
+![Written Blood]({static}/images/Gerard_Manley_Hopkins_3/09_Written_Blood.png)
 
 The lack of positive “human relations” in his life brings Hopkins pain. Harris writes that “To Seem the Stranger’s” depiction of Hopkins’ failure with loving Mankind indicates his personally diagnosed failure to live up to his potential in Christ’s eyes. Harris says “the separation between the priest and his community that the ‘Terrible Sonnets' mirrors is the earthly correlative, within the process of daily religious life, of Hopkins’s inability to sustain his communication with Christ” (129).
 
@@ -115,7 +115,7 @@ Mackenzie, however, writes that readers “almost invariably misread” Hopkins�
 
 MacKenzie writes that Hopkins “considered that a great work of art by an Englishman was ‘like a great battle won by England’, being praised even by those who hated her; but to achieve this action in her honor a work must become widely known (Letters, p.231)” (179). Hopkins’ works, however, during his period in Ireland, intended “to help England recover her spiritual honor by returning to the true Faith” (179) “issued in nothing but fragments” (Ellis 277). Mackenzie says, therefore, that Hopkins fails in “entering the battle for England’s honor by producing stimulating works which would redound to the national credit” (179). He says “others were busy fighting, while [Hopkins] was perforce idle, a mere bystander (11. 7-8)” (180).
 
-![Victorian_Coward]({filename}/images/Gerard_Manley_Hopkins_3/10_Victorian_Coward.png)
+![Victorian_Coward]({static}/images/Gerard_Manley_Hopkins_3/10_Victorian_Coward.png)
 
 Hopkins, “idle a being but by where wars are rife” states “his impotence not only as teacher-lover of humanity but as a soldier” (Ellis 276). Instead of being an active member in the crusade to bring England, and furthermore, Catholicism, honor, he finds himself “a mere sidelined soldier, an observer ‘but by’ (only on the periphery of) the war... in which he should but cannot be engaged” (276). Furthermore, Hopkins’ choice of the word “idle” imparts a “bare existence, without energy or purpose or choice... the futile and tedious continuation of something that ought to be life and action but is endlessly thwarted and inactive” (276). Hopkins writes this sonnet in response to his sense of failure at not producing any works of worth in Ireland. He blames this lack of muse on the city itself.  
 
@@ -129,7 +129,7 @@ Hopkins, “idle a being but by where wars are rife” states “his impotence n
 
 We translate lines 2-3 into conventional English: “he that asks for patience would rather see battle and receive wounds because he wearily spends his time on mundane and inconsequential tasks.” Taken further, the lines say: “only those engaged in mundane and inconsequential tasks would ask for patience, those engaged in worthwhile battle would never ask for patience.”  MacKenzie writes, “the quality of patience is never required where there is excitement. No one engaged in active warfare ever needs it... but only those whose lives and whose jobs are dull” (184). Ellis agrees with such a sentiment, saying that Hopkins “initially view[s] [patience] as a thoroughly negative virtue” in he associates patience only with those avoiding their “soldierly” duties (289). 
 
-![Squalid City]({filename}/images/Gerard_Manley_Hopkins_3/11_Squalid_City.png)
+![Squalid City]({static}/images/Gerard_Manley_Hopkins_3/11_Squalid_City.png)
 
 The act of asking for patience troubles Hopkins in this first stanza because he fancies himself a would-be hero, and by asking for patience, he counters that illusion. Ellis writes “it is difficult for Hopkins even to bring himself to pray for patience, because such a prayer is in itself an acknowledgement of his failure as a soldier of God” (Ellis 289). Hopkins carries the idea of equating the action of asking for patience with the action of deeming oneself a failure in the second stanza of the poem:
 
@@ -183,7 +183,7 @@ The next quatrain includes prison imagery:
 
 Hopkins sits in a “prison cell devoid of light and furnishings..., a dissociation room designed to bereave a man of all his own resources” (187). The quatrain gives a “bewildered sense of futility, sense of exile, sense of reduction to animalism” (Ellis 297). He can do nothing more than “grope” around for comfort, like a scavenger hunting for carrion. 
 
-![Scav Hunt]({filename}/images/Gerard_Manley_Hopkins_3/12_Scav_Hunt.png)
+![Scav Hunt]({static}/images/Gerard_Manley_Hopkins_3/12_Scav_Hunt.png)
 
 After this “claustrophobic image,” Hopkins finds himself in a Coleridgesque situation, dying of thirst, “surrounded by a hostile waste of undrinkable water” (MacKenzie 187). In the final sextet, however, he realizes the antidote to his situation:
 
@@ -210,11 +210,11 @@ Hopkins' earlier works lack deep philosophical rumination. “Pied Beauty,” �
 
 We must not compare Gerard Manley Hopkins’ “Terrible Sonnets” to The Book of Job. God punishes Job because of his pride. Job's pride stems from the belief that he could know the unknowable ways of God. God, however, does not punish Hopkins. Hopkins punishes himself. His punishment stems not from his pride, but rather from his piety. He strives for soldierly duty in God’s eyes, and when he feels wanting in his duties, he becomes depressed and miserable. His eagerness for piousness produces an overly sensitive reaction to failings that most of us would not dwell over. Hopkins' perception of failure causes pain, and this pain drives the “Terrible Sonnets.”  He does not lack faith in God. We owe it to Hopkins, therefore, to recognize that Hopkins wrote these sonnets of desolation not on account of “under-devotion,” but rather “over-devotion” to his God. He becomes depressed whenever he slips below the high-water mark of his progress in duty, no matter how little that slip may be. 
 
-![City Burns]({filename}/images/Gerard_Manley_Hopkins_3/13_City_Burns.png)
+![City Burns]({static}/images/Gerard_Manley_Hopkins_3/13_City_Burns.png)
 
 The city causes a heightened sense of failure in Hopkins during the period of these sonnets' creation. The "Terrible Sonnets,” therefore, illustrate the City’s ability to suffocate even the pious and those eager to devote themselves to the cause of humanity. The city lowers the estimation of Humanity even in the eyes of Hopkins, who devotes his life to loving it. The city turns even the most innocent and loving of individuals into a cynical loather of humanity at times.
 
-![Man Grasp]({filename}/images/Gerard_Manley_Hopkins_3/14_Man_Grasp.png)
+![Man Grasp]({static}/images/Gerard_Manley_Hopkins_3/14_Man_Grasp.png)
 
 We can with certainty claim that Hopkins would never write the "Terrible Sonnets” if he avoided the metropolises of England and Dublin. If he stayed in St. Beuno’s, we would remember him for a catalog of poems akin to “Spring” and “Pied Beauty.” Inspired by the splendor of nature around him, he would produce innocent, carefree poems uncritical of himself or humanity. Hopkins' constitution would benefit from a life devoid of the city and devoted to nature. The English literary canon, however, would suffer.
 

@@ -42,19 +42,19 @@ Let's see if the Google AutoML service can beat our idiotic, yet successful **ch
 ## Enable GCP AutoML tables
 Engineers at Google call the menu selection icon the **hamburger**, a bit of slang that simultaneously makes me laugh and makes me hungry.  Click the **hamburger** icon in the upper left corner and then scroll down to **Artificial Intelligence** and select **Tables --> Datasets**.
 
-![Hamburger Menu]({filename}/images/Fast_And_Easy_Automl_Optimize/01_Hamburger.png)
+![Hamburger Menu]({static}/images/Fast_And_Easy_Automl_Optimize/01_Hamburger.png)
 
 Click **enable the API**.
 
-![Enable API]({filename}/images/Fast_And_Easy_Automl_Optimize/02_Enable_API.png)
+![Enable API]({static}/images/Fast_And_Easy_Automl_Optimize/02_Enable_API.png)
 
 Once we enable the API, click **get started**.
 
-![Get Started]({filename}/images/Fast_And_Easy_Automl_Optimize/03_Get_Started.png)
+![Get Started]({static}/images/Fast_And_Easy_Automl_Optimize/03_Get_Started.png)
 
 Name our dataset on the **create dataset** screen.
 
-![New Dataset]({filename}/images/Fast_And_Easy_Automl_Optimize/04_New_Dataset.png)
+![New Dataset]({static}/images/Fast_And_Easy_Automl_Optimize/04_New_Dataset.png)
 
 The AutoML Tables Beta service provides three vehicles for dataset import:
 
@@ -64,41 +64,41 @@ The AutoML Tables Beta service provides three vehicles for dataset import:
 
 We will upload the BUPA dataset from our computer.
 
-![Download BUPA]({filename}/images/Fast_And_Easy_Automl_Optimize/05_Download_Bupa.png)
+![Download BUPA]({static}/images/Fast_And_Easy_Automl_Optimize/05_Download_Bupa.png)
 
 [Click here](http://archive.ics.uci.edu/ml/machine-learning-databases/liver-disorders/bupa.data) to download the CSV file from USC.
 
 USC names the file **bupa.data**.  If we attempt to upload the file **bupa.data**, Google will bark.
 
-![Bad Name]({filename}/images/Fast_And_Easy_Automl_Optimize/06_Bad_Name.png)
+![Bad Name]({static}/images/Fast_And_Easy_Automl_Optimize/06_Bad_Name.png)
 
 Rename our file from **bupa.data** to **bupa.csv** in order to upload the data.  Click **select files** and then click the **bupa.csv** file.
 
 If needed, create a bucket to store the model and metadata.  Click **browse** and then select the **Swiss lunch pail** (my terminology, not Google's).
 
-![Create A Bucket]({filename}/images/Fast_And_Easy_Automl_Optimize/07_Create_A_Bucket.png)
+![Create A Bucket]({static}/images/Fast_And_Easy_Automl_Optimize/07_Create_A_Bucket.png)
 
 Cycle through the bucket wizard and click **create**.
 
-![Create A Bucket]({filename}/images/Fast_And_Easy_Automl_Optimize/08_Create_A_Bucket.png)
+![Create A Bucket]({static}/images/Fast_And_Easy_Automl_Optimize/08_Create_A_Bucket.png)
 
 If needed, create a folder via the **Swiss lunch pail**.
 
-![Create A Folder]({filename}/images/Fast_And_Easy_Automl_Optimize/09_Create_A_Folder.png)
+![Create A Folder]({static}/images/Fast_And_Easy_Automl_Optimize/09_Create_A_Folder.png)
 
 If done properly, we will see all green, and will be able to click **import**.
 
 Click **Import**
 
-![Import Dataset]({filename}/images/Fast_And_Easy_Automl_Optimize/10_Import.png)
+![Import Dataset]({static}/images/Fast_And_Easy_Automl_Optimize/10_Import.png)
 
 Google will import the data, a process which can take hours.  We can close the window and Google will email us once they (it?) completes the import process.
 
-![Import Message]({filename}/images/Fast_And_Easy_Automl_Optimize/11_Import_Message.png)
+![Import Message]({static}/images/Fast_And_Easy_Automl_Optimize/11_Import_Message.png)
 
 After a few minutes, the import fails!
 
-![Fail Ext]({filename}/images/Fast_And_Easy_Automl_Optimize/12_Fail.png)
+![Fail Ext]({static}/images/Fast_And_Easy_Automl_Optimize/12_Fail.png)
 
 The Beta service requires a header.  We hope the **Alpha** version will provide a friendlier UI, and provide a wizard to create a header row.  Until then, we will need to add the header row by hand:
 
@@ -116,15 +116,15 @@ mcv,alkphos,sgpt,sgot,gammagt,drinks,selector
 
 We properly wrangled the data into a form that the Google service accepts.  Upload the modified **bupa.csv** into the import wizard and select import once more.
 
-![Import Dataset]({filename}/images/Fast_And_Easy_Automl_Optimize/10_Import.png)
+![Import Dataset]({static}/images/Fast_And_Easy_Automl_Optimize/10_Import.png)
 
 GCP imports the data...
 
-![Import Message]({filename}/images/Fast_And_Easy_Automl_Optimize/11_Import_Message.png)
+![Import Message]({static}/images/Fast_And_Easy_Automl_Optimize/11_Import_Message.png)
 
 ...and fails once more!
 
-![Fail Rows]({filename}/images/Fast_And_Easy_Automl_Optimize/13_Fail2.png)
+![Fail Rows]({static}/images/Fast_And_Easy_Automl_Optimize/13_Fail2.png)
 
 The service does not accept data sets that contain **less than** 1,000 rows.  For this reason, we can't optimize the **BUPA Liver Disorders** model with **Google AutoML Tables Beta**, a reality that disappoints me greatly.
 
@@ -137,7 +137,7 @@ Our BUPA liver disorders [TensorFlow model]({filename}/fast-and-easy-regression-
 
 Download the [wine dataset](http://archive.ics.uci.edu/ml/datasets/Wine+Quality) from the same UCI website that hosts the BUPA data set.
 
-![Wine Site]({filename}/images/Fast_And_Easy_Automl_Optimize/14_Wine_Site.png)
+![Wine Site]({static}/images/Fast_And_Easy_Automl_Optimize/14_Wine_Site.png)
 
 We follow the method described in the [BUPA TensorFlow]({filename}/fast-and-easy-regression-with-tensorflow.md) blog post to process the data, replacing the **BUPA Data Frame** with the new **Wine Data Frame** where appropriate.
 
@@ -189,7 +189,7 @@ quality | 5.63 | 0.81
 
 Note the wild range swings amongst the features.  We follow the same process from our **BUPA** model to [normalize the data via TensorFlow]({filename}/fast-and-easy-regression-with-tensorflow.md).  The following histogram records the normalized data histograms.  Note that we do not normalize the target, **quality**.
 
-![Wine Histograms]({filename}/images/Fast_And_Easy_Automl_Optimize/15_Wine_Histograms.png)
+![Wine Histograms]({static}/images/Fast_And_Easy_Automl_Optimize/15_Wine_Histograms.png)
 
 Recall that the idiotic **guess mean** algorithm yielded the best results for the **BUPA** data set.  That algorithm guesses the mean of the **training** Data Frame for each row in the **holdout** (or test) Data Frame.  If we apply that algorithm to the **Wine** Data Frame, we observe a RMSE of **0.8012159**, with a RMSE greater than the standard deviation of the entire population.  This result compels us to apply more advanced algorithms.
 
@@ -239,15 +239,15 @@ One principle component (dimension) depicts a poor fit for the regression line.
 
 > NOTE:  The Wine data frame uses **integers** for **quality**.  For this reason we could also apply a **classification** algorithm to predict wine quality.
 
-![Wine One Dim]({filename}/images/Fast_And_Easy_Automl_Optimize/16_Wine_One_Dim.png)
+![Wine One Dim]({static}/images/Fast_And_Easy_Automl_Optimize/16_Wine_One_Dim.png)
 
 The graph of two principal components indicates poor predictive performance.  We cannot draw a clean line that will predict the correct wine quality (depicted by the color and radius of the circles below).
 
-![Wine Two Dims]({filename}/images/Fast_And_Easy_Automl_Optimize/17_Wine_Two_Dims.png)
+![Wine Two Dims]({static}/images/Fast_And_Easy_Automl_Optimize/17_Wine_Two_Dims.png)
 
 The 3D bar chart looks flat, which also indicates that we need more than two Principal Components.
 
-![Wine Bar Chart]({filename}/images/Fast_And_Easy_Automl_Optimize/18_Wine_Bar_Chart.png)
+![Wine Bar Chart]({static}/images/Fast_And_Easy_Automl_Optimize/18_Wine_Bar_Chart.png)
 
 How many Principal Components should we use?  The **eigenvalues** record the variance for each **eigenvector**:
 
@@ -303,49 +303,49 @@ Follow the process that we used to (attempt to) import the **BUPA** data set abo
 
 I created a bucket named **wine-quality-data** and a folder named **red**.
 
-![Import Wine]({filename}/images/Fast_And_Easy_Automl_Optimize/19_Import_Wine.png)
+![Import Wine]({static}/images/Fast_And_Easy_Automl_Optimize/19_Import_Wine.png)
 
 After we click **import** Google will suggest that we close the window.
 
-![So Far So Good]({filename}/images/Fast_And_Easy_Automl_Optimize/20_So_Far_So_Good.png)
+![So Far So Good]({static}/images/Fast_And_Easy_Automl_Optimize/20_So_Far_So_Good.png)
 
 After about forty-five minutes, Google sends an email that reports a successful import.
 
-![Import Email]({filename}/images/Fast_And_Easy_Automl_Optimize/21_Import_Email.png)
+![Import Email]({static}/images/Fast_And_Easy_Automl_Optimize/21_Import_Email.png)
 
 With our imported data set, we can now train the model.
 
 ## Train the Model
 Click the **Train** tab in the console.
 
-![Click Train Button]({filename}/images/Fast_And_Easy_Automl_Optimize/22_Click_Train_Button.png)
+![Click Train Button]({static}/images/Fast_And_Easy_Automl_Optimize/22_Click_Train_Button.png)
 
 Scroll down to our target variable **quality** and change the data type from **categorical** to **numeric**.
 
 > Note:  In the spirit of our earlier efforts, we select **numeric** to continue with the regression theme.  If we want a **classification** model, then we can set **data type** to **categorical**
 
-![Quality Numeric]({filename}/images/Fast_And_Easy_Automl_Optimize/23_Quality_Numeric.png)
+![Quality Numeric]({static}/images/Fast_And_Easy_Automl_Optimize/23_Quality_Numeric.png)
 
 Scroll to the top and set the **target** variable to **quality**.
 
-![Target Quality]({filename}/images/Fast_And_Easy_Automl_Optimize/24_Target_Quality.png)
+![Target Quality]({static}/images/Fast_And_Easy_Automl_Optimize/24_Target_Quality.png)
 
 Select **train** model.  We can limit the number of CPU hours (e.g. cost) if desired.  I just set the value to the maximum.  Our simple model will not consume these resources.  Click **Train Model**.
 
-![Train Model]({filename}/images/Fast_And_Easy_Automl_Optimize/25_Train_Model.png)
+![Train Model]({static}/images/Fast_And_Easy_Automl_Optimize/25_Train_Model.png)
 
 The Google singularity then gets to work and creates the infrastructure needed to train our model.  We can close the browser.  Google will email us a notification once they finish developing the model.
 
-![Training Progress]({filename}/images/Fast_And_Easy_Automl_Optimize/26_Training_Progress.png)
+![Training Progress]({static}/images/Fast_And_Easy_Automl_Optimize/26_Training_Progress.png)
 
 ## View Results
 After a few hours, Google sends an email that notifies us of model completion.
 
-![Training Email]({filename}/images/Fast_And_Easy_Automl_Optimize/27_Training_Email.png)
+![Training Email]({static}/images/Fast_And_Easy_Automl_Optimize/27_Training_Email.png)
 
 Navigate back to the **Tables** service and click the **Models** tab.  The GCP console presents the results.
 
-![Model Results]({filename}/images/Fast_And_Easy_Automl_Optimize/28_Model_Results.png)
+![Model Results]({static}/images/Fast_And_Easy_Automl_Optimize/28_Model_Results.png)
 
 In summary, the **Google AutoML Tables Beta** service yields the best results:
 
@@ -364,15 +364,15 @@ Guess Mean | N/A | 0.801
 ## Model Meta Data
 The service provides feature importance.  Google reports that **alcohol** drives **quality** more than any other feature.
 
-![Feature Importance]({filename}/images/Fast_And_Easy_Automl_Optimize/29_Feature_Importance.png)
+![Feature Importance]({static}/images/Fast_And_Easy_Automl_Optimize/29_Feature_Importance.png)
 
 **Model Hyperparameters** under the **Model** tab re-directs us to the GCP **Operations Logging** console.  These logs include the different scenarios for each iteration.  Trial zero, for example, uses a Neural Network with sixteen (16) layers.
 
-![Hyper Nn L1]({filename}/images/Fast_And_Easy_Automl_Optimize/30_Hyper_Nn_L1.png)
+![Hyper Nn L1]({static}/images/Fast_And_Easy_Automl_Optimize/30_Hyper_Nn_L1.png)
 
 Trial fifteen uses a Gradient Boosted Decision Tree (GBDT).
 
-![Hyper Gbdt]({filename}/images/Fast_And_Easy_Automl_Optimize/31_Hyper_Gbdt.png)
+![Hyper Gbdt]({static}/images/Fast_And_Easy_Automl_Optimize/31_Hyper_Gbdt.png)
 
 The logs provide a cumbersome UI to investigate the trials.  Perhaps the **Alpha** service will clean up the UI and present a friendlier dashboard.
 
@@ -381,33 +381,33 @@ Now that we developed the model, we will deploy the model for use.  The AutoML s
 
 Click **Test And Use --> Online Prediction --> Deploy Model**.
 
-![Deploy Model]({filename}/images/Fast_And_Easy_Automl_Optimize/32_Deploy_Model.png)
+![Deploy Model]({static}/images/Fast_And_Easy_Automl_Optimize/32_Deploy_Model.png)
 
 Google once more deploys the model, and perhaps more importantly, the required infrastructure to enable model serving.
 
 Google emails an alert once the model deployment completes.
 
-![Deployed Email]({filename}/images/Fast_And_Easy_Automl_Optimize/33_Deployed_Email.png)
+![Deployed Email]({static}/images/Fast_And_Easy_Automl_Optimize/33_Deployed_Email.png)
 
 ## Test the Model
 The **online prediction** tab provides a web form to test the model.  
 
-![Deployed Model]({filename}/images/Fast_And_Easy_Automl_Optimize/34_Deployed_Model.png)
+![Deployed Model]({static}/images/Fast_And_Easy_Automl_Optimize/34_Deployed_Model.png)
 
 Scroll down to the **alcohol** field.  What score can we expect for a 160 proof bottle of wine?  Simply enter the number eighty into the alcohol field and then click **test**.
 
-![Test The Model]({filename}/images/Fast_And_Easy_Automl_Optimize/35_Test_The_Model.png)
+![Test The Model]({static}/images/Fast_And_Easy_Automl_Optimize/35_Test_The_Model.png)
 
 The model predicts our strong wine deserves a score of **5.194**
 
-![Prediction Results]({filename}/images/Fast_And_Easy_Automl_Optimize/36_Prediction.png)
+![Prediction Results]({static}/images/Fast_And_Easy_Automl_Optimize/36_Prediction.png)
 
 The AutoML Tables Beta also service provides a REST API for machines to submit predictions to the model.
 
 ## Billing
 The AutoML Tables Beta service costs significantly less than our [Vision model]({filename}/gcp-automl-vision.md).  We paid $28 for one and a half hour of compute time. 
 
-![Billing Metering]({filename}/images/Fast_And_Easy_Automl_Optimize/37_Billing.png)
+![Billing Metering]({static}/images/Fast_And_Easy_Automl_Optimize/37_Billing.png)
 
 Google gave us a credit for the training, so we did not need to pay any out-of-pocket fee.
 

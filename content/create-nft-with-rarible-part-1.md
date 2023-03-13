@@ -10,7 +10,7 @@ Non Fungible Tokens (NFT) allow collectors to own unique, scarce digital assets.
 
 The NFT landscape in early 2021 attracted manic investors, eager to invest thousands of dollars into unlikely and esoteric investments.  A certain experienced Data Scientist and Cloud Professional, for example, bid nearly $900 on a Taco Gif.
 
-![Idiotic Bid]({filename}/images/Create_Nft_With_Rarible_Part_1/01_Idiotic_Bid.png)
+![Idiotic Bid]({static}/images/Create_Nft_With_Rarible_Part_1/01_Idiotic_Bid.png)
 
 This blog will demonstrate how to mint a digital collectible on the [Rarible](https://rarible.com/) NFT marketplace over the course of two posts.
 
@@ -39,56 +39,56 @@ MetaMask provides a digital wallet to store Ethereum.  You create a wallet, and 
 
 To install MetaMask, simply go to the Chrome web store and browse for the [MetaMask Chrome extension](https://chrome.google.com/webstore/search/metamask).  Click the icon, click **Install** and Click **Add Extension**.
 
-![Add Metamask]({filename}/images/Create_Nft_With_Rarible_Part_1/03_Add_Metamask.png)
+![Add Metamask]({static}/images/Create_Nft_With_Rarible_Part_1/03_Add_Metamask.png)
 
 Upon Successful installation, MetaMask will provide a welcome splash screen.
 
-![Welcome To]({filename}/images/Create_Nft_With_Rarible_Part_1/04_Welcome_To.png)
+![Welcome To]({static}/images/Create_Nft_With_Rarible_Part_1/04_Welcome_To.png)
 
 ## Create A Wallet
 To create a new wallet, click **Get Started** and then click **Create a Wallet**.
 
-![Create Wallet]({filename}/images/Create_Nft_With_Rarible_Part_1/05_Create_Wallet.png)
+![Create Wallet]({static}/images/Create_Nft_With_Rarible_Part_1/05_Create_Wallet.png)
 
 MetaMask then explains their data privacy policiy.  Read the policy and click **I Agree**. 
 
-![I Agree]({filename}/images/Create_Nft_With_Rarible_Part_1/06_I_Agree.png)
+![I Agree]({static}/images/Create_Nft_With_Rarible_Part_1/06_I_Agree.png)
 
 Create a password.  The password provides a shortcut to allow you to log into MetaMask without needing to re-enter your seed phrase (described below) or private key.
 
-![Create Password]({filename}/images/Create_Nft_With_Rarible_Part_1/07_Create_Password.png)
+![Create Password]({static}/images/Create_Nft_With_Rarible_Part_1/07_Create_Password.png)
 
 The seed phrase, common amongst most if not all cryptos, provides a human-readable version of your private key.  Click the button that reads **CLICK HERE TO REVEAL SECRET WORDS**.
 
-![Seed Phrase]({filename}/images/Create_Nft_With_Rarible_Part_1/08_Seed_Phrase.png)
+![Seed Phrase]({static}/images/Create_Nft_With_Rarible_Part_1/08_Seed_Phrase.png)
 
 Guard your seed phrase with your life.  Whoever owns the seed phrase owns all of the tokens and digital goods associated with your wallet.  Write the seed phrase down, put it in an envelope and put that envelope in a safe deposit box.  Make several copies.  If you lose your seed phrase you could lose all of your coins.
 
-![Super Secret]({filename}/images/Create_Nft_With_Rarible_Part_1/09_Super_Secret.png)
+![Super Secret]({static}/images/Create_Nft_With_Rarible_Part_1/09_Super_Secret.png)
 
 MetaMask requires you to re-input your seed phrase.  Drag the boxes in the correct order to proceed.
 
-![Click Confirm]({filename}/images/Create_Nft_With_Rarible_Part_1/10_Click_Confirm.png)
+![Click Confirm]({static}/images/Create_Nft_With_Rarible_Part_1/10_Click_Confirm.png)
 
 MetaMask provides some suggestions for preserving and protecting your seed phrase.  Click **All Done**.
 
-![Congrats Splash]({filename}/images/Create_Nft_With_Rarible_Part_1/11_Congrats_Splash.png)
+![Congrats Splash]({static}/images/Create_Nft_With_Rarible_Part_1/11_Congrats_Splash.png)
 
 Close out the **Token Swap** window.
 
-![Token Swap]({filename}/images/Create_Nft_With_Rarible_Part_1/12_Token_Swap.png)
+![Token Swap]({static}/images/Create_Nft_With_Rarible_Part_1/12_Token_Swap.png)
 
 MetaMask now re-directs the web page to your empty wallet.  Click the **buy** icon.  You will need Ethereum to mint NFTs (e.g. create digital art and sell it on Rarible).
 
-![Your Wallet]({filename}/images/Create_Nft_With_Rarible_Part_1/13_Your_Wallet.png)
+![Your Wallet]({static}/images/Create_Nft_With_Rarible_Part_1/13_Your_Wallet.png)
 
 Select **Directly Deposit Ether** and then click **View Account**.
 
-![Select Deposit]({filename}/images/Create_Nft_With_Rarible_Part_1/14_Select_Deposit.png)
+![Select Deposit]({static}/images/Create_Nft_With_Rarible_Part_1/14_Select_Deposit.png)
 
 MetaMask now provides you with your Ethereum wallet address.  Copy this address.  You will send Ethereum to this address.
 
-![Copy Address]({filename}/images/Create_Nft_With_Rarible_Part_1/15_Copy_Address.png)
+![Copy Address]({static}/images/Create_Nft_With_Rarible_Part_1/15_Copy_Address.png)
 
 ## Send Ethereum to Your Wallet
 Go to [Coinbase](https://www.coinbase.com/) to purchase Ethereum.  If you need help with creating an account, then open [this link](https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/create-a-coinbase-account) in a new tab and follow the directions.  
@@ -97,65 +97,65 @@ Go to [Coinbase](https://www.coinbase.com/) to purchase Ethereum.  If you need h
 
 Once you log in and have funds, click **Buy/Sell**
 
-![Click Buy]({filename}/images/Create_Nft_With_Rarible_Part_1/16_Click_Buy.png)
+![Click Buy]({static}/images/Create_Nft_With_Rarible_Part_1/16_Click_Buy.png)
 
 Select Ethereum (Bitcoin won't do) and buy some Ethereum.  Around 0.050 Ethereum suffices, but buy some more if you would like to buy artwork.
 
-![Buy Ethereum]({filename}/images/Create_Nft_With_Rarible_Part_1/17_Buy_Ethereum.png)
+![Buy Ethereum]({static}/images/Create_Nft_With_Rarible_Part_1/17_Buy_Ethereum.png)
 
 Coinbase converts the Dollars to Ethereum.  Click **Buy Now**.
 
-![Confirm Buy]({filename}/images/Create_Nft_With_Rarible_Part_1/18_Confirm_Buy.png)
+![Confirm Buy]({static}/images/Create_Nft_With_Rarible_Part_1/18_Confirm_Buy.png)
 
 Close the window and Click **Send/ Recieve** (next to the **Buy/Sell** button).
 
 In the send form, copy and paste your wallet address into the **to** field.  This will send money to MetaMask.  You will keep this money. Click **Continue**.
 
-![Send Eth]({filename}/images/Create_Nft_With_Rarible_Part_1/19_Send_Eth.png)
+![Send Eth]({static}/images/Create_Nft_With_Rarible_Part_1/19_Send_Eth.png)
 
 Click **Send Now**.
 
-![Send Now]({filename}/images/Create_Nft_With_Rarible_Part_1/20_Send_Now.png)
+![Send Now]({static}/images/Create_Nft_With_Rarible_Part_1/20_Send_Now.png)
 
 Coinbase confirms the transaction.
 
-![Send Confirmed]({filename}/images/Create_Nft_With_Rarible_Part_1/21_Send_Confirmed.png)
+![Send Confirmed]({static}/images/Create_Nft_With_Rarible_Part_1/21_Send_Confirmed.png)
 
 Wait a few minutes and return to your MetaMask wallet.  MetaMask will now show your balance.
 
-![Money Wallet]({filename}/images/Create_Nft_With_Rarible_Part_1/22_Money_Wallet.png)
+![Money Wallet]({static}/images/Create_Nft_With_Rarible_Part_1/22_Money_Wallet.png)
 
 ## Connect to Rarible
 Navigate to the [Rarible web page](https://rarible.com).  Click **Connect Wallet** in the upper right corner.
 
-![Click Connect]({filename}/images/Create_Nft_With_Rarible_Part_1/23_Click_Connect.png)
+![Click Connect]({static}/images/Create_Nft_With_Rarible_Part_1/23_Click_Connect.png)
 
 Select MetaMask from the list of providers.
 
-![Select Mm]({filename}/images/Create_Nft_With_Rarible_Part_1/24_Select_Mm.png)
+![Select Mm]({static}/images/Create_Nft_With_Rarible_Part_1/24_Select_Mm.png)
 
 Click **Next** on the MetaMask Pop-Up.
 
-![Click Next]({filename}/images/Create_Nft_With_Rarible_Part_1/25_Click_Next.png)
+![Click Next]({static}/images/Create_Nft_With_Rarible_Part_1/25_Click_Next.png)
 
 Click **Proceed** to accept the terms of service.
 
-![Click ToS]({filename}/images/Create_Nft_With_Rarible_Part_1/26_Click_ToS.png)
+![Click ToS]({static}/images/Create_Nft_With_Rarible_Part_1/26_Click_ToS.png)
 
 You just created and logged into an account on Rarible.
 
 ## Customize Your Profile
 Click your picture in the upper right (looks like an Atari 2600 sprite) and then click **Edit Profile**
 
-![Edit Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/27_Edit_Profile.png)
+![Edit Profile]({static}/images/Create_Nft_With_Rarible_Part_1/27_Edit_Profile.png)
 
 Fill out your profile and Upload a picture.
 
-![Config Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/28_Config_Profile.png)
+![Config Profile]({static}/images/Create_Nft_With_Rarible_Part_1/28_Config_Profile.png)
 
 Once you click **submit**, MetaMask will prompt you for a **Sign** request.  MetaMask will use your private key to digitally sign the update request and post the change to the Ethereum blockchain.
 
-![Sign Profile]({filename}/images/Create_Nft_With_Rarible_Part_1/29_Sign_Profile.png)
+![Sign Profile]({static}/images/Create_Nft_With_Rarible_Part_1/29_Sign_Profile.png)
 
 You now have an account on Rarible with a username and Avatar picture.
 
@@ -164,6 +164,6 @@ NFTs provide an exciting and fun investment vehicle.  With Rarible you can buy a
 
 Since you have an account on Rarible and some Ethereum in your wallet, you may want to purchase some of my digital artwork.  Click this link to [buy my isometric pixel art on Rarible](https://rarible.com/sobanski?tab=created).
 
-![For Sale]({filename}/images/Create_Nft_With_Rarible_Part_1/30_For_Sale.png)
+![For Sale]({static}/images/Create_Nft_With_Rarible_Part_1/30_For_Sale.png)
 
 [Next month]({filename}/create-nft-with-rarible-part-2.md) I will provide a fun, straightforward HOWTO on how to create and sell your own NFTs.

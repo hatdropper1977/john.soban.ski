@@ -12,7 +12,7 @@ In the first part of this series, I describe a [Flask application with an S3 dat
 
 Instead of grinding through the Lambda development and integration by hand, [Zappa](https://github.com/Miserlou/Zappa) promises to do this automatically.  Zappa deploys the Flask application into Lambda as depicted below.
 
-![Zappa Lambda]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/01_Zappa_Lambda.png)
+![Zappa Lambda]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/01_Zappa_Lambda.png)
 
 ## Test Drive the Original App
 Before we get started, download and run my test app.
@@ -44,11 +44,11 @@ Open a web browser and access ***http://your ip:5000***.
 
 Notice the app performs client side validation.
 
-![Client side validation]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/05_Client_Side_Validation.png) 
+![Client side validation]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/05_Client_Side_Validation.png) 
 
 Once you submit a message, enter ***http://your ip:5000/user/your user key*** in the browser to see the database retrieval in action.
 
-![Retrieve User Data]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
+![Retrieve User Data]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
 
 ## Deploy Zappa
 Now that we have a working Flask application, let's install and run [Zappa](https://github.com/Miserlou/Zappa).
@@ -81,45 +81,45 @@ Deployment complete!: https://hbjj91si68.execute-api.us-east-1.amazonaws.com/dev
 ## Test Drive the Deployed App
 Type the URL of the API Gateway into a browser and you will see the APP.
 
-![Zappa Lambda]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/02_API_Gateway.png)
+![Zappa Lambda]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/02_API_Gateway.png)
 
 Notice that the Bootstrap validation still works, you need to enter a number in the number field, and an IP address in the IP address field.
 
 When you click Submit, the web data base application writes the form data to S3 and gives you a User ID.
 
-![After Submit]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/03_After_Submit.png)
+![After Submit]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/03_After_Submit.png)
 
 Now, to check if the route works correctly, you can enter your key in the **/user/user date/user key** field.
 
-![Failed Submit]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/04_Failed_Submit.png)
+![Failed Submit]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/04_Failed_Submit.png)
 
 Note that since this is a "dev" deployment, I need to include dev in the URL.  So I need to append **/dev/user/user date/user key** to the API URL.
 
-![Add Dev to URL]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/05_DEV.png)
+![Add Dev to URL]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/05_DEV.png)
 
 ## Zappa Goodies
 If you go to your console, you will see that Zappa automatically created an API gateway for your project.  I used the default project name ***web-db-app-w-s3***.
 
-![API GW]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/06_API_GW.png)
+![API GW]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/06_API_GW.png)
 
 Zappa also created a Lambda function.
 
-![Lambda Function]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/07_Lambda_Func.png)
+![Lambda Function]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/07_Lambda_Func.png)
 
 The Lambda function uses a Zappa generated Execution (IAM) Role.
 
-![Role]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/08_Ex_Role.png)
+![Role]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/08_Ex_Role.png)
 
 If you navigate to the IAM roles screen, you will see that Zappa generated an automatic in-line policy.
 
-![Policy]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/09_Inline.png)
+![Policy]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/09_Inline.png)
 
 ## Improving the Application
 I created the ***web-db-app-w-s3*** application to demonstrate the bare minimum of database interaction, and demonstrate writes and reads of form data to/ from S3 via a web browser.
 
 To demonstrate the read, the user needs to copy and paste his user key by hand.
 
-![No link]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/10_No_Link.png)
+![No link]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/10_No_Link.png)
 
 I tried to improve this situation by manually adding an ***HREF*** to the ***return*** statement.
 
@@ -137,7 +137,7 @@ return 'Your key is <a href=/user/{}/{}>{}/{}</a>.'.format(S3_SUB_BUCKET_NAME,S3
 
 This way a user has a link to click.
 
-![Now with link]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/11_With_Link.png)
+![Now with link]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/11_With_Link.png)
 
 I took the lazy way out and hard coded the ***HREF***.  This approach works fine on my development server, but fails when I deploy it to Lambda via Zappa.  The hard coded approach will link to ***api-endpoint/user/date/key*** but needs to link to ***api-endpoint/dev/user/date/key***.
 
@@ -207,11 +207,11 @@ Your application is now live at: https://bymeej7ka2.execute-api.us-east-1.amazon
 
 Go to the URL and fill out the form.  If you inspect the link, you will see that the ***url_for*** in the template knew to add ***dev*** to the path.
 
-![Looks Good]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/12_Looks_Good.png)
+![Looks Good]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/12_Looks_Good.png)
 
 When you click the link, Flask routes to the correct view.
 
-![Correct URL]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/13_Success.png)
+![Correct URL]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_Two/13_Success.png)
 
 ## Conclusion
 We deployed a Flask app to the horizontally scalable Lambda ecosystem.  The S3 back end also scales on-demand, in contrast to traditional RDBMS which have a capacity limit, and therefore introduce bottlenecks.  Zappa took care of all the hard work, setting up roles, policies and the API Gateway/ FaaS integration.

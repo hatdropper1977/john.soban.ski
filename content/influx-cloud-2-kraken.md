@@ -19,26 +19,26 @@ In this blog post you will deploy your own personal Kraken terminal using the In
  - Integrated control panel and data viz dashboards
  - Quick onboarding
  
-![InfluxDB Logo]({filename}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
+![InfluxDB Logo]({static}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
 
 ### Sign Up
 Go to the [beta signup](https://cloud2.influxdata.com/beta/signup) page and enter your email address.
 
-![Sign up]({filename}/images/Influx_Cloud_2_Kraken/01_Signup.png) 
+![Sign up]({static}/images/Influx_Cloud_2_Kraken/01_Signup.png) 
 
 The website tells you to check your email.
 
-![Verify Splash]({filename}/images/Influx_Cloud_2_Kraken/02_Verify.png) 
+![Verify Splash]({static}/images/Influx_Cloud_2_Kraken/02_Verify.png) 
 
 You should see an email from **cloudbeta@influxdata.com**.
 
 Click **Verify Your Email**.
 
-![Email]({filename}/images/Influx_Cloud_2_Kraken/03_Email.png) 
+![Email]({static}/images/Influx_Cloud_2_Kraken/03_Email.png) 
 
 Once you verify, InfluxDB will take you to the welcome screen.
 
-![Splash]({filename}/images/Influx_Cloud_2_Kraken/04_Splash.png) 
+![Splash]({static}/images/Influx_Cloud_2_Kraken/04_Splash.png) 
 
 Leave the defaults and click **continue**.
 
@@ -49,11 +49,11 @@ Create a bucket to store data for analytics and plots.
 
 From the main control panel, click **settings**.
 
-![Settings]({filename}/images/Influx_Cloud_2_Kraken/05_Settings.png) 
+![Settings]({static}/images/Influx_Cloud_2_Kraken/05_Settings.png) 
 
 Click **Buckets** and **Create Bucket**.
 
-![Create a bucket]({filename}/images/Influx_Cloud_2_Kraken/06_Create_A_Bucket.png) 
+![Create a bucket]({static}/images/Influx_Cloud_2_Kraken/06_Create_A_Bucket.png) 
 
 Enter a **Name** for the bucket.  
 
@@ -61,22 +61,22 @@ I named mine **Buck**.
 
 You will need to set the retention period to three or less days in order to use the free tier.
 
-![Save Retention Period]({filename}/images/Influx_Cloud_2_Kraken/07_Save_Retention_Period.png) 
+![Save Retention Period]({static}/images/Influx_Cloud_2_Kraken/07_Save_Retention_Period.png) 
 
 #### Generate a Token
 A token enables programmatic access to your InfluxDB Cloud 2.0 Platform API.
 
 Click **Generate** on the **Tokens** Tab.
 
-![Generate Token]({filename}/images/Influx_Cloud_2_Kraken/08_Gen_Token.png) 
+![Generate Token]({static}/images/Influx_Cloud_2_Kraken/08_Gen_Token.png) 
 
 You can scope the token for read and or write on all buckets or just one of your choosing.
 
-![Bucket Scope]({filename}/images/Influx_Cloud_2_Kraken/09_Bucket_Scope.png) 
+![Bucket Scope]({static}/images/Influx_Cloud_2_Kraken/09_Bucket_Scope.png) 
 
 Click **Copy to Clipboard** and save the token in a local file.
 
-![Copy Paste]({filename}/images/Influx_Cloud_2_Kraken/10_Copy_Paste_Key.png) 
+![Copy Paste]({static}/images/Influx_Cloud_2_Kraken/10_Copy_Paste_Key.png) 
 
 Your Python script (found in the following sections) requires this token.
 
@@ -85,7 +85,7 @@ You will find the Org Name in the upper left corner of your console.
 
 You can also find it under the **Org Profile** tab.
 
-![Org Name]({filename}/images/Influx_Cloud_2_Kraken/11_Org_Name.png) 
+![Org Name]({static}/images/Influx_Cloud_2_Kraken/11_Org_Name.png) 
 
 You can see my org name in the picture above.
 
@@ -202,20 +202,20 @@ In your console, click **Data Explorer**.
 
 From there, select the **bucket name** you set in the Python script and click submit.
 
-![Data Explorer]({filename}/images/Influx_Cloud_2_Kraken/12_Click_Data_Explorer.png) 
+![Data Explorer]({static}/images/Influx_Cloud_2_Kraken/12_Click_Data_Explorer.png) 
 
 You will see the points that you pushed from the Python script.
 
-![First Plot]({filename}/images/Influx_Cloud_2_Kraken/13_First_Plot.png) 
+![First Plot]({static}/images/Influx_Cloud_2_Kraken/13_First_Plot.png) 
 
 Execute the script from your laptop/ server a few more times and then refresh the plot.
 
-![Second Plot]({filename}/images/Influx_Cloud_2_Kraken/14_Second_Plot.png) 
+![Second Plot]({static}/images/Influx_Cloud_2_Kraken/14_Second_Plot.png) 
 
 ## Kraken Terminal
 In this section, we will use the [Kraken Ticker API](https://www.kraken.com/en-us/help/api) to get coin trade data.
 
-![Kraken logo]({filename}/images/Influx_Cloud_2_Kraken/15_Kraken_Logo.png)
+![Kraken logo]({static}/images/Influx_Cloud_2_Kraken/15_Kraken_Logo.png)
 
 The Kraken API returns trade data in the form of JSON encoded key value pairs.
 
@@ -225,7 +225,7 @@ Kraken provides information on several dozen Crypto/ Currency pairs.
 
 The following screen grab illustrates some options.
 
-![Kraken Pairs]({filename}/images/Influx_Cloud_2_Kraken/16_Kraken_Pairs.png) 
+![Kraken Pairs]({static}/images/Influx_Cloud_2_Kraken/16_Kraken_Pairs.png) 
 
 You can test the API via curl.
 
@@ -312,19 +312,19 @@ Create a Dashboard for the new Kraken data.
 
 Click **Create Dashboard** under **Dashboards**.
 
-![Create Dashboard]({filename}/images/Influx_Cloud_2_Kraken/17_Create_Dashboard.png) 
+![Create Dashboard]({static}/images/Influx_Cloud_2_Kraken/17_Create_Dashboard.png) 
 
 Click the **Add Cell** button to add a cell.
 
 You can optionally name the dashboard. 
 
-![Add Cell]({filename}/images/Influx_Cloud_2_Kraken/18_Add_Cell.png) 
+![Add Cell]({static}/images/Influx_Cloud_2_Kraken/18_Add_Cell.png) 
 
 You will first add the Bitcoin close price.
 
 Follow the blue boxes on the screen grab below to select your bucket (buck), measurement (kraken), field (last closed price) and tag (the Bitcoin/USD pair).
 
-![Bitcoin Price]({filename}/images/Influx_Cloud_2_Kraken/19_Bitcoin_Price.png)
+![Bitcoin Price]({static}/images/Influx_Cloud_2_Kraken/19_Bitcoin_Price.png)
 
 Save the cell and add it to your Dashboard.
 
@@ -332,7 +332,7 @@ You can plot any/ all of the pairs on the graph by clicking their tag values.
 
 Litecoin and XMR, for example, have similar prices and plot nicely together.
 
-![XMR LTC]({filename}/images/Influx_Cloud_2_Kraken/20_XMR_LTC_Price.png)
+![XMR LTC]({static}/images/Influx_Cloud_2_Kraken/20_XMR_LTC_Price.png)
 
 ### Math in Action
 Let's say you wanted to plot the rate of change (velocity) for the Bitcoin price.
@@ -341,7 +341,7 @@ Go back to your grade school calculus and remember that **derivative** gives us 
 
 Simply click **derivative** under **AGGREGATE FUNCTIONS** to apply this math.
 
-![Bitcoin Velocity]({filename}/images/Influx_Cloud_2_Kraken/21_Bitcoin_Derivative.png)
+![Bitcoin Velocity]({static}/images/Influx_Cloud_2_Kraken/21_Bitcoin_Derivative.png)
 
 You can add cells to your dashboard for situational awareness.
 
@@ -349,7 +349,7 @@ I created a cell that plots the velocity of all of the coins (against USD).
 
 You can see that Stellar experienced a spike around 4am.
 
-![Dashboard]({filename}/images/Influx_Cloud_2_Kraken/22_Dashboard.png)
+![Dashboard]({static}/images/Influx_Cloud_2_Kraken/22_Dashboard.png)
 
 ## Conclusion
 I hope you appreciate the power of the preceding project.  You demonstrated how to pull data from a remote API and push the data to a (free as in beer), cloud based Time Series Database as a service.  The InfluxDB Cloud 2.0 platform provides easy to use tools to plot, filter and perform math on the plumbed data.  

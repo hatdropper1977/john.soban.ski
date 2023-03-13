@@ -17,7 +17,7 @@ Status: published
   -  Situational Awareness
      -  Get granular, instantaneous metrics plumbed from each and every data frame in your networks
 
-![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
+![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
 The following outline records the steps necessary to install OpenDaylight on Ubuntu LTS 18.04
 
@@ -164,7 +164,7 @@ Karaf started in 1s. Bundle stats: 54 active, 55 total
 
 OpenDaylight starts with some radical ASCII art!
 
-![OpenDaylight Splash]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/01_ODL_Splash.png)
+![OpenDaylight Splash]({static}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/01_ODL_Splash.png)
 
 Now, from the ***Karaf*** command prompt, install the ***DLUX GUI***.
 
@@ -188,11 +188,11 @@ Alternatively (assuming your firewall/ security groups permit it), you can go to
 
 http://8.7.6.5:8181/index.html#/login
 
-![OpenDaylight DLUX Login]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/02_DLUX_LOGIN.png)
+![OpenDaylight DLUX Login]({static}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/02_DLUX_LOGIN.png)
 
 If you log in with ***admin***/***admin***, you will see the (pretty boring) ***DLUX*** console.
 
-![OpenDaylight DLUX Console]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/03_DLUX.png)
+![OpenDaylight DLUX Console]({static}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/03_DLUX.png)
 
 At this point, you can shut down the service by typing ***system:shutdown***.
 

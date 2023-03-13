@@ -8,7 +8,7 @@ Status: published
 
 The City fuels Hopkins' sense of failure. The City provokes him to lose faith in himself and Humankind. Hopkins’ lack of faith in Humanity leads to feelings of inadequacy in his vocation. A Priest must focus on his fellow man’s spiritual potential instead of his depravity. The city steers Hopkins away from his vocation. The City distracts him with “outward occupations” of which “not only the mind is drawn away from God, which may be at the call of duty and be God’s will, but unhappily the will too is entangled, worldly interests freshen, and worldly ambitions revive” (Correspondence 70). The City builds distraction upon distraction, confounding Hopkins' true calling. The city pushes Hopkins from the path of righteousness which causes Hopkins to harbor great feelings of pain and depression.
 
-![The Beast]({filename}/images/Gerard_Manley_Hopkins_2/01_The_Beast.png)
+![The Beast]({static}/images/Gerard_Manley_Hopkins_2/01_The_Beast.png)
 
 > NOTE: [Click here for part one]({filename}/gerard-manley-hopkins-1.md) if you missed it last month
 
@@ -32,7 +32,7 @@ The poem “No Worst, There is None” expresses Hopkins' pain and depression ca
 
 The poem catalogs the extreme internal anguish felt by Hopkins. He attempts to impart to the reader the magnitude of the pain he feels. He wishes to express his pain, and finds it nearly inexpressible. Hopkins concedes to the fact that people may ignore his lamentations because the lamentations deal with the pain that lies outside the normal sphere of experience (12). During their “durance,” or life, the average person never deals with such an intense psychological pain so “steep or deep,” and therefore won't fully empathize with Hopkins’ pain.
  
-![Mountains Cliff]({filename}/images/Gerard_Manley_Hopkins_2/02_Mountains_Cliff.png)
+![Mountains Cliff]({static}/images/Gerard_Manley_Hopkins_2/02_Mountains_Cliff.png)
 
 Hopkins concedes that those “who ne’er hung” around his “cliffs” of anguish will probably view them as trivialities, or "hold them cheap,” and blow off his lamentations (11). Nonetheless, Hopkins tries his best to express the extreme internal anguish he experiences.
 
@@ -42,7 +42,7 @@ The first half of the poem’s opening line: “No Worst, there is None’’—
 
 Hopkins’ suffering turns him into a beast, with his “cries heav[ing], herds-long”— i.e., like sheep bleating in imitation of one another after a long journey (5). Hopkins also hints at sporadic breaks in his torture, at the moments when his cries “lull, then leave off” (7). The lulls add to his misery because they hint at the inevitable, unrivaled, and unprecedented afflictions that lurk around the corner.
 
-![No Worse]({filename}/images/Gerard_Manley_Hopkins_2/03_No_Worse.png)
+![No Worse]({static}/images/Gerard_Manley_Hopkins_2/03_No_Worse.png)
 
 The Speaker falls upon a self­destructive attitude. He says “Here! creep/ Wretch, under a comfort serves in a whirlwind: all / Life death does end and each day dies with sleep” (12-14). The finite nature of life provides the only comfort in the Speaker's life. Death allows him to escape the misery of life, and until then, he uses the living death of sleep to escape. The speaker’s suicidal view that contentment exists only after death appears nihilistic. 
 
@@ -55,11 +55,11 @@ We must reject counterarguments that claim the distance between the speaker and 
 ## Comforter, where, where is your comforting?
 “Comforter, where, where is your comforting?” (3) does not declare an indignant loss of faith, but rather a lamentation by Hopkins regarding his own inability to “enact the gradual attainment of colloquy with God” (Harris xiii). The line describes Hopkins’ “failure to achieve the climactic and redemptive colloquy with Christ which, he knew, Ignatius and others stipulated should” come naturally to a priest (Harris 3). A Priest must perform the functions that Christ did while on Earth. Given the severity of this responsibility, Priests should have a special relationship with God, to properly perform His Sacraments. 
 
-![Jesuit Yells]({filename}/images/Gerard_Manley_Hopkins_2/04_Jesuit_Yells.png)
+![Jesuit Yells]({static}/images/Gerard_Manley_Hopkins_2/04_Jesuit_Yells.png)
 
 In his mind, Hopkins' relationship with Christ falls short, and this leads to thoughts of failed duty. This perceived failure leads to anguish for the Jesuit Priest. The line “O the mind, mind has mountains: cliffs of fall/ Frightful, sheer, no-man-fathomed...” (9-10) connects Hopkins' anguish to his “failings” in duty. Something in Hopkins' mind causes his pain and he attempts to identify the source. He likens his in-depth rumination and self-analysis to mountaineering. His mental gropings cause him to tumble down into a dark valley of his soul to a place he previously has never seen, imagined, or “fathomed” (10). In this dark corner of his soul, he finds a hatred of modern man, a product of life in the city. Hatred stands counter to his priestly nature.
 
-![Victorian Drunks]({filename}/images/Gerard_Manley_Hopkins_2/05_Victorian_Drunks.png)
+![Victorian Drunks]({static}/images/Gerard_Manley_Hopkins_2/05_Victorian_Drunks.png)
 
 In regards to an absent “comforter,” Harris attributes Christ's absence not to His own accord, but rather because the modem man excised Him from his world (34). Modem man’s creation of the city and destruction of nature leaves “the world to be reshapen in licentious metamorphosis according to human will,” thereby “withdraw[ing] the divine breath” (Harris 34). Harris writes, “‘the fact,’ as St. Ignatius puts it ‘of God’s being in every creature by essence, presence and power’ was no longer an emotional reality to Hopkins, though he sturdily maintained it in principle” (34). Mankind's ability to push the divine out of his machinations yields “a chief-/ woe, world-sorrow; ... an age old anvil...” that hearkens back to the original sin of Eden and the associated apple-eating (5-6).
 
@@ -73,11 +73,11 @@ We also see **to eat or not to eat** at the beginning of “[Carrion Comfort]:�
 
 Hopkins refuses to gorge on despair to comfort himself from the pain after a battle. The poem opens with Hopkins proclaiming “Not, I’ll not, carrion comfort, Despair, not feast on thee” (1). He refuses to lose his humanity and scavange on rotting flesh. 
 
-![Carrion Comfort]({filename}/images/Gerard_Manley_Hopkins_2/06_Carrion_Comfort.png)
+![Carrion Comfort]({static}/images/Gerard_Manley_Hopkins_2/06_Carrion_Comfort.png)
 
 Hopkins clinga to his remaining faint flicker of humanity and says “Not untwist—slack they may be—these last strands of man/ in me” (2-3). Hopkins also refuses to regress into a state of spiritual cannibalism. He wants to avoid the temptation of self-consuming pity and fully-immersive wallowing to attain comfort in life. He won’t indulge his depressive tendencies.
 
-![Carrion Wall]({filename}/images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png)
+![Carrion Wall]({static}/images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png)
 
 After the opening quatrain, “[Carrion Comfort]” seems Job-esque in nature. Hopkins slings questions at God, in seemingly the same manner that Job does:
 
@@ -101,15 +101,15 @@ Like the epilogue of The Book of Job, The sextet of “(Carrion Comfort]” indi
 
 Hopkins acknowledges a resolution, saying “Nay in all that toil, that coil, since (seems) I kissed the rod/ Hand rather, my heart lo! lapped strength, stole joy, would laugh, cheer” (10-11). He ends the battle, and humbles himself to his adversary, and this yields satisfaction. The Adversary's torture purifies Hopkins. Monks wear hairshirts and whip themselves in an attempt to emulate the physical suffering that Christ felt on earth. Their pain leads them to believe they can come closer to Him during times of weakness. “The hero[’s]... heaven­handling fl[ings]” Hopkins into a state of humility and repentance. Hopkins closes with “...That night, that year/ Of now done darkness I wretch lay wrestling with (My God!) my God” (13-14). He insinuates an end to his year of darkness, his year of darkness, his year of wrestling with his adversary.
 
-![Terrible Sonnets]({filename}/images/Gerard_Manley_Hopkins_2/08_Terrible_Sonnets.png)
+![Terrible Sonnets]({static}/images/Gerard_Manley_Hopkins_2/08_Terrible_Sonnets.png)
 
 Can we call the speaker of the poem a Job analog?  Like Job, Hopkins questions his creator, God punishes him, Hopkins humbles himself, and then Hopkins rekindles his faith. We must look deeper to find the answer. God strikes Job, a completely pious man, with a disease that causes Job to protest. In his protests, Job "reminds" God of his piety and goodness as a human. He asks God why someone so pious should suffer. The speaker of “[Carrion Comfort]” however, differs in his protests. The speaker instead reminds God of His strength and Omnipotence and then compares it to his own weakness and patheticness. He asks God what satisfaction an Omnipotent entity could derive from destroying a futile peon. He calls God “Thou Terrible,” and "reminds" him of His strength (5). 
 
-![Hopkins Depressed]({filename}/images/Gerard_Manley_Hopkins_2/09_Hopkins_Depressed.png)
+![Hopkins Depressed]({static}/images/Gerard_Manley_Hopkins_2/09_Hopkins_Depressed.png)
 
 The speaker’s argument, therefore, reminds one not of the pious Job, but rather of a sinner threatened with a sentence of eternal damnation begging for clemency. The speaker does not wage a philosophical battle, he does not ask why the pious should suffer. Instead, the speaker wages a battle to save his soul through an appeal to his Judge’s sense of fairness. In the speaker, we do not see a philosophical logician who lost faith in God on some “principle.”  Instead, we see a panicked, irrational child scared for the fate of his eternal life. 
 
-![Hopkins Yells]({filename}/images/Gerard_Manley_Hopkins_2/10_Hopkins_Yells.png)
+![Hopkins Yells]({static}/images/Gerard_Manley_Hopkins_2/10_Hopkins_Yells.png)
 
 He stammers off his pathetic attacks one after another, in a futile, animal-like manner. Once his head clears, he realizes the idiocy of his actions, and humbles himself to God, grateful for the fact that God chose not to punish his insolence. Under such rationale, the first quatrain still makes sense. It deals with Hopkins’ refusal to ever descend into that state of maddening insolence, marked by the second quatrain, ever again. When Hopkins calls God “terrible,” he means “one who instills awe” (5). He says “terrible” not to insult, but instead to "remind" God of the fear He instills in Hopkins.
 

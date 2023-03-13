@@ -16,24 +16,24 @@ In this blog post, I will develop Python code to implement a lesser known **exem
 
 The RCE algorithm assigns a class to **test** data based on whether or not the data points live inside **hit footprints** of **training** data.
 
-![2d RCE Map]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
+![2d RCE Map]({static}/images/Rce_Python_Part_1/21_2d_Rce.png)
 
 Open my post [A Graphical Introduction to Probabalistic Neural Networks]({filename}/graphical_intro_to_probabilistic_neural_networks.md) in a new tab for a deep dive into the math behind RCE.
 
 At a high level, RCE draws a circle around each labeled **training** observation, with a radius (lambda) equal to the distance of the closest labeled training point in the **opposite** class. Each circle indicates the **hit footprint** for that class.
 
-![RCE in action]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
+![RCE in action]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
 
 ## RCE vs. Nearest Neighbor (NN)
 The following two-dimensional (2d) plot shows five data points, two of class **X**, two of class <span style="color:red">**O**</span> and one unknown observation, <span style="color:green">**?**</span>, we wish to classify.
 
-![How would you classify this green question mark]({filename}/images/Rce_Python_Part_1/01_Classify_Green.png)
+![How would you classify this green question mark]({static}/images/Rce_Python_Part_1/01_Classify_Green.png)
 
 The **NN** algorithm uses the classes of the nearest data points to classify an unknown observation.  Based on the plot above, **NN** identifies that the green question mark belongs to class **X**.  The two **X's** clearly lie closer to the green question mark than the two red <span style="color:red">**O's**</span>.
 
 **RCE**, however uses a hit radius approach to classify datum.  The algorithm calculates a footprint for each of the known data, with radii lengths determined by the vicinity of data from the opposite class.  The **RCE** footprint for the four data points follows:
 
-![RCE classification of the green question mark]({filename}/images/Rce_Python_Part_1/02_Classify_Rce.png)
+![RCE classification of the green question mark]({static}/images/Rce_Python_Part_1/02_Classify_Rce.png)
 
 Based on this model, the green question mark lands in the footprint of the red class, and **RCE** indicates that the unknown observation belongs to class <span style="color:red">**O**</span>.
 
@@ -52,7 +52,7 @@ pima_df.head()
 
 The **head()** method gives a quick peek at the features and observations.
 
-![Pima Table]({filename}/images/Rce_Python_Part_1/03_Pima_Table.png)
+![Pima Table]({static}/images/Rce_Python_Part_1/03_Pima_Table.png)
 
 
 A quick [Seaborn](https://seaborn.pydata.org/) histogram depicts the frequency of **Outcome Zero** (No Diabetes) vs. **Outcome One** (Diabetes).
@@ -65,7 +65,7 @@ sns.histplot( pima_df['Outcome'],
 
 A quick glance shows that 2/3 of the observations indicate **no diabetes**.
 
-![Histogram of Outcome]({filename}/images/Rce_Python_Part_1/04_Outcome_Hist.png)
+![Histogram of Outcome]({static}/images/Rce_Python_Part_1/04_Outcome_Hist.png)
 
 ### Explore One Feature
 Of all the given features, I assume that **Glucose** will impact **Outcome** the most, so I update the histogram to depict the relationship between the two.
@@ -78,7 +78,7 @@ sns.histplot( x = pima_df['Glucose'],
 
 Blood sugar over **150** appears to indicate **diabetes**.  Lower than **150** we see a lot of overlap.
 
-![Glucose Outcome Histogram]({filename}/images/Rce_Python_Part_1/05_Glucose_Hist.png)
+![Glucose Outcome Histogram]({static}/images/Rce_Python_Part_1/05_Glucose_Hist.png)
 
 Kernel Density Estimation (KDE) provides a smoothed "overhead view" of the histogram.
 
@@ -90,7 +90,7 @@ sns.displot( x = pima_df['Glucose'],
 
 This view also shows the lack of clear separation between the two **Outcomes** based on **Glucose**.
 
-![Glucose Outcome Kernel Density Estimation]({filename}/images/Rce_Python_Part_1/06_Glucose_Density.png)
+![Glucose Outcome Kernel Density Estimation]({static}/images/Rce_Python_Part_1/06_Glucose_Density.png)
 
 ### Explore Two Features
 Use **PairGrid** to cycle through all features in order to depict their relationships to **Outcome**.
@@ -115,7 +115,7 @@ g.add_legend
 
 **Glucose** and **BMI** appear to have a tiny bit of correlation with **Outcome**, based on the left/ right orentation of the density **blobs**.
 
-![Correlation of Features with Outcome]({filename}/images/Rce_Python_Part_1/07_Correlate_Features.png)
+![Correlation of Features with Outcome]({static}/images/Rce_Python_Part_1/07_Correlate_Features.png)
 
 A **KDE** plot provides an overhead, three-dimensional view of the relationships between **Glucose**, **BMI** and **Outcome**.
 
@@ -128,7 +128,7 @@ sns.displot( x = pima_df['Glucose'],
 
   Based on the near-total overlap, the two features do not provide enough data to predict **Outcome**.
 
-![Glucose, BMI and Outcome KDE]({filename}/images/Rce_Python_Part_1/08_Glucose_Bmi.png)
+![Glucose, BMI and Outcome KDE]({static}/images/Rce_Python_Part_1/08_Glucose_Bmi.png)
 
 A **Seaborn** heat map visualizes correlations across features.
 
@@ -164,7 +164,7 @@ sns.heatmap(corr,
 
 Look for dark red tiles in the **Outcome** row.  The dark red tiles of **Glucose** and **BMI** indicate stronger correlation with **Outcome** vs. other features.
 
-![Heatmap of Feature Correlation]({filename}/images/Rce_Python_Part_1/09_Corr_Heatmap.png)
+![Heatmap of Feature Correlation]({static}/images/Rce_Python_Part_1/09_Corr_Heatmap.png)
 
 ### Explore Three Features
 Create a function to plot three features against **Outcome**.
@@ -211,7 +211,7 @@ plot_3d(pima_df,
 
 This plot depicts slight separation between the two classes.
 
-![3d Plot of Outcomes x 3 Features]({filename}/images/Rce_Python_Part_1/10_Pima_3d.png)
+![3d Plot of Outcomes x 3 Features]({static}/images/Rce_Python_Part_1/10_Pima_3d.png)
 
 Pick two new features, **Insulin** and **DiabetesPedigreeFunction** for another view.
 
@@ -225,7 +225,7 @@ plot_3d(pima_df,
 
 This combination yields significantly less separability of the classes than the combination of **Glucose**, **BMI** and **SkinThickness** above.
 
-![Another view in 3d]({filename}/images/Rce_Python_Part_1/11_More_3d.png)
+![Another view in 3d]({static}/images/Rce_Python_Part_1/11_More_3d.png)
 
 ### Normalize
 First, split the **pima_df** DataFrame into **train** and **test**.
@@ -256,7 +256,7 @@ train_dataset.describe().transpose()[['mean','std']]
 
 We see big differences in the range of values for each feature, so we must normalize the data to comply with Machine Learning (ML) best practices.
 
-![Stat summary of the Pima Diabetes Dataset]({filename}/images/Rce_Python_Part_1/12_Pima_Stats.png)
+![Stat summary of the Pima Diabetes Dataset]({static}/images/Rce_Python_Part_1/12_Pima_Stats.png)
 
 [Keras](https://keras.io/) provides tools for Normalization. 
 
@@ -289,7 +289,7 @@ normalizer.adapt(np.array(train_features))
 
 The features cluster around **zero** post-normalization.
 
-![Histogram of Normalized Features]({filename}/images/Rce_Python_Part_1/13_Norm_Features.png)
+![Histogram of Normalized Features]({static}/images/Rce_Python_Part_1/13_Norm_Features.png)
 
 ## Reduce Dimensionality
 The correlation heatmap above indicates strong correlation between some features.  Highly correlated features input redundancy (noise) into our model.  Principal Component Analysis (PCA) maps the features onto orthogonal planes and also provides a means to reduce dimensions.  Too many dimensions (features) leads to over-fitting which reduces the predictive effectiveness of ML models.
@@ -325,7 +325,7 @@ sns.histplot( x = pca_train_features_df['princomp1'],
 
 The histogram captures near-total overlap, which indicates we will need more than one Principal Component 
 
-![Histogram of The Principal Components vs. Outcome]({filename}/images/Rce_Python_Part_1/14_Princomp_Hist.png)
+![Histogram of The Principal Components vs. Outcome]({static}/images/Rce_Python_Part_1/14_Princomp_Hist.png)
 
 Create a new data frame that includes two Principal Components.
 
@@ -349,7 +349,7 @@ sns.scatterplot(x = pca_train_features_df['princomp1'],
 
 Two Principal Components reduce the overlap of the two classes slightly.
 
-![A scatterplot of the two Principle Components vs. Outcome]({filename}/images/Rce_Python_Part_1/15_Princomp_Scat.png)
+![A scatterplot of the two Principle Components vs. Outcome]({static}/images/Rce_Python_Part_1/15_Princomp_Scat.png)
 
 A density plot provides another view of the **Outcomes**.
 
@@ -363,7 +363,7 @@ sns.kdeplot( data = pca_train_features_df,
 
 The most dense regions of the two outcomes overlap.
 
-![A KDE plot of two principle components vs. Outcome]({filename}/images/Rce_Python_Part_1/16_Princomp_Density.png)
+![A KDE plot of two principle components vs. Outcome]({static}/images/Rce_Python_Part_1/16_Princomp_Density.png)
 
 How many components do we need?  The following code records the variance for each component.  Higher variance means more information.
 
@@ -402,7 +402,7 @@ plot_3d(data_df,
 
 The result shows slight separability of the two classes if you imagine sliding a sheet of paper between the clouds of green and red dots.
 
-![3d plot of Principle Components vs. Outcome]({filename}/images/Rce_Python_Part_1/17_Princomp_3d.png)
+![3d plot of Principle Components vs. Outcome]({static}/images/Rce_Python_Part_1/17_Princomp_3d.png)
 
 ## Develop Model
 We will use a 2d **train** data set to walk through model development.
@@ -476,7 +476,7 @@ train_df['lambda'] = train_df.apply(lambda X: find_lambda(train_df, X),
 
 The following table captures the resulting **lambda** for a handful of example **training** observations.
 
-![The calculated Lambdas in a table]({filename}/images/Rce_Python_Part_1/18_Train_Lambda.png)
+![The calculated Lambdas in a table]({static}/images/Rce_Python_Part_1/18_Train_Lambda.png)
 
 ### Classify Test Data
 **Test** data does not include a label.  The ML Engineer feeds **test** data into the **trained** model, and the model predicts a label.
@@ -493,7 +493,7 @@ class_df = pd.DataFrame([(x,y) for x in range(-100,100) for y in range(-100,100)
 
 Our grid includes the following **test** data.
 
-![A grid to feed the visualization of the RCE decision boundaries]({filename}/images/Rce_Python_Part_1/19_Princomp_Grid.png)
+![A grid to feed the visualization of the RCE decision boundaries]({static}/images/Rce_Python_Part_1/19_Princomp_Grid.png)
 
 Our RCE algorithm uses the **find_lambda** function (above) to calculate **lambda** for each observation in the **train** DataFrame and stores the results in the **train_df** DataFrame.  Recall that **Lambda** represents the **radius** of a circle that captures the **hit footprint** for a given observation.  
 
@@ -556,7 +556,7 @@ class_df = classify_data(train_df, class_df)
 
 A quick peek shows mostly **Ambiguous** classification for the first and last five observations in our **test** DataFrame. 
 
-![The calculated hits]({filename}/images/Rce_Python_Part_1/20_Hits_Grid.png)
+![The calculated hits]({static}/images/Rce_Python_Part_1/20_Hits_Grid.png)
 
 A **Seaborn** scatterplot maps our entire grid.
 
@@ -568,7 +568,7 @@ sns.scatterplot(x = class_df['princomp1'],
 
 The following graphic captures the footprint of each class.  **Purple** for **Outcome 1** (Diabetes), **Pink** for **Outcome 0** (No Diabetes) and **Gray** for **Ambiguous**.
 
-![The RCE 2d decision boundaries]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
+![The RCE 2d decision boundaries]({static}/images/Rce_Python_Part_1/21_2d_Rce.png)
 
 ## Evaluate RCE
 Our Pima **test** DataFrame includes labels, which we use to **evaluate** the model.
@@ -606,7 +606,7 @@ plt.show()
 
 The following graphic captures the **confusion matrix** for our two Principal Component **test** DataFrame.
 
-![The Confusion Matrix for two Principle Components]({filename}/images/Rce_Python_Part_1/22_2d_Confuse.png)
+![The Confusion Matrix for two Principle Components]({static}/images/Rce_Python_Part_1/22_2d_Confuse.png)
 
 An [F1 Score](https://en.wikipedia.org/wiki/F1_score) provides a usesful success metric.
 

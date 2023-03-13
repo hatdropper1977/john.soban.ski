@@ -32,29 +32,29 @@ Several mathematicians apply algorithms to the BUPA Liver Disorders dataset.  Go
 ### Brief discussion of RCE
 Pattern classification represents distinct classes through disjoint regions formed by feature space partitioning.  Most classifiers partition non-overlapping regions and map each of these to a class.  In RCE networks, however, a class may have one or more regions, and regions can overlap.  A RCE net contains three layers, the input, output and hidden.  The input layer contains one node for each of the features, totaling the feature vector dimension.  The output layer has one node for each class.  In the hidden layer, each node represents a prototype.  Each class connects to either one or a cluster of prototypes.  A RCE net contains two modes, learning and classification.  The learning mode executes feature space partitioning, adjusts connection weights between input and hidden layer, and reduces thresholds in hidden nodes to eliminate wrong activations.  The classification mode makes class membership decisions based on the prototypes and their influence fields.  Some regions may have multiple class affiliations, and the RCE net labels these regions “ambiguous.”  [[Li](#Li) 847]
 
-![Learn Lambda]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/01_A_Training_Point_Learns_Lambda.png)
+![Learn Lambda]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/01_A_Training_Point_Learns_Lambda.png)
 
 Figure 1 above illustrates part of the learning stage of an RCE net.  Consider two classes of data, each with three training samples.  The RCE net grows a sphere around a training point until it hits a training point of a different class.  The RCE net stores this radius, **&#955;**, for that training point.
 
-![Lambda for three training points]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/02_Lambda_For_Three_Training_Points.png)
+![Lambda for three training points]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/02_Lambda_For_Three_Training_Points.png)
  
 Figure 2 above shows **&#955;** for the three training points of class two (marked by a “+”).
 
 Figure 3 below depicts **&#955;** for both classes, notice how they overlap.
  
-![Ambiguous Regions]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/03_Illustration_Of_Abiguous_Regions.png)
+![Ambiguous Regions]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/03_Illustration_Of_Abiguous_Regions.png)
 
 Scofield defines ambiguous regions as "point sets in the state space of a system which are labeled with multiple class affiliations.  This can occur because the input space has not carried all of the features in the pattern environment, or because the pattern itself is not separable."  [[Scofield](#Scofield) 5].  The RCE net reduces the overlapping region by setting a maximum **&#955;**, as shown in Figure 4 below.
  
-![Reduce Max Lambda]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/04_Reduce_Max_Lambda_To_Reduce_Ambiguity.png)
+![Reduce Max Lambda]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/04_Reduce_Max_Lambda_To_Reduce_Ambiguity.png)
 
 The overlapping, or ambiguous regions point to regions that provide useful training points.  In Figure 5 below, we show an RCE net with a large ambiguous region.
  
-![Areas of Interest]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/05_Ambiguous_Regions_Point_To_Areas_Of_Interest.png)
+![Areas of Interest]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/05_Ambiguous_Regions_Point_To_Areas_Of_Interest.png)
  
 Getting training samples from this ambiguous area helps to better define the nature of the feature space.
  
-![Key Training Points]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/06_Key_Training_Points_Reduce_Ambiguity.png)
+![Key Training Points]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/06_Key_Training_Points_Reduce_Ambiguity.png)
 
 Once the training phase completes, the RCE net classifies the test points.  RCE nets belong to the family of exemplar neural net classifiers, which “perform classification based on the identity of the training examples, or exemplars, that are nearest to the input.  Exemplar nodes compute the weighted Euclidean distance between inputs and node centroids [[Lippmann](#Lippmann) 49].”  RCE nets create hyper-spheres around training points.  The related hidden layer nodes have “high outputs only if the input is within a given radius of the node’s centroid.  Otherwise, node outputs are low.  The classification decision is the label attached to the nodes with high outputs [[Lippmann](#Lippmann) 51].”  The RCE net classifies a region ambiguous in the case of no outputs or outputs from multiple classes.
 
@@ -70,7 +70,7 @@ I solve the problem by creating a family of MatLab/ Octave functions from the gr
 
 Inappropriate normalization presents the first roadblock in my investigation.  Normalizing between zero and one causes otherwise distinct training points from different classes to have the same magnitude.  For most classification algorithms, this creates “built-in error.”  For RCE nets, this results in “built-in ambiguity.”  I depict this in Figure 7 below.
  
-![Normalized Zoom In]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/07_Normalized_Zoom_In.png)
+![Normalized Zoom In]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/07_Normalized_Zoom_In.png)
  
 In addition, normalizing on a per pattern basis yields the greatest error and ambiguity.  Normalizing over a class yields the next greatest error/ambiguity.  Normalizing over all samples yields the lowest error, when normalizing between -1 and 1.  
 
@@ -85,9 +85,9 @@ I download the BUPA liver disorders database from the University of California, 
 
 In summary, all methods picked parameters [2 5] for the two feature case, [2 5 6] for the three feature case, [2 3 5 6] for four features and [2 3 4 5 6] for five features.  For the coded data, the methods selected [19 20 21 23 29] for five features, [4 9 10 14 16 18 25 28 29 30] for ten and [1 2 3 4 7 9 10 16 19 21 25 28 29 31].  This shows certain features correlate more with a class when they are coded to a certain range.  The following figures (Figure 8 & Figure 9) show two (2) and three (3) feature plots:
  
-![Poorly Separable]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/08_Poorly_Separable_Two_Dimensional_Feature_Vector.png)
+![Poorly Separable]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/08_Poorly_Separable_Two_Dimensional_Feature_Vector.png)
  
-![Two Approaches]({filename}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/09_3d_Plots_Of_Twp_Approaches.png)
+![Two Approaches]({static}/images/Reduced_Coulomb_Energy_Neural_Network_Bupa/09_3d_Plots_Of_Twp_Approaches.png)
 
 ## Results
 In general, coding the data does not give us any gain, either in the ‘feedback-tuned” case or the “non-feedback-tuned” RCE net case.  All un-coded strategies yield lower error and ambiguity than the coded strategies, with one exception (when feedback tuned, the fifteen (15) feature coded data set yields lower error and ambiguity than the five (5) feature un-coded data set).  In all cases (coded and un-coded), however, paring the feature space down yields less error than using all features, with one exception.  For feedback tuning, the coded “all features” feature vector performs better than the coded ten (10) feature vector.

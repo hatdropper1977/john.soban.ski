@@ -8,11 +8,11 @@ Status: published
 
 In [part one]({filename}/rce-python-part-1.md) of this two-part series, I developed a [Reduced Columb Energy (RCE) classifier]({filename}/graphical_intro_to_probabilistic_neural_networks.md) in Python.  [RCE]({filename}/reduced_coulomb_energy_neural_network_bupa.md) calculates **hit footprints** around training data and uses the footprints to classify test data.
 
-![2d RCE Map]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
+![2d RCE Map]({static}/images/Rce_Python_Part_1/21_2d_Rce.png)
 
 RCE draws a circle around each labeled **training** observation, with a radius (lambda) that stops at the closest labeled training point in the **opposite** class. Each circle indicates the **hit footprint** for that class.
 
-![RCE in action]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
+![RCE in action]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
 
 [In part one]({filename}/rce-python-part-1.md) I ran RCE for one epoch on a two-feature training set to achieve an F1 Score of **0.42** and ambiguity of **26.6%**.
 
@@ -27,7 +27,7 @@ I will also see how RCE performs with a reduced training set.  In Pattern Classi
 ## Tune Number of Features
 [Last time]({filename}/rce-python-part-1.md), I left off with the following confusion matrix for the two principal component scenario.  In that scenario, I applied RCE to the diabetes dataset after I used Principal Component Analysis (PCA) to reduce the data set down to two features.
 
-![The Confusion Matrix for two Principle Components]({filename}/images/Rce_Python_Part_1/22_2d_Confuse.png)
+![The Confusion Matrix for two Principle Components]({static}/images/Rce_Python_Part_1/22_2d_Confuse.png)
 
 Our RCE algorithm trained a model with an F1 Score of **0.42** and ambiguity of **26.6%**.
 
@@ -78,7 +78,7 @@ plt.show()
 
 Three features yield the following confusion_matrix:
 
-![Three Princomp]({filename}/images/Rce_Python_Part_2/01_Three_Princomp.png)
+![Three Princomp]({static}/images/Rce_Python_Part_2/01_Three_Princomp.png)
 
 My **calc_success()** function returns **f1_score** and ambiguity.
 
@@ -133,7 +133,7 @@ sns.heatmap(confusion_matrix, annot=True)
 plt.show()
 ```
 
-![Four Princomp]({filename}/images/Rce_Python_Part_2/02_Four_Princomp.png)
+![Four Princomp]({static}/images/Rce_Python_Part_2/02_Four_Princomp.png)
 
 The F1 score increases slightly and the ambiguity shoots up.
 
@@ -177,7 +177,7 @@ sns.heatmap(confusion_matrix, annot=True)
 plt.show()
 ```
 
-![Five Princomp]({filename}/images/Rce_Python_Part_2/03_Five_Princomp.png)
+![Five Princomp]({static}/images/Rce_Python_Part_2/03_Five_Princomp.png)
 
 Five principal components decrease the F1 score and increase the ambiguity.
 
@@ -215,7 +215,7 @@ def find_lambda(df, v):
 
 In part one, we see the footprints that result from unbounded radii.
 
-![Radius Unbounded]({filename}/images/Rce_Python_Part_1/21_2d_Rce.png)
+![Radius Unbounded]({static}/images/Rce_Python_Part_1/21_2d_Rce.png)
 
 I can add the following conditional to scope the footprint to a set maximum radius, **r**.
 
@@ -244,7 +244,7 @@ train_df['lambda'] = train_df.apply(lambda X: find_lambda(train_df,
 
 A scoped radius of maximum **0.1** creates the following footprints.
 
-![Radius Pointone]({filename}/images/Rce_Python_Part_2/04_Radius_Pointone.png)
+![Radius Pointone]({static}/images/Rce_Python_Part_2/04_Radius_Pointone.png)
 
 The following code creates, labels and plots a three dimensional dataset, with **r** set to 3.
 
@@ -281,7 +281,7 @@ plot_3d(class_3d_df,
 
 This plot captures the hit footprints in 3d, with each footprint a sphere versus a circle (2d case). 
 
-![Threed Radiusthree]({filename}/images/Rce_Python_Part_2/05_Threed_Radiusthree.png)
+![Threed Radiusthree]({static}/images/Rce_Python_Part_2/05_Threed_Radiusthree.png)
 
 Re-run the code above with the following edit to set **r** to **0.15**:
 
@@ -294,7 +294,7 @@ train_df['lambda'] = train_df.apply(lambda X: find_lambda(train_df,
 
 With a smaller **r** we get a better view of the spheres that show the hit footprints.
 
-![Threed Radiuspointonefive]({filename}/images/Rce_Python_Part_2/06_Threed_Radiuspointonefive.png)
+![Threed Radiuspointonefive]({static}/images/Rce_Python_Part_2/06_Threed_Radiuspointonefive.png)
 
 **r** provides a hyperparameter to the **RCE** algorithm.  Different values of **r** will produce different results in terms of model effectiveness.
 
@@ -331,13 +331,13 @@ I then plot the results, to identify the optimal **r** value for the given train
 pd.DataFrame(loss).set_index('r').plot()
 ```
 
-![Tune R]({filename}/images/Rce_Python_Part_2/07_Tune_R.png)
+![Tune R]({static}/images/Rce_Python_Part_2/07_Tune_R.png)
 
 **r = 0.58** yields the ideal results, with an f1_score of **0.43** and ambiguity of **0.27**.
 
 The following confusion matrix captures the results for **r=0.58**.
 
-![Radius Pointfive]({filename}/images/Rce_Python_Part_2/08_Radius_Pointfive.png)
+![Radius Pointfive]({static}/images/Rce_Python_Part_2/08_Radius_Pointfive.png)
 
 ## Tune the Algorithm
 Our Algorithm declares regions with either (1) no footprint, or (2) **overlapping** footprints **ambiguous**.  The Python code follows:
@@ -378,7 +378,7 @@ def classify_data(training_df, class_df):
 
 The **Voting RCE** algorithm produces a 2d footprint map with a high concentration of **Class Zero** regions.
 
-![Vote Algorithm]({filename}/images/Rce_Python_Part_2/09_Vote_Algorithm.png)
+![Vote Algorithm]({static}/images/Rce_Python_Part_2/09_Vote_Algorithm.png)
 
 I tune **r** for the new algorithm and plot the results using the same code above.
 
@@ -396,7 +396,7 @@ for x in range(0,100):
 pd.DataFrame(loss).set_index('r').plot()
 ```
 
-![Vote Loss]({filename}/images/Rce_Python_Part_2/10_Vote_Loss.png)
+![Vote Loss]({static}/images/Rce_Python_Part_2/10_Vote_Loss.png)
 
 The tuning identifies an ideal **r** of 0.40, which yields an **f1_score** of 0.4 and **ambiguity** of 0.2.  The ambiguity drops from the non-voting algorithm, which yielded .27.
 
@@ -407,23 +407,23 @@ In Pattern Classification Using Neural Networks (IEEE Communications Magazine, N
 
 I decided to try the algorithm (keeping the ideal **r**) on half the training data, which results in the following loss graph:
 
-![Half Data]({filename}/images/Rce_Python_Part_2/11_Half_Data.png)
+![Half Data]({static}/images/Rce_Python_Part_2/11_Half_Data.png)
 
 Contrast this to the loss plot for the full training data set (from above):
 
-![Tune R]({filename}/images/Rce_Python_Part_2/07_Tune_R.png)
+![Tune R]({static}/images/Rce_Python_Part_2/07_Tune_R.png)
 
 Compared to the full dataset, the half dataset drives higher ambiguity, but produces a decent F1 score.
 
 If we halve the dataset once more, (one quarter the data) we get the following loss plot.
 
-![Quarter Data]({filename}/images/Rce_Python_Part_2/12_Quarter_Data.png)
+![Quarter Data]({static}/images/Rce_Python_Part_2/12_Quarter_Data.png)
 
 Since we have a dearth of data, we need an **r** of at least **0.4** to get any traction.  At that point, the algorithm produces decent ambiguity and **F1** score, considering the lack of training data.
 
 The following plot shows the RCE hit footprints given one-quarter of the training data:
 
-![Quarter Datamap]({filename}/images/Rce_Python_Part_2/13_Quarter_Datamap.png)
+![Quarter Datamap]({static}/images/Rce_Python_Part_2/13_Quarter_Datamap.png)
 
 ## Conclusion
 RCE provides an interesting alternative to the more popular **K-Nearest** exemplar classifier.  The RCE classifier learns quickly with limited training data.

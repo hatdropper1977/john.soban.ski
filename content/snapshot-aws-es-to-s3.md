@@ -32,15 +32,15 @@ In order to tell Elasticsearch to write a snapshot to a bucket, you must create 
 
 Type **S3** into the search bar in order to locate service in AWS.
 
-![Find S3]({filename}/images/Snapshot_Aws_Es_To_S3/01_Find_S3.png)
+![Find S3]({static}/images/Snapshot_Aws_Es_To_S3/01_Find_S3.png)
 
 Click **Create Bucket**.
 
-![Create Bucket]({filename}/images/Snapshot_Aws_Es_To_S3/02_Create_Bucket.png)
+![Create Bucket]({static}/images/Snapshot_Aws_Es_To_S3/02_Create_Bucket.png)
 
 Name the bucket something unique and then click **Create**.
 
-![Name Bucket]({filename}/images/Snapshot_Aws_Es_To_S3/03_Name_Bucket.png)
+![Name Bucket]({static}/images/Snapshot_Aws_Es_To_S3/03_Name_Bucket.png)
 
 ## Step 2:  Connect Python to Elasticsearch
 The AWS provided manual snapshot procedure reads:  
@@ -127,15 +127,15 @@ In an earlier blog post I describe how to [create an IAM policy that allows us t
 
 From the home screen, type **IAM** into the search bar and click **IAM**.
 
-![Find IAM]({filename}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
+![Find IAM]({static}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
 
 On the left hand side of the bar, click **Policies** and then click **Create policy**.
 
-![Click Policy]({filename}/images/Snapshot_Aws_Es_To_S3/05_Find_Policy.png)
+![Click Policy]({static}/images/Snapshot_Aws_Es_To_S3/05_Find_Policy.png)
 
 After the **Create policy** screen loads, select the **JSON** (JavaScript Object Notation) tab, and then paste in the **JSON** that follows the image below.
 
-![Select JSON Tab]({filename}/images/Snapshot_Aws_Es_To_S3/06_Create_Policy_1.png)
+![Select JSON Tab]({static}/images/Snapshot_Aws_Es_To_S3/06_Create_Policy_1.png)
 
 Copy and paste this object into the text box.
 
@@ -163,7 +163,7 @@ Copy and paste this object into the text box.
 
 Click **Review policy**, name your policy and then click **Create policy**.
 
-![Name Policy]({filename}/images/Snapshot_Aws_Es_To_S3/07_Name_and_Review_Policy.png)
+![Name Policy]({static}/images/Snapshot_Aws_Es_To_S3/07_Name_and_Review_Policy.png)
 
 > NOTE:  The last line of our **Action** stanza (above) reads **iam:PassRole**.  This line allows our Python client to give **Elasticsearch** the right to CRUD **S3** buckets.
 
@@ -172,38 +172,38 @@ In the last blog we [created a role that we attached to our EC2 instance]({filen
 
 Bring up the IAM console:
 
-![Find IAM]({filename}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
+![Find IAM]({static}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
 
 Click **Roles** on the left hand pane.  Type the name of the role we created in the previous blog post, named **EC2\_Can\_Use\_Services** into the search bar and then click it in the results.
 
-![Find EC2 Role from last blog]({filename}/images/Snapshot_Aws_Es_To_S3/08_Roles_Find_EC2.png)
+![Find EC2 Role from last blog]({static}/images/Snapshot_Aws_Es_To_S3/08_Roles_Find_EC2.png)
 
 Click **Attach polices**.
 
-![Attach policies]({filename}/images/Snapshot_Aws_Es_To_S3/09_Attach_a_Policy.png)
+![Attach policies]({static}/images/Snapshot_Aws_Es_To_S3/09_Attach_a_Policy.png)
 
 Type **Can** in the search bar, select **Can\_CRUD\_S3** and then click **Attach policy**.
 
-![Attach the S3 CRUD Policy]({filename}/images/Snapshot_Aws_Es_To_S3/10_Attach_S3_Policy.png)
+![Attach the S3 CRUD Policy]({static}/images/Snapshot_Aws_Es_To_S3/10_Attach_S3_Policy.png)
 
 ### Trust Relationship
 In order for the **EC2\_Can\_Use\_Services** role to grant **Elasticsearch** permissions, the role must trust **Elasticsearch**.  Command the role to trust **Elasticsearch** via a **trust relationship**.
 
 We already configured **EC2\_Can\_Use\_Services** to [trust Elasticsearch in the first part of this tutorial]({filename}/boto3-ec2-to-amazon-elasticsearch.md).  To see this, go to the IAM console.
 
-![Find IAM]({filename}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
+![Find IAM]({static}/images/Snapshot_Aws_Es_To_S3/04_Find_Iam.png)
 
 Bring up the **EC2\_Can\_Use\_Services** role.
 
-![Find EC2 Role from last blog]({filename}/images/Snapshot_Aws_Es_To_S3/08_Roles_Find_EC2.png)
+![Find EC2 Role from last blog]({static}/images/Snapshot_Aws_Es_To_S3/08_Roles_Find_EC2.png)
 
 Click the **Trust relationship** tab and verify that we trust **es.amazonaws.com**.  The **es** stands for **Elasticsearch**.
 
-![View trust relationship]({filename}/images/Snapshot_Aws_Es_To_S3/11_Roles_Edit_Trust.png)
+![View trust relationship]({static}/images/Snapshot_Aws_Es_To_S3/11_Roles_Edit_Trust.png)
 
 If you do not see **es** under trusted entities, then click **Edit trust relationship**.
 
-![Edit Trust Relationship]({filename}/images/Snapshot_Aws_Es_To_S3/12_Trust_Relationship_JSON.png)
+![Edit Trust Relationship]({static}/images/Snapshot_Aws_Es_To_S3/12_Trust_Relationship_JSON.png)
 
 If it does not exist, then paste in the following:
 
@@ -234,7 +234,7 @@ Unlike most services, we cannot use the console GUI to pass a role to **Elastics
 
 We must use a script that signs the request (below).  Kibana **Dev Tools**, for example, do not suffice.
 
-![Dev Tools Fail]({filename}/images/Snapshot_Aws_Es_To_S3/13_Dev_Tools_Fail.png)
+![Dev Tools Fail]({static}/images/Snapshot_Aws_Es_To_S3/13_Dev_Tools_Fail.png)
 
 The following script signs the request. 
 
@@ -252,7 +252,7 @@ service = 'es'
 
 To find your account ARN, simply click Support in the AWS console.
 
-![Find your ARN]({filename}/images/Boto3_Ec2_To_Amazon_Elasticsearch/00_Account_ID.png)
+![Find your ARN]({static}/images/Boto3_Ec2_To_Amazon_Elasticsearch/00_Account_ID.png)
 
 I record the entire script here:
 
@@ -317,7 +317,7 @@ Now that you passed the role to **Elasticsearch**, you can use Kibana **Dev Tool
 
 In Dev Tools, create a new index and document.
 
-![Create a Doc]({filename}/images/Snapshot_Aws_Es_To_S3/14_Put_A_Doc.png)
+![Create a Doc]({static}/images/Snapshot_Aws_Es_To_S3/14_Put_A_Doc.png)
 
 Paste in the following to **Dev Tools**:
 
@@ -340,15 +340,15 @@ PUT /_snapshot/s3-flask-es/snapshot_1?wait_for_completion=true
 }
 ```
 
-![Snapshot Success]({filename}/images/Snapshot_Aws_Es_To_S3/15_Snapshot_Success.png)
+![Snapshot Success]({static}/images/Snapshot_Aws_Es_To_S3/15_Snapshot_Success.png)
 
 Go to your **S3** bucket and take a look at the contents. 
 
-![Find Bucket]({filename}/images/Snapshot_Aws_Es_To_S3/16_Flask_ES_Bucket.png)
+![Find Bucket]({static}/images/Snapshot_Aws_Es_To_S3/16_Flask_ES_Bucket.png)
 
 You will see a new sub-folder named **indices**.
 
-![Sub Bucket]({filename}/images/Snapshot_Aws_Es_To_S3/17_Flask_ES_Indices.png)
+![Sub Bucket]({static}/images/Snapshot_Aws_Es_To_S3/17_Flask_ES_Indices.png)
 
 
 Delete **new_index**:
@@ -363,7 +363,7 @@ DELETE new_index
 
 Now try to retrieve the **new_index** and **Elasticsearch** barks.  You deleted it!
 
-![DELETE Index]({filename}/images/Snapshot_Aws_Es_To_S3/18_Deleted_Index.png)
+![DELETE Index]({static}/images/Snapshot_Aws_Es_To_S3/18_Deleted_Index.png)
 
 **POST** this restore command into **Dev Tools**.  Once more, change **s3-flask-es** to the name of your endpoint:
 
@@ -377,7 +377,7 @@ POST /_snapshot/s3-flask-es/snapshot_1/_restore
 
 **new_index** returns from the dead!
 
-![RESTORE Index]({filename}/images/Snapshot_Aws_Es_To_S3/19_Restored.png)
+![RESTORE Index]({static}/images/Snapshot_Aws_Es_To_S3/19_Restored.png)
 
 ## Conclusion
 Congratulations!  You now deployed an Elasticsearch service, connected to it, created an index, backed up an index and restored an index - all within the AWS ecosystem.

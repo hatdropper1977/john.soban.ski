@@ -79,7 +79,7 @@ The key to Adaptive FEC is to match the power of the coding to the amount of los
 
 My AFEC simulation contains a FSM with four states.  The channel can be experiencing a fade event and thus great loss, which I refer to as the state of being in “High BER.”  The channel can be outside of a fade event and experiencing normal loss, which I refer to as “Low BER.”  If the encoders apply a large amount of FEC (that is, they have a low code rate), they are in a state of “High FEC.”  If they apply a low amount of FEC (they have a high code rate), they are in the state of “Low FEC.”  Thus, either the encoder FEC rate matches the BER or it does not.  The four states are “Low FEC Low BER (Match),” “High FEC High BER (Match),” “Low FEC High BER (Mismatch),” or “High FEC Low BER (Mismatch).”
 
-![State Diagram]({filename}/images/Afec_Ka_Band_Discrete_Event_Simulation/01_State_Diagram.png)
+![State Diagram]({static}/images/Afec_Ka_Band_Discrete_Event_Simulation/01_State_Diagram.png)
 
 The goal of the system, therefore, is to be in one of the two “match” states, “Low FEC Low BER” or “High FEC High BER” as much as possible.  The key to leaving the mismatched states is the detection time.  Consider the system applying low FEC during a low BER period, which is ideal.  If a fade event occurs, the FSM is now in the “Low FEC High BER” state, and experiences high loss.  The FSM must wait until the detection time passes in order to switch to the desired “High FEC High BER” state.  This detection time, for example, can be based on the round trip time to a GEO satellite, which is approximately **250ms**.
 
@@ -91,13 +91,13 @@ The MATLAB file [sim_header.m](https://github.com/hatdropper1977/afec-des/blob/m
 ## Results
 I wrote a script that runs the simulation five times for each of fourteen parameter sets and averages the resulting efficiency and Coding Gain.  Each simulation execution iterates **1e6** times.  For the fourteen parameter sets, I used the following static parameters: The channel during a clear day has a BER of **1e-6**. The channel during a fade event has a BER of **1e-2**.  Finally, the probability of the channel going into and out of a fade event is **1e-2**.  I varied the detection interval, from **<sub>t</sub> = 0** to **<sub>t</sub> = 1100** (with **<sub>t</sub> = 1 = 25&#956;s**). The results follow.
 
-![Results Table]({filename}/images/Afec_Ka_Band_Discrete_Event_Simulation/02_Results_Table.png)
+![Results Table]({static}/images/Afec_Ka_Band_Discrete_Event_Simulation/02_Results_Table.png)
 
 What this tells us is that as **t** approaches **zero**, we see an increase in coding Gain over both no FEC and static FEC, as well as efficiency. As **t** approaches infinity, the parameters converge on the static FEC case, of **<sup>57</sup>/<sub>63</sub>** efficiency and a gain of **~5.53**.  Graphs of the data follow.
 
-![AFEC Efficiency]({filename}/images/Afec_Ka_Band_Discrete_Event_Simulation/03_AFEC_Eff.png)
+![AFEC Efficiency]({static}/images/Afec_Ka_Band_Discrete_Event_Simulation/03_AFEC_Eff.png)
 
-![Coding Gain]({filename}/images/Afec_Ka_Band_Discrete_Event_Simulation/04_Coding_Gain.png)
+![Coding Gain]({static}/images/Afec_Ka_Band_Discrete_Event_Simulation/04_Coding_Gain.png)
     
 ## Conclusion
 Forward Error Correction (FEC) increases the reliability of data transmission over a link by adding redundant information to a transmission that receivers downstream use to repair or recreate any damaged or missing data.  FEC, however, works best when the link’s error probabilities are known or at least reasonably consistent.  Rain attenuation events, however, cause severe data loss to a communication channel, several deviations away from the normal data loss.  The FEC rate used for a channel during non-rain (normal) communications, therefore, may not suffice during rain events.  At the highest level, Adaptive Forward Error Correction (AFEC) tunes the amount of redundancy to mitigate the channel loss at hand.  AFEC must find the optimal redundancy, because too much redundancy may exacerbate the situation by overwhelming the receiver with redundant data, instead of useful information.  This paper described the mechanisms involved in deploying a successful AFEC system to include encoding type, attenuation thresholds, number of states, fade detection margin and most importantly (for closed loop GEO systems) fade prediction methods.  In addition, this paper described the finite state model created by the author for this paper that performed numerical simulation to investigate the effects of prediction delay on AFEC utility.

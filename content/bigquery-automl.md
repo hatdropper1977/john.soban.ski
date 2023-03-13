@@ -64,7 +64,7 @@ We can improve model performance through **hyper parameter** tuning.  In the old
 
 To use BigQuery AutoML, simply set your SQL OPTIONS to **AUTOML_REGRESSOR**.
 
-![Automl Query]({filename}/images/Bigquery_Automl/19_Automl_Query.png)
+![Automl Query]({static}/images/Bigquery_Automl/19_Automl_Query.png)
 
 > Note: We direct BigQuery to save the new model under the name **automl_model**.
 
@@ -90,22 +90,22 @@ FROM
 
 BigQuery AutoML iterates through many hyperparameter scenarios, each which investigate the effects of choices related to learning rate, regularization and optimizers.  You will notice that AutoML consumes a much larger portion of **wall clock** time in comparison to our single Regression model above.
 
-![Training Pic]({filename}/images/Bigquery_Automl/20_Training.png)
+![Training Pic]({static}/images/Bigquery_Automl/20_Training.png)
 
 Click **Execution Details** to get more status information.
 
-![Training Pic 2]({filename}/images/Bigquery_Automl/21_Training_2.png)
+![Training Pic 2]({static}/images/Bigquery_Automl/21_Training_2.png)
 
 Upon completion, BigQuery stores our new **automl_model** in the **wine_dataset** Dataset, which lives in the **shining_chain** project.
 
 The AutoML process completes in about fifty (50) or so minutes.
 
-![AutoML Done]({filename}/images/Bigquery_Automl/22_AutoML_Done.png)
+![AutoML Done]({static}/images/Bigquery_Automl/22_AutoML_Done.png)
 
 ## AutoML Regressor Results
 The **results** tab reports a reduction in Mean Square Error (MSE), compared to the prior Linear Regression model that used default parameters.
 
-![Automl Results]({filename}/images/Bigquery_Automl/23_Automl_Results.png)
+![Automl Results]({static}/images/Bigquery_Automl/23_Automl_Results.png)
 
 The MSE maps to a Root Mean Square Error (RMSE) of about 0.6393.
 
@@ -134,7 +134,7 @@ After training, BigQuery saves and serves the new model in place.
 
 We use **SQL** to use the served model.  In the BigQuery console, click **QUERY MODEL**.
 
-![Query Model]({filename}/images/Bigquery_Automl/24_Query_Model.png)
+![Query Model]({static}/images/Bigquery_Automl/24_Query_Model.png)
 
 The following SQL command pulls the first record out of the Wine Quality data set and then sets the **alcohol** parameter to 80%.
 
@@ -178,7 +178,7 @@ The above **QUERY** returns the following **JSON.**
 
 The following screengrab captures the console view of this **QUERY**:
 
-![Predict Data]({filename}/images/Bigquery_Automl/25_Predict_Data.png)
+![Predict Data]({static}/images/Bigquery_Automl/25_Predict_Data.png)
 
 The **SQL QUERY** below pulls and modifies the first record from the Wine Quality data set and then pipes it to the **automl_model** we trained via **AUTOML_REGRESSOR**.
 
@@ -209,7 +209,7 @@ LIMIT 1
 
 The console returns the predicted **quality**.
 
-![Predicted API]({filename}/images/Bigquery_Automl/26_Predicted_API.png)
+![Predicted API]({static}/images/Bigquery_Automl/26_Predicted_API.png)
 
 The model predicts a **quality** score (taste) of 1.7 out of 10 for a wine with 80% alcohol, which I consider reasonable.
 
@@ -247,11 +247,11 @@ FROM `shining-chain.wine_dataset.wine_red`
 
 The model takes six minutes to train.
 
-![Boost Model]({filename}/images/Bigquery_Automl/27_Boost_Model.png)
+![Boost Model]({static}/images/Bigquery_Automl/27_Boost_Model.png)
 
 The model results in an MSE of 0.3419, with an RMSE of 0.5847.
 
-![Boost Results]({filename}/images/Bigquery_Automl/28_Boost_Results.png)
+![Boost Results]({static}/images/Bigquery_Automl/28_Boost_Results.png)
 
 The **BQML BOOSTED_TREE_REGRESSOR** bests **GCP AutoML Tables** and lands in first place!
 
@@ -383,11 +383,11 @@ FROM `shining-chain.pca_wine.pca_wine`
 
 The model takes six minutes to train.
 
-![Boost Model on PCA Data]({filename}/images/Bigquery_Automl/29_Pca_Boost.png)
+![Boost Model on PCA Data]({static}/images/Bigquery_Automl/29_Pca_Boost.png)
 
 Click the Evaluation tab to find a **MSE** of **0.3771**, which maps to an **RMSE** of **0.6140**.
 
-![Boost Model on PCA Evaluation]({filename}/images/Bigquery_Automl/30_Pca_Eval.png)
+![Boost Model on PCA Evaluation]({static}/images/Bigquery_Automl/30_Pca_Eval.png)
 
 The dimensionality reduced data set proves less successful than the full featured data set, and lands in third place.
 

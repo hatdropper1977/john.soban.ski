@@ -17,38 +17,38 @@ Jasper also integrates with the machine learning driven [Surfer AI](https://surf
 ## Get Started
 Jasper uses a [Software as a Service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service) approach to get its AI into the hands of end users.  You just need to sign into the WebSite and put in your credit card information.
 
-![Splash Screen]({filename}/images/Jasper_Ai/01_Splash_Screen.png)
+![Splash Screen]({static}/images/Jasper_Ai/01_Splash_Screen.png)
 
 Similar to most [Web 2.0](https://en.wikipedia.org/wiki/Web_2.0) applications, you need to register a username and password with their proprietary database, or connect to the centralized, authoritarian Google identity service.
 
-![Google Login]({filename}/images/Jasper_Ai/02_Google_Login.png)
+![Google Login]({static}/images/Jasper_Ai/02_Google_Login.png)
 
 Once you log in, you enter a Business Name and domain.
 
-![Step Two]({filename}/images/Jasper_Ai/03_Step_Two.png)
+![Step Two]({static}/images/Jasper_Ai/03_Step_Two.png)
 
 I mis-understood the **domain** field.  The Wizard expects a web address, so I enter my address in the text field.
 
-![Enter Domain]({filename}/images/Jasper_Ai/04_Enter_Domain.png)
+![Enter Domain]({static}/images/Jasper_Ai/04_Enter_Domain.png)
 
 Select the use case for Jasper.  Since I plan to write a blog, I click **Blog posts**.
 
-![Select Blog]({filename}/images/Jasper_Ai/05_Select_Blog.png)
+![Select Blog]({static}/images/Jasper_Ai/05_Select_Blog.png)
 
 Jasper then expects payment.  They offer **starter** and **basic** packages, for $29/month and $59/month respectively.
 
-![Choose Plan]({filename}/images/Jasper_Ai/06_Choose_Plan.png)
+![Choose Plan]({static}/images/Jasper_Ai/06_Choose_Plan.png)
 
 I decide to try the cheaper option for my Proof of Concept.
 
-![Pay Money]({filename}/images/Jasper_Ai/07_Pay_Money.png)
+![Pay Money]({static}/images/Jasper_Ai/07_Pay_Money.png)
 
 ## Use a Template
 The **starter** plan allows use of the Jasper templates.  
 
 I select the **Blog Post Intro Paragraph** template.  I want Jasper to write a blog post on [Decentralized Finance](https://en.wikipedia.org/wiki/Decentralized_finance), so I feed it the title **Decentralized Finance Drives Freedom**.
 
-![Intro Paragraph]({filename}/images/Jasper_Ai/08_Intro_Paragraph.png)
+![Intro Paragraph]({static}/images/Jasper_Ai/08_Intro_Paragraph.png)
 
 I click **Generate** and Jasper produces the following text:
 
@@ -73,11 +73,11 @@ I don’t blame Jasper too much, since I assume most of the Internet includes sl
 ## Recipes
 Jasper provides **recipes** to help content creators write more than an intro (or concluding) paragraph.
 
-![Try Recipe]({filename}/images/Jasper_Ai/09_Try_Recipie.png)
+![Try Recipe]({static}/images/Jasper_Ai/09_Try_Recipie.png)
 
 When I click the **Recipe** button, Jasper sends an alert that I must upgrade to the $59 **Basic** plan.
 
-![Need Upgrade]({filename}/images/Jasper_Ai/10_Need_Upgrade.png)
+![Need Upgrade]({static}/images/Jasper_Ai/10_Need_Upgrade.png)
 
 I know that the **Documents** service will help me write a blog post.
 
@@ -91,15 +91,15 @@ The [Jasper website](https://www.jasper.ai/templates) reads
 
 I click **Documents** and once more read a Call To Action (CTA) that I **must** Upgrade to the $59 plan to write a document.
  
-![Try Document]({filename}/images/Jasper_Ai/11_Try_Document.png)
+![Try Document]({static}/images/Jasper_Ai/11_Try_Document.png)
 
 Jasper provides me with the **Boss Mode** plan for an additional $28.09, since I already paid $29 for the **Starter** plan.  I take one for our team and pay the money to upgrade.
 
-![Need Boss]({filename}/images/Jasper_Ai/12_Need_Boss.png)
+![Need Boss]({static}/images/Jasper_Ai/12_Need_Boss.png)
 
 Since I already have my Credit Card out, I also pay $59 for [Surfer SEO](https://surferseo.com/), a tool I will discuss later in this blog post.
 
-![Pay Boss]({filename}/images/Jasper_Ai/13_Pay_Boss.png)
+![Pay Boss]({static}/images/Jasper_Ai/13_Pay_Boss.png)
 
 ## Create a Document
 Now that I paid the big bucks, Jasper rolls out the red carpet for me.
@@ -108,7 +108,7 @@ It provides a wizard to hold my hand through the blog writing process.
 
 I tell Jasper to **write a thought leadership piece that discusses how decentralized finance (DeFi) increases freedom**.  I then enter the keywords **DeFi, Blockchain and Censorship**
 
-![New Blog]({filename}/images/Jasper_Ai/14_New_Blog.png)
+![New Blog]({static}/images/Jasper_Ai/14_New_Blog.png)
 
 Jasper provides a half dozen or so candidate titles.
 
@@ -119,18 +119,18 @@ Jasper provides a half dozen or so candidate titles.
 - Decentralized Finance:  The Future of Financial Freedom
 - Decentralized Finance:  The Future of Freedom
 
-![Automatic Titles]({filename}/images/Jasper_Ai/15_Automatic_Titles.png)
+![Automatic Titles]({static}/images/Jasper_Ai/15_Automatic_Titles.png)
 
 Once I select a title, Jasper spits out the intro paragraph.
 
 ## Integrate Search Engine Optimization
 The target audience for Jasper writes blog posts for traffic.  Search Engine Optimization (SEO) tools maximize the return on (writing) investment in terms of increased traffic.  Surfer SEO provides a SaaS and integrates with Jasper AI.
 
-![Create Surfer]({filename}/images/Jasper_Ai/16_Create_Surfer.png)
+![Create Surfer]({static}/images/Jasper_Ai/16_Create_Surfer.png)
 
 I purchase the $59/ month Jasper subscription and then refresh my Jasper page.  This connects the Surfer SEO service to Jasper.
 
-![Click SEO]({filename}/images/Jasper_Ai/17_Click_SEO.png)
+![Click SEO]({static}/images/Jasper_Ai/17_Click_SEO.png)
 
 After I enter “DeFi” into the target search term box, Surfer lists a handful of related, popular search questions.
 
@@ -139,11 +139,11 @@ After I enter “DeFi” into the target search term box, Surfer lists a handful
 - Is DeFi a good investment?
 - What is the difference between DeFi and crypto?
 
-![Good Questions]({filename}/images/Jasper_Ai/18_Good_Questions.png)
+![Good Questions]({static}/images/Jasper_Ai/18_Good_Questions.png)
 
 I paste these questions directly into the Jasper document box.  I precede them with double **Pound** signs (#) which tells Jasper to start a new paragraph.
 
-![Type Questions]({filename}/images/Jasper_Ai/19_Type_Questions.png)
+![Type Questions]({static}/images/Jasper_Ai/19_Type_Questions.png)
 
 From there, I click **Compose**, which generates four sentences per click.
 
@@ -156,27 +156,27 @@ I then have Jasper **compose** paragraphs for the remaining paragraph headers.
 ## Tune SEO Effectiveness
 Surfer provides a **word quota**, with recommended words and phrases that feed the hungry search engine algorithms.  The service colors each Phrase: Green indicates **acceptable**, Yellow indicates **needs work** and Red indicates **absent**. 
 
-![Word Quota]({filename}/images/Jasper_Ai/20_Word_Quota.png)
+![Word Quota]({static}/images/Jasper_Ai/20_Word_Quota.png)
 
 I begin to grind through the word quota suggestions, and pepper the phrases into my Jasper document.  I replace an instance of **DeFi**, for example, with **DeFi Applications** and that phrase turns green.
 
-![Getting Better]({filename}/images/Jasper_Ai/21_Getting_Better.png)
+![Getting Better]({static}/images/Jasper_Ai/21_Getting_Better.png)
 
 Jasper provides a gauge.  In addition to the word quota, I also must increase the word count to 1.7k, the paragraphs to 16, the headings to at least 18 and Images to at least three.
 
-![Status Gague]({filename}/images/Jasper_Ai/22_Status_Gague.png)
+![Status Gague]({static}/images/Jasper_Ai/22_Status_Gague.png)
 
 Checking off the suggested phrases in the word quota screen gets my document to a score of 80/100.
-![Eighty Percent]({filename}/images/Jasper_Ai/23_Eighty_Percent.png)
+![Eighty Percent]({static}/images/Jasper_Ai/23_Eighty_Percent.png)
 
 You can see that I peppered in a lot of the phrases, turning them green
 
-![Lotsa Green]({filename}/images/Jasper_Ai/24_Lotsa_Green.png)
+![Lotsa Green]({static}/images/Jasper_Ai/24_Lotsa_Green.png)
 
 ## Write Conclusion
 Jasper encourages you to update the “Content” box on the left side of the pane, to nudge the service a bit.  I type in **Write a concluding paragraph** into the content box, enter seed words into the document and then hit compile.
 
-![Write Conclusion]({filename}/images/Jasper_Ai/25_Write_Conclusion.png)
+![Write Conclusion]({static}/images/Jasper_Ai/25_Write_Conclusion.png)
 
 Jasper then writes a conclusion for me.
 

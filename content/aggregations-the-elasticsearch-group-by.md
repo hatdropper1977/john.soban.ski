@@ -111,38 +111,38 @@ filter {
 ## Aside 2: Why learn the Elasticsearch Aggregation API?
 You know and love Pandas.  The Elasticsearch **aggs** API appears to be bizarre and scary.  For now, you query Elasticsearch, convert the returned **JSON** to a Pandas Dataframe, and then apply a Pandas **GROUP BY** to the Dataframe to retrieve summary stats.  Modern laptops include 32GB of memory and you have had no issues with this method.  If you use Elasticsearch for non **time series** data, e.g. static data for blogs, you may not need to worry about running out of memory.
 
-![Lazy Group By]({filename}/images/Aggregations_The_Elasticsearch_Group_By/01_Lazy_Group_By.png)
+![Lazy Group By]({static}/images/Aggregations_The_Elasticsearch_Group_By/01_Lazy_Group_By.png)
 
 In the future, you may deal with **Big Data**.  If you collect **time series** data, such as access logs, or security logs, you might scale to **Big Data**.  In that case, the Elasticsearch database size will exceed the memory of your laptop.
 
-![Big Data Kaboom]({filename}/images/Aggregations_The_Elasticsearch_Group_By/02_Big_Data_Kaboom.png)
+![Big Data Kaboom]({static}/images/Aggregations_The_Elasticsearch_Group_By/02_Big_Data_Kaboom.png)
 
 I recommend that you learn the **aggs** API.  This allows you to command Elasticsearch to execute the **GROUP BY** analouge **in-stu** (a best practice), and then also apply the **summary stats** in place.  Elasticsearch will then return the summary stats as JSON, and you will not run out of memory.
 
-![Best Practice]({filename}/images/Aggregations_The_Elasticsearch_Group_By/03_Big_Data_Best_Practice.png)
+![Best Practice]({static}/images/Aggregations_The_Elasticsearch_Group_By/03_Big_Data_Best_Practice.png)
 
 ## Aggs
 
 ### Simple Tables 
 In the upper right corner of Kibana, select the appropriate time range.
 
-![Select Time]({filename}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
+![Select Time]({static}/images/Aggregations_The_Elasticsearch_Group_By/04_Select_Time.png)
 
 Select **Visualization --> Create New Visualization**
 
-![New Viz]({filename}/images/Aggregations_The_Elasticsearch_Group_By/05_Create_New_Viz.png)
+![New Viz]({static}/images/Aggregations_The_Elasticsearch_Group_By/05_Create_New_Viz.png)
 
 Select **Data Table** and then pick the name of your index.
 
-![Data Table]({filename}/images/Aggregations_The_Elasticsearch_Group_By/06_Data_Table_Viz.png)
+![Data Table]({static}/images/Aggregations_The_Elasticsearch_Group_By/06_Data_Table_Viz.png)
 
 Elasticsearch organizes aggregations into **Metrics** and **Buckets**.  Leave **Metrics** to the default of **count** (hits), and expand **Buckets**.  Click **Split rows**.  
 
-![Split Rows]({filename}/images/Aggregations_The_Elasticsearch_Group_By/07_Simple_Table_Split_Rows.png)
+![Split Rows]({static}/images/Aggregations_The_Elasticsearch_Group_By/07_Simple_Table_Split_Rows.png)
 
 Under **Aggregation** select **Terms** (A categorical bucketization) and then under **Field** select **geoip.country_name.keyword**.  Type **country_agg** under **Custom label** and press the **Play** icon.  The results show the hits per country over the month of June.
 
-![Simple Table Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/08_Simple_Table_Configure.png)
+![Simple Table Config]({static}/images/Aggregations_The_Elasticsearch_Group_By/08_Simple_Table_Configure.png)
 
 
 ### Nested Tables
@@ -150,14 +150,14 @@ Elasticsearch created five big **Country** buckets based on the number of hits: 
 
 Collapse the first **Split row** and click **add**.  An **Add Sub-bucket** menu pops up.  Once more, click **Split Rows**.  Select **Terms** for **Sub Aggregation** and **geoip.city_name.keyword** for **Field**.  Set **Size** to **3**.  Under **Custom Label** enter **city_agg** and press the **Play** icon to apply changes.
 
-![Nested Table Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
+![Nested Table Config]({static}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
 
 ### Use the API
 Now that you have some exposure to the terminology and structure of Elasticsearch **Aggregations** we will move from the Visualization GUI to the **REST API**.
 
 In Kibana, select the Dev Tools icon and then type the following:
 
-![Auto Complete]({filename}/images/Aggregations_The_Elasticsearch_Group_By/10_Dev_Tools_Auto_Complete.png)
+![Auto Complete]({static}/images/Aggregations_The_Elasticsearch_Group_By/10_Dev_Tools_Auto_Complete.png)
 
 > Note:  Be sure to replace the name **sobanski-logs-2020-06-27** with the name of your Cloudfront log index
 
@@ -191,7 +191,7 @@ GET sobanski-logs-2020-06-27/_search
 
 As you type the lowercase text **terms** into the **Dev Tools** supplied **JSON** stanza, the auto-complete menu pops up.
 
-![Terms auto complete]({filename}/images/Aggregations_The_Elasticsearch_Group_By/11_Dev_Tools_Terms_Auto_Complete.png)
+![Terms auto complete]({static}/images/Aggregations_The_Elasticsearch_Group_By/11_Dev_Tools_Terms_Auto_Complete.png)
 
 If you select **terms**, auto-complete provides the following form:
 
@@ -211,32 +211,32 @@ GET sobanski-logs-2020-06-27/_search
 
 As in the Visualization GUI section above, select **geoip.country_name.keyword** for **field.**  If you click the two empty quotes to the right of the **field** colon, auto-complete provides an assist.  Begin to type **country** and the pop-up provides selections.  
 
-![Country Auto Complete]({filename}/images/Aggregations_The_Elasticsearch_Group_By/12_Dev_Tools_Country_Auto_Complete.png)
+![Country Auto Complete]({static}/images/Aggregations_The_Elasticsearch_Group_By/12_Dev_Tools_Country_Auto_Complete.png)
 
 Select **geoip.country_name.keyword**, set **size** to **5** and press play.
 
 The query returns a lot of gobbledygook.  
 
-![Bunch of noise]({filename}/images/Aggregations_The_Elasticsearch_Group_By/13_Bunch_of_Noise.png)
+![Bunch of noise]({static}/images/Aggregations_The_Elasticsearch_Group_By/13_Bunch_of_Noise.png)
 
 Elasticsearch by default returns search **hits** with the **aggs** query.  You have two options, (1) Scroll down to the bottom to see the **aggs** results or (2) Command Elasticsearch not to return search **hits** via the **size** parameter.  I will demonstrate method (2) now.
 
 I like to collapse JSON stanzas to ensure that I edit the correct section.  Click the **caret** next to the **aggs** stanza and Dev Tools **collapses** the field.
 
-![Collapse aggs]({filename}/images/Aggregations_The_Elasticsearch_Group_By/14_Collapse_Aggs.png)
+![Collapse aggs]({static}/images/Aggregations_The_Elasticsearch_Group_By/14_Collapse_Aggs.png)
 
 Add a comma right after **aggs** and hit return.  Type a quote and then begin to type **size**, once more auto-complete suggests the field.
 
-![Set size]({filename}/images/Aggregations_The_Elasticsearch_Group_By/15_Set_Size.png)
+![Set size]({static}/images/Aggregations_The_Elasticsearch_Group_By/15_Set_Size.png)
 
 Set size from **20** to **0** and press play.  You now see the **aggs** results.
 
-![Size zero results]({filename}/images/Aggregations_The_Elasticsearch_Group_By/16_Size_Zero_Results.png)
+![Size zero results]({static}/images/Aggregations_The_Elasticsearch_Group_By/16_Size_Zero_Results.png)
 
 ### Nested Aggs via the API
 Look at our nested Table from the Kibana example above.
 
-![Nested Config]({filename}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
+![Nested Config]({static}/images/Aggregations_The_Elasticsearch_Group_By/09_Nested_Table_Configure.png)
 
 We can create the same table via the API, using **nested aggregations**.  The [Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html) provides the structure the **nested agg** query must follow.
 
@@ -276,11 +276,11 @@ To nest, we want to stick another **aggs** query under **country_agg** after our
 
 To make life easy, collapse the **terms** field.
 
-![Collapse Terms]({filename}/images/Aggregations_The_Elasticsearch_Group_By/17_Collapse_Terms.png)
+![Collapse Terms]({static}/images/Aggregations_The_Elasticsearch_Group_By/17_Collapse_Terms.png)
 
 Add a comma after **terms** and then type a **quote** followed by **aggs**.  If you see the auto-complete, then you are in the right spot.
 
-![Auto nested agg]({filename}/images/Aggregations_The_Elasticsearch_Group_By/18_Auto_Complete_Nested_Agg.png)
+![Auto nested agg]({static}/images/Aggregations_The_Elasticsearch_Group_By/18_Auto_Complete_Nested_Agg.png)
 
 > Note:  If you do not see the auto-complete then double check that you are editing the correct spot.
 
@@ -308,7 +308,7 @@ GET sobanski-logs-2020-06-27/_search
 
 If you remember from the Visualization GUI example above, we selected **Terms** for **Sub Aggregation** and entered **city_agg** for **Custom Label**.  Enter **city_agg** for **NAME** and begin to type **terms** into **AGG_TYPE**.
 
-![Nested terms auto complete]({filename}/images/Aggregations_The_Elasticsearch_Group_By/19_Auto_Complete_Terms.png)
+![Nested terms auto complete]({static}/images/Aggregations_The_Elasticsearch_Group_By/19_Auto_Complete_Terms.png)
 
 Select **terms** from the auto-complete menu and **Dev tools** produces:
 
@@ -337,15 +337,15 @@ GET sobanski-logs-2020-06-27/_search
 
 Under **city_agg** change size from **10** to **3**.  Then, click between the two empty quotes after **field** and type in **city**.  Click **geoip.city_name.keyword**.
 
-![Nest on city]({filename}/images/Aggregations_The_Elasticsearch_Group_By/20_Nest_On_City.png)
+![Nest on city]({static}/images/Aggregations_The_Elasticsearch_Group_By/20_Nest_On_City.png)
 
 When you click play, Dev Tools returns the same results the Kibana UI returned.
 
-![Nest agg result]({filename}/images/Aggregations_The_Elasticsearch_Group_By/21_Nest_Agg_Result.png)
+![Nest agg result]({static}/images/Aggregations_The_Elasticsearch_Group_By/21_Nest_Agg_Result.png)
 
 If you expand the **city_agg** for one of the **country_agg** buckets, you will find three cities.
 
-![More nested agg results]({filename}/images/Aggregations_The_Elasticsearch_Group_By/22_Nest_Agg_Results_2.png)
+![More nested agg results]({static}/images/Aggregations_The_Elasticsearch_Group_By/22_Nest_Agg_Results_2.png)
 
 ## Conclusion
 In this blog post I demonstrated how to execute simple **GROUP BY** operations via Elasticsearch **aggregations**.  I demonstrated how to generate tables via both Kibana and the Elasticsearch API.  **GROUP BY** (RDBMS) and **Aggregation** (Elasticsearch) operations lend themselves well to **Time Series** data, since these operations allow you to **GROUP BY** or **Aggregate** results over a given time bucket (e.g. Hour, Day, Week, Month, etc.).  Next month, I will demonstrate how to use **Aggregations** for [time series analysis and Data Viz]({filename}/elasticsearch-aggs-for-time-series.md).

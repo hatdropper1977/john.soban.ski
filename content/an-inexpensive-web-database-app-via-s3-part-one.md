@@ -11,7 +11,7 @@ I deployed my first web database application back in 2002 thanks to the seminal 
 
 I use [S3 to host this website]({filename}/how-to-configure-s3-websites-to-use-https-part-1.md) and receive about 60,000 - 90,000 hits per month.
 
-![S3 Stat]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/01_S3_Stat.png)  
+![S3 Stat]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/01_S3_Stat.png)  
 
 Since I use [S3 to host this site]({filename}/how-to-configure-s3-websites-to-use-https-part-2.md), I only pay ~$0.90/month.
 
@@ -19,16 +19,16 @@ Since I use [S3 to host this site]({filename}/how-to-configure-s3-websites-to-us
  
 The following graphic captures the desired, final Web Database Application architecture.  I will use [AWS Chalice]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md) to automate the deployment.
 
-![Flask Web DB Architecture]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/03_Flask_Web_DB_Architecture.png)
+![Flask Web DB Architecture]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/03_Flask_Web_DB_Architecture.png)
 
 This blog post discusses how to deploy the S3 backed Web Database Application through [Flask]({tag}flask).  Once we get the logic down in Flask, we can easily refactor the code to conform to the Chalice framework.
 
-![Final Web DB Architecture]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/02_Final_Web_DB_Architecture.png)
+![Final Web DB Architecture]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/02_Final_Web_DB_Architecture.png)
  
 ## The Flask App
 This section describes the Flask implementation of the Web Database application.  Miguel Grinberg wrote the definative book on Flask.  I highly recommend you [purchase his book](https://blog.miguelgrinberg.com/post/about-me).  (You will see a familiar name on page XIV).
 
-![Flask book shout out]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/04_Flask_Ack.png)
+![Flask book shout out]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/04_Flask_Ack.png)
 
 I have written heavily about Flask on [this very site]({tag}flask).
 
@@ -107,7 +107,7 @@ If you want to go nuts, you can check the validation by entering incompatible da
 
 Enter "ABCD" into **IP Address**, for example.
 
-![Client side validation]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/05_Client_Side_Validation.png) 
+![Client side validation]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/05_Client_Side_Validation.png) 
 
 ## Persistence
 Now we will persist the data to our "database," which happens to be an object store.
@@ -213,7 +213,7 @@ def show_user_data(userkey):
 
 Now, go to your Flask endpoint and append /user/<Your user key> to the URL.  I run a test server at http://52.54.218.55:5000, and my document has a Key ID of **mU93H9iAt3X7FKkmbZFL**.  Therefore, I entered http://52.54.218.55:5000/user/mU93H9iAt3X7FKkmbZFL into my browser's search bar.  Notice I left the **.json** off of the end.
 
-![Retrieve User Data]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/06_Retrieve_User_Data.png) 
+![Retrieve User Data]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/06_Retrieve_User_Data.png) 
 
 ### Make the Data Pretty
 Since this is Flask, we can make the data pretty by using a **Jinja2** template.
@@ -250,7 +250,7 @@ def show_user_data(userkey):
 
 When you reload the web page, you will see a bulleted list of key/ value pairs.
 
-![Retrieve User Data Pretty]({filename}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
+![Retrieve User Data Pretty]({static}/images/An_Inexpensive_Web_Database_App_Via_S3_Part_One/07_Retrieve_User_Data_Pretty.png) 
 
 ### Daily Bucket
 If you don't like the idea of having a single bucket holding every record, you can break up the storage into daily buckets.

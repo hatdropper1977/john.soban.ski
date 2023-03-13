@@ -8,7 +8,7 @@ Status: published
 
 Network Engineers use the [OpenDaylight](https://www.opendaylight.org/) (ODL) platform to craft, deploy and manage interesting virtual network services.
 
-![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
+![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
 Internet Service Providers, Cloud Service Providers, Data Center Engineers and Academics use ODL to address the following use-cases:
 
@@ -136,7 +136,7 @@ Release | Version | Year | Month
 
 Right click the desired version in the table above and then select **Copy link address** from the context menu.  
 
-![Right Click my Table]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/08_Table_Right_Click.png)
+![Right Click my Table]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/08_Table_Right_Click.png)
 
 Paste the link into a **CURL** command, as follows.  Be sure to use the capital **O** ("O" as in "Oscar") flag to save the **Zip**.  I use the **Oxygen** release in the example below.
 
@@ -151,37 +151,37 @@ If you downloaded your **Zip**, and the **Zip** name starts with the word **kara
 ### Option 2: Navigate the OpenDaylight Download page.
 If you want to use the OpenDaylight Download page, first go to the OpenDaylight project's [home page](https://www.opendaylight.org) and click on the **hamburger** icon.
 
-![OpenDaylight Hamburger Menu]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/01_ODL_Homepage.png)
+![OpenDaylight Hamburger Menu]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/01_ODL_Homepage.png)
 
 Click **Tech Community**.
 
-![Tech Community]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/02_Tech_Community.png)
+![Tech Community]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/02_Tech_Community.png)
 
 Click **Getting Started for Developers**.
 
-![Getting Started for Developers]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/03_Get_Start_Devs.png)
+![Getting Started for Developers]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/03_Get_Start_Devs.png)
 
 Click **Downloads**.
 
-![Downloads]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/04_Downloads.png)
+![Downloads]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/04_Downloads.png)
 
 > NOTE: If you can't navigate the menu, then click the [direct link to the OpenDaylight downloads page](https://docs.opendaylight.org/en/latest/downloads.html)
 
 Once you hit the OpenDaylight download page, you may be tempted to right click and save the **Zip** of the current release.
 
-![Right Click]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/05_Right_Click.png)
+![Right Click]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/05_Right_Click.png)
 
 Do not download this Zip!  This Zip includes the source code of OpenDaylight for builds.  You do not want the source code, you want the pre-compiled binaries.
 
 Instead, navigate to the section that reads "Archived Releases."
 
-![Archived Releases]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/06_Archived_Releases.png)
+![Archived Releases]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/06_Archived_Releases.png)
 
 Click one of the OpenDaylight links, e.g. [Nitrogen and Newer](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/).
 
 Now, select the version you want, for example, [0.12.2](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.12.2/).  Once you hit the child folder, download a **Karaf** zip.
 
-![Binary]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/07_The_Bin.png)
+![Binary]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/07_The_Bin.png)
 
 Right click the link to the **karaf** zip and then, in your terminal, paste the link into a **CURL** command.  
 
@@ -246,7 +246,7 @@ Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown OpenDaylight.
 opendaylight-user@root>
 ```
 
-![OpenDaylight Splash!]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/09_ODL_Splash.png)
+![OpenDaylight Splash!]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/09_ODL_Splash.png)
 
 You just installed a **release** distribution, which provides you with the ability to select from **all** features for install.
 
@@ -254,7 +254,7 @@ You just installed a **release** distribution, which provides you with the abili
 opendaylight-user@root>feature:list
 ```
 
-![04_All_Features]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
+![04_All_Features]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/04_All_Features.png)
 
 ## Conclusion
 You now have the knowledge and experience to install any **release** version of OpenDaylight with all the **karaf features**.  If you would like a challenge, you can try some more complicated methods of install, to include [building OpenDaylight from Source]({filename}/how-to-install-opendaylight-on-centos-or-ubuntu.md) or [installing OpenDaylight as a Service]({filename}/how-to-install-opendaylight-as-a-service-on-ubuntu.md).

@@ -9,7 +9,7 @@ Status: published
 Internet Service Providers (ISP), Cloud Service Providers (CSP), Data Center Engineers and Academics use the [OpenDaylight (ODL)](https://www.opendaylight.org/) platform to tailor and automate computer networks.
 
 
-![OpenDaylight Logo]({filename}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
+![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
 Professionals and Academics use ODL to execute several use-cases:
 
@@ -164,7 +164,7 @@ Release | Version | Year | Month
 
 Right click the desired version in the table above and then select **Copy link address** from the context menu.  
 
-![Right Click my Table]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/08_Table_Right_Click.png)
+![Right Click my Table]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/08_Table_Right_Click.png)
 
 Paste the link into a **CURL** command.  Use a capital **O** ("O" as in "Oscar") flag to save the **Zip**, not the number zero.
 
@@ -185,21 +185,21 @@ You can skip this section if you completed the section above.
 
 If you **really** want to use the website, navigate to the OpenDaylight project's [home page](https://www.opendaylight.org) and click **Developer**.
 
-![Click Dev]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/01_Click_Dev.png)
+![Click Dev]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/01_Click_Dev.png)
 
 Click **Documentation** under **Developer**.
 
-![Click the Documentation]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/02_Click_Doc.png)
+![Click the Documentation]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/02_Click_Doc.png)
 
 Click **Downloads**.
 
-![Getting Started for Developers]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/03_Click_Down.png)
+![Getting Started for Developers]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/03_Click_Down.png)
 
 > NOTE: If you can't navigate the menu, then click the [direct link to the OpenDaylight downloads page](https://docs.opendaylight.org/en/latest/downloads.html)
 
 Once you hit the OpenDaylight download page, the **current release** section may tempt you with a download.
 
-![Right Click]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/04_Scroll_Down.png)
+![Right Click]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/04_Scroll_Down.png)
 
 Do not download either of these Zips!  These Zips only include the source code of OpenDaylight for builds, which you do not want.
 
@@ -209,7 +209,7 @@ Instead, scroll down to the section that reads **Archived Releases**.
 
 If you hover over the **Fluorine and Newer** link, you will not see the word **karaf** in the path, which indicates this link directs you to the unwanted source code.
 
-![Archived Releases]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/05_Bad_Click.png)
+![Archived Releases]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/05_Bad_Click.png)
 
 > **BEWARE:**  The **Fluorine and Newer** link contains links to the source code, and not the binary.  
 
@@ -217,7 +217,7 @@ If you want **Fluorine or newer**, then scroll up to the table in this blog post
 
 The remaining links under **Archived Releases** provide paths that contains the desired binaries (includes the word **karaf**).
 
-![Archived Releases]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/06_Good_Click.png)
+![Archived Releases]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/06_Good_Click.png)
 
 Click one of the good OpenDaylight links, e.g. [Nitrogen and Oxygen](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/).
 
@@ -225,7 +225,7 @@ Now, select the version you want, for example, [0.12.2](https://nexus.opendaylig
 
 Once you hit the child folder, download a **Karaf** zip.
 
-![Binary]({filename}/images/Install_Opendaylight_Ubuntu_Lts_Fast/07_The_Bin.png)
+![Binary]({static}/images/Install_Opendaylight_Ubuntu_Lts_Fast/07_The_Bin.png)
 
 Right click the link to the **karaf** zip and then, in your terminal, paste the link into a **CURL** command.  
 
@@ -288,7 +288,7 @@ Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown OpenDaylight.
 opendaylight-user@root>                                                 
 ```
 
-![OpenDaylight Splash!]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/07_Odl_Splash.png)
+![OpenDaylight Splash!]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/07_Odl_Splash.png)
 
 You just installed a **release** distribution, which provides you with the ability to select from **all** features for install.
 
@@ -296,7 +296,7 @@ You just installed a **release** distribution, which provides you with the abili
 opendaylight-user@root>feature:list
 ```
 
-![OpenDaylight List!]({filename}/images/Install_Opendaylight_Ubuntu_Lts_22_04/08_Feature_List.png)
+![OpenDaylight List!]({static}/images/Install_Opendaylight_Ubuntu_Lts_22_04/08_Feature_List.png)
 
 ## 7.  Bonus: What happened to DLUX?
 Over the past four years I received dozens of Disqus Comments, [LinkedIn](https://www.linkedin.com/in/johnsobanski/) messages and [GitHub](https://github.com/hatdropper1977/) issues on the topic of [DLUX](https://docs.opendaylight.org/en/stable-nitrogen/getting-started-guide/common-features/dlux.html).
@@ -490,11 +490,11 @@ Enter your IP address in the following URL (Keep the port as **8181**).
 
 > http://<your ip address here\>:8181/index.html#/login
 
-![OpenDaylight DLUX Login]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/02_DLUX_LOGIN.png)
+![OpenDaylight DLUX Login]({static}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/02_DLUX_LOGIN.png)
 
 If you log in with **admin**/**admin**, **DLUX** renders the **DLUX** console.
 
-![OpenDaylight DLUX Console]({filename}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/03_DLUX.png)
+![OpenDaylight DLUX Console]({static}/images/How_To_Install_Opendaylight_As_A_Service_On_Ubuntu/03_DLUX.png)
 
 ## Conclusion
 This HOWTO taught you how to install OpenDaylight with all the **karaf features**.  

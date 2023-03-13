@@ -27,7 +27,7 @@ I will quickly dive into scenario four to illustrate the benefits of Darkblock.
 
 Consider the current state of creative content delivery.
 
-![Current Streaming Ecosystem]({filename}/images/Darkblock/00_Hbo_Current.png)
+![Current Streaming Ecosystem]({static}/images/Darkblock/00_Hbo_Current.png)
 
 A creator develops (or licenses) content to a streaming service (HBO Max, HULU, Prime Video, Netflix, YouTube Red).
 
@@ -43,7 +43,7 @@ Each one of these services: Identity, Payment, Content Delivery, Rights Manageme
 
 Contrast the current streaming ecosystem (above) to the Darkblock ecosystem:
 
-![Blockchain Streaming Approach]({filename}/images/Darkblock/00_Solution_Blockchain.png)
+![Blockchain Streaming Approach]({static}/images/Darkblock/00_Solution_Blockchain.png)
 
 In the Web 3.0, the blockchain (and related DAPPS) provides identity, payment, infrastructure and digital rights management services.
 
@@ -63,36 +63,36 @@ You do not, however, need to own the NFT to create a Darkblock.
 ### NFT I Created (But Do Not Own)
 To demonstrate, I will log into my **Hello World** [Rarible account](https://rarible.com/ultramagnus).
 
-![Um Login]({filename}/images/Darkblock/01_Um_Login.png)
+![Um Login]({static}/images/Darkblock/01_Um_Login.png)
 
 I named this account [Ultra Magnus](https://tfwiki.net/wiki/Ultra_Magnus_(G1)) and [created two NFT]({filename}/create-nft-with-rarible-part-1.md), Isometric Pixel Art renditions of (1) the [Charles and Ray Eames Chair](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537) and (2) a [1990s Media Console](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:351373).  
 
 Find these two NFT under the [created tab](https://rarible.com/ultramagnus?tab=created).
 
-![Um Created]({filename}/images/Darkblock/02_Um_Created.png)
+![Um Created]({static}/images/Darkblock/02_Um_Created.png)
 
 The [Owners](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537?tab=owners) tab shows that **Ultra Magnus** no longer owns the Eames NFT.  [John Sobanski](https://rarible.com/sobanski) (me) and [Mark Discordia](https://rarible.com/markdiscordia?tab=owned) own copies of the NFT.
 
-![All Gone]({filename}/images/Darkblock/03_All_Gone.png)
+![All Gone]({static}/images/Darkblock/03_All_Gone.png)
 
 Ultra Magnus no longer owns the [Partu Media NFT](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:351373?tab=details), since I transferred it to my official John Sobanski account.
 
-![All Gone2]({filename}/images/Darkblock/04_All_Gone2.png)
+![All Gone2]({static}/images/Darkblock/04_All_Gone2.png)
 
 ### The Darkblock App
 Navigate to [app.darkblock.io](https://app.darkblock.io).
 
-![App Darkblock]({filename}/images/Darkblock/05_App_Darkblock.png)
+![App Darkblock]({static}/images/Darkblock/05_App_Darkblock.png)
 
 Click **Connect Wallet** to connect with MetaMask.
 
 If you do not know how to use MetaMask, I wrote a blog post on [how to create and configure a MetaMask wallet to use Decentralized Applications (dApps)]({filename}/create-nft-with-rarible-part-1.md).
 
-![Connect Wallet]({filename}/images/Darkblock/06_Connect_Wallet.png)
+![Connect Wallet]({static}/images/Darkblock/06_Connect_Wallet.png)
 
 Click **Connect**.
 
-![Click Connect]({filename}/images/Darkblock/07_Click_Connect.png)
+![Click Connect]({static}/images/Darkblock/07_Click_Connect.png)
 
 The Darkblock App provides tabs to list the NFT you own and the [NFT you created]({filename}/create-nft-with-rarible-part-2.md).
 
@@ -100,45 +100,45 @@ In the last section, we saw that **Ultra Magnus** does not own any NFT.
 
 Darkblock tells us that **Ultra Magnus** does not own any NFT.
 
-![Nuthin In]({filename}/images/Darkblock/08_Nuthin_In.png)
+![Nuthin In]({static}/images/Darkblock/08_Nuthin_In.png)
 
 The Darkblock App, however, shows that Ultra Magnus **Created** two NFT, via the **Created By Me** tab.
 
-![My Nfts]({filename}/images/Darkblock/09_My_Nfts.png)
+![My Nfts]({static}/images/Darkblock/09_My_Nfts.png)
 
 The App notes that Address [0x8f799eeb12521639b20405494082f3d88aec5f8e](https://etherscan.io/address/0x8f799eeb12521639b20405494082f3d88aec5f8e), AKA Mark Discordia owns the [Eames NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537?tab=owners) (and not **Ultra Magnus**).
 
-![Eames Chair]({filename}/images/Darkblock/10_Eames_Chair.png)
+![Eames Chair]({static}/images/Darkblock/10_Eames_Chair.png)
 
 Since I (Ultra Magnus) created the NFT, I can create a Darkblock.
 
-![Create Darkblock]({filename}/images/Darkblock/11_Create_Darkblock.png)
+![Create Darkblock]({static}/images/Darkblock/11_Create_Darkblock.png)
 
 I upload content in the form of a High-Res picture into the Darkblock App, and then click **Create Darkblock**.
 
-![Create Darkblock2]({filename}/images/Darkblock/12_Create_Darkblock2.png)
+![Create Darkblock2]({static}/images/Darkblock/12_Create_Darkblock2.png)
 
 I then sign the request.
 
-![Sign Darkblock]({filename}/images/Darkblock/13_Sign_Darkblock.png)
+![Sign Darkblock]({static}/images/Darkblock/13_Sign_Darkblock.png)
 
 Darkblock indicates successful creation.  Now, the owners of the NFT ([John Sobanski](https://etherscan.io/address/sobanski.eth) and [Mark Discordia](https://etherscan.io/address/0x8f799eeb12521639b20405494082f3d88aec5f8e)) both have unlockable content to the [Eames NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537?tab=owners).
 
-![Darkblock Created]({filename}/images/Darkblock/14_Darkblock_Created.png)
+![Darkblock Created]({static}/images/Darkblock/14_Darkblock_Created.png)
 
 John and Mark received the [Eames NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537?tab=owners) in [March](https://etherscan.io/tx/0x781b8067bed403570dce3db5a4ac5b122f38da947c7cd764412630a6d02febca).  Now, over 1/2 a year later they received a special **drop** in  the form of unlockable content.
 
-![Darkblock Protected]({filename}/images/Darkblock/15_Darkblock_Protected.png)
+![Darkblock Protected]({static}/images/Darkblock/15_Darkblock_Protected.png)
 
 If I click back to the Ultra Magnus **created by Me** tab, I now see that the two NFT include **Darkblock** goodies.
 
-![Ultra Darkblocks]({filename}/images/Darkblock/16_Ultra_Darkblocks.png)
+![Ultra Darkblocks]({static}/images/Darkblock/16_Ultra_Darkblocks.png)
 
 I now log out of my [Ultra Magnus](https://rarible.com/ultramagnus) account and into my verified [John Sobanski](https://rarible.com/sobanski) account.
 
 I then click the **My NFT's** tab.
 
-![Sobanski Nft]({filename}/images/Darkblock/17_Sobanski_Nft.png)
+![Sobanski Nft]({static}/images/Darkblock/17_Sobanski_Nft.png)
 
 In addition to my [NFTP By Charmin NFT](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:489778) and [Taco Bell NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715?tab=owners), I own the Ultra Magnus [Eames](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:254537?tab=owners) and [Console](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:351373?tab=details) NFT.
 
@@ -151,47 +151,47 @@ Today (October 30th, 2021) Darkblock provides an Application for the [Amazon Fir
 
 > NOTE:  The following pictures capture the app running on a Vintage TV from 2005.  I apologize for the crappy quality of the pictures.  [Send me some Eth](https://etherscan.io/address/sobanski.eth) so I can upgrade to a [Bang & Olufsen](https://www.bang-olufsen.com/en/de/televisions).
 
-![Darkblock App]({filename}/images/Darkblock/18_Darkblock_App.png)
+![Darkblock App]({static}/images/Darkblock/18_Darkblock_App.png)
 
 The Fire Stick App provides a secret code and instructs me to go to [app.darkblock.io/tv](https://app.darkblock.io/tv).
 
-![Tv Code]({filename}/images/Darkblock/19_Tv_Code.png)
+![Tv Code]({static}/images/Darkblock/19_Tv_Code.png)
 
 On my laptop I enter the code.
 
-![Enter Code]({filename}/images/Darkblock/20_Enter_Code.png)
+![Enter Code]({static}/images/Darkblock/20_Enter_Code.png)
 
 I sign the login request.
 
-![Sign Request]({filename}/images/Darkblock/21_Sign_Request.png)
+![Sign Request]({static}/images/Darkblock/21_Sign_Request.png)
 
 This signing request demonstrates how Darkblock uses the blockchain for Identity and Access Management (IAM) of the digital content.
 
-![Goto Tv]({filename}/images/Darkblock/22_Goto_Tv.png)
+![Goto Tv]({static}/images/Darkblock/22_Goto_Tv.png)
 
 My (broken) TV (I have some dead pixels in the upper left) shows the NFT I own in this particular account.
 
-![Nft List]({filename}/images/Darkblock/23_Nft_List.png)
+![Nft List]({static}/images/Darkblock/23_Nft_List.png)
 
 This account owns an [Isometric Pixel Art NFT of an Orange Francis Francis X1 Espresso Machine](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:542004), with unlockable **Darkblock** content.
 
 I click **Decrypt**.
 
-![Click Decrypt]({filename}/images/Darkblock/24_Click_Decrypt.png)
+![Click Decrypt]({static}/images/Darkblock/24_Click_Decrypt.png)
 
 The App decrypts the secret content.
 
-![Decrypt Screen]({filename}/images/Darkblock/25_Decrypt_Screen.png)
+![Decrypt Screen]({static}/images/Darkblock/25_Decrypt_Screen.png)
 
 The App displays my secret content (a Grey Espresso Machine) along with some display controls and a QR code that links to the public version of the NFT.
 
 In this way, a museum (for example) can tune the display of secret content during an exhibition.
 
-![Secret Art]({filename}/images/Darkblock/26_Secret_Art.png)
+![Secret Art]({static}/images/Darkblock/26_Secret_Art.png)
 
 Here I change the matte background to corkboard.
 
-![With Borders]({filename}/images/Darkblock/27_With_Borders.png)
+![With Borders]({static}/images/Darkblock/27_With_Borders.png)
 
 ## Conclusion
 Darkblock provides artists with an NFT control panel for access rights and Creator Rights Management.  Artists can use NFT for media distribution and permissions management, which opens the door for exciting possibilities.
@@ -201,37 +201,37 @@ I attempted to [create a brand new NFT](https://rarible.com/token/0xf6793da65749
 
 I selected **single collectible**.
 
-![Upload Png]({filename}/images/Darkblock/28_Upload_Png.png)
+![Upload Png]({static}/images/Darkblock/28_Upload_Png.png)
 
 I **disabled** free minting.
 
-![Toggle Free]({filename}/images/Darkblock/29_Toggle_Free.png)
+![Toggle Free]({static}/images/Darkblock/29_Toggle_Free.png)
 
 I clicked **Create item** to mint the NFT then and there.
 
-![Click Create]({filename}/images/Darkblock/30_Click_Create.png)
+![Click Create]({static}/images/Darkblock/30_Click_Create.png)
 
 I paid $170.00 to **mint** the item then and there (vs. lazy minting).
 
-![Sign Contract]({filename}/images/Darkblock/31_Sign_Contract.png)
+![Sign Contract]({static}/images/Darkblock/31_Sign_Contract.png)
 
 Rarible depicts a successful mint.
 
-![Mint NFT]({filename}/images/Darkblock/32_Mint_NFT.png)
+![Mint NFT]({static}/images/Darkblock/32_Mint_NFT.png)
 
 You too can view my [isometric pixel art masterpiece](https://rarible.com/token/0xf6793da657495ffeff9ee6350824910abc21356c:69644222009519936378771681436291690114697426885580689206684726473945885179905?tab=details).
 
-![Nft Minted]({filename}/images/Darkblock/33_Nft_Minted.png)
+![Nft Minted]({static}/images/Darkblock/33_Nft_Minted.png)
 
 The Darkblock App, however, does not detect that I, John Sobanski created the NFT.
 
 Darkblock believes [0x3482549fca7511267c9ef7089507c0f16ea1dcc1](https://etherscan.io/address/0x3482549fca7511267c9ef7089507c0f16ea1dcc1) AKA [GayAuburnSeahorseOfAwe](https://opensea.io/GayAuburnSeahorseOfAwe?tab=created) minted the NFT.
 
-![Darkblock Error]({filename}/images/Darkblock/34_Darkblock_Error.png)
+![Darkblock Error]({static}/images/Darkblock/34_Darkblock_Error.png)
 
 OpenSea also believes that [GayAuburnSeahorseOfAwe](https://opensea.io/GayAuburnSeahorseOfAwe?tab=created) created the item, not John Sobanski.
 
-![Auburn Seahorse]({filename}/images/Darkblock/35_Auborn_Seahorse.png)
+![Auburn Seahorse]({static}/images/Darkblock/35_Auborn_Seahorse.png)
 
 I reached out to Rarible, and they responded immediately (excellent tech support thank you!)
 

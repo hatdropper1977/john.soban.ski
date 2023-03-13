@@ -61,7 +61,7 @@ With alphabet **Q** representing the **n** dimensional vector space, we define t
 
 We consider a code **C** systematic on **k** positions if **|C| = 2<sup>k</sup>** and we have one codeword for every possible choice of coordinates in the **k** positions.  We call the symbols (**1** or **0** for binary) in these **k** positions information bits ([Lint](#Lint) 36).  Any **[n,k]** code, must prove systematic on at least one **k-tuple** of positions.  In other words, a systematic linear block code generator matrix maps a message vector onto a code vector such that the resultant code vector contains the original message vector plus m additional bits.
  
-![Block Code]({filename}/images/Visual_Guide_To_Forward_Error_Correction/01_Block_Code.png)
+![Block Code]({static}/images/Visual_Guide_To_Forward_Error_Correction/01_Block_Code.png)
  
 A systematic linear block code generator matrix has the form **G = [ P | I<sub>k</sub> ]**.  We call **P**, the first part of matrix **G** the parity matrix.  From this we can create the parity-check matrix **H = [ I<sub>n-k</sub> | P<sup>T</sup> ]**.  We use **H** to create the syndrome test matrix **S = rH<sup>T</sup>**, with **r** a received code vector.  The syndrome test matrix produces a syndrome.  We have a coset on hand that maps all expected syndromes to error patterns.  Once we lookup the error pattern for a given syndrome, we add it to the received vector at which point **modulo 2** addition will correct the error ([Sklar](#Sklar) 333).
 

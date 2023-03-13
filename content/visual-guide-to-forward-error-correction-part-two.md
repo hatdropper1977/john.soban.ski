@@ -13,7 +13,7 @@ Over the air communications, such as text messages, satellite radio, walkie talk
 ## Channel Coding: Convolutional Codes
 Convolutional codes produce **n** code bits in response to the **k** input bits from both the current time unit and the previous **N-1** input data bits.  We refer to convolution codes as **(n,k,L)**, with **n** and **k** equal to output and input bits respectively.  We define **L**, the constraint length, as **L = k(m-1)**, with **m** equal to the number of memory registers.  The figure below describes an encoding device:
 
-![Convolutional Code Encoding Device]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/02_Convolutional_Code_Encoding_Device.png)
+![Convolutional Code Encoding Device]({static}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/02_Convolutional_Code_Encoding_Device.png)
 
 The constraint length is **3**, with **n=2** output bits.  Squares **d1**, **d2** and **d3** represent the flip-flops that can be in either state **0** or **1**.  They are connected to modulo two adders to represent the generator polynomial.  An external clock produces a signal every **t<sub>0</sub>** seconds (assume **t<sub>0</sub> = 1**), causing the contents of the flip-flops to move to the right (i.e. a shift register).  The **modulo 2** operations produce the output bits **s1** and **s2** ([Lint](#Lint) 181).
 
@@ -25,17 +25,17 @@ We interlace the outputs as **T(x) = T<sub>0</sub>(x<sup>2</sup>) + xT<sub>1</su
 
 The key is to understand that only the right two flip-flops in the diagram are the memory registers, the first is the input.  The two memory registers can be one of four values, **0** through **3** (in binary).   If they are at **00** for example, the input bit can only be a **0** or a **1**.  If it is a **1**, we get **100** and the output bits are **11** from the polynomial.  Then, when the shift register moves the bits, the memory registers are now **10**.  Going back to **00** in the memory register, consider an input bit of **0**.  The three registers are now **000**, which applying the modulo **2** adders gives us an output of **00**.  The shift register then shifts the two zeros to the right into the memory registers.  Therefore, if start at state **00**, we can only transition to state **10** (with an output of **11**) or stay at state **00** (with an output of **00**). 
 
-![Convolutional Code State Diagram]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/03_Convolutional_Code_State_Diagram.png)
+![Convolutional Code State Diagram]({static}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/03_Convolutional_Code_State_Diagram.png)
  
 Another representation of convolutional encoding is the tree diagram, which attempts to show the passage of time as we go deeper into the branches.  Instead of moving from one state to another, we go down the branches of the tree whether a **1** or **0** is received.  If we receive a **0**, we go up a branch.  If we receive a **1**, we go down a branch.  
 
 The first two bits show the output bits, and the number in the parenthesis shows the operation of shifting in the input bit, or the output state ([Langton](#Langton) **12**).  The tree diagram is not the preferred diagram for engineers.  In the diagram below, the state diagram is added for reference, with the **1** input bits highlighted by a red circle:
 
-![Convolutional Code Tree Diagram]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/04_Convolutional_Code_Tree_Diagram.png)
+![Convolutional Code Tree Diagram]({static}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/04_Convolutional_Code_Tree_Diagram.png)
  
 The preferred method is the Trellis diagram.  We draw all states on the y-axis.  The x-axis represents discrete time intervals.  When we receive a **0** we go up using a solid line, for a **1** we use a dashed line flowing down.  On the line we write the output, or the codeword branch.  After **L** bits, all states are reached, and the diagram repeats.   Coding is easy with a Trellis diagram, for an input string, we merely go up for a **0** bit or down for a **1**, and copy down the codewords along the path.
 
-![Convolutional Code Trellis Diagram]({filename}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/05_Convolutional_Code_Trellis_Diagram.png)
+![Convolutional Code Trellis Diagram]({static}/images/Visual_Guide_To_Forward_Error_Correction_Part_Two/05_Convolutional_Code_Trellis_Diagram.png)
 	 
 ## Channel Coding: Decoding convolutional codes
 The decoding of convolutional codes almost resembles the decoding of block codes since we’re comparing the received word with all codewords.  Convolutional codes, however, have infinitely long codewords so the receiver must only look at the first **l** symbols of the received message ([Lint](#Lint) 185).

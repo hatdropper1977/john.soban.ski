@@ -10,12 +10,12 @@ In this [HOWTO]({category}howto), I will demonstrate a very quick and dirty meth
 
 The following graphic depicts the AWS Architecture (courtesy of [Angela Wang](https://github.com/aws-samples/amazon-transcribe-comprehend-podcast)).  Do not be intimidated by the complexity, you will literally only need to click a single button to deploy it!
 
-![Transcribe Architecture]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/01_Architecture.png)
+![Transcribe Architecture]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/01_Architecture.png)
 
 ## Deploy the Architecture
 To deploy the architecture, sign into your AWS console and then click the following button.(Note that you will deploy to US-East-1):
 
-[![Launch Stack]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/02_Launch_Stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=podcast-transcribe-index&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/discovering-podcasts/packaged.yaml)
+[![Launch Stack]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/02_Launch_Stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=podcast-transcribe-index&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/discovering-podcasts/packaged.yaml)
 
 Follow these [instructions](https://github.com/aws-samples/amazon-transcribe-comprehend-podcast) to deploy the stack:
 
@@ -35,7 +35,7 @@ The deployed system watches an RSS feed and ingests new Podcasts as they arrive.
 
 The simplest way to achieve this would be to put a proxy in front of your S3 bucket that password protects access.
 
-![Proxies]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/03a_Prox.png)
+![Proxies]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/03a_Prox.png)
 
 Alternatively you could use AWS IAM roles, IAM policies and bucket polices to ensure that only the Lambda function can access the customer service voicemails.
 
@@ -53,7 +53,7 @@ You can use my RSS feed, which includes audio files that I pulled from YouTube v
 ## Point the Pipeline to your RSS feed
 In the AWS search bar, type in "Step Functions" and click the **Step Functions** console.
 
-![Step Functions]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/03_Step_Functions.png)
+![Step Functions]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/03_Step_Functions.png)
 
 Click the **RSSStateMachine** step function name and then click the orange **start execution** button.  In the **New Execution** window, type in the following JSON.  This example points to my RSS feed.  If you set up your own RSS feed, replace my RSS feed with yours.
 
@@ -66,37 +66,38 @@ Click the **RSSStateMachine** step function name and then click the orange **sta
 }
 ```
 
-![Point to Feed]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/04_Point_To_Feed.png)
+![Point to Feed]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/04_Point_To_Feed.png)
 
 Click start and the pipeline begins!
 
 You can click any of the pipeline boxes to see status.
 
-![Progress]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/05_State_Machine_Progress.png)
+![Progress]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/05_State_Machine_Progress.png)
 
 ## Explore the Data in Kibana
 ### Find the Console URL
 First, open the CloudFormation console.
-![CF Console]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/06_CF.png)
+
+![CF Console]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/06_CF.png)
 
 Click your stack, and then expand the **Output** triangle.  You will see a **Kibana** username, password and URL.
 
-![CF Out]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/07_CF_Out.png)
+![CF Out]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/07_CF_Out.png)
 
 Click the URL and then enter the username and password that the output file indicates.  You will need to change this username and password.
 
-![Kibana Login]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/08_Kibana_Login.png)
+![Kibana Login]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/08_Kibana_Login.png)
 
 Providing an identity/ authentication layer to Kibana is actually a tricky problem.  The **CloudFormation** template, however, created one for us automatically!!!
 
 ### Configure Kibana to Serve Your Documents
 Once in Kibana, set up index patterns for the **episodes** and **paragraphs** indices.  Click the 'Create Index' button.
 
-![Kibana Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/09_Index_Pattern.png)
+![Kibana Patterns]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/09_Index_Pattern.png)
 
 Now type in 'Episodes.'
 
-![Episodes Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/10_Episodes.png)
+![Episodes Patterns]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/10_Episodes.png)
 
 If you are asked to pick a Time Filter Field, choose 'I don’t want to use the Time Filter', then choose **Create Index Pattern**.
 
@@ -105,7 +106,7 @@ Repeat the process for 'paragraphs.'
 ### Explore the data
 Now you have a fully searchable index!  Click discover, select 'paragraphs' and type in a term.  Since my feed addresses the midterm elections, you can type in a political term, such as **President Trump**.  The search engine returns and highlights all of the hits.
 
-![Episodes Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/11_President_Trump.png)
+![Episodes Patterns]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/11_President_Trump.png)
 
 ## Programmatically Access your Documents
 In this section, we will write a script to search for terms so that we can automatically monitor and send an email when a certain keyword arrives.
@@ -272,15 +273,15 @@ Leave the **ELASTIC_INDEX_NAME** and **DOCTYPE_NAME** as is.  You can add, edit 
 ### Find Your Elasticsearch Endpoint
 Open up the Elasticsearch console.
 
-![ES Console]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/12_Find_ES.png)
+![ES Console]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/12_Find_ES.png)
 
 Click your Domain.
 
-![Click ES Domain]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/13_Click_Domain.png)
+![Click ES Domain]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/13_Click_Domain.png)
 
 You will see your Domain URL.  Copy this link.
 
-![ES Domain]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/14_ES_Domain.png)
+![ES Domain]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/14_ES_Domain.png)
 
 Now, update your **config.py** file.  Be sure to remove the **https://** from your entry.
 
@@ -311,42 +312,42 @@ Since you added a new field **Update_Sent**, you need to refresh the Kibana inde
 
 On the Kibana console, click 'Management.'
 
-![MGMT]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/15_MGMT.png)
+![MGMT]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/15_MGMT.png)
 
 Now click **Index Pattens**
 
-![Index Patterns]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/16_Index_Patterns.png)
+![Index Patterns]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/16_Index_Patterns.png)
 
 Click **paragraphs** and then **refresh**.  **Warning_Sent** now appears.
 
-![Refresh]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/17_Refresh.png)
+![Refresh]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/17_Refresh.png)
 
 If you go to discover, you will see documents with **Warning_Sent**.
 
-![Filter]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/18_Filter.png).
+![Filter]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/18_Filter.png).
 
 Click save and you will see your document.
 
-![True]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/19_True.png)
+![True]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/19_True.png)
 
 ## Configure Simple Email Service
 We now need to configure SES to send emails.  You first 
 
 Open the SES console and click **Email Addresses**.
 
-![SES]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/20_SES.png)
+![SES]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/20_SES.png)
 
 Click **verify a new email**.
 
-![Verify]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/21_Verify.png)
+![Verify]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/21_Verify.png)
 
 Enter your email address and then go to your inbox.  Click the verify link.
 
-![Click]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/22_Click.png)
+![Click]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/22_Click.png)
 
 You will see verification success.
 
-![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
+![Success]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
 
 ## Send alert via email
 We will now have our **search** script emit an email.  First, update **config.py** with the following.
@@ -462,7 +463,7 @@ Email sent! Message ID: 010001676647ee89-d14d7dec-ad45-458c-81d8-617b3edb90bf-00
 
 If you go to your inbox, you will see an email that contains the *start time* of the paragraph along with the text that matches one of your keywords.
 
-![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/24_Victory.png)
+![Success]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/24_Victory.png)
 
 ## Install in Cron
 If you would like to periodically watch the index for new audio files that trap on a keyword, simply execute the following commands.

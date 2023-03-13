@@ -17,11 +17,11 @@ Fastai provides helper functions on top of Pytorch to help us wrangle, clean, an
 ## Introduction
 Fastai delivers a series of videos and Juypter notebooks that teach us how to quickly apply ML/AI techniques to real world problems.  The Jupyter notebooks require Python 3 libraries and a GPU.  Crestle.ai provides a one-click deployment of the required environment. 
 
-![Crestle Splash]({filename}/images/Fastai_Flask/01_Crestle.png) 
+![Crestle Splash]({static}/images/Fastai_Flask/01_Crestle.png) 
 
 You enter your credit card and then click "run."
 
-![Enter your credit card]({filename}/images/Fastai_Flask/02_Pay.png)
+![Enter your credit card]({static}/images/Fastai_Flask/02_Pay.png)
 
 Unfortunately, as of August 31st, 2019, Crestle no longer provides their service to the public.
 
@@ -200,7 +200,7 @@ $ jupyter notebook --ip=0.0.0.0
 
 Ensure that your EC2 instance's security group provides access to port 8888, and then access the server on this port via a web browser.
 
-![Notebook]({filename}/images/Fastai_Flask/03_Jupyter_Notebook.png)
+![Notebook]({static}/images/Fastai_Flask/03_Jupyter_Notebook.png)
 
 ### Use the notebook to clean the data
 Launch the ***lesson2-download.ipynb***, which provides the data cleaning service.
@@ -221,13 +221,13 @@ The notebook directs us to upload the ***mods.csv*** file to the **dl1** folder,
 
 Be sure to upload this file before you execute the download command.
 
-![Mods cells]({filename}/images/Fastai_Flask/04_Mods_DL.png)
+![Mods cells]({static}/images/Fastai_Flask/04_Mods_DL.png)
 
 I then create a new set of cells to set folder to ***rockers***, file to ***rockers.csv*** and the same parent folder.
 
 Once again, I add a cell to download the files and print the results.
 
-![Mods cells]({filename}/images/Fastai_Flask/05_Rockers_DL.png)
+![Mods cells]({static}/images/Fastai_Flask/05_Rockers_DL.png)
 
 Run the cells until you get to the **learn.recorder.plot()** step.
 
@@ -238,7 +238,7 @@ learn.recorder.plot()
 
 Plot the image.  This image helps us select the learning rate boundaries.
 
-![LR]({filename}/images/Fastai_Flask/06_LR.png)
+![LR]({static}/images/Fastai_Flask/06_LR.png)
 
 Based on this image, we want to set the learning rate between ***1e-4*** and ***1e-3***.
 
@@ -252,7 +252,7 @@ As you can see, our data set includes images with incorrect labels.
 
 The image on the right, for example, shows a ***mod***, not a ***rocker***.
 
-![Bad Data]({filename}/images/Fastai_Flask/07_Bad_Data.png)
+![Bad Data]({static}/images/Fastai_Flask/07_Bad_Data.png)
 
 Once you used the widget to fix the data, go back to the following cell, uncomment it and run it.
 
@@ -266,7 +266,7 @@ Notice that this cell uses ***cleaned.csv***, a file created by the image cleani
 
 Run the next few cells.  One cell will show correctly labeled data.
 
-![Samples]({filename}/images/Fastai_Flask/08_Samples.png)
+![Samples]({static}/images/Fastai_Flask/08_Samples.png)
 
 ### Re-run the learn process
 Re-learn the model based on the new cleaned data set.
@@ -275,11 +275,11 @@ Run the cells right and be sure to stop at the ***Cleaning Up*** section.
 
 The new model has a nice, low error rate.
 
-![Good Error]({filename}/images/Fastai_Flask/09_Good_Error.png)
+![Good Error]({static}/images/Fastai_Flask/09_Good_Error.png)
 
 The Confusion matrix shows one miss.
 
-![Confuse]({filename}/images/Fastai_Flask/10_Confuse.png)
+![Confuse]({static}/images/Fastai_Flask/10_Confuse.png)
 
 ### Export the model
 Skip the ***Cleaning Up*** section and proceed to the following cell.
@@ -402,15 +402,15 @@ Now, start your Flask app.
 
 If you navigate to port ***5000/upload***, you will see a screen that directs you to upload a picture for classification.
 
-![App Upload]({filename}/images/Fastai_Flask/11_App_Upload.png)
+![App Upload]({static}/images/Fastai_Flask/11_App_Upload.png)
 
 I will upload a picture of young Glam Rocker Marc Bolan, which the photographer snapped during his mod phase.
 
-![Marc Bolan]({filename}/images/Fastai_Flask/12_Marc_Bolan.png)
+![Marc Bolan]({static}/images/Fastai_Flask/12_Marc_Bolan.png)
 
 After upload, the model successfully classified Marc as a mod!
 
-![Result]({filename}/images/Fastai_Flask/13_Result.png)
+![Result]({static}/images/Fastai_Flask/13_Result.png)
 
 ### Conclusion
 We created a fun APP that differentiates between ***mods*** and ***rockers***.  We created a toy application.  Our application blocks, and can only accommodate one user at a time.  If asynchronous web applications interest you, take a look at Python [Celery]({filename}/part-6-backup-aws-provided-elasticsearch-to-amazon-simple-storage-service.md) or Amazon [Lambda]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md).

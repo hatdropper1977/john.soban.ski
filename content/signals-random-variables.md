@@ -8,7 +8,7 @@ Status: published
 
 This blog post summarizes the first three chapters of Bernard Sklar's [Digital Communication - Fundamentals and Applications](https://www.pearson.com/us/higher-education/product/Sklar-Digital-Communications-Fundamentals-and-Applications/9780132119399.html) textbook.
 
-![Sklar Digital Communications]({filename}/images/Signals_Random_Variables/01_Sklar_Dc.png)
+![Sklar Digital Communications]({static}/images/Signals_Random_Variables/01_Sklar_Dc.png)
 
 ## Signals
 A Digital Communication System (DCS) transmitter (XMT) sends a waveform selected from a finite set of waveforms. A receiver (RCV) does not need to reproduce the waveform entirely, but only needs to determine from the degraded signal which waveform the signal best matches. The **RCV** regenerates digital signals with less effort and power than their analog counterparts.
@@ -21,7 +21,7 @@ Engineers classify **periodic** and **random** signals **power signals** and cla
 
 Engineers characterize distribution of a signal's energy or power in the frequency domain through **spectral density**. Energy spectral density (ESD) sits symmetric in frequency about the origin and describes the signal energy per unit bandwidth measured in **joules/ hertz**. The power spectral density (PSD) provides a real, even, nonnegative, periodic function of frequency.
 
-![Power Spectral Density of a Fluorescent Light]({filename}/images/Signals_Random_Variables/02_Psd_Pic.png)
+![Power Spectral Density of a Fluorescent Light]({static}/images/Signals_Random_Variables/02_Psd_Pic.png)
 
 Autocorrelation measures how closely a signal matches a copy of itself through shifts in time. A real valued energy signal’s **autocorrelation** sits symmetric in time difference about zero, with a maximum value at zero. The autocorrelation and **ESD** form a Fourier transform pair. A real valued power signal shares the same properties, substituting in the fact that it forms a Fourier transform pair with its **PSD**.
 
@@ -47,7 +47,7 @@ The sampling theorem states that a bandlimited signal having no spectral compone
 
 For compatibility with a **DCS**, the Pulse Amplitude Modulation (PAM) levels must be of a finite number of predetermined levels or **quantized samples**. Some sources of corruption occur during **quantization**, since the system converts the infinite continuous analog levels into a finite number of predefined levels. The step sizes between a quantization levels are called quantile intervals, which we denote **q** volts. Quantization levels can be **uniform** or **linear**, but more often **nonuniform**, to reflect the statistical distributions of peak to peak levels. The error due to the quantization approximation error registers no more than **<sup>+</sup>/<sub>-</sub><sup>q</sup>/<sub>2</sub>** volts in either direction or **2** quantile intervals. If you a uniform distribution of **quantization error** over a quantile interval, you can use probability theory to describe the variance, or average **quantization noise power**.
 
-![Pulse Amplitude Modulation]({filename}/images/Signals_Random_Variables/03_Pam_Pic.png)
+![Pulse Amplitude Modulation]({static}/images/Signals_Random_Variables/03_Pam_Pic.png)
 
 From this, and the number of quantization levels, you can describe the **peak power** of the
 analog signal. **<sup>S</sup>/<sub>N</sub>** or **3L<sup>2</sup>** represents the ratio of **peak signal power** to **average quantization noise power**
@@ -70,4 +70,4 @@ Engineers call a non-linear equalizer that uses previous detector decisions to e
 
 Preset equalization use fixed tap weights during data transmission, whether decided mathematically, or after an initial training test. Preset equalization sets tap weights once at the start of transmission. Adaptive equalization, however, performs tap weight adjustments either continually or periodically. In the decision directed method, an **XMT** sends a periodic preamble, which allows the receiver to adjust its tap weights accordingly.
 
-![Sklar Digital Communications 3rd Edition]({filename}/images/Signals_Random_Variables/04_Dc_Book.png)
+![Sklar Digital Communications 3rd Edition]({static}/images/Signals_Random_Variables/04_Dc_Book.png)
