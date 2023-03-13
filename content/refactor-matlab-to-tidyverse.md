@@ -12,7 +12,7 @@ The example RCE algorithm assigns a class to data based on weather or not the da
 
 The following graphic captures an animation of the RCE NN Algorithm in action.
 
-![RCE in action]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
+![RCE in action]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
 
 You can find the original Matlab script and the new R script on [GitHub](https://github.com/hatdropper1977/bupa-rce-octave).
 

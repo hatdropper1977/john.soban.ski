@@ -24,7 +24,7 @@ After this text, the Amazon documentation provides detailed descriptions of the�
 
 In order to backup to a bucket, you need to create a bucket.  From the Amazon console, click S3 --\> Create Bucket and then enter a bucket name.  I named mine ***s3-flask-es***.  Pick a Region if you care and then click "create."
  
-![Create Bucket]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/7-create-s3-bucket-1024x808.png)
+![Create Bucket]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/7-create-s3-bucket-1024x808.png)
 
 **2. Create an S3 CRUD policy**  
 
@@ -34,7 +34,7 @@ Go to the main AWS console and then click the following tree to create a new pol
 
 Console --\> IAM --\> Policies --\> Create Policy --\> Create Your Own Policy
 
-![Create Profile]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/1-createprofile-1024x817.png)
+![Create Profile]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/1-createprofile-1024x817.png)
 
 Copy and paste the following JavaScript Object Notation (JSON) text into the "Create Your Own Policy" text box.
 
@@ -67,7 +67,7 @@ Our IAM role must have a trust relationship with the Amazon Elasticsearch servic
 Click through the following tree:  
 Console --\> IAM --\> Roles --\> EC2\_Can\_Use\_Services --\> Trust Relationships (Tab)
 
-![Edit Trust]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/2-edittrust-1024x693.png)
+![Edit Trust]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/2-edittrust-1024x693.png)
 
 You will see the following JSON:
 
@@ -97,7 +97,7 @@ Click through the following tree to attach our new policy to our existing role.
 
 Console --\> IAM --\> Roles --\> EC2\_Can\_Use\_Services --\> Attach Policy --\> Attach Can\_CRUD\_S3
 
-![Attach CRUD]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/3-attachcrud-1024x754.png)
+![Attach CRUD]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/3-attachcrud-1024x754.png)
 
 **3. Pass ability to CRUD S3 to Elasticsearch**
 
@@ -120,7 +120,7 @@ This statement stops the legion of wannabee coders dead in their tracks.  Since 
 
 All you need to do is locate your ARN and remember the name of the S3 bucket you created in step one. To find your ARN, go to the AWS console, click your name, click "My Account" and then look for your 'Account ID':
  
-![Find ARN]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/8-findarn-1024x660.png)
+![Find ARN]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/8-findarn-1024x660.png)
 
 Now activate your virtual environment (notice, the 'bang dot' shortcut should work for you).
 
@@ -219,7 +219,7 @@ Now, take a look at your S3 bucket:
 
 Console --\> S3 --\> s3-flask-es: (Snapshot of the Metadata)  
 
-![View Bucket]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/4-viewbucket-1024x391.png)
+![View Bucket]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/4-viewbucket-1024x391.png)
  
 You see that Elasticsearch populated your bucket with a snapshot of your Elasticsearch document store.
 
@@ -243,7 +243,7 @@ Did you notice a difference in the response? If you said "Acknowledged" vs. "Acc
 
 Console --\> Elasticsearch Service --\> test-domain --\> Indicies (Tab)
 
-![Empty Index]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/5-emptyesindex-1024x800.png)
+![Empty Index]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/5-emptyesindex-1024x800.png)
 
 Do you want to bring it back from the dead like Doc Martens, Flannels and the Undercut hairstyle? To bring back the Document store, edit your "Take Snapshot" Python script. Comment the "delete" line and un-comment the "POST" (\_restore) line:
 
@@ -257,6 +257,6 @@ Again, you will see "accepted" = True.
 
 Now, refresh the indicies tab on your ES console:  big\_survey returned from the dead!
 
-![Restored Index]({filename}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/restored_index-1024x742.png)
+![Restored Index]({static}/images/Part_6_Backup_AWS_provided_Elasticsearch_to_Amazon_Simple_Storage_Service/restored_index-1024x742.png)
 
 In the next blog post we will use the snapshot feature to "save our work" before we update the mappings of our Document properties.

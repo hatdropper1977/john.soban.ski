@@ -51,12 +51,12 @@ You now want to use a PPNN to classify the color of the observation ***( Var1 = 
 
 The Cartoon below shows the weights as filled colored boxes.  In Column A, for example, weight one (WA1) is half full (e.g. 0.5) and weight two (WA2) is three quarters full ( e.g. 0.75).  The animation shows the dot product of the test pattern ***( X1 = 0.75, X2 = 0.25)*** with the weight vectors, an activation function, and then the selection of the winner.
 
-![Parzen Cartoon]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Parzen_Cartoon.gif)
+![Parzen Cartoon]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Parzen_Cartoon.gif)
 
 ###  Animated example of a Parzen Neural Network 
 Now let's take a look at the classification approach using the familiar neural network diagram.  The input layer (bottom) includes our test pattern ***( X1 = 0.75, X2 = 0.25)***, the hidden layer includes weight vectors assigned to classes based on the train patterns.  The PPNN then connects the hidden layer to the appropriate class in the output layer.
 
-![Parzen Cartoon]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Parzen_Neural_Net_Cartoon.gif)
+![Parzen Cartoon]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Parzen_Neural_Net_Cartoon.gif)
 
 ##  Normalization of Training Data
 The Mathworks [PPNN web page](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/11880/versions/1/previews/ParzenPNN/html/demo.html) specifies that we must normalize both our weight vectors and training vectors.
@@ -169,12 +169,12 @@ If you would like more details, I encourage you to read my [detailed investigati
 ###  Descriptive Animation
 This cartoon shows the simplicity of the RCE algorithm.  For each training point, the RCE algorithm creates a circular footprint with a radius equal to the distance of the nearest training point from the ***other*** class.  To prevent overlap, you can set a maximum radius for each training point.
 
-![RCE Cartoon]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
+![RCE Cartoon]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/RCE_Cartoon.gif)
 
 ###  Visualization of RCE on the normalization approach
 The following animation shows the classification footprints for the centered and normalized training data.  Note that dark gray represents class one, light gray represents class two and white indicates an "ambiguous region" (no class).
 
-![Center Norm Lambda]({filename}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Center_Norm_Lambda.gif)
+![Center Norm Lambda]({static}/images/Graphical_Intro_To_Probabilistic_Neural_Networks/Center_Norm_Lambda.gif)
 
 The next animation shows the RCE classification footprints on the non-centered all samples normalized training data.
 

@@ -18,7 +18,7 @@ In this tutorial, we will execute the following:
 
 Once complete, we will have the following Architecture:
 
-![EBS to ES]({filename}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/ebs_to_es-1024x390.jpg)
+![EBS to ES]({static}/images/Part_4_Connect_ElasticBeanstalk_to_Elasticsearch_via_AWS_Identity_and_Access_Management/ebs_to_es-1024x390.jpg)
 
 Activate the virtual environment for your **__flask\_to\_es project__**:
 

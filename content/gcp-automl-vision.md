@@ -53,7 +53,7 @@ gs://mods-rockers/rockers/00000099.jpg,rockers
 
 If you do not use the proper bucket configuration, you will receive the following error when you attempt to import your dataset.
 
-![Import Fail]({filename}/images/Gcp_Automl_Vision/00_Import_Fail_Wrong_Region.png)
+![Import Fail]({static}/images/Gcp_Automl_Vision/00_Import_Fail_Wrong_Region.png)
 
 The following commands create a bucket, apply permissions to AutoML and give AutoML permissions to access a bucket.
 
@@ -113,15 +113,15 @@ Log into the Google Cloud Platform (GCP) console at [console.cloud.google.com](h
 
 Type **notebooks** into the search bar, click **Notebooks AI Platform** and then click **Enable API**.
 
-![Enable_Notebooks]({filename}/images/Gcp_Automl_Vision/01_Enable_Notebooks.png)
+![Enable_Notebooks]({static}/images/Gcp_Automl_Vision/01_Enable_Notebooks.png)
 
 Click **New Instance** and then select **Python**.
 
-![Create_Python_Notebook]({filename}/images/Gcp_Automl_Vision/02_Create_Python_Notebook.png)
+![Create_Python_Notebook]({static}/images/Gcp_Automl_Vision/02_Create_Python_Notebook.png)
 
 Launch a terminal.
 
-![Launch_Terminal]({filename}/images/Gcp_Automl_Vision/03_Launch_Terminal.png)
+![Launch_Terminal]({static}/images/Gcp_Automl_Vision/03_Launch_Terminal.png)
 
 ### Install FastAI Course v3
 From the terminal install the FastAI course v3.
@@ -183,7 +183,7 @@ for c in classes:
 
 I present the updated code in the following graphic.
 
-![FastAI_Notebook]({filename}/images/Gcp_Automl_Vision/04_FastAI_Notebook.png)
+![FastAI_Notebook]({static}/images/Gcp_Automl_Vision/04_FastAI_Notebook.png)
 
 Be sure to run the next **verify_images** cell.
 
@@ -247,37 +247,36 @@ Log into the Google Cloud Platform (GCP) console at [console.cloud.google.com](h
 
 In the search bar, type **Vision** and then click **ENABLE AUTOML API**.
 
-![Enable_API]({filename}/images/Gcp_Automl_Vision/05_Enable_API.png)
+![Enable_API]({static}/images/Gcp_Automl_Vision/05_Enable_API.png)
 
 ### Upload your Dataset
 Click **Get Started --> New Dataset  --> Multi-label classification**
 
-![AutoML Import Dataset]({filename}/images/Gcp_Automl_Vision/06_AutoML_Import_Dataset.png)
-
+![AutoML Import Dataset]({static}/images/Gcp_Automl_Vision/06_AutoML_Import_Dataset.png)
 
 Under **Select files to import**, select **Select a CSV file on Cloud Storage** and then enter the URI for the **labeled_data.csv** file on your **bucket**.
 
-![Select_Bucket_With_Labeled_CSV]({filename}/images/Gcp_Automl_Vision/07_Select_Bucket_With_Labeled_CSV.png)
+![Select_Bucket_With_Labeled_CSV]({static}/images/Gcp_Automl_Vision/07_Select_Bucket_With_Labeled_CSV.png)
 
 The import will take several minutes.
 
-![Import_Image]({filename}/images/Gcp_Automl_Vision/08_Import_Image.png)
+![Import_Image]({static}/images/Gcp_Automl_Vision/08_Import_Image.png)
 
 ### View Images
 After the import completes, you will see your labeled images.
 
-![Successful_Import]({filename}/images/Gcp_Automl_Vision/09_Successful_Import.png)
+![Successful_Import]({static}/images/Gcp_Automl_Vision/09_Successful_Import.png)
 
 A brief perusal of the images shows that some pictures (highlighted in red) include incorrect labels.
 
-![Bad_Labels]({filename}/images/Gcp_Automl_Vision/10_Bad_Labels.png)
+![Bad_Labels]({static}/images/Gcp_Automl_Vision/10_Bad_Labels.png)
 
 For now, let's ignore the bad labels and see what happens.  
 
 ## Train your Model
 Select **Start Training**
 
-![Start training bad labels]({filename}/images/Gcp_Automl_Vision/11_Start_Training_Bad_Labels.png)
+![Start training bad labels]({static}/images/Gcp_Automl_Vision/11_Start_Training_Bad_Labels.png)
 
 The training will use 16 GPU hours.
 
@@ -288,13 +287,13 @@ After the training completes, click **Evaluate**.
 
 You will see that the model provides sub 90% precision and recall, as noted by the confusion matrix (highlighted in green).
 
-![Bad_Labels_Results]({filename}/images/Gcp_Automl_Vision/12_Bad_Labels_Results.png)
+![Bad_Labels_Results]({static}/images/Gcp_Automl_Vision/12_Bad_Labels_Results.png)
 
 Drill down for more details and you will see that the false positives for **mods** includes two pictures of **mods**.
 
 This points to a labeling problem.
 
-![Bad_Labels_Cause_Errors]({filename}/images/Gcp_Automl_Vision/13_Bad_Labels_Cause_Errors.png)
+![Bad_Labels_Cause_Errors]({static}/images/Gcp_Automl_Vision/13_Bad_Labels_Cause_Errors.png)
 
 > NOTE: Upon second glance, the picture on the right depicts Teddy Boys.  Should I label Teddy Boys Mods, Rockers or delete the picture?  Answer in the comments below!
 
@@ -303,20 +302,20 @@ Click **images** and change the labels of the troublesome images (or just delete
 
 I have a **rocker** motorcycle labeled **mod** and a picture that includes both **mods** and **rockers** labeled as just **mods**.
 
-![Delete_Confusing_Ones]({filename}/images/Gcp_Automl_Vision/14_Delete_Confusing_Ones.png)
+![Delete_Confusing_Ones]({static}/images/Gcp_Automl_Vision/14_Delete_Confusing_Ones.png)
 
 I like this picture, a bunch of rockers attempting to murder two helmet-less mods, who find it funny.
 
-![Both_Mod_and_Rocker]({filename}/images/Gcp_Automl_Vision/15_Both_Mod_and_Rocker.png)
+![Both_Mod_and_Rocker]({static}/images/Gcp_Automl_Vision/15_Both_Mod_and_Rocker.png)
 
 ## Re-train model
 After we clean up the data and re-train, we see a perfect confusion matrix.
 
-![Much_Better]({filename}/images/Gcp_Automl_Vision/16_Much_Better.png)
+![Much_Better]({static}/images/Gcp_Automl_Vision/16_Much_Better.png)
 
 Drilling down we see our model gave a **mod** under arrest the **rocker** label.
 
-![One_Wrong]({filename}/images/Gcp_Automl_Vision/17_One_Wrong.png)
+![One_Wrong]({static}/images/Gcp_Automl_Vision/17_One_Wrong.png)
 
 ## Deploy the model
 Unlike FastAI, the Google AI Platform provides one-click deployment of your model.
@@ -325,7 +324,7 @@ Click **Test & Use** and the **Deploy Model**.
 
 GCP takes several minutes to deploy the model.
 
-![Deploy_The_Model]({filename}/images/Gcp_Automl_Vision/18_Deploy_The_Model.png)
+![Deploy_The_Model]({static}/images/Gcp_Automl_Vision/18_Deploy_The_Model.png)
 
 After you deploy the model, click the **Upload Images** button and upload up to ten images.
 
@@ -333,7 +332,7 @@ I upload a picture of myself at the park.
 
 The model reports, with 93% certainty that I fall under the **Mod** classification, vs. **Rocker**.
 
-![Serve_Sobanski]({filename}/images/Gcp_Automl_Vision/19_Serve_Sobanski.png)
+![Serve_Sobanski]({static}/images/Gcp_Automl_Vision/19_Serve_Sobanski.png)
 
 My paisley shirt and Italian sunglasses give credence to this, although I do have a **Rocker** hair cut (styled with [Royal Crown](https://en.wikipedia.org/wiki/Pomade), no less).
 
@@ -352,7 +351,7 @@ My FastAI model ran for two or three minutes, on one GPU.
 
 My two runs (32 hours total), cost about $100.
 
-![Pricey]({filename}/images/Gcp_Automl_Vision/20_Pricey.png)
+![Pricey]({static}/images/Gcp_Automl_Vision/20_Pricey.png)
 
 Google, however, gave me $176.00 to experiment with the model training and serving.
 
@@ -364,4 +363,4 @@ From Google:
 
 I did not need to eat into the $300 in free credits google provided when I signed up for GCP!
 
-![Free Goody]({filename}/images/Gcp_Automl_Vision/21_Free_Goody.png)
+![Free Goody]({static}/images/Gcp_Automl_Vision/21_Free_Goody.png)

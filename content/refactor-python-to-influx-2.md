@@ -23,7 +23,7 @@ The on premise version of [InfluxDB 2.0](https://dl.influxdata.com/influxdb/rele
  - Integrated control panel and data viz dashboards
  - Quick on boarding
  
-![InfluxDB Logo]({filename}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
+![InfluxDB Logo]({static}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
 
 ### InfluxDB 2.0 Configuration
 
@@ -54,7 +54,7 @@ Navigate to **<your ip>:9999** in a web browser.
 
 You will be greeted with the following splash page.
 
-![Splash Page]({filename}/images/Refactor_Python_To_Influx_2/01_Influx_Welcome.png) 
+![Splash Page]({static}/images/Refactor_Python_To_Influx_2/01_Influx_Welcome.png) 
 
 Enter a user name, password, organization and bucket name.
 
@@ -67,25 +67,25 @@ I use the following parameters
 
 You will use these parameters (less the password) to access a bucket via the Python API.
 
-![Setup]({filename}/images/Refactor_Python_To_Influx_2/02_Initial_User.png) 
+![Setup]({static}/images/Refactor_Python_To_Influx_2/02_Initial_User.png) 
 
 Now click **Configure Later**.
 
-![Configure Later]({filename}/images/Refactor_Python_To_Influx_2/03_Configure_Later.png) 
+![Configure Later]({static}/images/Refactor_Python_To_Influx_2/03_Configure_Later.png) 
 
 #### Get your API token
 The API token enables access via REST calls.
 
 Click **settings --> tokens --> \<your user name\>'s token**.
 
-![Find your token]({filename}/images/Refactor_Python_To_Influx_2/04_Find_Your_Token.png) 
+![Find your token]({static}/images/Refactor_Python_To_Influx_2/04_Find_Your_Token.png) 
 
 #### Copy token to clipboard.
 Click **Copy to Clipboard** and paste this eighty-eight (88) byte token into a local text file for later use.
 
 In the graphic below, I replaced my actual token with a randomly generated string.
 
-![Copy your token]({filename}/images/Refactor_Python_To_Influx_2/05_Copy_Your_Token.png) 
+![Copy your token]({static}/images/Refactor_Python_To_Influx_2/05_Copy_Your_Token.png) 
 
 ### Refactor 1.X Code
 [Noah Crowley](https://www.influxdata.com/blog/author/noah-crowley/) wrote a blog post that [demonstrates the Python API client in action](https://www.influxdata.com/blog/writing-data-to-influxdb-with-python/).
@@ -247,7 +247,7 @@ This simple example shows how to emulate the **1.7 write_points** method in **2.
 
 If you go to your InfluxDB 2.0 console, you will see your points!
 
-![Graph It!]({filename}/images/Refactor_Python_To_Influx_2/06_Graph.png)
+![Graph It!]({static}/images/Refactor_Python_To_Influx_2/06_Graph.png)
 
 ## Code
 The full, refactored code follows:

@@ -139,10 +139,10 @@ If you click the item, Rarible lists the details of the item.  You have the abil
 ## Conclusion
 Rarible provides an exciting and fun way to create valuable digital collectibles.
 
-![Charmin Gif]({filename}/images/Create_Nft_With_Rarible_Part_2/00_Charmin.gif)
+![Charmin Gif]({static}/images/Create_Nft_With_Rarible_Part_2/00_Charmin.gif)
 
 If you want to see my NFT collection, then click here to see my [Rarible home page](https://rarible.com/sobanski).  You will find items for sale, and can click **Collectibles** to see my idiotic purchases.
 
-![Taco Gif]({filename}/images/Create_Nft_With_Rarible_Part_2/00_Taco_Bell.gif)
+![Taco Gif]({static}/images/Create_Nft_With_Rarible_Part_2/00_Taco_Bell.gif)
 
 If you used this blog post to mint an NFT, leave a link to it in the comments section below and I will take a look at it!

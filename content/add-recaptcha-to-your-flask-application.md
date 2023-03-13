@@ -30,7 +30,7 @@ This demo includes the following fun, easy steps:
 ## Step 1:  Deploy a simple, usable web Application
 We deploy the following baseline application, which uses "quick_form" to render our survey's web page.  This application doesn't do anything except print "success," but you can easily extend it to persist data, for example, using an [ORM](https://www.sqlalchemy.org/).  The simple baseline app uses the following Architecture:
 
-![Base Flask App]({filename}/images/Add_Recaptcha_To_Your_Flask_Application/base-app.jpg)
+![Base Flask App]({static}/images/Add_Recaptcha_To_Your_Flask_Application/base-app.jpg)
 
 From your workstation, pull the files for this demo from [GitHub](https://github.com/hatdropper1977/flask-recaptcha).
 

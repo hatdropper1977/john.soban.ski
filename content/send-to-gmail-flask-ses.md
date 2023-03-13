@@ -12,7 +12,7 @@ This blog post describes how to configure Flask to emit form data to your own pe
 
 The following cartoon captures the system architecture.
 
-![Flask Gmail]({filename}/images/Send_To_Gmail_Flask_Ses/01_Flask_Gmail.png) 
+![Flask Gmail]({static}/images/Send_To_Gmail_Flask_Ses/01_Flask_Gmail.png) 
 
 ## The Flask App
 This section describes the Web Database application, deployed via the [Flask framework]({tag}/flask).
@@ -97,7 +97,7 @@ As we have not yet wired in **SES**, at this point in time our controller simply
 
 Notice the validation in action in the screencap below.
 
-![Web DB App]({filename}/images/Send_To_Gmail_Flask_Ses/02_Web_DB_App.png)
+![Web DB App]({static}/images/Send_To_Gmail_Flask_Ses/02_Web_DB_App.png)
 
 ## Register an SES account
 To use SES you must register an account.
@@ -106,11 +106,11 @@ SES allows your Web Database Application to send form data to a Gmail (for examp
 
 Open the SES console and click **Email Addresses**.
 
-![SES]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/20_SES.png)
+![SES]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/20_SES.png)
 
 Click **verify a new email**.
 
-![Verify]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/21_Verify.png)
+![Verify]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/21_Verify.png)
 
 Enter your email address and then go to your inbox.
 
@@ -118,11 +118,11 @@ You will find a verify link in that email.
 
 Click that link.
 
-![Click]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/22_Click.png)
+![Click]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/22_Click.png)
 
 SES reports verification success.
 
-![Success]({filename}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
+![Success]({static}/images/Transcribe_Customer_Service_Voicemails_And_Alert_On_Keywords/23_Success.png)
 
 
 ### Set up your development environment
@@ -213,7 +213,7 @@ def take_test():
 
 Take the test and you will see dynamic, **Jinja2** rendered **HTML**.
 
-![Return HTML]({filename}/images/Send_To_Gmail_Flask_Ses/03_Pretty_HTML.png)
+![Return HTML]({static}/images/Send_To_Gmail_Flask_Ses/03_Pretty_HTML.png)
 
 ### Wire SES into the Application
 In **application.py** make the following edits (full code appears at the bottom of this page).
@@ -291,15 +291,15 @@ The **Web Database Application** returns the **message** status on post, and ind
 
 I purposefully malformed my email address, and on submit, the **WebDB App** alerts the user of this mistake.
 
-![Format Error]({filename}/images/Send_To_Gmail_Flask_Ses/04_Error.png)
+![Format Error]({static}/images/Send_To_Gmail_Flask_Ses/04_Error.png)
 
 After I correct this mistake, I re-submit the form and the **Flask** app returns a success message, recording the **SES Message ID**.
 
-![Success Message]({filename}/images/Send_To_Gmail_Flask_Ses/05_Success.png)
+![Success Message]({static}/images/Send_To_Gmail_Flask_Ses/05_Success.png)
 
 When I go to Gmail, I see my beautiful email, which includes the submitted form data.
 
-![Success Email]({filename}/images/Send_To_Gmail_Flask_Ses/06_Email.png)
+![Success Email]({static}/images/Send_To_Gmail_Flask_Ses/06_Email.png)
 
 ## Conclusion
 This toy application demonstrates how to easily have web users submit form data directly to your GMAIL account via *AWS SES.*
