@@ -3,6 +3,8 @@ Date: 2022-12-26 06:09
 Author: john-sobanski
 Category: Literature
 Tags: Literature, Hopkins, Jasper
+og_image: images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png
+twitter_image: images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png
 Slug: gerard-manley-hopkins-2
 Status: published
 

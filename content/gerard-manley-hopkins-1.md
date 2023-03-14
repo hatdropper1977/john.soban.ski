@@ -3,6 +3,8 @@ Date: 2022-11-26 04:20
 Author: john-sobanski
 Category: Literature
 Tags: Literature, Hopkins, Jasper
+og_image: images/Gerard_Manley_Hopkins_2/01_The_Beast.png
+twitter_image: images/Gerard_Manley_Hopkins_2/01_The_Beast.png
 Slug: gerard-manley-hopkins-1
 Status: published
 

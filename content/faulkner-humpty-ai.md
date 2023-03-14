@@ -3,6 +3,8 @@ Date: 2023-02-25 10:26
 Author: john-sobanski
 Category: Literature
 Tags: Literature, Machine Learning, NLP
+og_image: images/Faulkner_Humpty_Ai/01_Humpty_Dumpty.png
+twitter_image: images/Faulkner_Humpty_Ai/01_Humpty_Dumpty.png
 Slug: faulkner-humpty-ai
 Status: published
 

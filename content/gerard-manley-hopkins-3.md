@@ -3,6 +3,8 @@ Date: 2023-1-28 09:06
 Author: john-sobanski
 Category: Literature
 Tags: Literature, Hopkins, Jasper
+og_image: images/Gerard_Manley_Hopkins_3/01_No_Worst.png
+twitter_image: images/Gerard_Manley_Hopkins_3/01_No_Worst.png
 Slug: gerard-manley-hopkins-3
 Status: published
 
