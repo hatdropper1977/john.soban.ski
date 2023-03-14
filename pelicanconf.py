@@ -7,7 +7,7 @@ SITESUBTITLE = u'Artificial Intelligence in the Cloud'
 SITEURL = 'https://john.soban.ski'
 #SITEURL = 'http://52.54.218.55:8000'
 HEADER_COVER = 'images/city5.png'
-COLOR_SCHEME_CSS = 'monokai.css'
+COLOR_SCHEME_CSS = 'tomorrow.css'
 
 # Old Universal Analytics (UA)
 #GOOGLE_ANALYTICS = 'UA-72207340-3'
