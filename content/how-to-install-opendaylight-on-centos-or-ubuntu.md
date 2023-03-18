@@ -12,7 +12,7 @@ OpenDaylight provides a Software Defined Network ([SDN](https://en.wikipedia.org
 
 ![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
-When I [played](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) around with OpenDaylight [a bit](https://web.archive.org/web/20150924070416/https://ask.opendaylight.org/users/420/runamuck/) a couple of [years back](https://web.archive.org/web/20210420044720/https://blogs.oracle.com/ravello/opendaylight-on-on-aws), I came from a Sysetems/ Network engineering background.  I found the required Java domain experience a bit frustrating.  I put together this blog post, therefore, to make the valuable OpenDaylight platform more accessible to Systems/ Network Engineers.
+When I [played](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) around with OpenDaylight [a bit](https://web.archive.org/web/20150924070416/https://ask.opendaylight.org/users/420/runamuck/) a couple of [years back](https://web.archive.org/web/20210420044720/https://blogs.oracle.com/ravello/opendaylight-on-on-aws), I came from a Systems/ Network engineering background.  I found the required Java domain experience a bit frustrating.  I put together this blog post, therefore, to make the valuable OpenDaylight platform more accessible to Systems/ Network Engineers.
 
 The following bulleted list records the layout of this blog post.
 

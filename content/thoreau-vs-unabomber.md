@@ -69,7 +69,7 @@ sentiment_df.to_csv('{}_sentiment.csv'.format(FILENAME.split('.')[0]),
                     index= False)
 ```
 
-I use the Google Cloud Natural API Domain Specific Language (DSL), although [requests](https://docs.python-requests.org/) also works.  **Walden** includes some latin, which **breaks** the service.  To mitigate against the **erorr** I use **try/ except** logic.  The **strip()** methods remove blank lines from the analysis.
+I use the Google Cloud Natural API Domain Specific Language (DSL), although [requests](https://requests.readthedocs.io/en/latest/) also works.  **Walden** includes some latin, which **breaks** the service.  To mitigate against the **erorr** I use **try/ except** logic.  The **strip()** methods remove blank lines from the analysis.
 
 Since both texts include a wide variety of characters, I store the results in a [Pandas](https://pandas.pydata.org/) dataframe.  The **to_csv()** method will escape all of the characters that disturb the Comma Separated Values (CSV) encoded output.
 
@@ -157,7 +157,7 @@ The near forty-five degree angle of the contour map (the blue, green and yellow 
 Overall, however, most of his text lands in the **medium-negative** sentiment range.
 
 ## Literary Analysis
-Ted Kaczynski and Henry David Thoreau (despite the separation of a century) live lives of uncanny similarity. Both tackle their field of expertise in unorthodox, pioneering and peerless manners, and both graduated from Harvard. These individuals tried their hand at teaching, but eventually withdrew from the profession and instead became **hermits** living in the wilderness in modest shanties. During their seclusion from society they produced their most influential works: [Walden](https://www.gutenberg.org/files/205/205-h/205-h.htm) and [The Manifesto](http://www.self.gutenberg.org/articles/unabomber_manifesto).
+Ted Kaczynski and Henry David Thoreau (despite the separation of a century) live lives of uncanny similarity. Both tackle their field of expertise in unorthodox, pioneering and peerless manners, and both graduated from Harvard. These individuals tried their hand at teaching, but eventually withdrew from the profession and instead became **hermits** living in the wilderness in modest shanties. During their seclusion from society they produced their most influential works: [Walden](https://www.gutenberg.org/files/205/205-h/205-h.htm) and [The Manifesto](https://search.brave.com/search?q=unabomber+manifesto&source=web).
 
 ### Common View of Technology and Over-Socialization
 The effect of technology and over-socialization negatively reducing the human experience represents the first (and most prevalent) issue found in both works. The Unabomber opens his tirade with:

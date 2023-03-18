@@ -38,7 +38,7 @@ flask_bootstrap/
 [ec2-user@ip-192-168-10-134 ~]$ 
 ```
 
-I put the files for this baseline [Flask](http://flask.pocoo.org/) ***app*** on [GitHub](https://github.com/).  
+I put the files for this baseline [Flask](https://palletsprojects.com/p/flask/) ***app*** on [GitHub](https://github.com/).  
 
 [https://github.com/hatdropper1977/flask_bootstrap](https://github.com/hatdropper1977/flask_bootstrap)
 
@@ -233,7 +233,7 @@ As before, we add default text with "placeholder:"
 {{ wtf.form_field(form.email_addr, class='form-control', placeholder='your@email.com') }}
 ```
 
-We then customize the submit button. You can customize the button however you would like. Take a look [here](https://v4-alpha.getbootstrap.com/components/buttons/) for more ideas.
+We then customize the submit button. You can customize the button however you would like. Take a look [here](https://getbootstrap.com/docs/4.0/components/buttons/) for more ideas.
 
 ```jinja2
  <p><input type=submit class='btn btn-warning btn-block'>
@@ -254,7 +254,7 @@ If you enjoyed this blog post, you may be interested in how to [quickly add reCA
     - Deploy an [Amazon Web Service (AWS) Elasticsearch (ES)](https://aws.amazon.com/opensearch-service/) domain
     - Use [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) roles, IAM profiles and the [boto](https://aws.amazon.com/sdk-for-python/) library to connect a server to the ES domain
   - [Part Two:]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md)
-    - Deploy a [Flask](http://flask.pocoo.org/) web server
+    - Deploy a [Flask](https://palletsprojects.com/p/flask/) web server
     - Program the Flask web server to proxy and filter user inputs to ES
     - Learn the Python [WTForms](https://wtforms.readthedocs.io/en/3.0.x/) library and the Python [Elasticsearch Domain Specific Language (DSL)](https://elasticsearch-dsl.readthedocs.io/en/latest/)
   - [Part Three:]({filename}/part-3-professional-form-validation-with-bootstrap.md)

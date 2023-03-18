@@ -6,7 +6,7 @@ Tags: AWS, Elasticsearch, HOWTO, IAM, Python, S3
 Slug: snapshot-aws-es-to-s3
 Status: published
 
-Operational document stores require backups for disaster recovery and data migration.  **Elasticsearch** uses the term **snapshot** for their **backups**.  Amazon Web Services (AWS) provides a fully managed Elasticsearch service that includes both automatic and manual snapshots.  The  AWS **Elasticsearch** [documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-snapshots.html) presents the difference between automatic and manual snapshots:
+Operational document stores require backups for disaster recovery and data migration.  **Elasticsearch** uses the term **snapshot** for their **backups**.  Amazon Web Services (AWS) provides a fully managed Elasticsearch service that includes both automatic and manual snapshots.  The  AWS **Elasticsearch** [documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-snapshots.html) presents the difference between automatic and manual snapshots:
 
 > Automated snapshots are **only** for cluster recovery. You can use them to restore your domain in the event of red cluster status or other data loss.
 > 
@@ -14,7 +14,7 @@ Operational document stores require backups for disaster recovery and data migra
 
 In summary, if you want to be able to use the snapshots (e.g. move the data between clusters) then you must execute manual snapshots.  Amazon keeps the automatic snapshots for their own internal housekeeping in order to ensure proper disaster recovery.
 
-Amazon provides a reference document on how to execute a manual snapshot.  When I first began my AWS journey back in 2015, I found the [documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains-snapshots.html) to be overwhelming and highly technical.  I created this visual HOWTO to make life easier for everyone.
+Amazon provides a reference document on how to execute a manual snapshot.  When I first began my AWS journey back in 2015, I found the [documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-snapshots.html) to be overwhelming and highly technical.  I created this visual HOWTO to make life easier for everyone.
 
 ## Workflow
 To take a manual snapshot we must first give the **Elasticsearch** service permission to use a **Simple Storage Service (S3)** bucket.  Once the **Elasticsearch** service can use **S3**, we can command **Elasticsearch** to snapshot to our bucket using the **Elasticsearch** REST API.

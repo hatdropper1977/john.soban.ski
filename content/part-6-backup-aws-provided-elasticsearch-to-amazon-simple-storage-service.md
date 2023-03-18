@@ -6,7 +6,7 @@ Tags: AWS, Elasticsearch, HOWTO, IAM, Python, S3
 Slug: backup-aws-provided-elasticsearch-to-amazon-simple-storage-service
 Status: published
 
-All production databases require backups.  The AWS Elasticsearch [documentation](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html) states:
+All production databases require backups.  The AWS Elasticsearch [documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html) states:
 
 > Amazon Elasticsearch Service (Amazon ES) takes daily automated
 > snapshots of the primary index shards in an Amazon ES

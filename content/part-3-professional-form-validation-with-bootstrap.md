@@ -23,7 +23,7 @@ ubuntu@ip-172-31-35-80:~/flask_to_es$ . bin/activate
 (flask_to_es)ubuntu@ip-172-31-35-80:~/flask_to_es$
 ```
 
-To use [Bootstrap](http://getbootstrap.com/) with [Flask](http://flask.pocoo.org/), we need to easy\_install the [Flask-Bootstrap](https://pythonhosted.org/Flask-Bootstrap/) package.
+To use [Bootstrap](https://getbootstrap.com/) with [Flask](https://palletsprojects.com/p/flask/), we need to easy\_install the [Flask-Bootstrap](https://pythonhosted.org/Flask-Bootstrap/) package.
 
 ```bash
 (flask_to_es)ubuntu@ip-172-31-35-80:~/flask_to_es$ easy_install flask-bootstrap

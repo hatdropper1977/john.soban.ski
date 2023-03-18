@@ -8,7 +8,7 @@ Status: published
 
 ### Introduction
 
-Last month, I followed the example of [Full Stack Python](https://www.fullstackpython.com/pelican.html) and migrated this blog from [Wordpress](https://wordpress.com/) to Amazon Web Services (AWS) [Simple Storage Service (S3)](https://aws.amazon.com/s3).  The S3 hosting approach gives me the following features:
+Last month, I followed the example of [Full Stack Python](https://www.fullstackpython.com/pelican.html) and migrated this blog from [Wordpress](https://wordpress.com/) to Amazon Web Services (AWS) [Simple Storage Service (S3)](https://aws.amazon.com/s3/).  The S3 hosting approach gives me the following features:
 
   -  Global caching via [Cloudfront's](https://aws.amazon.com/cloudfront/) [Content Delivery Network (CDN)](https://en.wikipedia.org/wiki/Content_delivery_network)
   -  [Secure Hypertext Transport Protocol](https://en.wikipedia.org/wiki/HTTPS) via AWS' [certificate manager](https://aws.amazon.com/certificate-manager/)
@@ -32,16 +32,16 @@ Amazon does not provide a turnkey solution for this user story, so I faced two h
      -  Technology
         -  The [Elasticsearch, Logstash and Kibana (ELK)]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md) stack, which Elastic renamed to '[Elastic Stack](https://www.elastic.co/webinars/introduction-elk-stack)'
      -  Deployment
-        -  You can either deploy the __Elastic stack__ via a combination of [Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) and the Amazon provided [Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) or the Elastic provided [Elastic cloud](https://www.elastic.co/cloud)
+        -  You can either deploy the __Elastic stack__ via a combination of [Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) and the Amazon provided [Elasticsearch service](https://aws.amazon.com/opensearch-service/) or the Elastic provided [Elastic cloud](https://www.elastic.co/cloud/)
      -  Cost
         -  The Amazon approach costs ~$15/month and the cheapest Elastic cloud approach costs [$45/month](https://www.elastic.co/cloud/as-a-service/subscriptions)
      -  Effort
-        -  The Amazon approach requires a significant amount of [integration and troubleshooting](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-s3-lambda-es) whereas the Elastic cloud approach just requires the deployment of a few Logstash filters
+        -  The Amazon approach requires a significant amount of [integration and troubleshooting](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-s3-lambda-es) whereas the Elastic cloud approach just requires the deployment of a few Logstash filters
   -  Turn key
      -  Approach
         -  Use a __push button__ online service to ingest, parse and analyze the logs
      -  Technology
-        -  [Loggly](https://www.loggly.com/docs/s3-ingestion-auto/), [Sumo Logic](https://www.sumologic.com/lp/aws/002/) and [s3stat](https://www.s3stat.com/)
+        -  [Loggly](https://www.loggly.com/), [Sumo Logic](https://www.sumologic.com/lp/aws-monitoring-analytics/) and [s3stat](https://www.s3stat.com/)
      -  Deployment
         -  All services provide a simple 'push button' deployment (_note:  deployment may require minimal [Identity and Acess Management](https://aws.amazon.com/iam/) configurations_)
      -  Cost
@@ -58,7 +58,7 @@ I decided to try s3stat because their [cheap bastard plan](https://www.s3stat.co
 
 > How It Works
 >
-> 1.  [Sign up for a Free Trial](https://www.s3stat.com/setup/register.aspx) and try out the product (making sure you actually want to use it)
+> 1.  [Sign up for a Free Trial](https://www.s3stat.com/Setup/RegisterAlt.aspx) and try out the product (making sure you actually want to use it)
 >
 > 2.  __Blog about S3STAT__, explaining to the world how awesome the product is, and how generous we are being to give it to a deadbeat like yourself for free.
 >
@@ -81,7 +81,7 @@ I noticed that people still clicked links from my old web page.  I could tell be
 
 ![Error Pages]({static}/images/Use_S3stat_To_Troubleshoot_Your_Migration_From_Wordpress_To_S3/03_Error_Pages.png)
 
-When I moved from Wordpress to S3, I submitted a [URL map](https://help.disqus.com/customer/en/portal/articles/912757-url-mapper) to their [migration tool](https://www.disqus.com/admin/discussions/migrate/) to migrate my comments to fit with my site's new URL approach.
+When I moved from Wordpress to S3, I submitted a [URL map](https://help.disqus.com/en/articles/1717129-url-mapper) to their [migration tool](https://disqus.com/profile/login/?next=/admin/discussions/migrate/) to migrate my comments to fit with my site's new URL approach.
 
 I present a snippet of my URL map below.  This map removes the date from the URL and sets the protocol to HTTPS.
 

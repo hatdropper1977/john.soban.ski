@@ -107,7 +107,7 @@ AVHfVLNTHootPMn5yhhf,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 
 **Exploratory Factor Analysis**
 
-[James H. Steiger](http://www.statpower.net/) writes an excellent white paper on using [R for EFA](https://www.google.com/search?q=Exploratory+Factor+Analysis+with+R+James+H.+Steiger) titled "Exploratory Factor Analysis With R." I tried out several of the R libriaries to include ***principal*** and ***factor.pa*** in the [psych](https://cran.r-project.org/web/packages/psych/index.html) and ***princomp*** and ***facetanal*** in [stats](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html).
+[James H. Steiger](http://www.statpower.net/) writes an excellent white paper on using [R for EFA](https://www.google.com/search?q=Exploratory+Factor+Analysis+with+R+James+H.+Steiger) titled "Exploratory Factor Analysis With R." I tried out several of the R libriaries to include ***principal*** and ***factor.pa*** in the [psych](https://cran.r-project.org/web/packages/psych/index.html) and ***princomp*** and ***factanal*** in [stats](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html).
 
 The princomp library got me really excited at first because all of the vectors made perfect sense (in terms of groupings the questions by "yes's" ). When I applied the weight matrix to the initial answer matrix I saw that 80% of the test takers fell into the first component. This concerned me at first until I realized that the first component held most of the varience and that raw PCA would not be the appropriate tool to separate test takers into roughly equal groupings. 
 
