@@ -11,7 +11,7 @@ In this blog post you will deploy your own personal Kraken terminal using the In
 ## InfluxDB Cloud 2.0 Hello World
 
 ### Introduction
-[InfluxDB Cloud 2.0](https://www.influxdata.com/products/influxdb-cloud-2-0/) provides an integrated **Time Series Database** Platform as a Service (PaaS) with the following features:
+[InfluxDB Cloud 2.0](https://www.influxdata.com/products/influxdb-cloud/) provides an integrated **Time Series Database** Platform as a Service (PaaS) with the following features:
 
  - Free (rate limited) tier
  - A unified API for ingest, queries, storage and plots
@@ -22,7 +22,7 @@ In this blog post you will deploy your own personal Kraken terminal using the In
 ![InfluxDB Logo]({static}/images/Influx_Cloud_2_Kraken/00_Influx_Logo.png)
 
 ### Sign Up
-Go to the [beta signup](https://cloud2.influxdata.com/beta/signup) page and enter your email address.
+Go to the [beta signup](https://cloud2.influxdata.com/signup) page and enter your email address.
 
 ![Sign up]({static}/images/Influx_Cloud_2_Kraken/01_Signup.png) 
 
@@ -213,7 +213,7 @@ Execute the script from your laptop/ server a few more times and then refresh th
 ![Second Plot]({static}/images/Influx_Cloud_2_Kraken/14_Second_Plot.png) 
 
 ## Kraken Terminal
-In this section, we will use the [Kraken Ticker API](https://www.kraken.com/en-us/help/api) to get coin trade data.
+In this section, we will use the [Kraken Ticker API](https://www.kraken.com/features/api-trading) to get coin trade data.
 
 ![Kraken logo]({static}/images/Influx_Cloud_2_Kraken/15_Kraken_Logo.png)
 

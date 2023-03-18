@@ -20,7 +20,7 @@ Hackneyed critics quickly lobbed the knee-jerk **tulip mania** cliché at NFTs, 
 ### Value Prop #1: The Blessing
 Dim experts will point out a (perceived) shortcoming of NFTs: the ability for anyone to save a local copy.  Consider, for example, a token encoded in **JPEG** format.  A web surfer (90s slang) could buy the NFT for Ethereum, and own the **JPEG**.  Another web surfer, can also **right click** on the **JPEG** and save the **JPEG** to her desktop.  Both the purchaser and the downloader will have the **SAME EXACT JPEG**.
 
-Try it for yourself.  Open [this link](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:356990:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in another tab to find an Isometric Pixel Art NFT that tokenizes a **PNG** of a leaning bookcase.  You can either buy the NFT for 0.01 ETH, or just download the **PNG** for free.
+Try it for yourself.  Open [this link](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:356990?tab=overview) in another tab to find an Isometric Pixel Art NFT that tokenizes a **PNG** of a leaning bookcase.  You can either buy the NFT for 0.01 ETH, or just download the **PNG** for free.
 
 ![Isometric Pixel Art NFT Leaning Bookcase Sobanski Art]({static}/images/Nft_Value_Prop/01_Leaning_Bookcase.png)
 
@@ -50,7 +50,7 @@ Damien Hirst released a thousand or so paintings of dots (yes, just dots).  He d
 
 ![Damien Hirst Spots]({static}/images/Nft_Value_Prop/03_Damien_Spot.png)
 
-Business Insider [writes](https://www.businessinsider.com.au/why-damien-hirst-is-controversial-2013-6):
+Business Insider [writes](https://www.businessinsider.com/why-damien-hirst-is-controversial-2013-6):
 
 > There are nearly 1,400 of Damien Hirst’s **spot** paintings in existence.  The artist has only painted around 25 of them himself.  So who made the other 1,340 or so paintings, which regularly sell for tens of thousands of dollars?  They were done by Hirst's coterie of assistants — a well-known fact. 
 
@@ -66,7 +66,7 @@ The digital signature represents the Artist's blessing for digital pieces.
 ### Value Prop 2: Investment
 At present time, NFTs hold their value in Ethereum. Ethereum swings high and low, and the NFT market price holds steady.
 
-I purchased a [Taco Bell NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715:0x99f93b966021d6c6883b84e4b184957f49af8b32?tab=details) in March for 3 ETH, with Ethereum at $1.8k/ ETH.  Another copy sold for 3 ETH in April with Ethereum at $2.3k/ ETH.  On May 9th, someone made an offer for 2 ETH with ETH at $4k/ coin.  In terms of dollar value, the May bid landed at 43% higher than my initial purchase, with no sellers willing to part.
+I purchased a [Taco Bell NFT](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715?tab=owners) in March for 3 ETH, with Ethereum at $1.8k/ ETH.  Another copy sold for 3 ETH in April with Ethereum at $2.3k/ ETH.  On May 9th, someone made an offer for 2 ETH with ETH at $4k/ coin.  In terms of dollar value, the May bid landed at 43% higher than my initial purchase, with no sellers willing to part.
 
 ![History of a five figure Taco Gif]({static}/images/Nft_Value_Prop/04_Taco_History.png)
 

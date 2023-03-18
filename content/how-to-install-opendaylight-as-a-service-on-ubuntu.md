@@ -42,7 +42,7 @@ $ sudo apt-get -y install unzip vim wget
 ```
 
 ## Install the Java JRE
-Installation of OpenDaylight via the release **zip** archive requires the [JAVA 8](https://java.com/en/) runtime environment.  This section explains how to install the JRE.  
+Installation of OpenDaylight via the release **zip** archive requires the [JAVA 8](https://www.java.com/en/) runtime environment.  This section explains how to install the JRE.  
 
 > If you would like to build OpenDaylight from source, please refer to this [blog post]({filename}/how-to-install-opendaylight-on-centos-or-ubuntu.md) for detailed instructions
 
@@ -340,7 +340,7 @@ Dec 29 18:01:18 ip-172-31-18-10 systemd[1]: Stopped OpenDaylight Controller.
 ```
 
 ## Conclusion
-Now that you installed OpenDaylight as a service on Ubuntu LTS 18.04, head over to my Oracle Ravello [blog](https://blogs.oracle.com/ravello/opendaylight-on-on-aws) and try out the fun little project that I put together a few years back.
+Now that you installed OpenDaylight as a service on Ubuntu LTS 18.04, head over to my Oracle Ravello [blog](https://web.archive.org/web/20210420044720/https://blogs.oracle.com/ravello/opendaylight-on-on-aws) and try out the fun little project that I put together a few years back.
 
 You may be interested in the demo I gave at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia back in 2015.  Find the slides [here](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) or watch the video [here](https://www.youtube.com/watch?v=PGl43xJQQ0g).
 

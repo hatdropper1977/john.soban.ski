@@ -21,7 +21,7 @@ This blog post walks us through the process of receiving that blue check.
 ## Install the Brave Browser
 To reap the benefits of **Brave**, we must first install the software.
 
-Open the [Brave Download Page](https://brave.com/download) in a new tab and click the **Download** button.
+Open the [Brave Download Page](https://brave.com/download/) in a new tab and click the **Download** button.
 
 ![Download Brave]({static}/images/Brave_Verified_Creator/01_Download_Brave.png)
 

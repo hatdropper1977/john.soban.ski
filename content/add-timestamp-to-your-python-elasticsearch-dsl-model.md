@@ -133,7 +133,7 @@ If you go to ***Discover***, you will see your ***blog*** post.
 
 ![In Kibana]({static}/images/Add_Timestamp_to_your_Python_Elasticsearch_DSL_Model/t4_published_from_in_kibana-1024x593.png) 
  
-[***Logstash***](https://www.elastic.co/products/logstash), however, uses ***@timestamp*** for the time-field name. It would be nice to use the standard name instead of a one-off, custom name. To use ***@timestamp***, we must first update the model.
+[***Logstash***](https://www.elastic.co/logstash/), however, uses ***@timestamp*** for the time-field name. It would be nice to use the standard name instead of a one-off, custom name. To use ***@timestamp***, we must first update the model.
 
 In ***persist.py***(above), change the ***save*** stanza from...  
 
@@ -218,7 +218,7 @@ This command returns the JSON encoded mapping.
 
 Unfortunately, we still may have a problem. If you notice, ***@timestamp*** here is in the form of "April 1st 2017, 19:28:47.842." If you're sending a ***Document*** to an existing ***Logstash*** doc store, it most likely will have the default ***@timestamp*** format.
 
-To accomodate the default ***@timestamp*** format (or any custom format), you can update the model's ***save*** stanza with a [***string format time***](http://strftime.org/) command.  
+To accomodate the default ***@timestamp*** format (or any custom format), you can update the model's ***save*** stanza with a [***string format time***](https://strftime.org/) command.  
 
 ```python
 def save(self, ** kwargs):

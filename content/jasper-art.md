@@ -8,7 +8,7 @@ Status: published
 
 I use the new Jasper Artificial Intelligence (AI) Art service to create the pictures in this blog post.
 
-[Jasper AI Art](https://jasper.ai/art) (non-affiliate link), for example, creates the following picture of the **World's Largest Turnip**.
+[Jasper AI Art](https://www.jasper.ai/art) (non-affiliate link), for example, creates the following picture of the **World's Largest Turnip**.
 
 ![The World's Largest Turnip]({static}/images/Jasper_Art/00_Big_Turnip.png)
 

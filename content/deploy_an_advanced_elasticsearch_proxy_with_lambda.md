@@ -8,7 +8,7 @@ Status: published
 
 In this HOWTO, we expand upon the simple Elasticsearch proxy we deployed in [our first Lambda tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md).
 
-In [that tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md), we showed you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) using a Lambda function and an API Gateway.  We used [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and the Elasticsearch service.  
+In [that tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md), we showed you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/opensearch-service/) using a Lambda function and an API Gateway.  We used [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and the Elasticsearch service.  
 
 This HOWTO builds upon that simple use case.  In this HOWTO, we extend the API gateway to proxy user requests to the downstream Elasticsearch [Application Programming Interface (API)](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html).  
 
@@ -113,7 +113,7 @@ If it works, you will see output similar to the following:
 
 ### 3.  Create an app that receives, validates and submits a Document to your Elasticsearch endpoint
 
-We use [Chalice](https://github.com/awslabs/chalice/blob/master/README.rst) to create a Lambda function and attach it to an API gateway.  I move through this pretty quickly, and again, take a look at our [first Lambda tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md) if you get lost.
+We use [Chalice](https://github.com/aws/chalice/blob/master/README.rst) to create a Lambda function and attach it to an API gateway.  I move through this pretty quickly, and again, take a look at our [first Lambda tutorial]({filename}/connect_aws_lambda_to_elasticsearch.md) if you get lost.
 
 Ensure that you are in your Python working directory.  Now, pull our example Chalice package from [Github](https://github.com/hatdropper1977/eslambda):
 
@@ -126,11 +126,11 @@ This pulls the source code for a working Chalice package.  If you change directo
   * [app.py](https://github.com/hatdropper1977/eslambda/blob/master/app.py)
     * This contains the main Lambda application.  The application validates a JSON Document, creates a random Document ID and then chucks the Document to our Elasticsearch document store.  The application's structure should look familiar to those developers that have experience with [Flask]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md).
   * [chalicelib\config.py](https://github.com/hatdropper1977/eslambda/blob/master/chalicelib/config.py)
-    * This module includes the configuration for your development environment.  The [Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/multifile.html) instructs you to include any additional Python files in the **chalicelib** directory.  Be sure to update **ELASTICSEARCH_ENDPOINT** with your Elasticsearch endpoint's URL.  
+    * This module includes the configuration for your development environment.  The [Chalice documentation](https://aws.github.io/chalice/topics/multifile) instructs you to include any additional Python files in the **chalicelib** directory.  Be sure to update **ELASTICSEARCH_ENDPOINT** with your Elasticsearch endpoint's URL.  
   * [requirements.txt](https://github.com/hatdropper1977/eslambda/blob/master/requirements.txt)
     * Similar to [Elastic Beanstalk ](https://aws.amazon.com/elasticbeanstalk/), Chalice uses **requirements.txt** to ensure the Lambda function includes all the required packages.  **jsonschema**, unfortunately, requires **functools**, which cannot be installed via **pip**.  If you attempt to deploy your Chalice package using just **requirements.txt**, you will get the following error: **Could not install dependencies: functools==3.2.  You will have to build these yourself and vendor them in the chalice vendor folder.**  This brings us to the next bullet...
   * [vendor/functools32](https://github.com/hatdropper1977/eslambda/tree/master/vendor)
-    * **Pip** will not find wheel files for **functools**, a dependency for **jsonschema**.  To solve this problem, I followed the instructions on the [official Chalice documentation](http://chalice.readthedocs.io/en/latest/topics/packaging.html) and built a wheel file appropriate for Amazon Linux.  I then unzipped it into the **vendor** directory.  You're welcome.
+    * **Pip** will not find wheel files for **functools**, a dependency for **jsonschema**.  To solve this problem, I followed the instructions on the [official Chalice documentation](https://aws.github.io/chalice/topics/packaging) and built a wheel file appropriate for Amazon Linux.  I then unzipped it into the **vendor** directory.  You're welcome.
   * [.chalice/policy-dev.json](https://github.com/hatdropper1977/eslambda/blob/master/.chalice/policy-dev.json)
     * This IAM policy allows your lambda function to execute GET, HEAD, POST and PUT on your Elasticsearch domain, and to log activity.
 

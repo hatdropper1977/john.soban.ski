@@ -124,7 +124,7 @@ HEAD is now at f029a55... formhelpers
 [centos@ip-172-31-1-82 flask_bootstrap]
 ```
 
-The Flask-WTF [docs](http://flask.pocoo.org/docs/1.0/patterns/wtforms/#forms-in-templates) describe a Macro named ***render\_field*** which allows us to pass HTML attributes to Jinja2. We save this macro in a file named ***\_formhelpers.html*** and stick it in the same templates folder as ***take\_quiz\_template.html***.  
+The Flask-WTF [docs](https://flask.palletsprojects.com/en/1.0.x/patterns/wtforms/#forms-in-templates) describe a Macro named ***render\_field*** which allows us to pass HTML attributes to Jinja2. We save this macro in a file named ***\_formhelpers.html*** and stick it in the same templates folder as ***take\_quiz\_template.html***.  
 
 ```jinja2
 {% macro render_field(field) %}
@@ -248,17 +248,17 @@ As you can see, we get a popup if we attempt to submit without entering text, su
 ## Conclusion
 You now have a working web application that easily renders professional looking forms with validation and pop-ups. In the future you can trade ease of deployment against customability.
 
-If you enjoyed this blog post, you may be interested in how to [quickly add reCAPTCHA to your app using Flask-WTF]({filename}/add-recaptcha-to-your-flask-application.md), how to use the Flask-like [Chalice](https://github.com/aws/chalice) to [quickly deploy a web app to Lambda]({filename}/connect_aws_lambda_to_elasticsearch.md), or  my five part series on how to deploy a Flask application (with an [Elasticsearch](https://aws.amazon.com/elasticsearch-service/) back-end) to the Amazon Web Services ecosystem:
+If you enjoyed this blog post, you may be interested in how to [quickly add reCAPTCHA to your app using Flask-WTF]({filename}/add-recaptcha-to-your-flask-application.md), how to use the Flask-like [Chalice](https://github.com/aws/chalice) to [quickly deploy a web app to Lambda]({filename}/connect_aws_lambda_to_elasticsearch.md), or  my five part series on how to deploy a Flask application (with an [Elasticsearch](https://aws.amazon.com/opensearch-service/) back-end) to the Amazon Web Services ecosystem:
 
   - [Part One:]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md)
-    - Deploy an [Amazon Web Service (AWS) Elasticsearch (ES)](https://aws.amazon.com/elasticsearch-service/) domain
+    - Deploy an [Amazon Web Service (AWS) Elasticsearch (ES)](https://aws.amazon.com/opensearch-service/) domain
     - Use [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) roles, IAM profiles and the [boto](https://aws.amazon.com/sdk-for-python/) library to connect a server to the ES domain
   - [Part Two:]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md)
     - Deploy a [Flask](http://flask.pocoo.org/) web server
     - Program the Flask web server to proxy and filter user inputs to ES
-    - Learn the Python [WTForms](https://wtforms.readthedocs.io/en/latest/) library and the Python [Elasticsearch Domain Specific Language (DSL)](http://elasticsearch-dsl.readthedocs.io/en/latest/)
+    - Learn the Python [WTForms](https://wtforms.readthedocs.io/en/3.0.x/) library and the Python [Elasticsearch Domain Specific Language (DSL)](https://elasticsearch-dsl.readthedocs.io/en/latest/)
   - [Part Three:]({filename}/part-3-professional-form-validation-with-bootstrap.md)
-    - Use [Bootstrap](http://getbootstrap.com/) for form validation
+    - Use [Bootstrap](https://getbootstrap.com/) for form validation
     - Give the Proxy a professional, polished appearance
   - [Part Four:]({filename}/part-4-connect-elasticbeanstalk-to-elasticsearch-aws-identity-and-access-management-iam.md)
     - Connect [Elastic Beanstalk (EBS)](https://aws.amazon.com/elasticbeanstalk/) to Elasticsearch via AWS Identity and Access Management
@@ -266,7 +266,7 @@ If you enjoyed this blog post, you may be interested in how to [quickly add reCA
   - [Part Five:]({filename}/part-5-asynchronous-tasks-with-aws-elasticsearch-sqs-flask-and-celery.md)
     - Learn the benefits of [asynchronous](https://en.wikipedia.org/wiki/Message_queue#Synchronous_vs._asynchronous) tasks
     - Deploy an [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/) message Queue
-    - Make [Celery](http://www.celeryproject.org/) on our Flask controller
+    - Make [Celery](https://docs.celeryq.dev/en/stable/) on our Flask controller
     - Deploy Celery worker nodes
     - Call a remote web service via a Representative State Transfer (REST) Application Programming Interface (API)
 

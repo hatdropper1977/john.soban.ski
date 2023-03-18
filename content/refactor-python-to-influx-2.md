@@ -30,7 +30,7 @@ The on premise version of [InfluxDB 2.0](https://dl.influxdata.com/influxdb/rele
 #### Download the Source
 As of August 2019, InfluxData does not yet provide an RPM for InfluxDB 2.0.
 
-Download the [binary](https://v2.docs.influxdata.com/v2.0/get-started/) and then unzip it.
+Download the [binary](https://docs.influxdata.com/influxdb/v2.0/get-started/) and then unzip it.
 
 ```bash
 [~]$ curl -XGET https://dl.influxdata.com/influxdb/releases/influxdb_2.0.0-alpha.17_linux_amd64.tar.gz -O

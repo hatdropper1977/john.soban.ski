@@ -6,9 +6,9 @@ Tags: AWS, Elasticsearch, Flask, HOWTO, IAM, Python
 Slug: part-4-connect-elasticbeanstalk-to-elasticsearch-aws-identity-and-access-management-iam
 Status: published
 
-  - In [HOWTO-1]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md), we deployed an [Amazon Web Service](https://aws.amazon.com/) (AWS) [Elasticsearch](https://www.elastic.co/products/elasticsearch) domain and connected to it via a combination of [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) roles, IAM profiles and the *[Boto](https://aws.amazon.com/sdk-for-python/)* library.
+  - In [HOWTO-1]({filename}/part-1-connect-ec2-to-the-amazon-elasticsearch-service.md), we deployed an [Amazon Web Service](https://aws.amazon.com/) (AWS) [Elasticsearch](https://www.elastic.co/elasticsearch/) domain and connected to it via a combination of [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) roles, IAM profiles and the *[Boto](https://aws.amazon.com/sdk-for-python/)* library.
   - In [HOWTO-2]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md) we deployed a Flask web server that proxies and filters user inputs to our Elasticsearch service via [WTForms](https://wtforms.readthedocs.org/en/latest/) and the [Python Elasticsearch](https://github.com/elastic/elasticsearch-dsl-py) [Domain Specific Language (DSL)](https://en.wikipedia.org/wiki/Domain-specific_language).
-  - [HOWTO-3]({filename}/part-3-professional-form-validation-with-bootstrap.md) uses [Bootstrap](http://getbootstrap.com/) for form validation and to give our Proxy a professional, polished appearance.
+  - [HOWTO-3]({filename}/part-3-professional-form-validation-with-bootstrap.md) uses [Bootstrap](https://getbootstrap.com/) for form validation and to give our Proxy a professional, polished appearance.
  
 In this tutorial, we will execute the following:
 

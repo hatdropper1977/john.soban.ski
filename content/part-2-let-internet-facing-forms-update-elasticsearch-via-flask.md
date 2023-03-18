@@ -128,7 +128,7 @@ Adding six 1.10.0 to easy-install.pth file
 Adding urllib3 1.14 to easy-install.pth file
 ```
 
-Note:  You may see errors such as: ">*“An optional code optimization (C extension) could not be compiled. Optimizations for this package will not be available!”* or *“WARNING: The C extension could not be compiled, speedups are not enabled.”*  If these errors concern you, then you can install the [python development package](http://stackoverflow.com/questions/24097129/the-c-extension-could-not-be-compiled-error-while-installing-flask). Nonetheless, run pip freeze again to see the newly installed packages (NOTE:  These only exist in your virtual environment.)
+Note:  You may see errors such as: ">*“An optional code optimization (C extension) could not be compiled. Optimizations for this package will not be available!”* or *“WARNING: The C extension could not be compiled, speedups are not enabled.”*  If these errors concern you, then you can install the [python development package](https://stackoverflow.com/questions/24097129/the-c-extension-could-not-be-compiled-error-while-installing-flask). Nonetheless, run pip freeze again to see the newly installed packages (NOTE:  These only exist in your virtual environment.)
 
 ```bash
 (flask_to_es)ubuntu@ip-172-31-35-80:~/flask_to_es$ pip freeze

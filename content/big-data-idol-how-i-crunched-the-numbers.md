@@ -80,7 +80,7 @@ I named \#1 "Hellraisers", \#2 "Boy Scouts" and \#3 "Celebrities."
 
 I graphed the factors against each other.
 
-Take a look at Hellraiser vs. Boy Scout. If this graph confuses you, take a look at some of New York magazines' [Approval Matricies](http://nymag.com/nymag/culture/approvalmatrix/archive/). You will quickly get an idea of how the matricies work.
+Take a look at Hellraiser vs. Boy Scout. If this graph confuses you, take a look at some of New York magazines' [Approval Matricies](https://nymag.com/nymag/culture/approvalmatrix/archive/). You will quickly get an idea of how the matricies work.
 
 ![HR vs BS]({static}/images/Big_Data_Idol_How_I_Crunched_the_Numbers/hr_v_bs-1024x794.png)
 

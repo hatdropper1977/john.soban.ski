@@ -6,7 +6,7 @@ Tags: Flask, HOWTO, Python
 Slug: add-recaptcha-to-your-flask-application
 Status: published
 
-In this [HOWTO]({category}howto), I will demonstrate how to easily integrate the [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) service into a [Flask](http://flask.pocoo.org/) web application using [Flask-WTF](https://wtforms.readthedocs.io/en/3.0.x/).
+In this [HOWTO]({category}howto), I will demonstrate how to easily integrate the [Google reCAPTCHA](https://www.google.com/recaptcha/intro/) service into a [Flask](https://palletsprojects.com/p/flask/) web application using [Flask-WTF](https://wtforms.readthedocs.io/en/3.0.x/).
 
 The following cartoon depicts the end result.  
 
@@ -18,7 +18,7 @@ A Flask application server provides a simple (beautified) survey to the user.  W
 
 reCAPTCHA makes robots very sad! (p.s. that dope MS Paint [isometric pixel art](https://en.wikipedia.org/wiki/Pixel_art#Categories) is all me baby!)
 
-Before we begin, if you would like more detail on how Flask uses routes to generate the appropriate web pages for the end user, check out [HOWTO-2]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md).  If you would like to see how Flask can beautify and validate the survey form using [Bootstrap](http://getbootstrap.com/), check out [HOWTO-3]({filename}/part-3-professional-form-validation-with-bootstrap.md).  You do not need the details, however, to run this demo.
+Before we begin, if you would like more detail on how Flask uses routes to generate the appropriate web pages for the end user, check out [HOWTO-2]({filename}/part-2-let-internet-facing-forms-update-elasticsearch-via-flask.md).  If you would like to see how Flask can beautify and validate the survey form using [Bootstrap](https://getbootstrap.com/), check out [HOWTO-3]({filename}/part-3-professional-form-validation-with-bootstrap.md).  You do not need the details, however, to run this demo.
 
 This demo includes the following fun, easy steps:
 

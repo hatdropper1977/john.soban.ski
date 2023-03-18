@@ -13,11 +13,11 @@ You don't need to be a Blockchain wiz to mint NFT, you only need some Ethereum a
 ## Background
 The scarcity, novelty and decentralized nature of Bitcoin and Ethereum attracts manic investors willing to pay top dollar for these speculative assets.  NFTs take the scarcity and novelty of these traditional cryptos to the next level.  Each NFT provides a unique token (or collection of tokens) that represents a piece of digital art.
 
-The NFT landscape witnessed asymptotic growth in the past few months, with plenty of ridiculous sales.  A certain Big Data Architect, for example, paid three (3) Ethereum for a [Taco Gif](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715:0x99f93b966021d6c6883b84e4b184957f49af8b32).
+The NFT landscape witnessed asymptotic growth in the past few months, with plenty of ridiculous sales.  A certain Big Data Architect, for example, paid three (3) Ethereum for a [Taco Gif](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:236715?tab=owners).
 
 ![Taco Bell]({static}/images/Create_Nft_With_Rarible_Part_2/02_Taco_Bell.png)
 
-That same highly respected thought leader also paid two (2) Ethereum for a [Toilet Paper Gif](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:489778:0x99f93b966021d6c6883b84e4b184957f49af8b32).
+That same highly respected thought leader also paid two (2) Ethereum for a [Toilet Paper Gif](https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:489778?tab=overview).
 
 ![Charmin]({static}/images/Create_Nft_With_Rarible_Part_2/00_Charmin_NFT.png)
 

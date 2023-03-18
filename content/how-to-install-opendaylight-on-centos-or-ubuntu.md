@@ -12,7 +12,7 @@ OpenDaylight provides a Software Defined Network ([SDN](https://en.wikipedia.org
 
 ![OpenDaylight Logo]({static}/images/How_To_Install_Opendaylight_On_Centos_Or_Ubuntu/00_ODL.png)
 
-When I [played](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) around with OpenDaylight [a bit](https://ask.opendaylight.org/users/420/runamuck/) a couple of [years back](https://blogs.oracle.com/ravello/opendaylight-on-on-aws), I came from a Systems/ Network engineering background.  I found the required Java domain experience a bit frustrating.  I put together this blog post, therefore, to make the valuable OpenDaylight platform more accessible to Systems/ Network Engineers.
+When I [played](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) around with OpenDaylight [a bit](https://web.archive.org/web/20150924070416/https://ask.opendaylight.org/users/420/runamuck/) a couple of [years back](https://web.archive.org/web/20210420044720/https://blogs.oracle.com/ravello/opendaylight-on-on-aws), I came from a Sysetems/ Network engineering background.  I found the required Java domain experience a bit frustrating.  I put together this blog post, therefore, to make the valuable OpenDaylight platform more accessible to Systems/ Network Engineers.
 
 The following bulleted list records the layout of this blog post.
 
@@ -66,7 +66,7 @@ $ sudo yum -y install unzip vim wget
 ### Install JAVA 8
 This section walks you through installing packages that you need to run the binary from the release zip.  If you would like to build OpenDaylight, skip ahead to [Install packages for build](#packbuild)
 
-In order to run OpenDaylight, you need to install and configure [JAVA 8](https://java.com/en/).  You can just download the JRE if you do not plan to build.
+In order to run OpenDaylight, you need to install and configure [JAVA 8](https://www.java.com/en/).  You can just download the JRE if you do not plan to build.
 
 #### Ubuntu
 ```bash
@@ -511,7 +511,7 @@ $ ./karaf/target/assembly/bin/karaf
 
 ## Conclusion
 
-I hope that you enjoyed this blog post.  If you would like to try out OpenDaylight, check out the blog post I wrote for Oracle Ravello [here](https://blogs.oracle.com/ravello/opendaylight-on-on-aws).  
+I hope that you enjoyed this blog post.  If you would like to try out OpenDaylight, check out the blog post I wrote for Oracle Ravello [here](https://web.archive.org/web/20210420044720/https://blogs.oracle.com/ravello/opendaylight-on-on-aws).  
 
 In 2015 I presented a demo at the Linux Foundation OpenDaylight summit in Santa Clara, Califonia.  You can read the slides [here](https://www.slideshare.net/JohnSobanski/sobanski-odl-summit2015) or watch the video [here](https://www.youtube.com/watch?v=PGl43xJQQ0g).
 

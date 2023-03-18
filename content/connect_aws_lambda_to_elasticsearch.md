@@ -8,7 +8,7 @@ Status: published
 
 Amazon Web Services' (AWS) [Lambda](https://aws.amazon.com/lambda/) provides a [*serverless*](https://en.wikipedia.org/wiki/Serverless_computing) architecture framework for your web applications.  You deploy your application to Lambda, attach an [API Gateway](https://aws.amazon.com/api-gateway/) and then call your new service from anywhere on the web.  Amazon takes care of all the tedious, boring and necessary housekeeping.
 
-In this HOWTO I show you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/elasticsearch-service/) using a Lambda function and an API Gateway.  We use [Identity and Access Management  (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and  the Elasticsearch service.  This HOWTO serves as a simple starting point.
+In this HOWTO I show you how to create a proxy in front of the [AWS Elasticsearch service](https://aws.amazon.com/opensearch-service/) using a Lambda function and an API Gateway.  We use [Identity and Access Management  (IAM)](https://aws.amazon.com/iam/) policies to sign and encrypt the communication between your Lambda function and  the Elasticsearch service.  This HOWTO serves as a simple starting point.
  
 Once you successfully jump through the hoops to connect Lambda to Elasticsearch, you can easily grow your application to accommodate new features and services. In the second [HOWTO]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md), for example, I demonstrate how to [validate and publish documents to Elasticsearch]({filename}/deploy_an_advanced_elasticsearch_proxy_with_lambda.md).
 
@@ -57,7 +57,7 @@ Expect about ten (10) minutes for the service to initiate.  While you wait for
 
 ### 2. Configure your Chalice development environment
  
-As a convenience, I summarize the instructions from the [authoritative Chalice HOWTO](https://github.com/awslabs/chalice/blob/master/README.rst) here.
+As a convenience, I summarize the instructions from the [authoritative Chalice HOWTO](https://github.com/aws/chalice/blob/master/README.rst) here.
 
 First, create a Python virtual environment for a development
 
@@ -128,7 +128,7 @@ Successfully installed botocore-1.5.45 chalice-0.8.0 click-6.6 docutils-0.13.1 j
 (chalice-demo)[ec2-user@ip-172-31-4-69 chalice-demo]$ 
 ```
 
-The [quickstart](https://github.com/awslabs/chalice/blob/master/README.rst) is pretty clear about how to configure credentials.  Here are their instructions verbatim...
+The [quickstart](https://github.com/aws/chalice/blob/master/README.rst) is pretty clear about how to configure credentials.  Here are their instructions verbatim...
 
 > Before you can deploy an application, be sure you have credentials
 > configured. If you have previously configured your machine to run
@@ -147,7 +147,7 @@ The [quickstart](https://github.com/awslabs/chalice/blob/master/README.rst) is p
 >
 > If you want more information on all the supported methods for
 > configuring credentials, see the [boto3
-> docs](http://boto3.readthedocs.io/en/latest/guide/configuration.html).
+> docs](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
  
 From the chalice-demo directory, create a new Chalice project.
 
@@ -227,7 +227,7 @@ Connect_AWS_Lambda_to_Elasticsearch
  
 ![Lambda Error]({static}/images/Connect_AWS_Lambda_to_Elasticsearch/lambda_error-993x1024.png)
  
-Yes.  For some reason the steps on the [Chalice quick start](https://github.com/awslabs/chalice) does not seem to work.  If you take a look at ***policy.json*** you'll see that Chalice over-wrote it.
+Yes.  For some reason the steps on the [Chalice quick start](https://github.com/aws/chalice) does not seem to work.  If you take a look at ***policy.json*** you'll see that Chalice over-wrote it.
 
 ```bash
 (chalice-demo)[ec2-user@ip-172-31-4-69 eslambda]$ cat .chalice/policy.json 
