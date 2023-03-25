@@ -221,7 +221,7 @@ Install the following packages into your environment:
 - requests
 - requests-aws4auth
 
-Note that you need to install the proper version of the **Elasticsearch** client.  In this **HOWTO** I installed Elasticsearch version **7.4**, so I need to install **version seven** of the **Elasticsearch** client.  See the [Elasticsearch Docs](https://elasticsearch-py.readthedocs.io/en/master) for simple instructions.
+Note that you need to install the proper version of the **Elasticsearch** client.  In this **HOWTO** I installed Elasticsearch version **7.4**, so I need to install **version seven** of the **Elasticsearch** client.  See the [Elasticsearch Docs](https://elasticsearch-py.readthedocs.io/en/master/) for simple instructions.
 
 In the case of **7.4** I simply type:
 

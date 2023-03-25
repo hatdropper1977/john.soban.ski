@@ -131,7 +131,7 @@ Amazon SageMaker notebooks provide the JupyterLab service.  JupyterLab features 
 
 Upon launch of your Notebook, AWS allows you to [choose either JupyterLab Version 1 or JupyterLab Version 3](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-jl.html)
 
-I recommend Jupyter Lab 3, which delivers a [half dozen new  features](https://blog.jupyter.org/jupyterlab-3-0-is-out-4f58385e25bb), which include:
+I recommend Jupyter Lab 3, which delivers a [half dozen new  features](https://search.brave.com/search?q=jupyter+lab+3.0+features), which include:
 
   - Graphical Debug
     - Desktop Integrated Development Environments (IDE) ship graphical debuggers.  JupyterLab 3.0 provides a visual debugger for your Notebook.

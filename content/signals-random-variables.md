@@ -6,7 +6,7 @@ Tags: Satellite Communications, Digital
 Slug: signals-random-variables
 Status: published
 
-This blog post summarizes the first three chapters of Bernard Sklar's [Digital Communication - Fundamentals and Applications](https://www.pearson.com/us/higher-education/product/Sklar-Digital-Communications-Fundamentals-and-Applications/9780132119399.html) textbook.
+This blog post summarizes the first three chapters of Bernard Sklar's [Digital Communication - Fundamentals and Applications](https://search.brave.com/search?q=Sklar%20Digital%20Communications%20Fundamentals%20and%20Applications) textbook.
 
 ![Sklar Digital Communications]({static}/images/Signals_Random_Variables/01_Sklar_Dc.png)
 

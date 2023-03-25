@@ -147,7 +147,7 @@ Darkblock indicates that I now have digital goodies to unlock.
 ## View A Darkblock
 Darkblock provides an App to view the new, locked digital content.
 
-Today (October 30th, 2021) Darkblock provides an Application for the [Amazon Firestick](https://www.amazon.com/Darkblock-NFT-Display/dp/B09B4FLQZ6/) (They also provide applications for other [Google Media Devices](https://play.google.com/store/apps/details?id=io.darkblock.darkblock&hl=en&gl=US)).
+Today (October 30th, 2021) Darkblock provides an Application for the [Amazon Firestick](https://search.brave.com/search?q=amazon+app+darkblock+nft+viewer) (They also provide applications for other [Google Media Devices](https://play.google.com/store/apps/details?id=io.darkblock.darkblock&hl=en&gl=US)).
 
 > NOTE:  The following pictures capture the app running on a Vintage TV from 2005.  I apologize for the crappy quality of the pictures.  [Send me some Eth](https://etherscan.io/address/sobanski.eth) so I can upgrade to a [Bang & Olufsen](https://www.bang-olufsen.com/en/de/televisions).
 

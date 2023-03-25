@@ -34,7 +34,7 @@ Amazon does not provide a turnkey solution for this user story, so I faced two h
      -  Deployment
         -  You can either deploy the __Elastic stack__ via a combination of [Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) and the Amazon provided [Elasticsearch service](https://aws.amazon.com/opensearch-service/) or the Elastic provided [Elastic cloud](https://www.elastic.co/cloud/)
      -  Cost
-        -  The Amazon approach costs ~$15/month and the cheapest Elastic cloud approach costs [$45/month](https://www.elastic.co/cloud/as-a-service/subscriptions)
+        -  The Amazon approach costs ~$15/month and the cheapest Elastic cloud approach costs [$45/month](https://search.brave.com/search?q=elasticsearch+cloud+pricing)
      -  Effort
         -  The Amazon approach requires a significant amount of [integration and troubleshooting](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-s3-lambda-es) whereas the Elastic cloud approach just requires the deployment of a few Logstash filters
   -  Turn key
