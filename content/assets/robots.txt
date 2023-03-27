@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /2016/
+Disallow: /2017/
+Disallow: /google7a6d79cc71b58757.html
+Sitemap: https://john.soban.ski/sitemap.xml

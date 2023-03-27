@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: soban.ski
+Token: 0ea0eec69156d690f0cbe1e959b9b713b711709e293be11e9a485218c43b4d7b

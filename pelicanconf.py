@@ -7,12 +7,7 @@ SITESUBTITLE = u'Artificial Intelligence in the Cloud'
 SITEURL = 'https://john.soban.ski'
 #SITEURL = 'http://52.54.218.55:8000'
 HEADER_COVER = 'images/city5.png'
-#COLOR_SCHEME_CSS = 'tomorrow.css'
 
-# Old Universal Analytics (UA)
-#GOOGLE_ANALYTICS = 'UA-72207340-3'
-
-# New Google Analytics 4  (GA-4)
 GOOGLE_ANALYTICS ='G-68ZKCSR3PQ'
 
 CATEGORY_FEED_ATOM = None
@@ -62,13 +57,20 @@ MENUITEMS = (
              ('Protocols', '/cat/ietf.html'),
 )
 
-# To show the line numbers for code blocks
-# Refer https://docs.getpelican.com/en/stable/settings.html?highlight=MARKDOWN#basic-settings
-#MARKDOWN = {
-#  'extension_configs': {
-#    'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': True},
-#    'markdown.extensions.extra': {},
-#    'markdown.extensions.meta': {},
-#  },
-#  'output_format': 'html5',
-#}
+STATIC_PATHS = ['assets']
+
+EXTRA_PATH_METADATA = {
+    'assets/ads.txt': {'path': 'ads.txt'},
+    'assets/android-chrome-192x192.png': {'path': 'android-chrome-192x192.png'},
+    'assets/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
+    'assets/BingSiteAuth.xml': {'path': 'BingSiteAuth.xml'},
+    'assets/brave-rewards-verification.txt' : {'path': '.well-known/brave-rewards-verification.txt'},
+    'assets/create_sitemap.sh' : {'path': 'create_sitemap.sh'},
+    'assets/favicon-16x16.png': {'path': 'favicon-16x16.png'},
+    'assets/favicon-32x32.png': {'path': 'favicon-32x32.png'},
+    'assets/favicon.ico': {'path': 'favicon.ico'},
+    'assets/google7a6d79cc71b58757.txt': {'path': 'google7a6d79cc71b58757.html'},
+    'assets/mstile-150x150.png': {'path': 'mstile-150x150.png'},
+    'assets/robots.txt': {'path': 'robots.txt'},
+    'assets/safari-pinned-tab.svg': {'path': 'safari-pinned-tab.svg'},
+}
