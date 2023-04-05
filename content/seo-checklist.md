@@ -390,6 +390,8 @@ I recommend that you use AHREFS or Bing Search Tools to audit your site.
 
 Even static sites require annual housekeeping to keep the search engines happy.
 
+![Black Train]({static}/images/Seo_Checklist/14_Black_Train.png)
+
 Please use the following checklist to audit your site.
 
 1.  A Deliberate Sitemap
