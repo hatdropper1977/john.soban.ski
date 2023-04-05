@@ -5,12 +5,12 @@ from __future__ import unicode_literals
 SITENAME = 'John Sobanski'
 SITESUBTITLE = u'Artificial Intelligence in the Cloud'
 SITEURL = 'https://john.soban.ski'
-#SITEURL = 'http://52.54.218.55:8000'
+SITEURL = 'http://52.54.218.55:8000'
 HEADER_COVER = 'images/city5.png'
 
 GOOGLE_ANALYTICS ='G-68ZKCSR3PQ'
 
-CATEGORY_FEED_ATOM = None
+#CATEGORY_FEED_ATOM = None
 
 NOINDEX_THIN_CONTENT = True
 
