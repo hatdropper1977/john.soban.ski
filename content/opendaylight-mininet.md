@@ -1,4 +1,4 @@
-Title: Test Layer Two Opendaylight Services In The Cloud
+Title: Test Layer Two OpenDaylight Services In The Cloud
 Date: 2023-04-29 03:33
 Author: john-sobanski
 Category: HOWTO
