@@ -24,7 +24,7 @@ The plot follows Carrie White, an outcast who takes abuse from her peers in Cham
 
 ![Carrie Burns]({static}/images/King_Carrie/02_Carrie_Burns.png)
 
-# Approach
+## Approach
 I follow a simple approach to generate my term paper.
 
 First, I chunk the plot into a dozen plot groupings.
@@ -216,7 +216,7 @@ ChatGPT replies:
 
 > Stephen King's novel Carrie and the historical event of the Haitian Revolution may appear disparate at first glance, but a deeper exploration reveals intriguing parallels in their themes. This term paper aims to compare the themes of Carrie against the Haitian Revolution, with Carrie symbolizing the Haitian revolutionaries and the Chamberlain townspeople representing the French colonists. The themes of outcast, ostracism, resentment, gang-up, doubt, power, decision, violence, aftermath, regret, and epilogue will be examined in both contexts, highlighting the similarities and contrasting elements between the two narratives.
 
-# Conclusion
+## Conclusion
 With effective prompts, ChatGPT provides a soundboard for term paper thesis ideation.  It removes friction and roadblocks in term paper writing but still requires the student to read a book and extract salient quotes.
 
 ![Haitian Revolution]({static}/images/King_Carrie/09_Haitian_Revolution.png)
