@@ -523,26 +523,30 @@ df = pd.read_csv('cp.csv', header=None, names=['Crime'])
 
 df1 = df[0:750]
 df2 = df[751:1500]
-df3 = df[2251:3000]
-df4 = df[3001:3750]
-df5 = df[3751:]
+df3 = df[1501:2250]
+df4 = df[2251:3000]
+df5 = df[3001:3750]
+df6 = df[3751:]
 
 lb1 = df1.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
-lb1.to_csv('lb1.csv', index=False)
+lb1.to_csv('lb1.csv')
 lb2 = df2.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
-lb2.to_csv('lb2.csv', index=False)
+lb2.to_csv('lb2.csv')
 lb3 = df3.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
-lb3.to_csv('lb3.csv', index=False)
+lb3.to_csv('lb3.csv')
 lb4 = df4.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
-lb4.to_csv('lb4.csv', index=False)
+lb4.to_csv('lb4.csv')
 lb5 = df5.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
-lb5.to_csv('lb5.csv', index=False)
+lb5.to_csv('lb5.csv')
+lb6 = df6.apply(lambda X: classifier.predict( [X['Crime']]), axis=1)
+lb6.to_csv('lb6.csv')
 
 df1z = df1.merge(lb1.to_frame(name='Result'), left_index=True, right_index=True)
 df2z = df2.merge(lb2.to_frame(name='Result'), left_index=True, right_index=True)
 df3z = df3.merge(lb3.to_frame(name='Result'), left_index=True, right_index=True)
 df4z = df4.merge(lb4.to_frame(name='Result'), left_index=True, right_index=True)
 df5z = df5.merge(lb5.to_frame(name='Result'), left_index=True, right_index=True)
+df6z = df6.merge(lb6.to_frame(name='Result'), left_index=True, right_index=True)
 
-cp = pd.concat([df1z, df2z, df3z, df4z, df5z])
+cp = pd.concat([df1z, df2z, df3z, df4z, df5z, df6z])
 ```
