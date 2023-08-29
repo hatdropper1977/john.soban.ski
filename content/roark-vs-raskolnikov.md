@@ -73,12 +73,11 @@ rask_df[ rask_df.score == rask_df.score.min()].size
 24
 ```
 
-For example:
+For example, Raskolnikov's most negative dialog includes:
 
-> Raskolnikov's most negative dialog: All this is very naive . . . excuse me, I should have said impudent on your part
+> All this is very naive . . . excuse me, I should have said impudent on your part
 
 ### One Dimensional Graphical Analysis
-
 Pandas provides an easy method to generate Histograms.
 
 ```python
@@ -115,7 +114,6 @@ sns.histplot( x = sentiment_df['score'],
 ```
 
 The overlaid Histograms illustrate that Raskolnikov (Blue) leans more negative than Roark (Orange).
-
 
 ![Raskolnikov more negative than Roark Histogram]({static}/images/Roark_Vs_Raskolnikov/05_Compare_Scores.png)
 
