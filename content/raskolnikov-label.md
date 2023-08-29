@@ -550,3 +550,6 @@ df6z = df6.merge(lb6.to_frame(name='Result'), left_index=True, right_index=True)
 
 cp = pd.concat([df1z, df2z, df3z, df4z, df5z, df6z])
 ```
+
+## Bibliography
+- Dostoevsky, Fyodor. *Crime and Punishment*. Bantam Books, 1996.
