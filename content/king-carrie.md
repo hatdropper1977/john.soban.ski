@@ -220,3 +220,8 @@ ChatGPT replies:
 With effective prompts, ChatGPT provides a soundboard for term paper thesis ideation.  It removes friction and roadblocks in term paper writing but still requires the student to read a book and extract salient quotes.
 
 ![Haitian Revolution]({static}/images/King_Carrie/09_Haitian_Revolution.png)
+
+## Bibliography
+- King, Stephen. *Carrie*.  Signet, 1975.
+
+![My Carrie Paperback]({static}/images/King_Carrie/10_Carrie_Book.png)
