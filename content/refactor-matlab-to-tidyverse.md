@@ -1,14 +1,18 @@
-Title: Refactoring Matlab to Tidyverse
-Date: 2019-04-30 10:26
+Title: Refactor Matlab to Tidyverse
+Date: 2023-08-26 10:26
 Author: john-sobanski
 Category: Data Science
 Tags: Octave, RCE, Neural Networks, Machine Learning, Data Science, R
+og_image: images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png
+twitter_image: images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png
 Slug: refactor-matlab-to-tidyverse
 Status: published
 
 I've previously discussed the [Reduced Coloumb Energy]({filename}/reduced_coulomb_energy_neural_network_bupa.md) Neural Net algorithm on this site.  I wrote the algorithm in Matlab, which uses index based logic to select, filter, wrangle and process data.  I thought it would be a fun exercise to refactor the Matlab code to [Tidyverse](https://www.tidyverse.org/).  Tidyverse uses forward pipe operators to flow data through the data processing steps.
 
-The example RCE algorithm assigns a class to data based on weather or not the data points live inside "footprints" of training data.  If you are interested in a visual walk through of the RCE algorithm, take a minute to read  my post titled [A Graphical Introduction to Probabalistic Neural Networks]({filename}/graphical_intro_to_probabilistic_neural_networks.md).
+![Pipe Operator Pic]({static}/images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png)
+
+The example RCE algorithm assigns a class to data based on whether or not the data points live inside "footprints" of training data.  If a visual walk through the RCE algorithm interests you, take a minute to read  my post titled [A Graphical Introduction to Probabalistic Neural Networks]({filename}/graphical_intro_to_probabilistic_neural_networks.md).
 
 The following graphic captures an animation of the RCE NN Algorithm in action.
 
@@ -20,7 +24,7 @@ You can find the original Matlab script and the new R script on [GitHub](https:/
 The algorithm loads the BUPA liver disorders database from the University of California, Irvine (UCI) [machine learning repository](http://archive.ics.uci.edu/ml/machine-learning-databases/liver-disorders/bupa.data).
 
 ### Matlab
-In Matlab, we simply encode the CSV as matrix using brackets and assignment.
+In Matlab, we encode the CSV into a matrix with brackets and assignment.
 
 ```matlab
 data = [85,92,45,27,31,0.0,1
@@ -57,7 +61,7 @@ Bupa.Tib <- read_csv( "bupa.data", col_names = columns ) %>%
 ```
 
 ## Selecting Features
-The BUPA data has six features and two classes (one for alcohol related liver disorder, and one for alcohol unrelated liver disorder).  
+The BUPA data includes six features and two classes (one for alcohol related liver disorder, and one for alcohol unrelated liver disorder).  
 
 The six (6) BUPA features include: 
 
@@ -171,7 +175,7 @@ function [lambda_1, lambda_2] = rce_train(class1,class2,eps,lambda_max)
 end
 ```
 
-We apply the function to the training matrices as follows:
+We apply the function to the training matrices:
 
 ```matlab
 [lambda_1 lambda_2] = rce_train(class1,class2,eps,lambda_max);
@@ -246,7 +250,7 @@ Class.2.Train.Tib %<>%
   mutate( id = Class.2.Train.Tib$id )
 ```
 
-As you can see, we pipe the entire ***Class.1.Train.Tib*** to a ***select*** function and then use the ***apply*** operation to execute ***find_lambda*** on every row of ***Class.1.Train*** tib.  Although each iteration (application) of ***find_lambda*** inputs the entire ***Tibble*** of ***Class.2.Train.Tin***, it returns a single value for lambda.
+We pipe the entire ***Class.1.Train.Tib*** to a ***select*** function and then use the ***apply*** operation to execute ***find_lambda*** on every row of ***Class.1.Train*** tib.  Although each iteration (application) of ***find_lambda*** inputs the entire ***Tibble*** of ***Class.2.Train.Tin***, it returns a single value for lambda.
 
 > NOTE:  The ***MagrittR*** ***%<>%*** operation pipes data forward and stores the final result of all chained operations back into initial variable
 
@@ -298,7 +302,7 @@ Test.Patterns <- Bupa.Tib %>%
 Once we have test data, we need to classify it.
 
 ### Matlab
-In Matlab, I wrote a function named ***rce_clasify***.  As you can see, the function contains a ton of nested functions and a for loop.
+In Matlab, I wrote a function named ***rce_clasify***.  The function contains a ton of nested functions and a for loop.
 
 Each training pattern includes a circular "footprint" around it that extends to the nearest point of the ***other*** class, with radius equal to the ***lambda*** we calculated above.
 
@@ -356,7 +360,7 @@ rce_classify <- function( observation, Data.Tib, features ) {
 }
 ```
 
-Without getting two complicated, we pass the Test data to a function that uses ***rce_classify*** to detect the number of ***hits*** against each class of Training data.  First it finds the ***hits*** against ***Class.2.Training.Tib***, and then it finds the hits against ***Class.1.Training.Tib***.
+Without getting too complicated, we pass the Test data to a function that uses ***rce_classify*** to detect the number of ***hits*** against each class of Training data.  First it finds the ***hits*** against ***Class.2.Training.Tib***, and then it finds the hits against ***Class.1.Training.Tib***.
 
 The new function ***rce_classify_tib*** then uses the number of hits for each class to classify the data.  In this example, we use a voting approach, although you can tailor the algorithm to classify a test point as ambiguous if it hits either ***zero*** or ***more than one*** class.
 
@@ -473,5 +477,7 @@ This blog post described how to convert a Matlab script that uses for loops and 
 
 If you enjoyed this, you may enjoy these other Machine Learning posts.
 
+- [A New Exemplar Machine Learning Algorithm (Part 1: Develop)]({filename}/rce-python-part-1.md)
+- [A New Exemplar Machine Learning Algorithm (Part 2: Optimize)]({filename}/rce-python-part-2.md)
 - [Applying a Reduced Coulomb Energy (RCE) Neural Network Classifier to the Bupa Liver Disorders Data Set]({filename}/reduced_coulomb_energy_neural_network_bupa.md)
 - [A Graphical Introduction to Probabilistic Neural Networks - Normalization and Implementation]({filename}/graphical_intro_to_probabilistic_neural_networks.md)
