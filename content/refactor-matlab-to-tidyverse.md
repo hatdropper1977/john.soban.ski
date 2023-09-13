@@ -8,7 +8,7 @@ twitter_image: images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png
 Slug: refactor-matlab-to-tidyverse
 Status: published
 
-I've previously discussed the [Reduced Coloumb Energy]({filename}/reduced_coulomb_energy_neural_network_bupa.md) Neural Net algorithm on this site.  I wrote the algorithm in Matlab, which uses index based logic to select, filter, wrangle and process data.  I thought it would be a fun exercise to refactor the Matlab code to [Tidyverse](https://www.tidyverse.org/).  Tidyverse uses forward pipe operators to flow data through the data processing steps.
+I've previously discussed the [Reduced Coloumb Energy]({filename}/reduced_coulomb_energy_neural_network_bupa.md) Neural Net algorithm on this site.  I wrote the algorithm in Matlab, which uses index based logic to select, filter, wrangle and process data. Today I will refactor the Matlab code to [Tidyverse](https://www.tidyverse.org/).  Tidyverse uses forward pipe operators to flow data through the data processing steps.
 
 ![Pipe Operator Pic]({static}/images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png)
 
@@ -148,7 +148,7 @@ The RCE NN algorithm requires us to find the radii between a train point and the
 We compute the euclidean distance to all other training points of the other class, and store the distance (named ***lambda***) of the closest one.
 
 ### Matlab
-In Matlab, we create a function that ingests both the ***Class 1*** and ***Class 2*** training matrices, along with ***epsilon*** and ***lambda max***.  ***Lambda max*** provides an upper bound in terms of the maximum radius the algorithm will consider.  ***Epsilon*** is a very small value that we subtract from the calculated ***lambda***.  For more details, see my writeup of the [RCE NN]({filename}/reduced_coulomb_energy_neural_network_bupa.md) algorithm.
+In Matlab, we create a function that ingests both the ***Class 1*** and ***Class 2*** training matrices, along with ***epsilon*** and ***lambda max***.  ***Lambda max*** provides an upper bound in terms of the maximum radius the algorithm will consider.  ***Epsilon*** provides a very small value that we subtract from the calculated ***lambda***.  For more details, see my writeup of the [RCE NN]({filename}/reduced_coulomb_energy_neural_network_bupa.md) algorithm.
 
 The Matlab code performs Matrix operations via nested functions to calculate the euclidean distance to all other points and then record the minimum.
 
@@ -192,13 +192,13 @@ The ***find_lambda*** function takes a single observation (row of data) for a pa
 
 Not to overload terms too much, but the function includes a ***lambda function*** that calculates the Euclidean distance between two vectors.
 
-The ***lambda function*** takes two vectors, one which is the ***observation*** vector and the second which is a row from the ***other class*** Tibble, represented as ***x***.
+The ***lambda function*** takes two vectors, the ***observation*** vector and a row from the ***other class*** Tibble, which I call ***x***.
 
 ```R
 function(x) sqrt( sum( ( x - observation )^2 )
 ```
 
-The Lambda function can perform calculations on vectors of any length, which means that a data scientist is flexible in choosing which features to include.
+The Lambda function can perform calculations on vectors of any length, which provides Data Scientists flexiblity in choosing which features to include.
 
 The ***find_lambda*** function follows, and I will explain it quickly line by line.
 
@@ -222,7 +222,7 @@ The ***apply*** operator tells ***Tidyverse*** to apply the Euclidean distance *
 
 Since we must accommodate vectors of arbitrary length we tell ***apply*** to input ***row wise*** data via the ***1*** in the second parameter in the ***function signature***.
 
-Once the ***apply*** operation completes, we have a column that records the distance to each data point in the ***Other.Class.Tib***.  We are only interested in the ***nearest*** data point of the ***other class*** so we ***select*** the ***euclid_dist*** column and find the ***min()***.  We then ensure that the ***minimum distance*** is less than ***lambda max***.
+Once the ***apply*** operation completes, we have a column that records the distance to each data point in the ***Other.Class.Tib***.  We are only interested in the ***nearest*** data point of the ***other class*** so we ***select*** the ***euclid_dist*** column and find the ***min()***.  We then ensure that the ***minimum distance*** has length less than ***lambda max***.
 
 In summary, we supply the function with a single observation for a class, along with a ***Tibble*** that includes ***all*** observations for the ***other class***.  The function then returns a single value, the distance between the current observation and the nearest data point of the ***other class***.
 
