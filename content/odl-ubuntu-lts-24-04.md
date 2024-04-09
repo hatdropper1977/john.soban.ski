@@ -233,23 +233,23 @@ From the Hamburger Menu (Three Horizontal Bars), click **Get Started**.
 
 Click **Download**.
 
-![Click the Download]({static}/images/ODL_Ubuntu_Lts_24_04/02_Select_Download.png)
+![Click the Download]({static}/images/Odl_Ubuntu_Lts_24_04/02_Select_Download.png)
 
 Scroll down to the section that reads **Archived Releases**.
 
-![Archived Releases]({static}/images/ODL_Ubuntu_Lts_24_04/03_Scroll_Down.png)
+![Archived Releases]({static}/images/Odl_Ubuntu_Lts_24_04/03_Scroll_Down.png)
 
 Do not click on **Fluorine and Newer**, since that links to the source code.
 
 If you hover over the link, you will not see **karaf** in the path.  This lack of **karaf** in the path indicates source code.
 
-![Source Code Releases]({static}/images/ODL_Ubuntu_Lts_24_04/04_Bad_Download.png)
+![Source Code Releases]({static}/images/Odl_Ubuntu_Lts_24_04/04_Bad_Download.png)
 
 > **BEWARE:**  Avoid the **Fluorine and Newer** link.  You want precompiled binaries, and not source code.
 
 Look for links in the **Archived Releases** section that include the word **karaf**.  Paths that include **karaf** indicate precompiled binaries.  You can find all releases in these folders, including **Potassium** and **Argon**. 
 
-![Binary Releases]({static}/images/ODL_Ubuntu_Lts_24_04/05_Good_Download.png)
+![Binary Releases]({static}/images/Odl_Ubuntu_Lts_24_04/05_Good_Download.png)
 
 Click a link that [leads to precompiled binaries](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/).
 
