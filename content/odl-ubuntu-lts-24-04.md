@@ -1,5 +1,5 @@
 Title: Install OpenDaylight on Ubuntu 24.04 LTS (Quick and Easy!)
-Date: 2024-04-27 03:33
+Date: 2024-04-25 23:33
 Author: john-sobanski
 Category: HOWTO
 Tags: HOWTO, SD-RAN, SDN, OpenDaylight
