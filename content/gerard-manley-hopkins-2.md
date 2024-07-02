@@ -77,7 +77,7 @@ Hopkins refuses to gorge on despair to comfort himself from the pain after a bat
 
 ![Carrion Comfort]({static}/images/Gerard_Manley_Hopkins_2/06_Carrion_Comfort.png)
 
-Hopkins clinga to his remaining faint flicker of humanity and says “Not untwist—slack they may be—these last strands of man/ in me” (2-3). Hopkins also refuses to regress into a state of spiritual cannibalism. He wants to avoid the temptation of self-consuming pity and fully-immersive wallowing to attain comfort in life. He won’t indulge his depressive tendencies.
+Hopkins clings to his remaining faint flicker of humanity and says “Not untwist—slack they may be—these last strands of man/ in me” (2-3). Hopkins also refuses to regress into a state of spiritual cannibalism. He wants to avoid the temptation of self-consuming pity and fully-immersive wallowing to attain comfort in life. He won’t indulge his depressive tendencies.
 
 ![Carrion Wall]({static}/images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png)
 
