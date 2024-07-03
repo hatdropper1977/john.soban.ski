@@ -1,4 +1,4 @@
-Title: Mishima Teen's: Adolescent Archetypes of Pain (Part 1 of 2)
+Title: Mishima Teen's: Adolescent Archetypes of Pain (Part 2 of 2)
 Date: 2024-06-29 04:19
 Author: john-sobanski
 Category: Literature
