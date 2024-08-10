@@ -82,7 +82,7 @@ Kiyoaki dislikes anyone and almost everyone.  In describing Kiyoaki's school, Mi
 
 Mishima furthers the point, and writes that:
 
-> Kiyoaki hated the idealistic cries that rose from those young throats... his classmates' rough-and-ready relationships, their untried humanism, their constant jokes and puns [and] their never faltering reverence for the talent of Rodin and the perfection of Cpzanne (SS 170)
+> Kiyoaki hated the idealistic cries that rose from those young throats... his classmates' rough-and-ready relationships, their untried humanism, their constant jokes and puns [and] their never faltering reverence for the talent of Rodin and the perfection of Cezanne (SS 170)
 
 ![Honda's classmates in Kempo practice]({static}/images/Mishima/03_Mishima_Kempo.jpg)
 
@@ -164,7 +164,7 @@ Stokes writes that Mishima:
 
 > was not a religious man and his description of Hosso's teaching reads like part of a doctoral thesis... Here was a major problem for the writer: how to make an idea convincing when he did not believe it himself (YM 149)
 
-Stokes also adds that Mishima "was afraid that the Buddhist" theme running through his long novel-- the idea of reincarnation --would fail. Specifically, Mishima thought that if the reader did not believe he was serious about reincarnation then he would regard the entire novel "as a kind fof fairy story" (YM 165).
+Stokes also adds that Mishima "was afraid that the Buddhist" theme running through his long novel-- the idea of reincarnation --would fail. Specifically, Mishima thought that if the reader did not believe he was serious about reincarnation then he would regard the entire novel "as a kind of fairy story" (YM 165).
 
 Next month continues the discussion of Mishima's Teenage Archetypes.
 
