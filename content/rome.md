@@ -27,13 +27,13 @@ Gibbon writes:
 
 Beard provides detail, writing that in 88 B.C. Mithridates:
 
-> coordinated simultaneous attacks on Roman residents in towns on the west coast of what is now Turkey, from Pergamum in the north to Caunos, the ‘fig capital’ of the Aegean, in the south, killing – in highly inflated Roman estimates – somewhere between 80,000 and 150,000 men, women and children [Beard 270]
+> coordinated simultaneous attacks on Roman residents in towns on the west coast of what is now Turkey, from Pergamum in the north to Caunos, the ‘fig capital’ of the Aegean, in the south, **killing – in highly inflated Roman estimates – somewhere between 80,000 and 150,000 men, women and children** [Beard 270]
 
 ![An image of a marble scene that shows a Roman War]({static}/images/Rome/02_Roman_Battle.jpg)
 
 In 91 B.C., Italians enacted **ethnic cleansing**, and killed all Romans in one town.
 
-> [A] Roman envoy insulted the people of Asculum in central Italy. They responded by killing him and all the other Romans in the town [Beard 237]
+> [A] Roman envoy insulted the people of Asculum in central Italy. They responded by **killing him and all the other Romans in the town** [Beard 237]
 
 The Roman General and Statesman Sulla created a hit list of his enemies, which led to the execution of thousands.
 
@@ -150,7 +150,7 @@ Gibbon writes:
 
 Smith also reports that **Priscus** served under Severus, despite his Byzantine/ Nicodemian (now Turkey) origins.
 
-> [Priscus] Of Nicomedia, an architect and military engineer, who lived under Septimius Severus. (D. C. 74.11, 75.11.)
+> [Priscus] Of Nicomedia, an architect and military engineer, who **lived under Septimius Severus**. (D. C. 74.11, 75.11.)
 
 You can learn from Priscus.  If you focus on your craft and grow a reputation of excellence and technical superiority, you may dodge the normal (sometimes bellicose) corporate rules of power and protocol.
 
