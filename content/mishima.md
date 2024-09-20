@@ -158,7 +158,7 @@ The theme of reincarnation flows through the **Sea of Fertility** tetralogy.  Mi
 
 ![A still picture of Mishima]({static}/images/Mishima/05_Mishima_Still.jpg)
 
-Stokes attributes Mishima's Reincarnation fixation to overcompensation.  He postulates that Mishima wants to convince the reader that he believes in reincarnation.  Stokes 
+Stokes attributes Mishima's Reincarnation fixation to overcompensation.  He postulates that Mishima wants to convince the reader that he believes in reincarnation.
 
 Stokes writes that Mishima:
 
@@ -166,7 +166,7 @@ Stokes writes that Mishima:
 
 Stokes also adds that Mishima "was afraid that the Buddhist" theme running through his long novel-- the idea of reincarnation --would fail. Specifically, Mishima thought that if the reader did not believe he was serious about reincarnation then he would regard the entire novel "as a kind of fairy story" (YM 165).
 
-Next month continues the discussion of Mishima's Teenage Archetypes.
+[Next month]({filename}/mishima-2.md) continues the discussion of Mishima's Teenage Archetypes.
 
 ## Bibliography
 
