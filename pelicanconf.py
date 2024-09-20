@@ -74,4 +74,7 @@ EXTRA_PATH_METADATA = {
     'assets/robots.txt': {'path': 'robots.txt'},
     'assets/safari-pinned-tab.svg': {'path': 'safari-pinned-tab.svg'},
     'assets/John-2024.jpg': {'path': 'images/John-2024.jpg'},
+    'assets/city5.png' : {'path': 'images/city5.png'},
+    'assets/bsod_cropped.jpg' : {'path' : 'images/bsod_cropped.jpg'},
+    'assets/six_badges.png' : {'path' : 'images/six_badges.png'},
 }
