@@ -434,6 +434,8 @@ I demonstrated how to use NLP to label speakers in a text.  This allows Literary
 
 I first created a corpus of labeled training data.  I then used transfer learning to customize a medium-scale BERT model to fit the training data.  This produced a model that isolated Raskolnikov's quotes from **Crime and Punishment**
 
+I use this approach in next month's post, where [I compare Fyodor Dostoevsky's Rodion Raskolnikov (Crime and Punishment) with Ayn Rand's Howard Roark (The Fountainhead)]({filename}/roark-vs-raskolnikov.md).
+
 ## Coda
 I ran into some issues with **Keras and TensorFlow** on **Amazon Sagemaker**.  I record the **issues and solutions** here.
 
