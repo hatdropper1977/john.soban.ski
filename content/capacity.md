@@ -3,8 +3,8 @@ Date: 2024-09-28 09:41
 Author: john-sobanski
 Category: Data Science
 Tags: Operations Research, Data Science, Pandas, Python, HOWTO
-og_image: images/Capacity/
-twitter_image: images/Capacity/
+og_image: images/Capacity/08_Data_Flow.jpg
+twitter_image: images/Capacity/08_Data_Flow.jpg
 Slug: capacity
 Status: published
 
@@ -505,3 +505,6 @@ We see that we only need to buy **one (1) new CPU** for the **Data Analyst's** w
 5       firewall     8.192       5.0     1.0         185.0
 6          Total    73.364      45.0     7.0        1295.0
 ```
+
+
+![A Graphic that shows an ominous figure walking into a dense, server filled data center, with pipes and greebles on the ceiling]({static}/images/Capacity/08_Data_Flow.jpg)
