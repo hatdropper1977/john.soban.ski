@@ -184,8 +184,8 @@ Post a comment at the end of this blog post if you run into any issues.
 
 Release | Version | Year | Month
 ----------|--------|-----|------
-[Scandium-SR0](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.21.0/karaf-0.21.0.zip) | 0.21.0 | 2024 | Sept
-[Calcium-SR2](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.20.2/karaf-0.20.2.zip) | 0.20.2 | 2024 | Sept
+[Scandium (SR2)](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.21.2/karaf-0.21.2.zip) | 0.21.2 | 2025 | Mar
+[Calcium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.20.3/karaf-0.20.3.zip) | 0.20.3 | 2024 | Dec 
 [Potassium](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.19.3/karaf-0.19.3.zip) | 0.19.3 | 2024 | Jun
 [Argon](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.18.3/karaf-0.18.3.zip) | 0.18.3 | 2023 | Nov
 [Chlorine](https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.17.3/karaf-0.17.3.zip) | 0.17.3 | 2023 | Jun
