@@ -9,6 +9,7 @@ SITEURL = 'https://john.soban.ski'
 HEADER_COVER = 'images/city5.png'
 
 GOOGLE_ANALYTICS ='G-68ZKCSR3PQ'
+AHREFS_ANALYTICS ='Vj+WrOObNtHnxxqRTBlihQ'
 
 PLUGINS = ['sitemap']
 
