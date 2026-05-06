@@ -7,6 +7,7 @@ og_image: images/Faulkner_Humpty_Ai/01_Humpty_Dumpty.png
 twitter_image: images/Faulkner_Humpty_Ai/01_Humpty_Dumpty.png
 Slug: faulkner-humpty-ai
 Status: published
+Summary: Pit human literary parody against generative AI by rewriting *Humpty Dumpty* in the style of William Faulkner using modified passages from *Absalom, Absalom!*. Compare manual collage-style writing against ChatGPT and examine the limits of AI literary imitation.
 
 In this blog post I write an entry for the (now defunct) **Faux Faulkner Contest**.
 

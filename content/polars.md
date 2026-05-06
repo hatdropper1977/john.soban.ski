@@ -7,6 +7,7 @@ og_image: images/Polars/07_Square_Off.jpg
 twitter_image: images/Polars/07_Square_Off.jpg
 Slug: polars
 Status: published 
+Summary: Refactoring an RCE machine learning algorithm from Pandas lambda functions to the Polars expression API reduced execution time from six minutes to fourteen seconds. Polars cross joins, columnar operations, and Apache Arrow drive a 25x speedup.
 
 The open-source **Polars** library touts huge performance gains over **Pandas**.  A combination of parallel processing, Apache Arrow, and a "Close to the Metal" Architecture drives **Polars'** speed.  I refactored my Pandas-based Reduced Columb Energy (RCE) algorithm to **Polars** and will share my journey and observations with you.
 

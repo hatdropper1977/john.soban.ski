@@ -7,6 +7,7 @@ og_image: images/Far/01_Meme_Words.jpg
 twitter_image: images/Far/01_Meme_Words.jpg
 Slug: far
 Status: published
+Summary: Detect low-effort AI-generated writing in academic and government acquisition documents via a rubric that considers meme adjectives, passive voice, clichés, empty phrases, adverbs, and unsubstantiated grandiosity.
 
 ## Introduction
 Government Acquisition Teams (and Academics) request written responses to gauge writers' capacity for difficult work.  Good writing requires effort.  Writers must provide clear, focused, and valuable prose to Readers.    

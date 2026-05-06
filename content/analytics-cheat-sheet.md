@@ -7,6 +7,7 @@ og_image: images/Analytics_Cheat_Sheet/07_Twentyfive_Bins.png
 twitter_image: images/Analytics_Cheat_Sheet/07_Twentyfive_Bins.png
 Slug: analytics-cheat-sheet
 Status: published 
+Summary:  Witness practical Pandas, Seaborn, and Matplotlib techniques for exploring machine learning datasets using the UCI Abalone database. Includes histograms, KDE plots, boxplots, correlation heatmaps, PCA, regression plots, and multidimensional visualization workflows.
 
 Today I collect and organize useful data visualization (Data Viz) tools that aid data exploration.  
 

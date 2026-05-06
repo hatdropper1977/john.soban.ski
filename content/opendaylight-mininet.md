@@ -7,6 +7,7 @@ og_image: images/Opendaylight_Mininet/00_Virt_Net.png
 twitter_image: images/Opendaylight_Mininet/00_Virt_Net.png
 Slug: opendaylight-mininet
 Status: published
+Summary: Deploy OpenDaylight and Open vSwitch in a cloud-based layer two environment to steer traffic dynamically with OpenFlow rules. Bypass deep packet inspection for egress traffic while preserving ingress inspection through SDN-based flow manipulation.
 
 [OpenDaylight](https://www.opendaylight.org/) allows network engineers to control switches with high level intelligence and abstracted services. Before Ravello, your engineers needed to deploy physical switches or use Mininet in order to integrate and test OpenDaylight. Neither AWS, Google Cloud, nor Azure provide native access to layer two (Ethernet, VLAN, LLDP, etc.) in the cloud. Ravello, however, provides a simple method to access Layer 2 (L2) services in the cloud. This lab will show you or your engineers how to integrate and test OpenDaylight in the cloud, using full Virtual Machines (VM) instead of Mininet containers.
 

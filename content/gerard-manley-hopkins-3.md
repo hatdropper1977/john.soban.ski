@@ -7,6 +7,7 @@ og_image: images/Gerard_Manley_Hopkins_3/01_No_Worst.png
 twitter_image: images/Gerard_Manley_Hopkins_3/01_No_Worst.png
 Slug: gerard-manley-hopkins-3
 Status: published
+Summary: Gerard Manley Hopkins’ *Terrible Sonnet* poems *I Wake and Feel the Fell of Dark, Not Day,* *Patience, hard thing!,* and *My own Heart let me more have pity on* portray depression, isolation, and self-imposed spiritual imprisonment brought on by urban life and perceived vocational failure.
 
 Hopkins refers to a “year” of “done darkness.”  1885 marks this year, the year Hopkins wrote “[Carrion Comfort].”  For Hopkins, 1885 includes “encroaching derangement” that consumes him (Harris 12). 
 

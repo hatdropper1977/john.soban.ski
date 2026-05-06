@@ -7,6 +7,7 @@ og_image: images/Rome/04_Bolt_Thrower.jpg
 twitter_image: images/Rome/04_Bolt_Thrower.jpg
 Slug: rome
 Status: published
+Summary: Roman emperors routinely executed enemies, civilians, political rivals, and even allies without trial, yet Septimius Severus spared the Byzantine engineer Priscus after conquest. Learn why Severus valued Priscus’ technical skill and how the story parallels modern career survival through craftsmanship and reputation.
 
 Victorious Roman Emperors followed a **kill first** policy when dealing with perceived threats.  They ordered the execution of surrendered combatants, political leaders, women, children, and even friends.
 

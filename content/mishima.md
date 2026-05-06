@@ -7,6 +7,7 @@ og_image: images/Mishima/04_Bombay_Scene.jpg
 twitter_image: images/Mishima/04_Bombay_Scene.jpg
 Slug: mishima
 Status: published
+Summary: Mishima’s teenage protagonists drift through post-Meiji Japan burdened by dread, isolation, pride, and existential emptiness. Honda, Kiyoaki, and Mizoguchi embody adolescent anxiety and detachment across the *Sea of Fertility* tetralogy.
 
 Yukio Mishima's **Sea of Fertility** tetralogy includes themes of reincarnation, futility, inevitably, and tradition.  The novels follow the life of Shigekuni Honda and his peers in post-Meiji Japan.  Even though Mishima's teens faced adolescence one hundred years ago, their experience resonates with teenagers today.  Mishima's teens capture common realities of the human journey.
 

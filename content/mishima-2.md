@@ -7,6 +7,7 @@ og_image: images/Mishima_2/05_Peephole_Look.png
 twitter_image: images/Mishima_2/05_Peephole_Look.png
 Slug: mishima-2
 Status: published
+Summary: Yukio Mishima’s teenage characters embody universal adolescent struggles through identity crises, suicidal idealism, social isolation, and destructive father-son relationships. Explore how these archetype reflect timeless psychological conflict through a read of Mishima’s *Sea of Fertility* tetralogy.
 
 Our bipartite Literary analysis of Yukio Mishima's **Sea of Fertility** tetralogy concludes this month. We further illustrate how Mishima's **post-Meiji Japan** teens capture timeless realities of the human journey.
 

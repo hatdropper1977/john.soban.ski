@@ -7,6 +7,7 @@ og_image: images/Raskolnikov_Label/01_Rask_Yell.png
 twitter_image: images/Raskolnikov_Label/01_Rask_Yell.png
 Slug: raskolnikov-label
 Status: published
+Summary: Train a TensorFlow and Keras NLP model to identify and extract Raskolnikov’s dialogue and internal monologues from *Crime and Punishment*. Perform speaker-level lit analysis via transfer learning, BERT classification, Pandas processing, and sentiment analysis.
 
 The domain of Natural Language Processing (NLP) provides novel tools for Literary analysis.  Analysts use NLP tools to record sentiment, emotional intensity, and word frequencies.  Today I use NLP techniques to extract Raskolnikov's speaking (and thinking) quotes from Dostyevsky's **Crime and Punishment**.
 

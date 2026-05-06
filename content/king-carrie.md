@@ -7,6 +7,7 @@ og_image: images/King_Carrie/02_Carrie_Burns.png
 twitter_image: images/King_Carrie/07_More_Burn.png
 Slug: king-carrie
 Status: published
+Summary: Analyze Stephen King’s *Carrie* through structured prompts, thematic outlines, and historical analogies to evaluate whether ChatGPT can assist with literary term paper development.  It explore how GenAI can identify themes, symbolism, and parallels to events.
 
 In May 2023 Generative AI still disappoints in writing compelling literary analysis "from scratch."  The output reads thin and lacks hard evidence.
 

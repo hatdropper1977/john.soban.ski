@@ -7,6 +7,7 @@ og_image: images/Hurston/05_Full_Food.jpg
 twitter_image: images/Hurston/05_Full_Food.jpg
 Slug: hurston
 Status: published
+Summary: Food references in Zora Neale Hurston’s *Their Eyes Were Watching God* mirror Janie’s relationships and expose the personalities of her husbands. Cornmeal, sweets, bacon, beans, and breakfast scenes reflect stability, vanity, class, desire, maturity, and love throughout the novel.
  
 Food references in Zora Neale Hurston's novel *Their Eyes Were Watching God* expose both underlying personality traits of the protagonist Janie's husbands and her feelings towards those husbands.
 

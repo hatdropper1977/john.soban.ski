@@ -7,6 +7,7 @@ og_image: images/Capacity/08_Data_Flow.jpg
 twitter_image: images/Capacity/08_Data_Flow.jpg
 Slug: capacity
 Status: published
+Summary: Build a lightweight capacity planning model in Python Pandas using flow diagrams, throughput estimates, and GROUP BY operations to estimate CPU requirements and infrastructure cost. Apply Operations Research concepts to size a simple web application without complex simulation tooling.
 
 The discipline of Operations Research (OR) applies analytical methods from math, statistics, economics, and computer science to help leaders make good decisions.  
 

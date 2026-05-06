@@ -7,6 +7,7 @@ og_image: images/Polars2/01_Polars_Time.jpg
 twitter_image: images/Polars2/05_Polars_Space.jpg
 Slug: polars2
 Status: published 
+Summary: Polars streaming avoids out-of-memory errors in large cross joins via processing data in chunks. Learn how to run 27M row workloads on a single machine.
 
 Last month, I refactored a custom Artificial Intelligence (AI) algorithm from **Pandas** to **Polars**.  This switch drove a 25x increase in performance.  
 

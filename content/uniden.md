@@ -7,6 +7,7 @@ og_image: images/Uniden/00_Bear_Cat.png
 twitter_image: images/Uniden/00_Bear_Cat.png
 Slug: uniden
 Status: published
+Summary: Transform Radio Reference CSV frequency data into a format compatible with the Uniden Bearcat BC125AT scanner. Explore schema mapping, analog filtering, CTCSS/DCS conversion, frequency normalization, and importing channels into Bearcat programming files.
 
 Uniden released the **Bearcat BC125AT**, a killer non-digital scanner, in 2011.  This scanner holds 500 channels and covers Ambulance, Aviation, Fire, Marine, NASCAR, NOAA Weather, Police, and Railroad bands.  Uniden provides a desktop application to program the **BC125** with Alpha Tags (human-readable text), Input Frequencies, and Continuous Tone-Coded Squelch System (CTCSS) tone codes.
 

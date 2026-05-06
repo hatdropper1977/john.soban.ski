@@ -7,6 +7,7 @@ og_image: images/Gerard_Manley_Hopkins_2/01_The_Beast.png
 twitter_image: images/Gerard_Manley_Hopkins_2/01_The_Beast.png
 Slug: gerard-manley-hopkins-1
 Status: published
+Summary: Gerard Manley Hopkins’ *Terrible Sonnets* reflect despair over urban decay, human degeneracy, and the destruction of nature rather than a crisis of faith in God. Draw from Hopkins’ letters, poems, and biographies, and examine how Victorian city life eroded his faith in humanity and damaged his creative spirit.
 
 Speaking of his “Terrible Sonnets,” Gerard Manley Hopkins suggests in a letter that “if ever anything is written in blood one of these is” (Bridges 219). The poems recount Hopkins' tumultuous examination of the pain and ambivalence that defines his existence. The “Terrible Sonnets” tempt uncritical readers into inaccurate Job comparisons. Hopkins does not wrestle with his faith in God. Hopkins’ merciless interrogations reflect not a loss of faith in God, but an indignation towards his and Humanity’s gross failure to live up to God’s greatness (Ellis 242). 
 

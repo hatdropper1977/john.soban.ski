@@ -7,6 +7,7 @@ og_image: images/Smb3/00_Smb_Splash.png
 twitter_image: images/Smb3/00_Smb_Splash.png
 Slug: smb3
 Status: published 
+Summary: Identify *investment grade* copies of sealed Super Mario Bros. 3 variants through Python Pandas, Seaborn, and auction sales data. Normalize prices across market cycles and compare box grade, seal grade, release variant, and sale date to rank collectible value.
 
 Sealed and Graded Video Game Collecting skyrocketed in popularity over the past decade.  I joined the hobby in 2020 and stuck through the boom times of 2021 and the recent crash of 2023.
 

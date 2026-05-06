@@ -7,6 +7,7 @@ og_image: images/Beat_Ai/03_Chat_Avatar.png
 twitter_image: images/Beat_Ai/03_Chat_Avatar.png
 Slug: beat-ai
 Status: published
+Summary: Examine common stylistic patterns in ChatGPT-generated prose, including passive voice, vague abstractions, empty phrases, adverbs, and inflated language. Find clearer technical writing through active voice, Subject-Verb-Object structure, and E-Prime principles.
 
 When I ask ChatGPT to write detailed technical content, I find that it outputs hollow, bombastic, and meandering prose. 
 

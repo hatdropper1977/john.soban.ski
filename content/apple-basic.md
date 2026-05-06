@@ -7,6 +7,7 @@ og_image: images/Apple_Basic/04_Blue_Lion.png
 twitter_image: images/Apple_Basic/04_Blue_Lion.png
 Slug: apple-basic
 Status: published
+Summary: A recovered Apple II floppy disk from 1986 reveals BASIC programs written in fourth grade, including primitive games, low-resolution graphics, and early experiments with loops, strings, and user input. Revisit the code and compare childhood Apple II graphics to modern AI-generated versions.
 
 My Dad ran the first computer lab at [Division Avenue High School](https://www.levittownschools.com/division/) in Levittown, NY.  The lab held a bank of Apple II computers.  He bought an Apple II for our house and then showed us how run games and program basic.
 

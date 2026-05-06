@@ -7,6 +7,7 @@ og_image: images/Roark_Vs_Raskolnikov/01_Raskolnikov_Roark.png
 twitter_image: images/Roark_Vs_Raskolnikov/01_Raskolnikov_Roark.png
 Slug: roark-vs-raskolnikov
 Status: published
+Summary: Compare Howard Roark and Rodion Raskolnikov through sentiment scoring, emotional intensity, and thematic analysis. 
 
 I augment traditional literary analysis with Natural Language Processing (NLP) tools to compare Fyodor Dostoevsky's Rodion Raskolnikov (Crime and Punishment) with Ayn Rand's Howard Roark (The Fountainhead).  Tools include both the Google Cloud Platform (GCP) Natural Language Application Programming Interface (API) and Tensorflow Transfer Learning.
 

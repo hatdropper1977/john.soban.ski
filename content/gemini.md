@@ -7,6 +7,7 @@ og_image: images/Gemini/04_Gemini_Splash.jpg
 twitter_image: images/Gemini/04_Gemini_Splash.jpg
 Slug: gemini
 Status: published
+Summary: The Gemini protocol replaces the ad-heavy, JavaScript-driven web with a minimal, privacy-focused alternative built around static content and mandatory TLS. Learn Gemini’s architecture and deploy a Gemini server on Ubuntu with AWS, GMID, TLS, and systemd.
 
 Intrusive advertisements, Bloated JavaScript widgets, and Artificial Intelligence (AI) generated, Search Engine Optimized (SEO) slop suffocate our web browsing experience.  
 

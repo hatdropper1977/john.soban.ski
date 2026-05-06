@@ -7,6 +7,7 @@ og_image: images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png
 twitter_image: images/Refactor_Matlab_To_Tidyverse/00_Pipe_Operator.png
 Slug: refactor-matlab-to-tidyverse
 Status: published
+Summary: Refactor a Reduced Coulomb Energy neural network implementation from Matlab into R Tidyverse with pipes, tibbles, functional operations, and vectorized distance calculations. Compares loop-based Matlab patterns with tidy data workflows for training, classification, and visualization.
 
 I've previously discussed the [Reduced Coloumb Energy]({filename}/reduced_coulomb_energy_neural_network_bupa.md) Neural Net algorithm on this site.  I wrote the algorithm in Matlab, which uses index based logic to select, filter, wrangle and process data. Today I will refactor the Matlab code to [Tidyverse](https://www.tidyverse.org/).  Tidyverse uses forward pipe operators to flow data through the data processing steps.
 

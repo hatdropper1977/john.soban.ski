@@ -5,6 +5,7 @@ Category: HOWTO
 Tags: HOWTO, SD-RAN, SDN, OpenDaylight
 Slug: odl-ubuntu-lts-24-04
 Status: published
+Summary: Install OpenDaylight on Ubuntu 24.04 LTS. Perform Java setup, JAVA_HOME configuration, Karaf binary download, controller start, and DLUX enablement. Discover installation traps around Java compatibility and OpenDaylight release packaging.
 
 **Infrastructure Architects** at Internet Service Providers (ISP), Cloud Service Providers (CSP) and Academic Institutions use the [OpenDaylight (ODL) platform](https://www.opendaylight.org/) to command, control, monitor and automate computer networks.
 

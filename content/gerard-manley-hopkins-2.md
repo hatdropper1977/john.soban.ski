@@ -7,6 +7,7 @@ og_image: images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png
 twitter_image: images/Gerard_Manley_Hopkins_2/07_Carrion_Wall.png
 Slug: gerard-manley-hopkins-2
 Status: published
+Summary: Gerard Manley Hopkins’ *Terrible Sonnets* express spiritual exhaustion, vocational failure, and psychological terror caused by modern urban life. The poems *No Worst, There is None* and *[Carrion Comfort],* indicate that Hopkins feared his own inability to fulfill his Jesuit calling vs. doubting God’s existence.
 
 The City fuels Hopkins' sense of failure. The City provokes him to lose faith in himself and Humankind. Hopkins’ lack of faith in Humanity leads to feelings of inadequacy in his vocation. A Priest must focus on his fellow man’s spiritual potential instead of his depravity. The city steers Hopkins away from his vocation. The City distracts him with “outward occupations” of which “not only the mind is drawn away from God, which may be at the call of duty and be God’s will, but unhappily the will too is entangled, worldly interests freshen, and worldly ambitions revive” (Correspondence 70). The City builds distraction upon distraction, confounding Hopkins' true calling. The city pushes Hopkins from the path of righteousness which causes Hopkins to harbor great feelings of pain and depression.
 

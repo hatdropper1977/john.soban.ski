@@ -5,6 +5,7 @@ Category: Data Science
 Tags: AI, Machine Learning, CloudFront, Gemini, Linux, HOWTO
 Slug: gemma-nye
 Status: published
+Summary: Build a fully automated AI blogging pipeline via Gemini CLI, GitHub Actions, Docker, S3, and CloudFront. The bot writes, builds, tests, and deploys one production blog post per day without manual intervention.
 
 
 I hear a lot of developers on social media claim that they created fully automated, end-to-end AI bot pipelines that create, build, test, and deploy apps from scratch.  This idea appeals to me, so I gave it a shot.

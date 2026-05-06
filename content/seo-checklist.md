@@ -7,6 +7,7 @@ og_image: images/Seo_Checklist/14_Black_Train.png
 twitter_image: images/Seo_Checklist/13_Spider_Engine.png
 Slug: seo-checklist
 Status: published
+Summary: Practical SEO maintenance for static websites includes sitemap hygiene, canonical validation, redirect cleanup, broken link repair, image optimization, heading structure, JavaScript fixes, and noindex handling for thin content. Learn actionable fixes discovered through Bing Webmaster Tools and Ahrefs audits.
 
 In this blog post I present an actionable, focused checklist for the bare minimum, required SEO.
 

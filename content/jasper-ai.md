@@ -5,6 +5,7 @@ Category: Data Science
 Tags: Jasper, Machine Learning
 Slug: jasper-ai
 Status: published
+Noindex: true
 
 Machine Learning (ML) Engineers at [Jasper Artificial Intelligence (AI)](https://www.jasper.ai/) (non-affiliate link) trained a Natural Language Processing (NLP) model on 10% of the written content on the Internet to create a service that writes text on command.  A user feeds the model a sentence or two requesting a topic and the service spits out paragraphs.  The end user tunes the service, approving or disapproving each new paragraph and guides the writing through the addition of keywords.
 
