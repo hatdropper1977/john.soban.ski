@@ -10,6 +10,22 @@ HEADER_COVER = 'images/city5.png'
 
 GOOGLE_ANALYTICS ='G-68ZKCSR3PQ'
 
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.9,
+        'indexes': 0.3,
+        'pages': 0.7,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'weekly',
+        'pages': 'monthly',
+    },
+}
+
 #CATEGORY_FEED_ATOM = None
 
 NOINDEX_THIN_CONTENT = True
@@ -35,7 +51,7 @@ AUTHORS_BIO = {
   "john-sobanski": {
     "name": "John Sobanski",
     "cover": "https://john.soban.ski/images/bsod_cropped.jpg",
-    "image": "https://john.soban.ski/images/John-2024.jpg",
+    "image": "https://john.soban.ski/images/John-Headshot.jpg",
     "location": "Washington, DC",
     "bio": "Professional Degree (Engr.) and Masters of Science in Electrical Engineering from GWU.<p><img src=\'https://john.soban.ski/images/seven_badges.jpg\' alt=\'Cert\'></p><p>Google Cloud Certified Professional Data Engineer License <a href=\'https://www.credly.com/badges/3af351b3-8e0d-43cb-9996-05f6e9d23e8e/public_url\'>8c3166d14fef49faa159a02158108f64</a> (February 26th 2020 - Recertified 2022, 2024, 2026 - expires February 20th 2028)</p><p>Elasticsearch Certified Engineer License <a href=\'https://certified.elastic.co/81ae38bb-4a1a-42e5-9b34-7e90cd0c9617#gs.8l8jf7\'>19690771</a> (June 22nd 2020 - Recertified 2022, 2024 - expires June 20th 2026)</p><p>Scrum Master <a href=\'https://bcert.me/bc/html/show-badge.html?b=pffgetkt\'>Certified</a> (June 25th 2020 - Recertified 2022, 2024 - expires June 25th 2026)</p><p>AWS License <a href=\'https://www.credly.com/badges/831f8eef-4840-4674-bf6e-9875abb8397c\'>R25L4B4K1FF1Q9WP</a> (July 1st 2016 - Recertified 2018, 2021, 2024 - expires May 20th 2027)</p><p>Rarible <a href=\'https://rarible.com/sobanski\'>Verified</a> (June 28th 2021)</p><p>CompTIA <a href=\'https://www.credly.com/badges/ea22ce36-a52d-4a53-a65b-65dc98af3c77\'>A+ Certified</a> (January 31st 2001)</p><p>AWS Certified <a href=\'https://www.credly.com/badges/70fbb47a-8948-45a8-b2d5-9e0baf6d660b/public_url\'>AI Practitioner Early Adopter</a> (February 13th 2025 - expires February 13th 2028)</p>",
     "linkedin": "johnsobanski/",
@@ -73,7 +89,7 @@ EXTRA_PATH_METADATA = {
     'assets/mstile-150x150.png': {'path': 'mstile-150x150.png'},
     'assets/robots.txt': {'path': 'robots.txt'},
     'assets/safari-pinned-tab.svg': {'path': 'safari-pinned-tab.svg'},
-    'assets/John-2024.jpg': {'path': 'images/John-2024.jpg'},
+    'assets/John-Headshot.jpg': {'path': 'images/John-Headshot.jpg'},
     'assets/city5.png' : {'path': 'images/city5.png'},
     'assets/bsod_cropped.jpg' : {'path' : 'images/bsod_cropped.jpg'},
     'assets/six_badges.png' : {'path' : 'images/six_badges.png'},
