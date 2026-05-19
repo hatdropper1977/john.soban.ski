@@ -19,8 +19,6 @@ Goals include:
 - Following security best practices
 - Full automation (no manual intervention)
 
-![Screen Grab of Hours dot Love]({static}/images/Gemma_Nye/00_Hours_Love.jpg)
-
 <div style="text-align: center; margin: 2em auto; max-width: 800px;">
   <video
     controls
@@ -30,7 +28,6 @@ Goals include:
     Your browser does not support the video tag.
   </video>
 </div>
-<p style="margin-top: 0.5em; color: #666; font-size: 0.9em;">Demo of the AI blogging pipeline in action</p>
 
 ## The Approach
 I use Gemini CLI on my Windows laptop for GenAI.  The LLM write the blog in markdown and pushes it to my public repo on GitHub.  GitHub Actions (GA) then use a static site generator to build the site from the markdown (adding the home page hyperlinks, menus, and style) and then pushes the HTML and Javascript to an Amazon S3 Hosted website with [content caching, HTTPS and naked domain redirects](how-to-configure-s3-websites-to-use-https-part-1.md).  Gemini CLI uses a mounted SSH private key to push to GitHub, and GA uses an AWS Identity and Access Management (IAM) Role to push to AWS.
@@ -949,5 +946,7 @@ $ schtasks /create /tn "hours-love-daily" /tr "cmd.exe /c C:\Users\JohnSobanski\
 
 ## Conclusion
 I created a **engagement farming bot** that produces a clean, readable, and interesting blog post once per day.  You can take my approach to create a similar bot, on the topic of your choosing.  You can deploy a fleet of bots, to produce blog posts to dozens of different websites.  In fact, you could potentially create a meta-bot pipeline that scours the web for trending topics, and then creates a bot to write on that topic.
+
+![Screen Grab of Hours dot Love]({static}/images/Gemma_Nye/00_Hours_Love.jpg)
 
 I just began my GenAI automation pipeline journey, and look forward to exploring future use cases.
