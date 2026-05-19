@@ -21,6 +21,17 @@ Goals include:
 
 ![Screen Grab of Hours dot Love]({static}/images/Gemma_Nye/00_Hours_Love.jpg)
 
+<div style="text-align: center; margin: 2em auto; max-width: 800px;">
+  <video
+    controls
+    preload="metadata"
+    style="width: 100%; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+    <source src="{static}/videos/Gemma_Nye/Ai_Bot_01.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<p style="margin-top: 0.5em; color: #666; font-size: 0.9em;">Demo of the AI blogging pipeline in action</p>
+
 ## The Approach
 I use Gemini CLI on my Windows laptop for GenAI.  The LLM write the blog in markdown and pushes it to my public repo on GitHub.  GitHub Actions (GA) then use a static site generator to build the site from the markdown (adding the home page hyperlinks, menus, and style) and then pushes the HTML and Javascript to an Amazon S3 Hosted website with [content caching, HTTPS and naked domain redirects](how-to-configure-s3-websites-to-use-https-part-1.md).  Gemini CLI uses a mounted SSH private key to push to GitHub, and GA uses an AWS Identity and Access Management (IAM) Role to push to AWS.
 
