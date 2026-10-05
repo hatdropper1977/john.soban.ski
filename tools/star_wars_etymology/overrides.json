@@ -1,0 +1,115 @@
+{
+  "_comment": "Hand-checked corrections and first-attestation dates for the words the article leans on. Dates marked 'attested' follow the decade conventions of the Online Etymology Dictionary (etymonline.com) unless the note says otherwise. 'replace': true throws away the automatic parse for that word; otherwise the fields below are merged over it.",
+
+  "suicide": {
+    "chain": [
+      {"lang": "la-new", "term": "suīcīdium", "via": "override"},
+      {"lang": "la", "term": "suī (of oneself)", "via": "override"},
+      {"lang": "la", "term": "caedere (to kill)", "via": "override"}
+    ],
+    "date": {"year": 1643, "kind": "attested", "note": "first attested in Thomas Browne's Religio Medici (1643); often thought to have been coined in English before it entered Latin"}
+  },
+  "admiral": {
+    "date": {"year": 1200, "kind": "attested", "note": "c. 1200 as amiral; Anglo-Norman and Old French, from Medieval Latin admiralis, from Arabic amīr (commander) as in amīr al-baḥr, commander of the sea"}
+  },
+  "galaxy":   {"date": {"year": 1380, "kind": "attested", "note": "late 14th century, originally the Milky Way; Old French galaxie, Latin galaxias, Greek galaxias (kyklos), milky (circle)"}},
+  "empire":   {"date": {"year": 1310, "kind": "attested", "note": "early 14th century; Old French empire, Latin imperium"}},
+  "emperor":  {"date": {"year": 1200, "kind": "attested", "note": "c. 1200; Old French empereor, Latin imperator"}},
+  "imperial": {"date": {"year": 1380, "kind": "attested", "note": "late 14th century; Old French imperial, Latin imperialis"}},
+  "rebel":    {"date": {"year": 1300, "kind": "attested", "note": "c. 1300 as an adjective; Old French rebelle, Latin rebellis"}},
+  "rebellion":{"date": {"year": 1340, "kind": "attested", "note": "mid 14th century; Old French rebellion, Latin rebellionem"}},
+  "force":    {"date": {"year": 1300, "kind": "attested", "note": "c. 1300; Old French force, Late Latin fortia, from fortis (strong)"}},
+  "planet":   {"date": {"year": 1300, "kind": "attested", "note": "c. 1300; Old French planete, Late Latin planeta, Greek planetes (wanderer)"}},
+  "destroy":  {"date": {"year": 1215, "kind": "attested", "note": "early 13th century; Old French destruire, Latin destruere"}},
+  "princess": {"date": {"year": 1385, "kind": "attested", "note": "late 14th century; Old French princesse"}},
+  "senate":   {"date": {"year": 1200, "kind": "attested", "note": "c. 1200; Old French senat, Latin senatus, from senex (old man)"}},
+  "senator":  {"date": {"year": 1200, "kind": "attested", "note": "c. 1200; Old French senator, Latin senator"}},
+  "alliance": {"date": {"year": 1300, "kind": "attested", "note": "c. 1300; Old French aliance"}},
+  "station":  {"date": {"year": 1290, "kind": "attested", "note": "late 13th century; Old French estacion, Latin stationem"}},
+  "captain":  {"date": {"year": 1375, "kind": "attested", "note": "late 14th century; Old French capitaine, Late Latin capitaneus, from caput (head)"}},
+  "general":  {"date": {"year": 1570, "kind": "attested", "note": "the military noun is 1570s, short for captain general; the adjective is c. 1200"}},
+  "governor": {"date": {"year": 1300, "kind": "attested", "note": "c. 1300; Old French governeor, Latin gubernator, Greek kybernetes (steersman)"}},
+  "academy":  {"date": {"year": 1474, "kind": "attested", "note": "1470s, Plato's school; Latin Academia, Greek Akademeia, the grove outside Athens where Plato taught"}},
+  "pilot":    {"date": {"year": 1512, "kind": "attested", "note": "1510s; Middle French pillote, Italian piloto, probably from Greek pedon (steering oar)"}},
+  "system":   {"date": {"year": 1610, "kind": "attested", "note": "1610s; Late Latin systema, Greek systema (organised whole)"}},
+  "computer": {"date": {"year": 1897, "kind": "attested", "note": "machine sense c. 1897 in Engineering magazine; the person who computes is c. 1613"}},
+  "asteroid": {"coined": true, "coiner": "William Herschel", "date": {"year": 1802, "kind": "coined", "note": "coined by William Herschel in 1802 from Greek asteroeides (star-like)"}},
+  "carbon":   {"date": {"year": 1789, "kind": "attested", "note": "1789, from French carbone, coined by Lavoisier from Latin carbo (charcoal)"}},
+  "tractor":  {"date": {"year": 1856, "kind": "attested", "note": "1856 as something that pulls, Latin tractor; the tractor beam is 1931 science fiction (E. E. Smith)"}},
+  "reactor":  {"date": {"year": 1945, "kind": "attested", "note": "nuclear reactor sense 1945; react + -or"}},
+  "sensor":   {"date": {"year": 1958, "kind": "attested", "note": "1958, shortened from sensory"}},
+  "hyperspace": {"date": {"year": 1867, "kind": "attested", "note": "1867 in mathematics; the faster-than-light sense arrives with 1930s science fiction"}},
+  "hyperdrive": {"parts": ["hyper-", "drive"], "date": {"year": 1950, "kind": "inferred", "note": "mid-20th-century science fiction; hyper- + drive"}},
+  "blaster":  {"parts": ["blast", "-er"], "date": {"year": 1930, "kind": "inferred", "note": "blast + -er; the ray-gun sense belongs to early 20th-century pulp science fiction"}},
+  "laser":    {"date": {"year": 1957, "kind": "coined", "note": "acronym coined by Gordon Gould in 1957: light amplification by stimulated emission of radiation"}},
+  "robot": {
+    "replace": true,
+    "chain": [
+      {"lang": "cs", "term": "robot", "via": "override"},
+      {"lang": "cs", "term": "robota (forced labor)", "via": "override"},
+      {"lang": "sla-pro", "term": "*orbota", "via": "override"},
+      {"lang": "ine-pro", "term": "*h₃erbʰ-", "via": "override"}
+    ],
+    "root": {"lang": "ine-pro", "term": "*h₃erbʰ-"},
+    "coined": true, "coiner": "Josef Čapek",
+    "date": {"year": 1923, "kind": "attested", "note": "English 1923, from Karel Čapek's play R.U.R. (1920); the word was suggested by his brother Josef from Czech robota, forced labor"}
+  },
+  "droid": {
+    "replace": true,
+    "chain": [
+      {"lang": "la-new", "term": "androides", "via": "override"},
+      {"lang": "grc", "term": "ἀνήρ (anēr, man) + -ειδής (-eidēs, like)", "via": "override"}
+    ],
+    "parts": ["android", "-oid"],
+    "coined": true, "coiner": "Mari Wolf",
+    "date": {"year": 1952, "kind": "coined", "note": "clipping of android, coined by Mari Wolf in Robots of the World! Arise! (1952) and popularised by Star Wars (1977)"}
+  },
+  "lightsaber": {
+    "replace": true,
+    "parts": ["light", "saber"],
+    "coined": true, "coiner": "George Lucas",
+    "date": {"year": 1977, "kind": "coined", "note": "coined for Star Wars (1977); light is Old English, saber came through French sabre from German Sabel"}
+  },
+  "jedi": {
+    "replace": true,
+    "chain": [{"lang": "ja", "term": "時代劇 (jidaigeki, period drama)", "via": "override"}],
+    "coined": true, "coiner": "George Lucas",
+    "date": {"year": 1977, "kind": "coined", "note": "coined for Star Wars (1977); Lucas has linked the name to jidaigeki, the Japanese period-drama genre that shaped the films"}
+  },
+  "wookiee": {
+    "replace": true,
+    "coined": true, "coiner": "George Lucas",
+    "date": {"year": 1977, "kind": "coined", "note": "coined for Star Wars (1977); reportedly from an ad-lib by voice actor Terry McGovern, recorded during work on THX 1138 (1973)"}
+  },
+  "nerf": {
+    "replace": true,
+    "coined": true, "coiner": "Star Wars",
+    "date": {"year": 1980, "kind": "coined", "note": "in-universe livestock, first heard in The Empire Strikes Back (1980) in Leia's insult nerf-herder"}
+  },
+  "stormtrooper": {"date": {"year": 1917, "kind": "attested", "note": "1917, translating German Sturmtruppen"}},
+  "hokey":    {"date": {"year": 1927, "kind": "attested", "note": "US slang, 1927, from hokum"}},
+  "a": {
+    "replace": true,
+    "chain": [
+      {"lang": "enm", "term": "a", "via": "override"},
+      {"lang": "ang", "term": "ān (one)", "via": "override"},
+      {"lang": "gmw-pro", "term": "*ain", "via": "override"},
+      {"lang": "gem-pro", "term": "*ainaz", "via": "override"},
+      {"lang": "ine-pro", "term": "*óynos", "via": "override"}
+    ],
+    "date": {"year": 800, "kind": "inferred", "note": "the indefinite article, a weakened form of Old English ān, one (Wiktionary's first etymology is the letter, not the article)"}
+  },
+  "okay":     {"replace": true, "parts": ["OK"], "date": {"year": 1839, "kind": "attested", "note": "respelling of OK, a Boston newspaper abbreviation fad of 1839 for 'oll korrect'"}},
+  "gotta":    {"date": {"year": 1885, "kind": "attested", "note": "spelled form of got to, attested from 1885"}},
+  "unit":     {"chain": [{"lang": "la", "term": "ūnus (one)", "via": "override"}], "date": {"year": 1570, "kind": "attested", "note": "1570, introduced by the mathematician John Dee in his preface to Euclid as an English form of Latin unitas"}},
+  "parsec":   {"coined": true, "coiner": "Herbert Hall Turner", "date": {"year": 1913, "kind": "coined", "note": "coined by the astronomer Herbert Hall Turner in 1913 from parallax + second"}},
+  "already":  {"date": {"year": 1300, "kind": "attested", "note": "c. 1300, from all + ready"}},
+  "jam":      {"date": {"year": 1706, "kind": "attested", "note": "1706 as a verb, to press tightly; origin uncertain, perhaps imitative"}},
+  "hunk":     {"date": {"year": 1813, "kind": "attested", "note": "1813, probably from Flemish hunke"}},
+  "joint":    {"date": {"year": 1290, "kind": "attested", "note": "late 13th century, from Old French joint, Latin iunctus"}},
+  "tank":     {"date": {"year": 1616, "kind": "attested", "note": "1610s as a pool or cistern, from Portuguese tanque; the armoured vehicle is 1915"}},
+  "scoundrel": {"unknown": true, "date": {"year": 1589, "kind": "attested", "note": "1580s, origin unknown; perhaps from Anglo-Norman escoundre (to hide) or Old French escondre"}},
+  "gonna":    {"date": {"year": 1806, "kind": "attested", "note": "spelled form of going to, attested from 1806"}},
+  "wanna":    {"date": {"year": 1896, "kind": "attested", "note": "spelled form of want to, attested from 1896"}},
+  "ain't":    {"date": {"year": 1778, "kind": "attested", "note": "1778, earlier an't (1706), contraction of are not / am not"}}
+}

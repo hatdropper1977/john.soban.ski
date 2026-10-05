@@ -112,3 +112,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Star Wars etymology pipeline: cached Wiktionary text and intermediate files
+tools/star_wars_etymology/work/
