@@ -1,4 +1,4 @@
-Title: Ancient Rome in Corellia:  The Hidden History in Star Wars' Language
+Title: Interactive Maps of Star Wars Dialogue 
 Date: 2026-09-26 09:00
 Author: john-sobanski
 Category: Data Science
